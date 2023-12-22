@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Arial";
   background-image: url("./images/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -30,7 +30,7 @@ body {
 }
 
 section {
-  max-width: 60%;
+  min-width: 100%;
   background-color: transparent;
   border: 0px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;

@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Arial";
   background-image: url("./images/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -29,7 +29,7 @@ body {
 }
 
 section {
-  max-width: 60%;
+  min-width: 100%;
   background-color: transparent;
   border: 0px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -41,18 +41,21 @@ section {
 }
 
 h1 {
-  font-size: 3rem;
+  font-family: "Arial";
+  font-size: 35px;
   color: var(--fg2);
   text-align: center;
 }
 
 h2 {
-  font-size: 2rem;
+  font-family: "Arial";
+  font-size: 20px;
   color: var(--fg2);
   text-align: center;
 }
 
 .buttons {
+  font-family: "Arial";
   margin: 2%;
   height: 80px;
   text-align: center;
@@ -60,6 +63,7 @@ h2 {
 }
 
 .btn-hover {
+  font-family: "Arial";
   width: 50%;
   font-size: 16px;
   font-weight: 600;
@@ -220,5 +224,15 @@ h2 {
     #24283a,
     #ee7e8d,
     #ee7e8d
+  );
+}
+
+.btn-hover.color-4 {
+  background-image: linear-gradient(
+    to right,
+    #24283a,
+    #24283a,
+    #88ee7e,
+    #88ee7e
   );
 }
