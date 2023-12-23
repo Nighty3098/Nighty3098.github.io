@@ -45,13 +45,15 @@ h1 {
   font-size: 35px;
   color: var(--fg2);
   text-align: center;
+  line-height: 150%;
 }
 
 h2 {
   font-family: "Arial";
-  font-size: 20px;
+  font-size: 16px;
   color: var(--fg2);
   text-align: center;
+  line-height: 150%;
 }
 
 .buttons {
@@ -97,8 +99,8 @@ h2 {
 .btn-hover.color-1 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #b99df2,
     #b99df2
   );
@@ -107,8 +109,8 @@ h2 {
 .btn-hover.color-2 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #4ac0dc,
     #4ac0dc
   );
@@ -117,8 +119,8 @@ h2 {
 .btn-hover.color-3 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #ee7e8d,
     #ee7e8d
   );
@@ -158,8 +160,8 @@ h2 {
 .btn-hover2.color-1 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #b99df2,
     #b99df2
   );
@@ -168,8 +170,8 @@ h2 {
 .btn-hover2.color-2 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #4ac0dc,
     #4ac0dc
   );
@@ -178,8 +180,8 @@ h2 {
 .btn-hover2.color-3 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #707aef,
     #707aef
   );
@@ -210,8 +212,8 @@ h2 {
 .btn-hover.color-2 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #4ac0dc,
     #4ac0dc
   );
@@ -220,8 +222,8 @@ h2 {
 .btn-hover.color-3 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #ee7e8d,
     #ee7e8d
   );
@@ -230,8 +232,8 @@ h2 {
 .btn-hover.color-4 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #88ee7e,
     #88ee7e
   );

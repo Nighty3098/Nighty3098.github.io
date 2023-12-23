@@ -89,8 +89,8 @@ h1 {
 .btn-hover.color-1 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #b99df2,
     #b99df2
   );
@@ -99,8 +99,8 @@ h1 {
 .btn-hover.color-2 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #4ac0dc,
     #4ac0dc
   );
@@ -109,8 +109,8 @@ h1 {
 .btn-hover.color-3 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
+    #16161e,
+    #16161e,
     #ee7e8d,
     #ee7e8d
   );
@@ -125,6 +125,9 @@ h1 {
   overflow: hidden;
 
   border-radius: 20px;
+
+  min-width: 25%;
+  max-width: 25%;
 }
 .ag-projects-item_link {
   display: block;
@@ -204,7 +207,6 @@ h1 {
 .ag-projects_item:nth-child(6n) .ag-projects-item_bg {
   background-color: #424866;
 }
-
 @media only screen and (max-width: 979px) {
   .ag-projects_item {
     -ms-flex-preferred-size: calc(50% - 30px);
