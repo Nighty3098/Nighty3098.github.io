@@ -64,6 +64,23 @@ h2 {
     margin-bottom: 10%;
 }
 
+h3 {
+    font-size: 1rem;
+    color: var(--fg2);
+    text-align: center;
+    margin-bottom: 10%;
+ }
+
+b {
+    text-align: center;
+    font-size: 2rem;
+}
+
+summary {
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
 .buttons {
   margin: 5%;
   height: 50%;
@@ -84,18 +101,18 @@ h2 {
   background-size: 300% 100%;
 
   border-radius: 50px;
-  moz-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .btn-hover:hover {
   background-position: 100% 0;
-  moz-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .btn-hover:focus {
@@ -142,9 +159,11 @@ h2 {
 
   border-radius: 20px;
 
-  min-width: 25%;
-  max-width: 25%;
+  min-width: 20%;
+  max-width: 300px;
 }
+
+
 .ag-projects-item_link {
   display: block;
   padding: 30px 20px;
@@ -154,6 +173,7 @@ h2 {
 
   position: relative;
 }
+
 .ag-projects-item_link:hover,
 .ag-projects-item_link:hover .ag-projects-item_date {
   text-decoration: none;
@@ -165,13 +185,13 @@ h2 {
   transform: scale(10);
 }
 .ag-projects-item_title {
-  min-height: 50px;
+  min-height: 20px;
   margin: 0 0 25px;
 
   overflow: hidden;
 
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
 
   z-index: 2;
@@ -226,7 +246,7 @@ h2 {
 
 @media only screen and (max-width: 1500px) {
   .ag-projects_item {
-    min-width: 100%;
+    max-width: 200px;
     min-height:;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -235,7 +255,7 @@ h2 {
 
 @media only screen and (max-width: 1000px) {
   .ag-projects_item {
-    min-width: 100%;
+    max-width: 200px;
     min-height:;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -244,14 +264,11 @@ h2 {
     -ms-flex-preferred-size: calc(50% - 30px);
     flex-basis: calc(50% - 30px);
   }
-  .ag-projects-item_title {
-    font-size: 24px;
-  }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 740px) {
   .ag-projects_item {
-    min-width: 100%;
+    max-width: 100%;
     min-height:;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -261,20 +278,36 @@ h2 {
   }
 }
 @media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+        color: var(--fg2);
+        text-align: center;
+        margin-bottom: 10%;
+      }
+      
+      h2 {
+          text-align: center;
+          margin-bottom: 10%;
+      }
+      
+      h3 {
+          font-size: 1rem;
+          color: var(--fg2);
+          text-align: center;
+          margin-bottom: 10%;
+       }
+      
+      b {
+          text-align: center;
+          font-size: 1.5rem;
+      }
+      
+
   .ag-projects_item {
-    min-width: 90%;
+    max-width: 90%;
     min-height:;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-  }
-  .ag-projects-item_title {
-    min-height: 72px;
-    line-height: 1;
-
-    font-size: 24px;
-  }
-  .ag-projects-item_link {
-    padding: 22px 40px;
   }
   .ag-projects-item_content {
     font-size: 10px;
