@@ -31,8 +31,16 @@ body {
   width: 60%;
 }
 
+details summary::-webkit-details-marker {
+  display: none
+}
+
+details > summary {
+  list-style: none;
+}
+
 .content {
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 .image {
@@ -159,7 +167,10 @@ summary {
 
   border-radius: 20px;
 
-  min-width: 20%;
+  min-height: 200px;
+  max-height: 500px;
+
+  min-width: 300px;
   max-width: 300px;
 }
 
