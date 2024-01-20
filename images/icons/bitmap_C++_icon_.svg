@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="99.998703mm"
+   height="60.000069mm"
+   viewBox="0 0 99.998703 60.000069"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="343.31305"
+       y="112.03036"
+       width="137.25946"
+       height="65.94503"
+       id="rect2-0" />
+  </defs>
+  <g
+     id="layer2"
+     transform="translate(-107.71943,0.58579632)">
+    <rect
+       style="display:inline;fill:#a5c3d6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="rect1-4"
+       width="92.844933"
+       height="52.657017"
+       x="114.8732"
+       y="6.7572575"
+       ry="6.1529021" />
+    <rect
+       style="display:inline;fill:none;stroke:#2b303b;stroke-width:3.19;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4.3;stroke-dasharray:28.71, 6.38;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect1-5-6"
+       width="91.444046"
+       height="51.143066"
+       x="109.31444"
+       y="1.0092108"
+       ry="5.7422171" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.73436139,0,0,0.69082977,-130.95093,-72.512907)"
+       id="text1-6"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:46.8372px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect2-0);display:inline;fill:#009b00;fill-opacity:1;stroke:#56c600;stroke-width:0;stroke-dasharray:108.85, 108.85;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"><tspan
+         x="343.3125"
+         y="155.25601"
+         id="tspan2"><tspan
+           style="fill:#ffffff;stroke:#ffffff"
+           id="tspan1">C++</tspan></tspan></text>
+  </g>
+</svg>

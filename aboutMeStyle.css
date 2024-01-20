@@ -1,8 +1,10 @@
 :root {
-  --bg: #414868;
-  --fg: #959cbd;
-  --fg2: #ffffff;
-  --color2: #7aa2f7;
+    --bg: #0a0e1a;
+    --fg: #ffffff;
+    --fg2: #ffffff;
+    --color2: #8a6378;
+    --color1: #d09db5;
+    --color3: #716c88;
 }
 
 body {
@@ -20,6 +22,11 @@ body {
   width: 60%;
 }
 
+.icon {
+    width: 5%;
+}
+
+
 .content {
   margin-top: 1%;
 }
@@ -30,8 +37,8 @@ body {
 
 section {
   min-width: 100%;
-  background-color: transparent;
-  border: 0px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(10,14,26,.6);
+  border: 0px solid var(--fg2);
   border-radius: 20px;
   backdrop-filter: blur(30px);
   display: flex;
@@ -58,20 +65,20 @@ h2 {
 
 .buttons {
   font-family: "Arial";
-  margin: 2%;
+  margin: 0%;
   height: 80px;
   text-align: center;
-  width: 40%;
+  width: 5%;
 }
 
 .btn-hover {
   font-family: "Arial";
-  width: 80%;
+  width: 15%;
   font-size: 16px;
   font-weight: 600;
   color: var(--fg2);
   cursor: pointer;
-  margin: 2%;
+  margin: 0%;
   height: 60px;
   text-align: center;
   border: none;
@@ -99,40 +106,40 @@ h2 {
 .btn-hover.color-1 {
   background-image: linear-gradient(
     to right,
-    #16161e,
-    #16161e,
-    #b99df2,
-    #b99df2
+    var(--bg),
+    var(--bg),
+    var(--color1),
+    var(--color1)
   );
 }
 
 .btn-hover.color-2 {
   background-image: linear-gradient(
     to right,
-    #16161e,
-    #16161e,
-    #4ac0dc,
-    #4ac0dc
+    var(--bg),
+    var(--bg),
+    var(--color2),
+    var(--color2)
   );
 }
 
 .btn-hover.color-3 {
   background-image: linear-gradient(
     to right,
-    #16161e,
-    #16161e,
-    #ee7e8d,
-    #ee7e8d
+    var(--bg),
+    var(--bg),
+    var(--color3),
+    var(--color3)
   );
 }
 
 .btn-hover2 {
-  width: 100%;
+  width: 15%;
   font-size: 16px;
   font-weight: 600;
   color: var(--fg2);
   cursor: pointer;
-  margin: 1%;
+  margin: 0.2%;
   height: 60px;
   text-align: center;
   border: none;
@@ -160,30 +167,30 @@ h2 {
 .btn-hover2.color-1 {
   background-image: linear-gradient(
     to right,
-    #16161e,
-    #16161e,
-    #b99df2,
-    #b99df2
+    var(--bg),
+    var(--bg),
+    var(--color2),
+    var(--color2)
   );
 }
 
 .btn-hover2.color-2 {
   background-image: linear-gradient(
     to right,
-    #16161e,
-    #16161e,
-    #4ac0dc,
-    #4ac0dc
+    var(--bg),
+    var(--bg),
+    var(--color1),
+    var(--color1)
   );
 }
 
 .btn-hover2.color-3 {
   background-image: linear-gradient(
     to right,
-    #16161e,
-    #16161e,
-    #707aef,
-    #707aef
+    var(--bg),
+    var(--bg),
+    var(--color3),
+    var(--color3)
   );
 }
 
@@ -202,47 +209,45 @@ h2 {
 .btn-hover.color-1 {
   background-image: linear-gradient(
     to right,
-    #24283a,
-    #24283a,
-    #b99df2,
-    #b99df2
+    var(--bg),
+    var(--bg),
+    var(--color3),
+    var(--color3)
   );
 }
 
 .btn-hover.color-2 {
   background-image: linear-gradient(
     to right,
-    #16161e,
-    #16161e,
-    #4ac0dc,
-    #4ac0dc
+    var(--bg),
+    var(--bg),
+    var(--color2),
+    var(--color2)
   );
 }
 
 .btn-hover.color-3 {
   background-image: linear-gradient(
-    to right,
-    #16161e,
-    #16161e,
-    #ee7e8d,
-    #ee7e8d
+    var(--bg),
+    var(--bg),
+    var(--color1),
+    var(--color1)
   );
 }
 
 .btn-hover.color-4 {
   background-image: linear-gradient(
     to right,
-    #16161e,
-    #16161e,
-    #88ee7e,
-    #88ee7e
+    var(--bg),
+    var(--bg),
+    var(--color2),
+    var(--color2)
   );
 }
 
 @media only screen and (max-width: 1500px) {
   section {
     max-width: 50%;
-    background-color: transparent;
     border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
@@ -251,6 +256,10 @@ h2 {
     align-items: center;
     padding: 2rem 3rem;
   }
+
+  .icon {
+    width: 20%;
+}
 
   .buttons {
     height: 50%;
@@ -274,7 +283,6 @@ h2 {
 @media only screen and (max-width: 1000px) {
   section {
     max-width: 50%;
-    background-color: transparent;
     border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
@@ -289,11 +297,22 @@ h2 {
     width: 80%;
   }
 
+  
+  .icon {
+    width: 20%;
+}
+
   .btn-hover {
     width: 70%;
     margin: 1%;
     height: 60px;
   }
+  .btn-hover2 {
+    width: 70%;
+    margin: 1%;
+    height: 60px;
+  }
+  
 
   .ag-projects_item {
     min-width: 100%;
@@ -313,7 +332,6 @@ h2 {
 @media only screen and (max-width: 767px) {
   section {
     max-width: 70%;
-    background-color: transparent;
     border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
@@ -323,12 +341,21 @@ h2 {
     padding: 2rem 3rem;
   }
 
+  .icon {
+    width: 20%;
+}
+
   .buttons {
     height: 50%;
     width: 80%;
   }
 
   .btn-hover {
+    width: 70%;
+    margin: 1%;
+    height: 60px;
+  }
+  .btn-hover2 {
     width: 70%;
     margin: 1%;
     height: 60px;
@@ -347,7 +374,6 @@ h2 {
 @media only screen and (max-width: 600px) {
   section {
     max-width: 90%;
-    background-color: transparent;
     border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
@@ -357,12 +383,21 @@ h2 {
     padding: 2rem 3rem;
   }
 
+  .icon {
+    width: 20%;
+}
+
   .buttons {
     height: 50%;
     width: 80%;
   }
 
   .btn-hover {
+    width: 70%;
+    margin: 1%;
+    height: 60px;
+  }
+  .btn-hover2 {
     width: 70%;
     margin: 1%;
     height: 60px;
