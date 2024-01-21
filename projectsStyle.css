@@ -51,7 +51,7 @@ details > summary {
 }
 
 
-.icon {
+.badge {
     width: 20%;
 }
 
@@ -183,7 +183,7 @@ summary {
 
   border-radius: 20px;
 
-  min-height: 200px;
+  min-height: 100px;
   max-height: 500px;
 
   min-width: 300px;
