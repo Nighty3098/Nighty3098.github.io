@@ -22,22 +22,31 @@ body {
   width: 60%;
 }
 
+.about_me_text {
+}
+
 .badge {
     width: 7%;
 }
 
+.skills {
+    margin-top: 10%;
+}
 
 .content {
   margin-top: 1%;
 }
 
+
 .image {
-  border-radius: 20px;
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
 }
 
 section {
   min-width: 100%;
-  background-color: rgba(10,14,26,.6);
+  background-color: rgba(10,14,26,.5);
   border: 0px solid var(--fg2);
   border-radius: 20px;
   backdrop-filter: blur(30px);
@@ -57,7 +66,7 @@ h1 {
 
 h2 {
   font-family: "Arial";
-  font-size: 16px;
+  font-size: 18px;
   color: var(--fg2);
   text-align: center;
   line-height: 150%;
@@ -248,7 +257,6 @@ h2 {
 @media only screen and (max-width: 1500px) {
   section {
     max-width: 50%;
-    border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
     display: flex;
@@ -258,7 +266,7 @@ h2 {
   }
 
   .badge {
-    width: 20%;
+    width: 10%;
 }
 
   .buttons {
@@ -283,7 +291,6 @@ h2 {
 @media only screen and (max-width: 1000px) {
   section {
     max-width: 50%;
-    border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
     display: flex;
@@ -327,12 +334,16 @@ h2 {
   .ag-projects-item_title {
     font-size: 24px;
   }
+
+  .image {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800) {
   section {
     max-width: 70%;
-    border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
     display: flex;
@@ -370,11 +381,17 @@ h2 {
   .ag-format-container {
     width: 96%;
   }
+
+    .image {
+        height: 80%;
+        width: 80%;
+        border-radius: 50%;
+    }
 }
+
 @media only screen and (max-width: 600px) {
   section {
     max-width: 90%;
-    border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
     display: flex;
@@ -385,6 +402,12 @@ h2 {
 
   .badge {
     width: 20%;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
 }
 
   .buttons {
@@ -402,6 +425,7 @@ h2 {
     margin: 1%;
     height: 60px;
   }
+
 
   .ag-projects_item {
     min-width: 90%;

@@ -65,10 +65,9 @@ details > summary {
 
 section {
   min-width: 100%;
-  background-color: rgba(10,14,26,.6);
-  border: 0px solid var(--fg2);
+  background-color: rgba(10,14,26,.5);
   border-radius: 20px;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(20px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,8 +301,21 @@ summary {
   .ag-format-container {
     width: 96%;
   }
+
+
 }
 @media only screen and (max-width: 600px) {
+    section {
+        min-width: 120%;
+        border-radius: 20px;
+        backdrop-filter: blur(30px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 3rem;
+      }
+
+
   h1 {
     font-size: 2rem;
     color: var(--fg2);
@@ -327,6 +339,7 @@ summary {
     text-align: center;
     font-size: 1.5rem;
   }
+
 
   .ag-projects_item {
     max-width: 90%;
