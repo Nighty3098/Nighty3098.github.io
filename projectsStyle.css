@@ -175,15 +175,15 @@ summary {
 .ag-projects_item {
   display: inline-block;
   -ms-flex-preferred-size: calc(33.33333% - 30px);
-  flex-basis: calc(33.33333% - 30px);
+  flex-basis: calc(100% - 130px);
 
   margin: 0 15px 30px;
   overflow: hidden;
 
   border-radius: 20px;
 
-  min-height: 100px;
-  max-height: 500px;
+  min-height: 200px;
+  max-height: 200px;
 
   min-width: 300px;
   max-width: 300px;
@@ -193,6 +193,7 @@ summary {
   display: block;
   padding: 30px 20px;
   background-color: var(--bg);
+  border-radius: 20px;
 
   overflow: hidden;
 
@@ -200,14 +201,14 @@ summary {
 }
 
 .ag-projects-item_link:hover,
-.ag-projects-item_link:hover .ag-projects-item_date {
+.ag-projects-item_link:hover  {
   text-decoration: none;
   color: #fff;
 }
 .ag-projects-item_link:hover .ag-projects-item_bg {
-  -webkit-transform: scale(10);
-  -ms-transform: scale(10);
-  transform: scale(10);
+  -webkit-transform: scale(20);
+  -ms-transform: scale(20);
+  transform: scale(20);
 }
 .ag-projects-item_title {
   min-height: 20px;
@@ -247,7 +248,7 @@ summary {
   top: -75px;
   right: -75px;
 
-  border-radius: 50%;
+  border-radius: 100%;
 
   -webkit-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
@@ -272,7 +273,6 @@ summary {
 @media only screen and (max-width: 1500px) {
   .ag-projects_item {
     max-width: 200px;
-    min-height:;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
   }
