@@ -5,6 +5,8 @@
     --color2: #8a6378;
     --color1: #d09db5;
     --color3: #716c88;
+    --color4: #3f4a68;
+    --color5: #c9a1b3;
 }
 
 details[open] {
@@ -18,6 +20,8 @@ details {
 }
 
 html {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: var(--color1) var(--color4);   /* scroll thumb and track */ 
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +30,20 @@ html {
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
 }
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--color4);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color1);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--color4);  /* creates padding around scroll thumb */
+  }
 
 body {
   display: flex;
@@ -157,8 +175,8 @@ summary {
     to right,
     var(--bg),
     var(--bg),
-    var(--color1),
-    var(--color1)
+    var(--color4),
+    var(--color4)
   );
 }
 
@@ -177,7 +195,7 @@ summary {
   -ms-flex-preferred-size: calc(33.33333% - 30px);
   flex-basis: calc(100% - 130px);
 
-  margin: 0 15px 30px;
+  margin: 0 15px 0px;
   overflow: hidden;
 
   border-radius: 20px;
@@ -258,13 +276,13 @@ summary {
   background-color: var(--color2);
 }
 .ag-projects_item:nth-child(3n) .ag-projects-item_bg {
-  background-color: var(--color1);
+  background-color: var(--color4);
 }
 .ag-projects_item:nth-child(4n) .ag-projects-item_bg {
   background-color: var(--color3);
 }
 .ag-projects_item:nth-child(5n) .ag-projects-item_bg {
-  background-color: var(--color1);
+  background-color: var(--color5);
 }
 .ag-projects_item:nth-child(6n) .ag-projects-item_bg {
   background-color: var(--color2);

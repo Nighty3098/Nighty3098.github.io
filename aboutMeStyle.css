@@ -22,15 +22,12 @@ body {
   width: 60%;
 }
 
-.about_me_text {
+.skills{
+    margin-top: 10%;
 }
 
 .badge {
     width: 7%;
-}
-
-.skills {
-    margin-top: 10%;
 }
 
 .content {
@@ -41,10 +38,11 @@ body {
 .image {
     height: 35%;
     width: 35%;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 section {
+  margin-top: 5%;
   min-width: 100%;
   background-color: rgba(10,14,26,.5);
   border: 0px solid var(--fg2);
@@ -275,7 +273,7 @@ h2 {
   }
 
   .btn-hover {
-    width: 70%;
+    width: 80%;
     margin: 1%;
     height: 60px;
   }
