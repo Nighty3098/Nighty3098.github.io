@@ -19,6 +19,57 @@ details {
   transition: height 0.5s ease-out;
 }
 
+/*
+hr {
+    border: 0;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, var(--color3) 0%, var(--color1) 100%);
+}
+*/
+
+
+hr,    
+hr:before,
+hr:after {
+    content: "";
+    background: var(--color1);
+    display: block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    position: absolute;
+    animation: anim-hr 6s linear infinite;
+    border: 0;
+    overflow: visible;
+}
+hr:before {
+    left: -32px;
+}
+hr:after {
+    left: 32px;
+}
+hr {
+    position: relative;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+@keyframes anim-hr {
+    0% {
+        background: var(--color2);
+    }
+    50% {
+        background: var(--color1);
+    }  
+    100% {
+        background: var(--color3);
+    }
+}
+
+
+
 html {
   scrollbar-width: thin;          /* "auto" or "thin" */
   scrollbar-color: var(--color1) var(--color4);   /* scroll thumb and track */ 
@@ -85,7 +136,7 @@ section {
   min-width: 100%;
   background-color: rgba(10,14,26,.5);
   border-radius: 20px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,9 +146,10 @@ section {
 
 h1 {
   font-size: 3rem;
-  color: var(--fg2);
+  color: var(--color5);
   text-align: center;
-  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 h2 {
@@ -195,10 +247,10 @@ summary {
   -ms-flex-preferred-size: calc(33.33333% - 30px);
   flex-basis: calc(100% - 130px);
 
-  margin: 0 15px 0px;
+  margin: 0px 15px;
   overflow: hidden;
 
-  border-radius: 20px;
+  border-radius: 30px;
 
   min-height: 250px;
   max-height: 250px;
@@ -211,7 +263,7 @@ summary {
   display: block;
   padding: 30px 20px;
   background-color: var(--bg);
-  border-radius: 20px;
+  border-radius: 30px;
 
   overflow: hidden;
 
@@ -252,9 +304,9 @@ summary {
   font-weight: bold;
   color: var(--color3);
 
-  -webkit-transition: color 0.7s ease;
-  -o-transition: color 0.7s ease;
-  transition: color 0.7s ease;
+  -webkit-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
 }
 .ag-projects-item_bg {
   height: 128px;
@@ -335,10 +387,10 @@ summary {
 
 
   h1 {
-    font-size: 2rem;
-    color: var(--fg2);
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 10%;
+    margin-top: 4%;
+    margin-bottom: 4%;
   }
 
   h2 {
@@ -348,7 +400,6 @@ summary {
 
   h3 {
     font-size: 1rem;
-    color: var(--fg2);
     text-align: center;
     margin-bottom: 10%;
   }

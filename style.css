@@ -43,7 +43,7 @@ section {
     background-color: rgba(10,14,26,.5);
     border: 0px solid var(--fg2);
     border-radius: 20px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(30px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,7 +199,7 @@ h2 {
 
 @media only screen and (max-width: 1500px) {
     section {
-      max-width: 50%;
+      max-width: 30%;
       border-radius: 20px;
       backdrop-filter: blur(30px);
       display: flex;
@@ -229,7 +229,7 @@ h2 {
   
   @media only screen and (max-width: 1000px) {
     section {
-      max-width: 50%;
+      max-width: 40%;
       border-radius: 20px;
       backdrop-filter: blur(30px);
       display: flex;
@@ -266,7 +266,7 @@ h2 {
   
   @media only screen and (max-width: 767px) {
     section {
-      max-width: 70%;
+      max-width: 90%;
       border-radius: 20px;
       backdrop-filter: blur(30px);
       display: flex;

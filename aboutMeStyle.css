@@ -41,6 +41,44 @@ body {
     border-radius: 50%;
 }
 
+hr,    
+hr:before,
+hr:after {
+    content: "";
+    background: var(--color1);
+    display: block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    position: absolute;
+    animation: anim-hr 6s linear infinite;
+    border: 0;
+    overflow: visible;
+}
+hr:before {
+    left: -32px;
+}
+hr:after {
+    left: 32px;
+}
+hr {
+    position: relative;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+@keyframes anim-hr {
+    0% {
+        background: var(--color2);
+    }
+    50% {
+        background: var(--color1);
+    }  
+    100% {
+        background: var(--color3);
+    }
+}
+
+
 section {
   margin-top: 5%;
   min-width: 100%;
