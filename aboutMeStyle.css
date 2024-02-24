@@ -131,7 +131,7 @@ h2:hover {
 
 .btn-hover {
     font-family: "Arial";
-    width: 15%;
+    width: 25%;
     font-size: 16px;
     font-weight: 600;
     color: var(--fg2);
@@ -186,7 +186,7 @@ h2:hover {
 }
 
 .btn-hover2 {
-    width: 15%;
+    width: 30%;
     font-size: 16px;
     font-weight: 600;
     color: var(--fg2);
