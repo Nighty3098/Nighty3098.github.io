@@ -115,7 +115,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-family: "Arial";
-    background-image: url("./images/bg.jpg");
+    background-image: url("../images/bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
