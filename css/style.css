@@ -274,7 +274,7 @@ h2 {
 
 @media only screen and (max-width: 767px) {
     section {
-        max-width: 90%;
+        min-width: 100%;
         border-radius: 20px;
         backdrop-filter: blur(30px);
         display: flex;
@@ -314,7 +314,7 @@ h2 {
 
 @media only screen and (max-width: 600px) {
     section {
-        max-width: 90%;
+        min-width: 100%;
         border-radius: 20px;
         backdrop-filter: blur(30px);
         display: flex;
