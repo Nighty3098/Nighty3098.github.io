@@ -1,34 +1,59 @@
 :root {
-    --bg: #0a0e1a;
-    --fg: #ffffff;
-    --fg2: #ffffff;
-    --color2: #8a6378;
-    --color1: #d09db5;
-    --color3: #716c88;
-    --color4: #3f4a68;
-    --color5: #c9a1b3;
+    --bg: #1f4260;
+    --fg: #94bcce;
+    --color1: #a1b7be;
+    --color2: #324b63;
+    --color3: #435c64;
+    --color4: #375e82;
+    --color5: #557e8a;
+    --color6: #658690;
+    --color7: #346389;
+    --color8: #324b63;
 }
 
-details[open] {
-    height: auto;
-    transition: height 0.5s ease-out;
+
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color1) var(--color4);
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
 }
 
-details {
-    overflow: hidden;
-    transition: height 0.5s ease-out;
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Arial";
+    background-image: url("../images/bg_3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--fg);
+    margin: auto;
+    width: 60%;
 }
 
-/*
-hr {
-    border: 0;
-    height: 10px;
-    border-radius: 5px;
-    margin-top: -30px;
-    margin-bottom: 20px;
-    background-image: linear-gradient(to right, var(--color3) 0%, var(--color1) 100%);
+body::-webkit-scrollbar {
+    width: 12px;
 }
-*/
+
+body::-webkit-scrollbar-track {
+    background: var(--color4);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color1);
+    border-radius: 20px;
+    border: 3px solid var(--color4);
+}
 
 
 hr,
@@ -61,75 +86,17 @@ hr {
 }
 
 @keyframes anim-hr {
-    0% {
-        background: var(--color2);
+    10% {
+        background: var(--color7);
     }
 
     50% {
-        background: var(--color1);
+        background: var(--color8);
     }
 
     100% {
-        background: var(--color3);
+        background: var(--color4);
     }
-}
-
-
-
-html {
-    scrollbar-width: thin;
-    /* "auto" or "thin" */
-    scrollbar-color: var(--color1) var(--color4);
-    /* scroll thumb and track */
-    box-sizing: border-box;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    min-width: 300px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    text-rendering: optimizeLegibility;
-}
-
-body::-webkit-scrollbar {
-    width: 12px;
-    /* width of the entire scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--color4);
-    /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--color1);
-    /* color of the scroll thumb */
-    border-radius: 20px;
-    /* roundness of the scroll thumb */
-    border: 3px solid var(--color4);
-    /* creates padding around scroll thumb */
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: "Arial";
-    background-image: url("../images/bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: var(--fg2);
-    margin: auto;
-    width: 60%;
-}
-
-details summary::-webkit-details-marker {
-    display: none;
-}
-
-details>summary {
-    list-style: none;
 }
 
 
@@ -147,7 +114,7 @@ details>summary {
 
 section {
     min-width: 100%;
-    background-color: rgba(10, 14, 26, .5);
+    background-color: rgba(31, 66, 96, .5);
     border-radius: 20px;
     backdrop-filter: blur(30px);
     display: flex;
@@ -159,7 +126,7 @@ section {
 
 h1 {
     font-size: 3rem;
-    color: var(--color5);
+    color: var(--fg);
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -172,7 +139,7 @@ h2 {
 
 h3 {
     font-size: 1rem;
-    color: var(--fg2);
+    color: var(--fg);
     text-align: center;
     margin-bottom: 10%;
 }
@@ -198,7 +165,7 @@ summary {
     width: 40%;
     font-size: 16px;
     font-weight: 600;
-    color: var(--fg2);
+    color: var(--fg);
     cursor: pointer;
     margin: 1%;
     height: 60px;
@@ -229,24 +196,24 @@ summary {
     background-image: linear-gradient(to right,
             var(--bg),
             var(--bg),
-            var(--color3),
-            var(--color3));
+            var(--color7),
+            var(--color7));
 }
 
 .btn-hover.color-2 {
     background-image: linear-gradient(to right,
             var(--bg),
             var(--bg),
-            var(--color4),
-            var(--color4));
+            var(--color7),
+            var(--color7));
 }
 
 .btn-hover.color-3 {
     background-image: linear-gradient(to right,
             var(--bg),
             var(--bg),
-            var(--color2),
-            var(--color2));
+            var(--color7),
+            var(--color7));
 }
 
 .ag-projects_item {
@@ -313,7 +280,7 @@ summary {
 
 .ag-projects-item_content {
     font-weight: bold;
-    color: var(--color3);
+    color: var(--color1);
 
     -webkit-transition: color 1s ease;
     -o-transition: color 1s ease;
@@ -338,23 +305,23 @@ summary {
 }
 
 .ag-projects_item:nth-child(2n) .ag-projects-item_bg {
-    background-color: var(--color2);
-}
-
-.ag-projects_item:nth-child(3n) .ag-projects-item_bg {
     background-color: var(--color4);
 }
 
-.ag-projects_item:nth-child(4n) .ag-projects-item_bg {
-    background-color: var(--color3);
-}
-
-.ag-projects_item:nth-child(5n) .ag-projects-item_bg {
+.ag-projects_item:nth-child(3n) .ag-projects-item_bg {
     background-color: var(--color5);
 }
 
+.ag-projects_item:nth-child(4n) .ag-projects-item_bg {
+    background-color: var(--color6);
+}
+
+.ag-projects_item:nth-child(5n) .ag-projects-item_bg {
+    background-color: var(--color7);
+}
+
 .ag-projects_item:nth-child(6n) .ag-projects-item_bg {
-    background-color: var(--color2);
+    background-color: var(--color8);
 }
 
 @media only screen and (max-width: 1500px) {

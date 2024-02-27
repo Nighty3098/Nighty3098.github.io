@@ -1,11 +1,17 @@
 :root {
-    --bg: #0a0e1a;
-    --fg: #ffffff;
-    --fg2: #ffffff;
-    --color2: #8a6378;
-    --color1: #d09db5;
-    --color3: #716c88;
+    --bg: #1f4260;
+    --fg: #94bcce;
+    --color1: #a1b7be;
+    --color2: #324b63;
+    --color3: #435c64;
+    --color4: #8fb1c5;
+    --color5: #346389;
+    --color6: #658690;
+    --color7: #346389;
+    --color8: #324b63;
 }
+
+
 
 body {
     display: flex;
@@ -13,11 +19,11 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-family: "Arial";
-    background-image: url("../images/bg.jpg");
+    background-image: url("../images/bg_3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: var(--fg2);
+    color: var(--fg);
     margin: auto;
     width: 60%;
 }
@@ -71,25 +77,26 @@ hr {
 }
 
 @keyframes anim-hr {
-    0% {
-        background: var(--color2);
+    10% {
+        background: var(--color7);
     }
 
     50% {
-        background: var(--color1);
+        background: var(--color8);
     }
 
     100% {
-        background: var(--color3);
+        background: var(--color4);
     }
 }
+
 
 
 section {
     margin-top: 5%;
     min-width: 100%;
-    background-color: rgba(10, 14, 26, .5);
-    border: 0px solid var(--fg2);
+    background-color: rgba(31, 66, 96, .5);
+    border: 0px solid var(--fg);
     border-radius: 20px;
     backdrop-filter: blur(30px);
     display: flex;
@@ -101,7 +108,7 @@ section {
 h1 {
     font-family: "Arial";
     font-size: 35px;
-    color: var(--fg2);
+    color: var(--fg);
     text-align: center;
     line-height: 150%;
 }
@@ -110,8 +117,8 @@ h1 {
 
 h2 {
     font-family: "Arial";
-    font-size: 18px;
-    color: var(--fg2);
+    font-size: 20px;
+    color: var(--fg);
     text-align: center;
     line-height: 150%;
     transition: color 0.3s ease;
@@ -132,9 +139,9 @@ h2:hover {
 .btn-hover {
     font-family: "Arial";
     width: 25%;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: var(--fg2);
+    color: var(--fg);
     cursor: pointer;
     margin: 0%;
     height: 60px;
@@ -165,123 +172,26 @@ h2:hover {
     background-image: linear-gradient(to right,
             var(--bg),
             var(--bg),
-            var(--color1),
-            var(--color1));
+            var(--color7),
+            var(--color7));
 }
 
 .btn-hover.color-2 {
     background-image: linear-gradient(to right,
             var(--bg),
             var(--bg),
-            var(--color2),
-            var(--color2));
+            var(--color7),
+            var(--color7));
 }
 
 .btn-hover.color-3 {
     background-image: linear-gradient(to right,
             var(--bg),
             var(--bg),
-            var(--color3),
-            var(--color3));
+            var(--color7),
+            var(--color7));
 }
 
-.btn-hover2 {
-    width: 30%;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--fg2);
-    cursor: pointer;
-    margin: 0.2%;
-    height: 60px;
-    text-align: center;
-    border: none;
-    background-size: 300% 100%;
-
-    border-radius: 50px;
-    -moz-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out;
-    -webkit-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
-}
-
-.btn-hover2:hover {
-    background-position: 100% 0;
-    -moz-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out;
-    -webkit-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
-}
-
-.btn-hover2:focus {
-    outline: none;
-}
-
-.btn-hover2.color-1 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color2),
-            var(--color2));
-}
-
-.btn-hover2.color-2 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color1),
-            var(--color1));
-}
-
-.btn-hover2.color-3 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color3),
-            var(--color3));
-}
-
-.btn-hover:hover {
-    background-position: 100% 0;
-    -moz-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out;
-    -webkit-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
-}
-
-.btn-hover:focus {
-    outline: none;
-}
-
-.btn-hover.color-1 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color3),
-            var(--color3));
-}
-
-.btn-hover.color-2 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color2),
-            var(--color2));
-}
-
-.btn-hover.color-3 {
-    background-image: linear-gradient(var(--bg),
-            var(--bg),
-            var(--color1),
-            var(--color1));
-}
-
-.btn-hover.color-4 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color2),
-            var(--color2));
-}
 
 @media only screen and (max-width: 1500px) {
     section {
@@ -344,12 +254,6 @@ h2:hover {
         height: 60px;
     }
 
-    .btn-hover2 {
-        width: 70%;
-        margin: 1%;
-        height: 60px;
-    }
-
 
     .ag-projects_item {
         min-width: 100%;
@@ -394,12 +298,6 @@ h2:hover {
         }
 
         .btn-hover {
-            width: 70%;
-            margin: 1%;
-            height: 60px;
-        }
-
-        .btn-hover2 {
             width: 70%;
             margin: 1%;
             height: 60px;
@@ -454,13 +352,6 @@ h2:hover {
             margin: 1%;
             height: 60px;
         }
-
-        .btn-hover2 {
-            width: 70%;
-            margin: 1%;
-            height: 60px;
-        }
-
 
         .ag-projects_item {
             min-width: 90%;

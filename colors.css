@@ -1,0 +1,54 @@
+bg2
+:root {
+--color1: #bfa577;
+    --color2: #b0a46f;
+    --color3: #91a360;
+    --color4: #73a250;
+    --color5: #945444;
+    --color6: #8d6446;
+    --color7: #80834b;
+    --color8: #3c2c2a;
+    --color9: #485454;
+}
+
+bg1
+:root {
+    --bg: #131c24;
+    --fg: #7185c9;
+    --color1: #91a1cb;
+    --color2: #c1cace;
+    --color3: #86604e;
+    --color4: #94abb0;
+    --color5: #94abb0;
+    --color6: #a1aecc;
+    --color7: #c1cace;
+    --color8: #8193ca;
+}
+
+bg4
+:root {
+    --bg: #28333c;
+    --fg: #66777f;
+    --color1: #a1360a;
+    --color2: #996e64;
+    --color3: #652a12;
+    --color4: #66777f;
+    --color5: #28333c;
+    --color6: #364248;
+    --color7: #652a12;
+    --color8: #a1360a;
+}
+
+bg3
+:root {
+    --bg: #1f4260;
+    --fg: #94bcce;
+    --color1: #a1b7be;
+    --color2: #324b63;
+    --color3: #435c64;
+    --color4: #375e82;
+    --color5: #346389;
+    --color6: #658690;
+    --color7: #346389;
+    --color8: #324b63;
+}
