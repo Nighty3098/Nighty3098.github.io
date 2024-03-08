@@ -94,7 +94,7 @@ hr {
         background: var(--color8);
     }
 
-    100% {
+    90% {
         background: var(--color4);
     }
 }
