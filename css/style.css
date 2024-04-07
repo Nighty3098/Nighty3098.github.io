@@ -46,6 +46,19 @@ body {
     height: 70%;
     width: 70%;
     border-radius: 20%;
+
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes animate {
+    from {
+        transform: translateX(-100);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .details {
