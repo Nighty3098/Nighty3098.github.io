@@ -1,13 +1,13 @@
 :root {
-    --bg: #161816;
+    --bg: #13161b;
     --fg: #CBC5C0;
-    --color1: #2C2920;
-    --color2: #272A28;
-    --color3: #3D2F21;
-    --color4: #765F44;
-    --color5: #21221E;
-    --color6: #232521;
-    --color7: #354239;
+    --color1: #29302A;
+    --color2: #383D3C;
+    --color3: #29302A;
+    --color4: #D9A34B;
+    --color5: #333C33;
+    --color6: #333C33;
+    --color7: #383D3C;
 }
 
 html {
@@ -32,7 +32,6 @@ h3 {
     font-size: 19px;
     color: var(--fg);
 }
-
 
 .main-block {
     background-image: url('../imgs/background.jpg');
@@ -69,6 +68,13 @@ h3 {
     margin-bottom: 20px;
 }
 
+.svg_image {
+    width: 70vh;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
 .buttons {
     display: block;
     align-items: center;
@@ -88,7 +94,7 @@ h3 {
     margin-top: 10px;
     border: none;
     border-radius: 10px;
-    background-color: var(--color7);
+    background-color: var(--color4);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
