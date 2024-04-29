@@ -46,7 +46,7 @@ h3 {
 }
 
 .about_me {
-    margin-top: 10vh;
+    margin-top: 30vh;
     display: flexbox;
     height: 100vh;
     align-items: center;
@@ -55,7 +55,6 @@ h3 {
 
 .projects {
     display: block;
-    height: 100vh;
     align-items: center;
     justify-content: center;
 }
@@ -163,4 +162,21 @@ h3 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+        color: var(--fg);
+    }
+    
+    h2 {
+        font-size: 19px;
+        color: var(--fg);
+    }
+    
+    h3 {
+        font-size: 15px;
+        color: var(--fg);
+    }
 }
