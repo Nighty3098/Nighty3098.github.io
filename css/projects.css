@@ -1,219 +1,6 @@
-:root {
-    --bg: #1f4260;
-    --fg: #94bcce;
-    --color1: #a1b7be;
-    --color2: #324b63;
-    --color3: #435c64;
-    --color4: #375e82;
-    --color5: #557e8a;
-    --color6: #658690;
-    --color7: #346389;
-    --color8: #324b63;
-}
-
-
-
-html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color1) var(--color4);
-    box-sizing: border-box;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    min-width: 300px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    text-rendering: optimizeLegibility;
-}
-
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: "Arial";
-    background-image: url("../images/bg_3.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: var(--fg);
-    margin: auto;
-    width: 60%;
-}
-
-body::-webkit-scrollbar {
-    width: 12px;
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--color4);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--color1);
-    border-radius: 20px;
-    border: 3px solid var(--color4);
-}
-
-
-hr,
-hr:before,
-hr:after {
-    content: "";
-    background: var(--color1);
-    display: block;
-    height: 14px;
-    width: 14px;
-    border-radius: 50%;
-    position: absolute;
-    animation: anim-hr 6s linear infinite;
-    border: 0;
-    overflow: visible;
-}
-
-hr:before {
-    left: -32px;
-}
-
-hr:after {
-    left: 32px;
-}
-
-hr {
-    position: relative;
-    margin-top: -30px;
-    margin-bottom: 20px;
-}
-
-@keyframes anim-hr {
-    10% {
-        background: var(--color7);
-    }
-
-    50% {
-        background: var(--color8);
-    }
-
-    90% {
-        background: var(--color4);
-    }
-}
-
 
 .badge {
     width: 20%;
-}
-
-.content {
-    margin-top: 2%;
-}
-
-.image {
-    border-radius: 20px;
-}
-
-section {
-    min-width: 100%;
-    background-color: rgba(31, 66, 96, .5);
-    border-radius: 20px;
-    backdrop-filter: blur(30px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 3rem;
-    margin: 5%;
-}
-
-h1 {
-    font-size: 3rem;
-    color: var(--fg);
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 10%;
-}
-
-h3 {
-    font-size: 1rem;
-    color: var(--fg);
-    text-align: center;
-    margin-bottom: 10%;
-}
-
-b {
-    text-align: center;
-    font-size: 2rem;
-}
-
-summary {
-    margin-top: 20px;
-    margin-bottom: auto;
-}
-
-.buttons {
-    margin: 5%;
-    height: 50%;
-    text-align: center;
-    width: 60%;
-}
-
-.btn-hover {
-    width: 40%;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--fg);
-    cursor: pointer;
-    margin: 1%;
-    height: 60px;
-    text-align: center;
-    border: none;
-    background-size: 300% 100%;
-
-    border-radius: 50px;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-}
-
-.btn-hover:hover {
-    background-position: 100% 0;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-}
-
-.btn-hover:focus {
-    outline: none;
-}
-
-.btn-hover.color-1 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color7),
-            var(--color7));
-}
-
-.btn-hover.color-2 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color7),
-            var(--color7));
-}
-
-.btn-hover.color-3 {
-    background-image: linear-gradient(to right,
-            var(--bg),
-            var(--bg),
-            var(--color7),
-            var(--color7));
 }
 
 .ag-projects_item {
@@ -236,7 +23,7 @@ summary {
 .ag-projects-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: var(--bg);
+    background-color: #1D1F1C;
     border-radius: 30px;
 
     overflow: hidden;
@@ -263,7 +50,7 @@ summary {
     overflow: hidden;
 
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
 
     z-index: 2;
@@ -290,7 +77,7 @@ summary {
 .ag-projects-item_bg {
     height: 128px;
     width: 128px;
-    background-color: var(--color3);
+    background-color: var(--color7);
 
     z-index: 1;
     position: absolute;
@@ -305,15 +92,15 @@ summary {
 }
 
 .ag-projects_item:nth-child(2n) .ag-projects-item_bg {
-    background-color: var(--color4);
+    background-color: var(--color7);
 }
 
 .ag-projects_item:nth-child(3n) .ag-projects-item_bg {
-    background-color: var(--color5);
+    background-color: var(--color7);
 }
 
 .ag-projects_item:nth-child(4n) .ag-projects-item_bg {
-    background-color: var(--color6);
+    background-color: var(--color7);
 }
 
 .ag-projects_item:nth-child(5n) .ag-projects-item_bg {
@@ -321,90 +108,5 @@ summary {
 }
 
 .ag-projects_item:nth-child(6n) .ag-projects-item_bg {
-    background-color: var(--color8);
-}
-
-@media only screen and (max-width: 1500px) {
-    .ag-projects_item {
-        max-width: 200px;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .ag-projects_item {
-        max-width: 200px;
-        min-height: ;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    }
-
-    .ag-projects_item {
-        -ms-flex-preferred-size: calc(50% - 30px);
-        flex-basis: calc(50% - 30px);
-    }
-}
-
-@media only screen and (max-width: 740px) {
-    .ag-projects_item {
-        max-width: 100%;
-        min-height: ;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    }
-
-    .ag-format-container {
-        width: 96%;
-    }
-
-
-}
-
-@media only screen and (max-width: 600px) {
-    section {
-        min-width: 120%;
-        border-radius: 20px;
-        backdrop-filter: blur(30px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem 3rem;
-    }
-
-
-    h1 {
-        font-size: 3rem;
-        text-align: center;
-        margin-top: 4%;
-        margin-bottom: 4%;
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 10%;
-    }
-
-    h3 {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 10%;
-    }
-
-    b {
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
-
-    .ag-projects_item {
-        max-width: 90%;
-        min-height: ;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    }
-
-    .ag-projects-item_content {
-        font-size: 10px;
-    }
+    background-color: var(--color7);
 }
