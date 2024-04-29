@@ -46,15 +46,14 @@ h3 {
 }
 
 .about_me {
-    margin-top: 60%;
-    display: block;
+    margin-top: 10vh;
+    display: flexbox;
     height: 100vh;
     align-items: center;
     justify-content: center;
 }
 
 .projects {
-    margin-top: 60%;
     display: block;
     height: 100vh;
     align-items: center;
@@ -62,8 +61,8 @@ h3 {
 }
 
 .user-avatar {
-    width: 15vh;
-    height: 15vh;
+    width: 25vh;
+    height: 25vh;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
