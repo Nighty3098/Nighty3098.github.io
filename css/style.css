@@ -37,6 +37,8 @@ h3 {
 .main-block {
     background-image: url('../imgs/background.jpg');
     background-size: cover;
+    filter: contrast(1.1);
+    filter: brightness(90%);
     background-position: center;
     height: 100vh;
     display: flex;
