@@ -15,7 +15,9 @@
 </div>
 <br><br><br><br><br>
 
-<img src="https://github.com/Nighty3098/Nighty3098.github.io/assets/154594695/476d6999-fc13-4b6f-8410-56ec64189204" align="center" />
+<img src="https://github.com/Nighty3098/Nighty3098.github.io/assets/154594695/97f9e975-c718-444a-971f-db79b1567477" align="center" /><br><br>
+<img src="https://github.com/Nighty3098/Nighty3098.github.io/assets/154594695/1642e439-12ce-4095-b833-a7666064f0bb" align="center" /><br><br>
+<img src="https://github.com/Nighty3098/Nighty3098.github.io/assets/154594695/fe74c0a1-6c73-42cf-838b-f496e3f97c7a" align="center" />
 
 
 <div class="link" align="center">
