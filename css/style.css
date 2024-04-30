@@ -77,7 +77,7 @@ h3 {
 }
 
 .svg_image {
-    width: 70vh;
+    width: 50%;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
