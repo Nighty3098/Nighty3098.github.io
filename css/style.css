@@ -17,11 +17,12 @@ html {
 }
 
 .skillicons {
-    width: 20vh;
+    width: 30vh;
 }
 
 .skill_badge {
-    border-radius: 5px;
+    height: 2vh;
+    border-radius: 10px;
 }
 
 html {
@@ -236,5 +237,10 @@ footer {
     .skillicons {
         width: 25vh;
     }
-    
+
+    .skill_badge {
+        height: 2vh;
+        border-radius: 10px;
+    }
+
 }
