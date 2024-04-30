@@ -11,6 +11,11 @@
     --color7: #383d3c;
 }
 
+html {
+    scrollbar-color: var(--color4) var(--bg);
+    scrollbar-width: thin;
+}
+
 .skillicons {
     width: 20vh;
 }
