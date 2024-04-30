@@ -1,6 +1,7 @@
 :root {
     --bg: #13161b;
-    --fg: #CBC5C0;
+    --fg2: #CBC5C0;
+    --fg: #13161b;
     --color1: #29302A;
     --color2: #383D3C;
     --color3: #29302A;
@@ -20,12 +21,12 @@ body {
 
 h1 {
     font-size: 50px;
-    color: var(--fg);
+    color: var(--fg2);
 }
 
 h2 {
     font-size: 24px;
-    color: var(--fg);
+    color: var(--fg2);
 }
 
 h3 {
@@ -183,16 +184,16 @@ h3 {
 @media only screen and (max-width: 600px) {
     h1 {
         font-size: 30px;
-        color: var(--fg);
+        color: var(--fg2);
     }
     
     h2 {
         font-size: 19px;
-        color: var(--fg);
+        color: var(--fg2);
     }
     
     h3 {
         font-size: 15px;
-        color: var(--fg);
+        color: var(--fg2);
     }
 }
