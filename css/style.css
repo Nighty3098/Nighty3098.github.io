@@ -37,8 +37,8 @@ h3 {
 
 .hello {
     display: flexbox;
-    height: 100vh;
-    width: 100vh;
+    height: 100%;
+    width: 100%;
     align-items: center center;
     align-content: center;
     background-color: rgba(0, 0, 0, 0.4);
