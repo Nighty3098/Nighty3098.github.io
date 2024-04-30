@@ -4,6 +4,7 @@
 }
 
 .ag-projects_item {
+    color: var(--bg);
     display: inline-block;
     -ms-flex-preferred-size: calc(33.33333% - 30px);
     flex-basis: calc(100% - 130px);
@@ -23,7 +24,8 @@
 .ag-projects-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: #232627;
+    background-color: var(--fg);
+    color: transparent;
     border-radius: 30px;
 
     overflow: hidden;
@@ -34,7 +36,7 @@
 .ag-projects-item_link:hover,
 .ag-projects-item_link:hover {
     text-decoration: none;
-    color: #fff;
+    color: var(--bg);
 }
 
 .ag-projects-item_link:hover .ag-projects-item_bg {
@@ -51,7 +53,7 @@
 
     font-weight: bold;
     font-size: 25px;
-    color: #fff;
+    color: var(--bg);
 
     z-index: 2;
     position: relative;
@@ -59,7 +61,7 @@
 
 .ag-projects-item_content-box {
     font-size: 18px;
-    color: #fff;
+    color: var(--bg);
 
     z-index: 2;
     position: relative;
@@ -67,7 +69,7 @@
 
 .ag-projects-item_content {
     font-weight: bold;
-    color: #333C33;
+    color: var(--bg);
 
     -webkit-transition: color 1s ease;
     -o-transition: color 1s ease;
@@ -77,7 +79,8 @@
 .ag-projects-item_bg {
     height: 128px;
     width: 128px;
-    background-color: #333C33;
+    background-color: var(--color4);
+    color: var(--bg);
 
     z-index: 1;
     position: absolute;
@@ -92,21 +95,26 @@
 }
 
 .ag-projects_item:nth-child(2n) .ag-projects-item_bg {
-    background-color: #333C33;
+    color: var(--bg);
+    background-color: var(--color4);
 }
 
 .ag-projects_item:nth-child(3n) .ag-projects-item_bg {
-    background-color: #333C33;
+    color: var(--bg);
+    background-color: var(--color4);
 }
 
 .ag-projects_item:nth-child(4n) .ag-projects-item_bg {
-    background-color: #333C33;
+    color: var(--bg);
+    background-color: var(--color4);
 }
 
 .ag-projects_item:nth-child(5n) .ag-projects-item_bg {
-    background-color: #333C33;
+    color: var(--bg);
+    background-color: var(--color4);
 }
 
 .ag-projects_item:nth-child(6n) .ag-projects-item_bg {
-    background-color: #333C33;
+    color: var(--bg);
+    background-color: var(--color4);
 }
