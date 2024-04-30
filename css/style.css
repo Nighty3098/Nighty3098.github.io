@@ -1,200 +1,202 @@
 :root {
-    --bg: #13161b;
-    --fg2: #CBC5C0;
-    --fg: #13161b;
-    --color1: #29302A;
-    --color2: #383D3C;
-    --color3: #29302A;
-    --color4: #D9A34B;
-    --color5: #333C33;
-    --color6: #333C33;
-    --color7: #383D3C;
+  --bg: #13161b;
+  --fg2: #cbc5c0;
+  --fg: #13161b;
+  --color1: #29302a;
+  --color2: #383d3c;
+  --color3: #29302a;
+  --color4: #d9a34b;
+  --color5: #333c33;
+  --color6: #333c33;
+  --color7: #383d3c;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--bg);
+  background-color: var(--bg);
 }
 
 h1 {
-    font-size: 50px;
-    color: var(--fg2);
+  font-size: 50px;
+  color: var(--fg2);
 }
 
-
 h2 {
-    font-size: 24px;
-    color: var(--fg2);
+  font-size: 24px;
+  color: var(--fg2);
 }
 
 h3 {
-    font-size: 19px;
-    color: var(--fg);
+  font-size: 19px;
+  color: var(--fg);
+}
+
+.override {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
 }
 
 .hello {
-    display: flexbox;
-    height: 100%;
-    width: 100%;
-    align-items: center center;
-    align-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 50vh;
+  display: flexbox;
+  height: 100%;
+  width: 100%;
 }
 
 .main-block {
-    background-image: url('../imgs/background.jpg');
-    background-size: cover;
-    filter: contrast(1.1);
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
+  background-image: url("../imgs/background.jpg");
+  background-size: cover;
+  filter: contrast(1.1);
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 }
 
 .about_me {
-    margin-top: 30vh;
-    display: flexbox;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+  margin-top: 30vh;
+  display: flexbox;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .projects {
-    display: block;
-    align-items: center;
-    justify-content: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-avatar {
-    width: 25vh;
-    height: 25vh;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
+  width: 25vh;
+  height: 25vh;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .svg_image {
-    width: 50%;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
+  width: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .buttons {
-    display: block;
-    align-items: center;
+  display: block;
+  align-items: center;
 }
 
 .user-text {
-    text-align: center;
-    font-size: 20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .button {
-    display: inline-block;
-    height: 50px;
-    width: 200px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--color4);
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.7s ease;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color4);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
 }
 
 .button:hover {
-    transition: background-color 0.7s ease;
-    background-color: var(--color6);
+  transition: background-color 0.7s ease;
+  background-color: var(--color6);
 }
 
 .button:active {
-    background-color: var(--color5);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--color5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-
 .GitButton {
-    display: inline-block;
-    height: 50px;
-    width: 200px;
-    margin-right: 5px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 10px;
-    background-color: #0c1023;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.7s ease;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0c1023;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
 }
 
 .DiscordButton {
-    display: inline-block;
-    height: 50px;
-    width: 200px;
-    border: none;
-    margin-left: 5px;
-    margin-top: 5px;
-    border-radius: 10px;
-    background-color: #626ee6;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.7s ease;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  border: none;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: #626ee6;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
 }
 
 .TgButton {
-    display: inline-block;
-    height: 50px;
-    width: 200px;
-    margin-right: 5px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 10px;
-    background-color: #58a8e3;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.7s ease;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #58a8e3;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
 }
 
 .RedditButton {
-    display: inline-block;
-    height: 50px;
-    width: 200px;
-    margin-left: 5px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 10px;
-    background-color: #ee6a34;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.7s ease;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ee6a34;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
 }
 
 @media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 30px;
-        color: var(--fg2);
-    }
-    
-    h2 {
-        font-size: 19px;
-        color: var(--fg2);
-    }
-    
-    h3 {
-        font-size: 15px;
-        color: var(--fg);
-    }
+  h1 {
+    font-size: 30px;
+    color: var(--fg2);
+  }
+
+  h2 {
+    font-size: 19px;
+    color: var(--fg2);
+  }
+
+  h3 {
+    font-size: 15px;
+    color: var(--fg);
+  }
 }
