@@ -68,6 +68,12 @@ h3 {
     width: 100%;
 }
 
+.animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s, opacity 1s;
+}
+
 .main-block {
     background-image: url("../imgs/background.jpg");
     background-size: cover;
@@ -95,6 +101,7 @@ h3 {
     justify-content: center;
 }
 
+
 .projects {
     display: block;
     align-items: center;
@@ -114,6 +121,7 @@ h3 {
     object-fit: cover;
     margin-bottom: 20px;
 }
+
 
 .svg_image {
     width: 50%;
