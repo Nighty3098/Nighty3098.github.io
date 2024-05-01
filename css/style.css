@@ -11,6 +11,18 @@
     --color7: #383d3c;
 }
 
+nav {
+    display: box;
+    height: 70px;
+    background-color: rgba(19, 22, 27, 0.3);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+
 
 html {
     scrollbar-color: var(--color4) var(--bg);
@@ -55,7 +67,7 @@ h3 {
 }
 
 .override {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0px);
     background-color: rgba(19, 22, 27, 0.3);
     height: 100%;
     width: 100%;
@@ -77,6 +89,7 @@ h3 {
 
 .main-block {
     background-image: url("../imgs/background.jpg");
+    background-attachment: fixed;
     background-size: cover;
     margin-top: 20px;
     margin-right: 10px;
@@ -157,15 +170,20 @@ h3 {
     transition: background-color 0.7s ease;
 }
 
-.button:hover {
-    transition: background-color 0.7s ease;
-    background-color: var(--fg2);
+@media (hover: hover) {
+    .button:hover {
+        transition: background-color 0.7s ease;
+        background-color: var(--fg2);
+    }
 }
 
-.button:active {
-    background-color: var(--color2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+@media (hover: none) {
+    .button:active {
+        background-color: var(--fg2);
+    }
 }
+
 
 footer {
     align-items: center;
@@ -258,5 +276,4 @@ footer {
         height: 2vh;
         border-radius: 10px;
     }
-
 }
