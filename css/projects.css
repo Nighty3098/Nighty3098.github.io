@@ -13,11 +13,8 @@
 
     border-radius: 30px;
 
-    min-height: 250px;
-    max-height: 250px;
-
-    min-width: 300px;
-    max-width: 300px;
+    width: 400px;
+    height: 200px;
 }
 
 .ag-projects-item_link {
@@ -60,7 +57,8 @@
 
 .ag-projects-item_content-box {
     font-size: 18px;
-
+    width: 350px;
+    height: 200px;
     z-index: 2;
     position: relative;
 }
@@ -76,6 +74,7 @@
 .ag-projects-item_bg {
     height: 128px;
     width: 128px;
+
     background-color: var(--color4);
 
     z-index: 1;
