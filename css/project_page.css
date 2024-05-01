@@ -173,7 +173,10 @@ footer {
 }
 
 ._footer{
+    width: 100vh;
     display: flexbox;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer_content {
