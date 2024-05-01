@@ -11,6 +11,7 @@
     --color7: #383d3c;
 }
 
+
 html {
     scrollbar-color: var(--color4) var(--bg);
     scrollbar-width: thin;
@@ -188,6 +189,13 @@ footer {
     background-color: var(--color4);
     justify-content: center;
 }
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
     h1 {

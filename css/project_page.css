@@ -11,10 +11,25 @@
     --color7: #383d3c;
 }
 
+.perspective-container {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+.perspective-image {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
 html {
     scrollbar-color: var(--color4) var(--bg);
     scrollbar-width: thin;
 }
+
+body {
+    background-color: var(--bg);
+}
+
 
 .skillicons {
     width: 30vh;
@@ -27,10 +42,6 @@ html {
 
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--bg);
 }
 
 a {
