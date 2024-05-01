@@ -11,11 +11,6 @@
     --color7: #383d3c;
 }
 
-.perspective-container {
-    perspective: 1000px;
-    perspective-origin: 50% 50%;
-}
-
 .perspective-image {
     transform-style: preserve-3d;
     transition: transform 0.5s;
@@ -31,7 +26,7 @@ body {
 }
 
 .perspective-image {
-    width: 40vh;
+    width: 30vh;
 }
 
 .skillicons {
@@ -255,22 +250,6 @@ footer {
         color: var(--fg);
     }
 
-    .footer_content {
-        color: var(--bg);
-        font-size: medium;
-        display: flex;
-
-        height: 4vh;
-        width: 100vh;
-        margin-left: 6vh;
-        margin-right: 6vh;
-        margin-bottom: 3vh;
-        border-radius: 10vh;
-
-        align-items: center;
-        background-color: var(--color4);
-        justify-content: center;
-    }
 
     .svg_image {
         width: 100%;
