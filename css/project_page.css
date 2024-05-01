@@ -11,6 +11,7 @@
     --color7: #383d3c;
 }
 
+
 .perspective-image {
     transform-style: preserve-3d;
     transition: transform 0.5s;
@@ -26,7 +27,7 @@ body {
 }
 
 .perspective-image {
-    width: 30vh;
+    width: 60vh;
 }
 
 .skillicons {
@@ -278,5 +279,9 @@ footer {
     .skill_badge {
         height: 2vh;
         border-radius: 10px;
+    }
+
+    .perspective-image {
+        width: 30vh;
     }
 }
