@@ -25,6 +25,6 @@
 </div>
 <br><br>
 <div class="content" align="center">
-    <a>License<br>MIT License.</a>
+    <a>License<br>MIT License.</a><br />
     <a align="center">You can create your own homepage for free without notifying me by forking this project under the following conditions:<br>Add a link to my homepage<br>Check out  <a href="/LICENSE.md">LICENSE</a>  for more detail.</a>
 </div>
