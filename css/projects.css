@@ -13,8 +13,8 @@
 
     border-radius: 30px;
 
-    width: 400px;
-    height: 200px;
+    width: 30vh;
+    height: 14vh;
 }
 
 .ag-projects-item_link {
@@ -57,10 +57,11 @@
 
 .ag-projects-item_content-box {
     font-size: 18px;
-    width: 350px;
-    height: 200px;
     z-index: 2;
     position: relative;
+
+    width: 27vh;
+    height: 13vh;
 }
 
 .ag-projects-item_content {
