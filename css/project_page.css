@@ -11,6 +11,19 @@
     --color7: #383d3c;
 }
 
+.about_project {
+    margin-top: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    height: 10vh;
+    width: 30vh;
+    background-color: var(--color4);
+    color: var(--bg);
+    border-radius: 1vh;
+}
+
 .perspective-image {
     margin-top: 1%;
     width: 90vh;

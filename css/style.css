@@ -274,6 +274,120 @@ footer {
 }
 
 
+
+.badge {
+    width: 20%;
+}
+
+.ag-projects_item {
+    display: inline-block;
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(100% - 130px);
+
+    margin: 15px 15px;
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    width: 30vh;
+    height: 15vh;
+}
+
+.ag-projects-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: var(--fg2);
+    color: transparent;
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.ag-projects-item_link:hover,
+.ag-projects-item_link:hover {
+    text-decoration: none;
+    color: var(--bg);
+}
+
+.ag-projects-item_link:hover .ag-projects-item_bg {
+    -webkit-transform: scale(20);
+    -ms-transform: scale(20);
+    transform: scale(20);
+}
+
+.ag-projects-item_title {
+    color: var(--bg);
+    min-height: 20px;
+    margin: 0 0 25px;
+
+    overflow: hidden;
+
+    font-weight: bold;
+    font-size: 25px;
+
+    z-index: 2;
+    position: relative;
+}
+
+.ag-projects-item_content-box {
+    font-size: 18px;
+    z-index: 2;
+    position: relative;
+
+    width: 27vh;
+    height: 15vh;
+}
+
+.ag-projects-item_content {
+    font-weight: bold;
+
+    -webkit-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+}
+
+.ag-projects-item_bg {
+    height: 128px;
+    width: 128px;
+
+    background-color: var(--color4);
+
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+
+    border-radius: 100%;
+
+    -webkit-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.ag-projects_item:nth-child(2n) .ag-projects-item_bg {
+    background-color: var(--color4);
+}
+
+.ag-projects_item:nth-child(3n) .ag-projects-item_bg {
+    background-color: var(--color4);
+}
+
+.ag-projects_item:nth-child(4n) .ag-projects-item_bg {
+    background-color: var(--color4);
+}
+
+.ag-projects_item:nth-child(5n) .ag-projects-item_bg {
+    background-color: var(--color4);
+}
+
+.ag-projects_item:nth-child(6n) .ag-projects-item_bg {
+    background-color: var(--color4);
+}
+
+
+
 @media only screen and (max-width: 700px) {
     h1 {
         font-size: 30px;
@@ -340,7 +454,7 @@ footer {
     }
 
     .skill_badge {
-        height: 2vh;
+        height: 2.5vh;
         border-radius: 10px;
     }
 
@@ -353,5 +467,77 @@ footer {
     .btn-menu:checked + label + .list-menu{
         display: block;
     }
+    .ag-projects_item {
+        display: inline-block;
+        -ms-flex-preferred-size: calc(33.33333% - 30px);
+        flex-basis: calc(100% - 130px);
+    
+        margin: 15px 15px;
+        overflow: hidden;
+    
+        border-radius: 30px;
+    
+        width: 30vh;
+        height: 15vh;
+    }
 }
 
+@media only screen and (max-width: 1000px) {
+    .ag-projects_item {
+        display: inline-block;
+        -ms-flex-preferred-size: calc(33.33333% - 30px);
+        flex-basis: calc(100% - 130px);
+    
+        margin: 15px 15px;
+        overflow: hidden;
+    
+        border-radius: 30px;
+    
+        width: 30vh;
+        height: 16vh;
+    }
+    .skill_badge {
+        height: 2.5vh;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .ag-projects_item {
+        display: inline-block;
+        -ms-flex-preferred-size: calc(33.33333% - 30px);
+        flex-basis: calc(100% - 130px);
+    
+        margin: 15px 15px;
+        overflow: hidden;
+    
+        border-radius: 30px;
+    
+        width: 30vh;
+        height: 16vh;
+    }
+    .skill_badge {
+        height: 2.3vh;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 3000px) {
+    .ag-projects_item {
+        display: inline-block;
+        -ms-flex-preferred-size: calc(33.33333% - 30px);
+        flex-basis: calc(100% - 130px);
+    
+        margin: 15px 15px;
+        overflow: hidden;
+    
+        border-radius: 30px;
+    
+        width: 30vh;
+        height: 16vh;
+    }
+    .skill_badge {
+        height: 2.3vh;
+        border-radius: 10px;
+    }
+}
