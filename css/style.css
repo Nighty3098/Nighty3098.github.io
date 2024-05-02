@@ -205,6 +205,24 @@ h3 {
     transition: background-color 0.7s ease;
 }
 
+.button2 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color4);
+    color: var(--bg);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+    z-index: 56;
+}
+
 @media (hover: hover) {
     .button:hover {
         transition: background-color 0.7s ease;
@@ -219,6 +237,18 @@ h3 {
     }
 }
 
+@media (hover: hover) {
+    .button2:hover {
+        transition: background-color 0.7s ease;
+        background-color: var(--fg2);
+    }
+}
+
+@media (hover: none) {
+    .button2:active {
+        background-color: var(--fg2);
+    }
+}
 
 footer {
     align-items: center;
