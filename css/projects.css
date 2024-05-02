@@ -14,7 +14,7 @@
     border-radius: 30px;
 
     width: 30vh;
-    height: 13vh;
+    height: 15vh;
 }
 
 .ag-projects-item_link {
@@ -110,13 +110,13 @@
     background-color: var(--color4);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 300px) {
     .ag-projects-item_content-box {
         font-size: 18px;
         z-index: 2;
         position: relative;
     
         width: 25vh;
-        height: 16vh;
+        height: 30vh;
     }
 }
