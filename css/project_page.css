@@ -291,4 +291,20 @@ footer {
         align-items: center;
         justify-content: center;
     }
+    .footer_content {
+        color: var(--bg);
+        font-size: medium;
+        display: flex;
+    
+        height: 3vh;
+        width: 45%;
+        margin-left: 6vh;
+        margin-right: 6vh;
+        margin-bottom: 3vh;
+        border-radius: 10vh;
+
+        align-items: center;
+        background-color: var(--color4);
+        justify-content: center;
+    }
 }
