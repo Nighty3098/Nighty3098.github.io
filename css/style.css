@@ -1,3 +1,4 @@
+/*
 :root {
     --bg: #13161b;
     --fg2: #cbc5c0;
@@ -9,6 +10,20 @@
     --color5: #333c33;
     --color6: #333c33;
     --color7: #383d3c;
+}
+*/
+
+:root {
+    --bg: #1C2024;
+    --fg2: #CBC8BA;
+    --fg: #1C2024;
+    --color1: #27353C;
+    --color2: #737E83;
+    --color4: #59737F;
+    --color3: #915736;
+    --color5: #27353C;
+    --color6: #202C31;
+    --color7: #82939B;
 }
 
 nav {
@@ -57,7 +72,6 @@ nav {
     content: '\f00d';
     color: #f00;
 }
-
 
 
 html {
@@ -124,6 +138,7 @@ h3 {
 }
 
 .main-block {
+    /*background-image: url("../imgs/background3.jpg");*/
     background-image: url("../imgs/background.jpg");
     background-attachment: fixed;
     background-size: cover;
@@ -143,10 +158,24 @@ h3 {
     display: flex;
 }
 
+.quote {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: flexbox;
+    background-color: var(--color4);
+    color: var(--bg);
+    border-radius: 1vh;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .about_me {
     margin-top: 50vh;
     margin-bottom: 50vh;
     display: flexbox;
+    border-radius: 1vh;
     align-items: center;
     justify-content: center;
 }
@@ -480,6 +509,18 @@ footer {
         width: 30vh;
         height: 15vh;
     }
+
+    .quote {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        display: flexbox;
+        background-color: var(--color4);
+        color: var(--bg);
+        border-radius: 1vh;
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -503,26 +544,6 @@ footer {
 }
 
 @media only screen and (max-width: 1500px) {
-    .ag-projects_item {
-        display: inline-block;
-        -ms-flex-preferred-size: calc(33.33333% - 30px);
-        flex-basis: calc(100% - 130px);
-    
-        margin: 15px 15px;
-        overflow: hidden;
-    
-        border-radius: 30px;
-    
-        width: 30vh;
-        height: 16vh;
-    }
-    .skill_badge {
-        height: 2.3vh;
-        border-radius: 10px;
-    }
-}
-
-@media only screen and (max-width: 3000px) {
     .ag-projects_item {
         display: inline-block;
         -ms-flex-preferred-size: calc(33.33333% - 30px);

@@ -1,3 +1,4 @@
+/*
 :root {
     --bg: #13161b;
     --fg2: #cbc5c0;
@@ -10,14 +11,27 @@
     --color6: #333c33;
     --color7: #383d3c;
 }
+*/
+
+:root {
+    --bg: #1C2024;
+    --fg2: #CBC8BA;
+    --fg: #1C2024;
+    --color1: #27353C;
+    --color2: #737E83;
+    --color4: #59737F;
+    --color3: #915736;
+    --color5: #27353C;
+    --color6: #202C31;
+    --color7: #82939B;
+}
 
 .about_project {
-    margin-top: 6vh;
-    display: flex;
+    padding: 4vh 4vh;
+    display: flexbox;
     justify-content: center;
     align-items: center;
     font-size: large;
-    height: 10vh;
     width: 30vh;
     background-color: var(--color4);
     color: var(--bg);
@@ -28,7 +42,14 @@
     margin-top: 1%;
     width: 90vh;
     transform-style: preserve-3d;
-    transition: transform 0.5s;
+    z-index: 100;
+    border: 5px solid var(--bg);
+    border-radius: 10px;
+    transition: border 0.5s ease-in-out;
+}
+
+.perspective-image:hover {
+    border: 5px solid var(--color4);
 }
 
 html {
@@ -116,8 +137,8 @@ h3 {
     margin-left: 10px;
     filter: contrast(1.1);
     background-position: center;
-    height: 100vh;
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
