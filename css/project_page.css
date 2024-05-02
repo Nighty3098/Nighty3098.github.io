@@ -284,4 +284,11 @@ footer {
     .perspective-image {
         width: 30vh;
     }
+
+    ._footer {
+        width: 90%;
+        display: flexbox;
+        align-items: center;
+        justify-content: center;
+    }
 }
