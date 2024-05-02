@@ -11,8 +11,9 @@
     --color7: #383d3c;
 }
 
-
 .perspective-image {
+    margin-top: 1%;
+    width: 90vh;
     transform-style: preserve-3d;
     transition: transform 0.5s;
 }
@@ -176,13 +177,14 @@ h3 {
     transition: background-color 0.7s ease;
 }
 
-.inactive_button {
-    display: inline-block;
+.button2 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+
     height: 50px;
-    width: 200px;
-    margin-left: 5px;
-    margin-top: 10px;
-    margin-right: 5px;
+    width: 50px;
     border: none;
     border-radius: 10px;
     background-color: var(--color4);
@@ -190,6 +192,7 @@ h3 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
+    z-index: 56;
 }
 
 @media (hover: hover) {
@@ -201,6 +204,19 @@ h3 {
 
 @media (hover: none) {
     .button:active {
+        background-color: var(--fg2);
+    }
+}
+
+@media (hover: hover) {
+    .button2:hover {
+        transition: background-color 0.7s ease;
+        background-color: var(--fg2);
+    }
+}
+
+@media (hover: none) {
+    .button2:active {
         background-color: var(--fg2);
     }
 }
