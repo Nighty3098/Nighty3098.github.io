@@ -8,13 +8,13 @@
     -ms-flex-preferred-size: calc(33.33333% - 30px);
     flex-basis: calc(100% - 130px);
 
-    margin: 0px 15px;
+    margin: 15px 15px;
     overflow: hidden;
 
     border-radius: 30px;
 
     width: 30vh;
-    height: 16vh;
+    height: 13vh;
 }
 
 .ag-projects-item_link {
@@ -108,4 +108,15 @@
 
 .ag-projects_item:nth-child(6n) .ag-projects-item_bg {
     background-color: var(--color4);
+}
+
+@media only screen and (max-width: 600px) {
+    .ag-projects-item_content-box {
+        font-size: 18px;
+        z-index: 2;
+        position: relative;
+    
+        width: 25vh;
+        height: 16vh;
+    }
 }

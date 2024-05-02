@@ -220,7 +220,7 @@ footer {
 
 .footer_content {
     color: var(--bg);
-    font-size: large;
+    font-size: medium;
     display: flex;
 
     height: 3vh;
@@ -283,28 +283,5 @@ footer {
 
     .perspective-image {
         width: 30vh;
-    }
-
-    ._footer {
-        width: 90%;
-        display: flexbox;
-        align-items: center;
-        justify-content: center;
-    }
-    .footer_content {
-        color: var(--bg);
-        font-size: medium;
-        display: flex;
-    
-        height: 3vh;
-        width: 80%;
-        margin-left: 6vh;
-        margin-right: 6vh;
-        margin-bottom: 3vh;
-        border-radius: 10vh;
-
-        align-items: center;
-        background-color: var(--color4);
-        justify-content: center;
     }
 }

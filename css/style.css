@@ -23,6 +23,42 @@ nav {
     z-index: 1030;
 }
 
+.list-menu{
+    display: flex;
+    list-style: none;
+}
+.list-menu > li > a{
+    color: #fff;
+    display: block;
+    padding: 5px 15px;
+}
+.list-menu > li > a:hover{
+    background: #000;
+}
+
+.btn-menu{
+    display: none;
+}
+.btn-menu + label{
+    display: none; 
+    position: relative;
+    color: #fff; 
+    height: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+.btn-menu + label:before{
+    content: '\f0c9';  
+    display: inline-block;
+    font-family:'FontAwesome';
+    font-size: 22px;
+}
+.btn-menu:checked + label:before{
+    content: '\f00d';
+    color: #f00;
+}
+
+
 
 html {
     scrollbar-color: var(--color4) var(--bg);
@@ -68,7 +104,7 @@ h3 {
 
 .override {
     backdrop-filter: blur(0px);
-    background-color: rgba(19, 22, 27, 0.3);
+    background-color: rgba(19, 22, 27, 0.5);
     height: 100%;
     width: 100%;
     border-radius: 20px;
@@ -138,8 +174,7 @@ h3 {
 
 
 .svg_image {
-    width: 50%;
-    border-radius: 50%;
+    width: 30%;
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -193,11 +228,11 @@ footer {
 
 .footer_content {
     color: var(--bg);
-    font-size: large;
+    font-size: medium;
     display: flex;
 
-    height: 3vh;
-    width: 45%;
+    height: 2vh;
+    width: 25%;
     margin-left: 6vh;
     margin-right: 6vh;
     margin-bottom: 3vh;
@@ -209,13 +244,7 @@ footer {
 }
 
 
-
-
-
-
-
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     h1 {
         font-size: 30px;
         color: var(--fg2);
@@ -231,13 +260,19 @@ footer {
         color: var(--fg);
     }
 
+    footer {
+        margin-top: 3%;
+        height: 2vh;
+        width: 100%;
+    }
+
     .footer_content {
         color: var(--bg);
         font-size: medium;
         display: flex;
 
-        height: 4vh;
-        width: 100vh;
+        height: 3vh;
+        width: 100%;
         margin-left: 6vh;
         margin-right: 6vh;
         margin-bottom: 3vh;
@@ -250,8 +285,10 @@ footer {
 
     .svg_image {
         width: 100%;
+        object-fit: cover;
+        margin-bottom: 20px;
     }
-
+    
     .button {
         display: inline-block;
         height: 40px;
@@ -276,4 +313,15 @@ footer {
         height: 2vh;
         border-radius: 10px;
     }
+
+    .btn-menu + label{
+        display: inline-block;
+    }
+    .btn-menu + label + .list-menu{
+        display: none;
+    }
+    .btn-menu:checked + label + .list-menu{
+        display: block;
+    }
 }
+
