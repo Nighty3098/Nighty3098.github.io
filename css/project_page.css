@@ -79,9 +79,34 @@ body {
     border-radius: 10px;
 }
 
-nav {
+
+.logo {
+    cursor: default;
+    color: var(--fg2);
+    font-size: larger;
+    font-family: "Itim", cursive;
+    margin-left: 2vh;
+}
+
+
+.nav_buttons {
+    list-style: none;
+    margin-right: 2vh;
+}
+
+.nav_buttons li {
+    display: inline-block;
+    padding: 0px 0px;
+}
+
+.nav_buttons li a {
+    transition: all 0.3s ease 0s;
+}
+
+header {
+    display: flex;
     display: box;
-    height: 70px;
+    height: 5vh;
     background-color: rgba(19, 22, 27, 0);
     backdrop-filter: blur(10px);
     position: fixed;
@@ -89,7 +114,18 @@ nav {
     left: 0;
     right: 0;
     z-index: 1030;
+    align-items: center;
+    justify-content: space-between;
 }
+
+
+@media(max-width: 992px) {
+    .logo {
+        display: none;
+    }
+}
+
+
 
 a {
     font-size: 15px;
