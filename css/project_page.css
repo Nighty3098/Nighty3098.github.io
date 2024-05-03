@@ -13,6 +13,8 @@
 }
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
+
 :root {
     --bg: #1C2024;
     --fg2: #CBC8BA;
@@ -54,7 +56,10 @@
 
 html {
     scrollbar-color: var(--color4) var(--bg);
-    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
@@ -86,10 +91,6 @@ nav {
     z-index: 1030;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 a {
     font-size: 15px;
     color: var(--fg2);
@@ -98,16 +99,25 @@ a {
 h1 {
     font-size: 50px;
     color: var(--fg2);
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h2 {
     font-size: 24px;
     color: var(--fg2);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h3 {
     font-size: 19px;
     color: var(--fg);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .main {
@@ -205,6 +215,9 @@ h3 {
     border: none;
     border-radius: 10px;
     background-color: var(--color4);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
@@ -216,7 +229,9 @@ h3 {
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     height: 50px;
     width: 50px;
     border: none;
@@ -272,6 +287,9 @@ footer {
     color: var(--bg);
     font-size: medium;
     display: flex;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 
     height: 3vh;
     width: 45%;
