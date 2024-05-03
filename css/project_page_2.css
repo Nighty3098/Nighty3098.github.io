@@ -171,8 +171,8 @@ h3 {
 
 .download {
     margin-top: 30vh;
+    margin-bottom: 30vh;
     display: flexbox;
-    height: 70vh;
     width: 100%;
 }
 
@@ -186,6 +186,7 @@ h3 {
 .main-block {
     background-size: cover;
     margin-top: 20px;
+    background-attachment: fixed;
     margin-right: 10px;
     margin-left: 10px;
     filter: contrast(1.1);

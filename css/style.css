@@ -140,7 +140,7 @@ h3 {
 
 .override {
     backdrop-filter: blur(0px);
-    background-color: rgba(19, 22, 27, 0.2);
+    background-color: rgba(19, 22, 27, 0.4);
     height: 100%;
     width: 100%;
     border-radius: 20px;
