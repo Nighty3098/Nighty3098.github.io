@@ -91,7 +91,7 @@ body {
 
 .nav_buttons {
     list-style: none;
-    margin-right: 2vh;
+    padding: 0px 0px;
 }
 
 .nav_buttons li {
@@ -122,6 +122,16 @@ header {
 @media(max-width: 992px) {
     .logo {
         display: none;
+    }
+
+    header {
+        display: flexbox;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav_buttons li {
+        display: flexbox;
+        padding: 0px 0px;
     }
 }
 

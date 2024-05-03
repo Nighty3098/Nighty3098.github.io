@@ -71,6 +71,16 @@ header {
     .logo {
         display: none;
     }
+
+    header {
+        display: flexbox;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav_buttons li {
+        display: flexbox;
+        padding: 0px 0px;
+    }
 }
 
 
