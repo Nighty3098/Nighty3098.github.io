@@ -135,10 +135,21 @@ header {
     }
 }
 
+.page_content {
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+}
 
+li {
+    font-size: 17px;
+    color: var(--fg2);
+}
 
 a {
-    font-size: 15px;
+    font-size: 17px;
     color: var(--fg2);
 }
 
@@ -151,7 +162,7 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 26px;
     color: var(--fg2);
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -159,7 +170,7 @@ h2 {
 }
 
 h3 {
-    font-size: 19px;
+    font-size: 22px;
     color: var(--fg);
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -175,8 +186,8 @@ h3 {
 
 .download {
     margin-top: 30vh;
+    margin-bottom: 30vh;
     display: flexbox;
-    height: 70vh;
     width: 100%;
 }
 
@@ -188,6 +199,7 @@ h3 {
 
 .main-block {
     background-size: cover;
+    background-attachment: fixed;
     margin-top: 20px;
     margin-right: 10px;
     margin-left: 10px;
