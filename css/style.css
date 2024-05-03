@@ -31,7 +31,7 @@
 nav {
     display: box;
     height: 70px;
-    background-color: rgba(19, 22, 27, 0.3);
+    background-color: rgba(19, 22, 27, 0);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
@@ -152,12 +152,12 @@ h3 {
     background-image: url("../imgs/background.jpg");
     background-attachment: fixed;
     background-size: cover;
-    margin-top: 20px;
+    margin-top: 5vh;
     margin-right: 10px;
     margin-left: 10px;
     filter: contrast(1.1);
     background-position: center;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
