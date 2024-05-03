@@ -29,6 +29,7 @@
 }
 
 nav {
+    display: flexbox;
     display: box;
     height: 70px;
     background-color: rgba(19, 22, 27, 0);
@@ -38,6 +39,11 @@ nav {
     left: 0;
     right: 0;
     z-index: 1030;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
 }
 
 .list-menu{
