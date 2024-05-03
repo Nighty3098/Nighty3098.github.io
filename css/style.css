@@ -13,6 +13,8 @@
 }
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
+
 :root {
     --bg: #1C2024;
     --fg2: #CBC8BA;
@@ -26,57 +28,69 @@
     --color7: #82939B;
 }
 
-nav {
+.logo {
+    cursor: default;
+    color: var(--fg2);
+    font-size: larger;
+    font-family: "Itim", cursive;
+    margin-left: 2vh;
+}
+
+
+.nav_buttons {
+    list-style: none;
+    margin-right: 2vh;
+}
+
+.nav_buttons li {
+    display: inline-block;
+    padding: 0px 0px;
+}
+
+.nav_buttons li a {
+    transition: all 0.3s ease 0s;
+}
+
+header {
+    display: flex;
     display: box;
-    height: 70px;
-    background-color: rgba(19, 22, 27, 0.3);
+    height: 5vh;
+    background-color: rgba(19, 22, 27, 0);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1030;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.list-menu{
-    display: flex;
-    list-style: none;
-}
-.list-menu > li > a{
-    color: #fff;
-    display: block;
-    padding: 5px 15px;
-}
-.list-menu > li > a:hover{
-    background: #000;
+
+@media(max-width: 992px) {
+    .logo {
+        display: none;
+    }
+
+    header {
+        display: flexbox;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav_buttons li {
+        display: flexbox;
+        padding: 0px 0px;
+    }
 }
 
-.btn-menu{
-    display: none;
-}
-.btn-menu + label{
-    display: none; 
-    position: relative;
-    color: #fff; 
-    height: 20px;
-    z-index: 1;
-    cursor: pointer;
-}
-.btn-menu + label:before{
-    content: '\f0c9';  
-    display: inline-block;
-    font-family:'FontAwesome';
-    font-size: 22px;
-}
-.btn-menu:checked + label:before{
-    content: '\f00d';
-    color: #f00;
-}
 
 
 html {
     scrollbar-color: var(--color4) var(--bg);
-    scrollbar-width: thin;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
 }
 
 .skillicons {
@@ -86,10 +100,6 @@ html {
 .skill_badge {
     height: 2vh;
     border-radius: 10px;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -102,23 +112,35 @@ a {
 }
 
 h1 {
+    cursor: default;
     font-size: 50px;
     color: var(--fg2);
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h2 {
+    cursor: default;
     font-size: 24px;
     color: var(--fg2);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h3 {
+    cursor: default;
     font-size: 19px;
     color: var(--fg);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .override {
     backdrop-filter: blur(0px);
-    background-color: rgba(19, 22, 27, 0.5);
+    background-color: rgba(19, 22, 27, 0.2);
     height: 100%;
     width: 100%;
     border-radius: 20px;
@@ -142,12 +164,27 @@ h3 {
     background-image: url("../imgs/background.jpg");
     background-attachment: fixed;
     background-size: cover;
-    margin-top: 20px;
+    margin-top: 5vh;
     margin-right: 10px;
     margin-left: 10px;
     filter: contrast(1.1);
     background-position: center;
-    height: 100vh;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.paralax_block {
+    background-image: url("../imgs/background2.jpg");
+    background-filter: blur(20px);
+    background-attachment: fixed;
+    background-size: cover;
+    filter: contrast(1.1);
+    background-position: center;
+    width: 80vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,6 +196,9 @@ h3 {
 }
 
 .quote {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     padding-top: 3vh;
     padding-bottom: 3vh;
     display: flexbox;
@@ -172,6 +212,9 @@ h3 {
 
 
 .about_me {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     margin-top: 50vh;
     margin-bottom: 50vh;
     display: flexbox;
@@ -214,17 +257,23 @@ h3 {
 }
 
 .user-text {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
     font-size: 20px;
 }
 
 .button {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     display: inline-block;
     height: 50px;
     width: 200px;
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 10px;
+    margin-top: 0.1vh;
     border: none;
     border-radius: 10px;
     background-color: var(--color4);
@@ -235,6 +284,9 @@ h3 {
 }
 
 .button2 {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -286,6 +338,9 @@ footer {
 }
 
 .footer_content {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     color: var(--bg);
     font-size: medium;
     display: flex;
@@ -328,6 +383,9 @@ footer {
     background-color: var(--fg2);
     color: transparent;
     border-radius: 30px;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 
     overflow: hidden;
 
@@ -348,6 +406,9 @@ footer {
 
 .ag-projects-item_title {
     color: var(--bg);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     min-height: 20px;
     margin: 0 0 25px;
 
@@ -364,6 +425,9 @@ footer {
     font-size: 18px;
     z-index: 2;
     position: relative;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 
     width: 27vh;
     height: 15vh;
@@ -371,6 +435,9 @@ footer {
 
 .ag-projects-item_content {
     font-weight: bold;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 
     -webkit-transition: color 1s ease;
     -o-transition: color 1s ease;
