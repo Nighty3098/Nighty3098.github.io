@@ -1,20 +1,20 @@
-/*
-:root {
-    --bg: #13161b;
-    --fg2: #cbc5c0;
-    --fg: #13161b;
-    --color1: #29302a;
-    --color2: #383d3c;
-    --color3: #29302a;
-    --color4: #d9a34b;
-    --color5: #333c33;
-    --color6: #333c33;
-    --color7: #383d3c;
-}
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
 
+
+:root {
+    --bg: #13171e;
+    --fg2: #c7e7ef;
+    --fg: #13171e;
+    --color1: #263542;
+    --color2: #5f7e95;
+    --color3: #435a6f;
+    --color4: #bf8a9d;
+    --color5: #5d6779;
+    --color6: #222d38;
+    --color7: #5d6779;
+}
+
+/*
 :root {
     --bg: #1C2024;
     --fg2: #CBC8BA;
@@ -27,6 +27,7 @@
     --color6: #202C31;
     --color7: #82939B;
 }
+*/
 
 .about_project {
     padding: 4vh 4vh;
@@ -53,7 +54,7 @@
 
 .perspective-image:hover {
     border: 5px solid var(--color4);
-    box-shadow:  0 0 5px var(--color4), 0 0 25px var(--color2);
+    box-shadow:  0 0 5px var(--color4), 0 0 30px var(--color4);
 }
 
 html {
@@ -252,67 +253,73 @@ h3 {
 }
 
 .button {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     display: inline-block;
     height: 50px;
     width: 200px;
     margin-left: 5px;
-    margin-top: 10px;
     margin-right: 5px;
+    margin-top: 0.5vh;
     border: none;
     border-radius: 10px;
     background-color: var(--color4);
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
+    transition: box-shadow 0.7s ease;
+    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
 }
 
 .button2 {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
     position: fixed;
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
+    
     height: 50px;
     width: 50px;
     border: none;
     border-radius: 10px;
     background-color: var(--color4);
+    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
+    transition: box-shadow 0.7s ease;
     transition: background-color 0.7s ease;
     z-index: 56;
 }
 
 @media (hover: hover) {
     .button:hover {
-        transition: background-color 0.7s ease;
-        background-color: var(--fg2);
+        transition: box-shadow 0.7s ease;
+        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
 
+
 @media (hover: none) {
     .button:active {
-        background-color: var(--fg2);
+        background-color: var(--color7);
     }
 }
 
 @media (hover: hover) {
     .button2:hover {
-        transition: background-color 0.7s ease;
-        background-color: var(--fg2);
+        transition: box-shadow 0.7s ease;
+        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
 
 @media (hover: none) {
     .button2:active {
-        background-color: var(--fg2);
+        background-color: var(--color7);
     }
 }
 
