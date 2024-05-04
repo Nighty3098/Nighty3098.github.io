@@ -14,21 +14,6 @@
     --color7: #5d6779;
 }
 
-/*
-:root {
-    --bg: #1C2024;
-    --fg2: #CBC8BA;
-    --fg: #1C2024;
-    --color1: #27353C;
-    --color2: #737E83;
-    --color4: #59737F;
-    --color3: #915736;
-    --color5: #27353C;
-    --color6: #202C31;
-    --color7: #82939B;
-}
-*/
-
 .about_project {
     padding: 4vh 4vh;
     display: flexbox;
