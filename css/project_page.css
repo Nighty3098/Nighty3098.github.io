@@ -361,7 +361,7 @@ footer {
     justify-content: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     h1 {
         font-size: 30px;
         color: var(--fg2);

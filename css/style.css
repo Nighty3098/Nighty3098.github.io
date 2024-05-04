@@ -281,6 +281,7 @@ h3 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
+    /*box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4);*/
 }
 
 .button2 {
@@ -308,6 +309,7 @@ h3 {
     .button:hover {
         transition: background-color 0.7s ease;
         background-color: var(--fg2);
+        /*box-shadow: 0 0 5px var(--fg2), 0 0 25px var(--fg2), 0 0 50px var(--fg2);*/
     }
 }
 
@@ -380,7 +382,7 @@ footer {
 .ag-projects-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: var(--fg2);
+    background-color: var(--color4);
     color: transparent;
     border-radius: 30px;
     font-family: "Itim", cursive;
@@ -448,7 +450,7 @@ footer {
     height: 128px;
     width: 128px;
 
-    background-color: var(--color4);
+    background-color: var(--color7);
 
     z-index: 1;
     position: absolute;
@@ -463,23 +465,23 @@ footer {
 }
 
 .ag-projects_item:nth-child(2n) .ag-projects-item_bg {
-    background-color: var(--color4);
+    background-color: var(--color7);
 }
 
 .ag-projects_item:nth-child(3n) .ag-projects-item_bg {
-    background-color: var(--color4);
+    background-color: var(--color7);
 }
 
 .ag-projects_item:nth-child(4n) .ag-projects-item_bg {
-    background-color: var(--color4);
+    background-color: var(--color7);
 }
 
 .ag-projects_item:nth-child(5n) .ag-projects-item_bg {
-    background-color: var(--color4);
+    background-color: var(--color7);
 }
 
 .ag-projects_item:nth-child(6n) .ag-projects-item_bg {
-    background-color: var(--color4);
+    background-color: var(--color7);
 }
 
 
