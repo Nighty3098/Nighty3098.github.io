@@ -263,7 +263,7 @@ h3 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
-    transition: box-shadow 0.7s ease;
+    transition: box-shadow 0.5s ease;
     box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
 }
 
@@ -285,14 +285,14 @@ h3 {
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
-    transition: box-shadow 0.7s ease;
+    transition: box-shadow 0.5s ease;
     transition: background-color 0.7s ease;
     z-index: 56;
 }
 
 @media (hover: hover) {
     .button:hover {
-        transition: box-shadow 0.7s ease;
+        transition: box-shadow 0.5s ease;
         box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
@@ -306,7 +306,7 @@ h3 {
 
 @media (hover: hover) {
     .button2:hover {
-        transition: box-shadow 0.7s ease;
+        transition: box-shadow 0.5s ease;
         box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
