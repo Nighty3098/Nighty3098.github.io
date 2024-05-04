@@ -29,11 +29,10 @@
 }
 
 .logo {
-    cursor: default;
-    color: var(--fg2);
-    font-size: larger;
-    font-family: "Itim", cursive;
-    margin-left: 2vh;
+    margin-left: 1vh;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 
