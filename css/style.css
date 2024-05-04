@@ -87,6 +87,7 @@ header {
 
 html {
     scrollbar-color: var(--color4) var(--bg);
+    scrollbar-arrow-color: var(--bg) var(--bg);
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
