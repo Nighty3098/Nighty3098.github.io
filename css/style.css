@@ -18,12 +18,12 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    transition: box-shadow 0.7s ease;
+    transition: box-shadow 0.5s ease;
     box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
 }
 
 .logo:hover {
-    transition: box-shadow 0.7s ease;
+    transition: box-shadow 0.5s ease;
     box-shadow: 0 0 30px var(--color7), 0 0 40px var(--color7);
 }
 
@@ -302,7 +302,7 @@ h3 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
-    transition: box-shadow 0.7s ease;
+    transition: box-shadow 0.5s ease;
     box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
 }
 
@@ -324,14 +324,14 @@ h3 {
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
-    transition: box-shadow 0.7s ease;
+    transition: box-shadow 0.5s ease;
     transition: background-color 0.7s ease;
     z-index: 56;
 }
 
 @media (hover: hover) {
     .button:hover {
-        transition: box-shadow 0.7s ease;
+        transition: box-shadow 0.5s ease;
         box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
@@ -345,7 +345,7 @@ h3 {
 
 @media (hover: hover) {
     .button2:hover {
-        transition: box-shadow 0.7s ease;
+        transition: box-shadow 0.5s ease;
         box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
@@ -391,7 +391,7 @@ footer {
 }
 
 .ag-projects_item {
-    transition: box-shadow 0.7s ease;
+    transition: box-shadow 0.5s ease;
     box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg), 0 0 50px var(--bg);
 
     display: inline-block;
@@ -404,7 +404,7 @@ footer {
     border-radius: 30px;
 
     width: 30vh;
-    height: 15vh;
+    height: 13vh;
 }
 
 .ag-projects-item_link {
@@ -474,55 +474,10 @@ footer {
     transition: color 1s ease;
 }
 
-.ag-projects-item_bg {
-    height: 128px;
-    width: 128px;
-
-    background-color: var(--color5);
-    box-shadow: 0 0 5px var(--color5), 0 0 25px var(--color5), 0 0 50px var(--color5);
-
-    z-index: 1;
-    position: absolute;
-    top: -75px;
-    right: -75px;
-
-    border-radius: 100%;
-
-    -webkit-transition: all 0.7s ease;
-    -o-transition: all 0.7s ease;
-    transition: all 0.7s ease;
+.ag-projects_item:hover {
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
 }
-
-.ag-projects_item:nth-child(2n) .ag-projects-item_bg {
-    box-shadow: 0 0 5px var(--color5), 0 0 25px var(--color5), 0 0 50px var(--color5);
-
-    background-color: var(--color5);
-}
-
-.ag-projects_item:nth-child(3n) .ag-projects-item_bg {
-    box-shadow: 0 0 5px var(--color5), 0 0 25px var(--color5), 0 0 50px var(--color5);
-
-    background-color: var(--color5);
-}
-
-.ag-projects_item:nth-child(4n) .ag-projects-item_bg {
-    box-shadow: 0 0 5px var(--color5), 0 0 25px var(--color5), 0 0 50px var(--color5);
-
-    background-color: var(--color5);
-}
-
-.ag-projects_item:nth-child(5n) .ag-projects-item_bg {
-    box-shadow: 0 0 5px var(--color5), 0 0 25px var(--color5), 0 0 50px var(--color5);
-
-    background-color: var(--color5);
-}
-
-.ag-projects_item:nth-child(6n) .ag-projects-item_bg {
-    box-shadow: 0 0 5px var(--color5), 0 0 25px var(--color5), 0 0 50px var(--color5);
-
-    background-color: var(--color5);
-}
-
 
 @media only screen and (max-width: 700px) {
     h1 {
