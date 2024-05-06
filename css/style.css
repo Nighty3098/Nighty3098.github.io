@@ -485,19 +485,19 @@ footer {
 @media(max-width: 1600px) {
     .ag-projects_item {
         width: 50vw;
-        height: 14vh;
+        height: 12vh;
     }
 }
 @media(max-width: 1800px) {
     .ag-projects_item {
         width: 30vw;
-        height: 17vh;
+        height: 13vh;
     }
 }
 @media(max-width: 1700px) {
     .ag-projects_item {
         width: 50vw;
-        height: 14vh;
+        height: 12vh;
     }
 }
 @media(max-width: 900px) {
