@@ -503,7 +503,7 @@ footer {
 @media(max-width: 900px) {
     .ag-projects_item {
         width: 80vw;
-        height: 12vh;
+        height: 14vh;
     }
 }
 
