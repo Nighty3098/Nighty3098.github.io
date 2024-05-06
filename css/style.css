@@ -75,7 +75,6 @@ header {
 }
 
 
-
 html {
     scrollbar-color: var(--color4) var(--bg);
     scrollbar-arrow-color: var(--bg) var(--bg);
@@ -85,13 +84,33 @@ html {
     scroll-behavior: smooth;
 }
 
-.skillicons {
-    width: 30vh;
-}
-
 .skill_badge {
-    height: 2vh;
+    height: 1.7vh;
     border-radius: 10px;
+}
+@media(max-width: 1500px) {
+    .skill_badge {
+        height: 1.7vh;
+        border-radius: 10px;
+    }
+}
+@media(max-width: 1800px) {
+    .skill_badge {
+        height: 1.5vh;
+        border-radius: 10px;
+    }
+}
+@media(max-width: 2400px) {
+    .skill_badge {
+        height: 1.4vh;
+        border-radius: 10px;
+    }
+}
+@media(max-width: 900px) {
+    .skill_badge {
+        height: 1.7vh;
+        border-radius: 10px;
+    }
 }
 
 body {
@@ -111,6 +130,17 @@ h1 {
     font-weight: 400;
     font-style: normal;
 }
+@media(max-width: 1500px) {
+    h1 {
+        font-size:80px;
+    }
+}
+@media(max-width: 900px) {
+    h1 {
+        font-size:60px;
+    }
+}
+
 
 h2 {
     cursor: default;
@@ -120,6 +150,17 @@ h2 {
     font-weight: 400;
     font-style: normal;
 }
+@media(max-width: 1500px) {
+    h2 {
+        font-size:25px;
+    }
+}
+@media(max-width: 900px) {
+    h2 {
+        font-size:23px;
+    }
+}
+
 
 h3 {
     cursor: default;
@@ -129,6 +170,17 @@ h3 {
     font-weight: 400;
     font-style: normal;
 }
+@media(max-width: 1500px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+@media(max-width: 900px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
 
 .override {
     backdrop-filter: blur(0px);
@@ -153,7 +205,6 @@ h3 {
 
 .main-block {
     background-image: url("../imgs/background.jpg");
-    /*background-image: url("../imgs/background2.jpg");*/
     background-attachment: fixed;
     background-size: cover;
     margin-top: 5vh;
@@ -305,6 +356,13 @@ h3 {
     transition: box-shadow 0.5s ease;
     box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
 }
+@media(max-width: 992px) {
+    .button {
+        height: 2vh;
+        width: 22vw;
+    }
+}
+
 
 .button2 {
     font-family: "Itim", cursive;
@@ -328,6 +386,14 @@ h3 {
     transition: background-color 0.7s ease;
     z-index: 56;
 }
+@media(max-width: 992px) {
+    .button2 {
+        height: 3vh;
+        width: 3vh;
+    }
+}
+
+
 
 @media (hover: hover) {
     .button:hover {
@@ -384,11 +450,20 @@ footer {
     justify-content: center;
 }
 
+@media(max-width: 992px) {
+    .footer_content {
+        width: 80vw;
+    }
+    .svg_image {
+        width: 80vw;
+    }
+}
 
 
 .badge {
     width: 20%;
 }
+
 
 .ag-projects_item {
     transition: box-shadow 0.5s ease;
@@ -403,8 +478,33 @@ footer {
 
     border-radius: 30px;
 
-    width: 30vh;
+    width: 20vw;
     height: 13vh;
+}
+
+@media(max-width: 1600px) {
+    .ag-projects_item {
+        width: 50vw;
+        height: 14vh;
+    }
+}
+@media(max-width: 1800px) {
+    .ag-projects_item {
+        width: 30vw;
+        height: 17vh;
+    }
+}
+@media(max-width: 1700px) {
+    .ag-projects_item {
+        width: 50vw;
+        height: 14vh;
+    }
+}
+@media(max-width: 900px) {
+    .ag-projects_item {
+        width: 80vw;
+        height: 12vh;
+    }
 }
 
 .ag-projects-item_link {
@@ -459,9 +559,34 @@ footer {
     font-weight: 400;
     font-style: normal;
 
-    width: 27vh;
-    height: 15vh;
+    width: 15vw;
+    height: 13vh;
 }
+@media(max-width: 1600px) {
+    .ag-projects-item_content-box {
+        width: 20vw;
+        height: 12vh;
+    }
+}
+@media(max-width: 1800px) {
+    .ag-projects-item_content-box {
+        width: 25vw;
+        height: 14vh;
+    }
+}
+@media(max-width: 1700px) {
+    .ag-projects-item_content-box {
+        width: 40vw;
+        height: 10vh;
+    }
+}
+@media(max-width: 900px) {
+    .ag-projects-item_content-box {
+        width: 70vw;
+        height: 11vh;
+    }
+}
+
 
 .ag-projects-item_content {
     font-weight: bold;
@@ -485,151 +610,5 @@ footer {
     .ag-projects_item:hover {
         transition: box-shadow 0.5s ease;
         box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    h1 {
-        font-size: 30px;
-        color: var(--fg2);
-    }
-
-    h2 {
-        font-size: 19px;
-        color: var(--fg2);
-    }
-
-    h3 {
-        font-size: 15px;
-        color: var(--fg);
-    }
-
-    footer {
-        margin-top: 3%;
-        height: 2vh;
-        width: 100%;
-    }
-
-    .footer_content {
-        color: var(--bg);
-        font-size: medium;
-        display: flex;
-
-        height: 3vh;
-        width: 100%;
-        margin-left: 6vh;
-        margin-right: 6vh;
-        margin-bottom: 3vh;
-        border-radius: 10vh;
-
-        align-items: center;
-        background-color: var(--color4);
-        justify-content: center;
-    }
-
-    .svg_image {
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 20px;
-    }
-    
-    .button {
-        display: inline-block;
-        height: 40px;
-        width: 150px;
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-top: 10px;
-        border: none;
-        border-radius: 10px;
-        background-color: var(--color4);
-        color: var(--bg);
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.7s ease;
-    }
-
-    .skillicons {
-        width: 25vh;
-    }
-
-    .skill_badge {
-        height: 2.5vh;
-        border-radius: 10px;
-    }
-
-    .btn-menu + label{
-        display: inline-block;
-    }
-    .btn-menu + label + .list-menu{
-        display: none;
-    }
-    .btn-menu:checked + label + .list-menu{
-        display: block;
-    }
-    .ag-projects_item {
-        display: inline-block;
-        -ms-flex-preferred-size: calc(33.33333% - 30px);
-        flex-basis: calc(100% - 130px);
-    
-        margin: 15px 15px;
-        overflow: hidden;
-    
-        border-radius: 30px;
-    
-        width: 30vh;
-        height: 15vh;
-    }
-
-    .quote {
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-        display: flexbox;
-        background-color: var(--color4);
-        color: var(--bg);
-        border-radius: 1vh;
-        width: 95%;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .ag-projects_item {
-        display: inline-block;
-        -ms-flex-preferred-size: calc(33.33333% - 30px);
-        flex-basis: calc(100% - 130px);
-    
-        margin: 15px 15px;
-        overflow: hidden;
-    
-        border-radius: 30px;
-    
-        width: 30vh;
-        height: 16vh;
-    }
-    .skill_badge {
-        height: 2.5vh;
-        border-radius: 10px;
-    }
-}
-
-@media only screen and (max-width: 1500px) {
-    .ag-projects_item {
-        display: inline-block;
-        -ms-flex-preferred-size: calc(33.33333% - 30px);
-        flex-basis: calc(100% - 130px);
-    
-        margin: 15px 15px;
-        overflow: hidden;
-    
-        border-radius: 30px;
-    
-        width: 30vh;
-        height: 16vh;
-    }
-    .skill_badge {
-        height: 2.3vh;
-        border-radius: 10px;
     }
 }
