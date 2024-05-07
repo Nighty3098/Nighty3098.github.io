@@ -375,6 +375,7 @@ h3 {
     
     height: 50px;
     width: 50px;
+    
     border: none;
     border-radius: 10px;
     background-color: var(--color4);
@@ -386,13 +387,6 @@ h3 {
     transition: background-color 0.7s ease;
     z-index: 56;
 }
-@media(max-width: 992px) {
-    .button2 {
-        height: 3vh;
-        width: 3vh;
-    }
-}
-
 
 
 @media (hover: hover) {
