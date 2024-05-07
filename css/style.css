@@ -286,7 +286,7 @@ h3 {
     vertical-align: middle;
     flex-direction: column;
     display: flex;
-    border-radius: 1vh;
+    border: 0px;
     align-items: center;
     justify-content: center;
 }
