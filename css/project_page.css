@@ -28,7 +28,7 @@
 
 .perspective-image {
     margin: 1% 1%;
-    width: 60vh;
+    width: 30vw;
     transform-style: preserve-3d;
     z-index: 100;
     border: 5px solid var(--color4);
