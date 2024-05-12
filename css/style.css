@@ -101,9 +101,15 @@ html {
     height: 1.7vh;
     border-radius: 10px;
 }
+@media(max-width: 900px) {
+    .skill_badge {
+        height: 2vh;
+        border-radius: 10px;
+    }
+}
 @media(max-width: 1500px) {
     .skill_badge {
-        height: 1.7vh;
+        height: 2vh;
         border-radius: 10px;
     }
 }
@@ -119,12 +125,7 @@ html {
         border-radius: 10px;
     }
 }
-@media(max-width: 900px) {
-    .skill_badge {
-        height: 1.7vh;
-        border-radius: 10px;
-    }
-}
+
 
 body {
     background-color: var(--bg);
@@ -358,8 +359,8 @@ h3 {
     font-weight: 400;
     font-style: normal;
     display: inline-block;
-    height: 40px;
-    width: 150px;
+    height: 2vh;
+    width: 5vw;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 0.5vh;
@@ -375,8 +376,15 @@ h3 {
 }
 @media(max-width: 992px) {
     .button {
-        height: 2vh;
-        width: 22vw;
+        height: 3vh;
+        width: 23vw;
+    }
+}
+
+@media(min-width: 992px) {
+    .button {
+        height: 3vh;
+        width: 250px;
     }
 }
 
@@ -432,8 +440,6 @@ h3 {
         background-color: var(--color7);
     }
 }
-
-
 
 .contact_button {
     font-family: "Itim", cursive;
@@ -502,11 +508,9 @@ footer {
     }
 }
 
-
 .badge {
     width: 20%;
 }
-
 
 .ag-projects_item {
     transition: box-shadow 0.5s ease;
@@ -543,9 +547,15 @@ footer {
         height: 12vh;
     }
 }
+@media(max-width: 1300px) {
+    .ag-projects_item {
+        width: 85vw;
+        height: 14vh;
+    }
+}
 @media(max-width: 900px) {
     .ag-projects_item {
-        width: 80vw;
+        width: 85vw;
         height: 14vh;
     }
 }
