@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
 
 
 :root {
@@ -149,7 +149,7 @@ a {
 h1 {
     font-size: 50px;
     color: var(--fg2);
-    font-family: "Permanent Marker", cursive;
+    font-family: "Titan One", cursive;
     font-weight: 400;
     font-style: normal;
 }
