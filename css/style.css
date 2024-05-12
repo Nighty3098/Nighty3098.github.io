@@ -193,6 +193,8 @@ h3 {
 .hello {
     margin-top: 50vh;
     display: flexbox;
+    justify-content: center;
+    align-items: center;
 }
 
 .animated {
@@ -235,21 +237,21 @@ h3 {
     font-weight: 400;
     font-style: normal;
     vertical-align: middle;
-    display: flex;
+    display: flexbox;
     border-radius: 1vh;
     align-items: center;
     justify-content: center;
 }
 
 .paralax_block {
-    background-image: url("../imgs/background2.jpg");
+    background-image: url("../imgs/background.jpg");
     background-filter: blur(20px);
-    background-attachment: fixed;
+    background-attachment:fixed;
     background-size: cover;
     filter: contrast(1.1);
     background-position: center;
-    width: 80vh;
-    height: 30vh;
+    width: 70vw;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,6 +277,9 @@ h3 {
     justify-content: center;
 }
 
+.about {
+    display: flex;
+}
 
 .about_me {
     font-family: "Itim", cursive;
@@ -289,6 +294,9 @@ h3 {
     justify-content: center;
 }
 
+.content {
+    display: flex;
+}
 
 .projects {
     display: flex;
@@ -312,8 +320,15 @@ h3 {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
+
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
 }
 
+.user-avatar:hover {
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 5px var(--color7), 0 0 25px var(--color7), 0 0 60px var(--color7);
+}
 
 .svg_image {
     width: 30%;
@@ -339,8 +354,8 @@ h3 {
     font-weight: 400;
     font-style: normal;
     display: inline-block;
-    height: 50px;
-    width: 200px;
+    height: 40px;
+    width: 150px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 0.5vh;
@@ -414,6 +429,42 @@ h3 {
     }
 }
 
+
+
+.contact_button {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0.5vh;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+}
+.contact_button i {
+    width: 100px;
+    height: 100px;
+    color: var(--fg2);
+}
+
+@media (hover: hover) {
+    .contact_button i:hover {
+        transition: color 0.5s ease;
+        color: var(--color4);
+    }
+}
+
+@media (hover: none) {
+    .contact_button i:active {
+        color: var(--color4);
+    }
+}
+
 footer {
     align-items: center;
     justify-content: center;
@@ -470,7 +521,7 @@ footer {
 
     border-radius: 30px;
 
-    width: 20vw;
+    width: 15vw;
     height: 13vh;
 }
 
@@ -551,7 +602,7 @@ footer {
     font-weight: 400;
     font-style: normal;
 
-    width: 15vw;
+    width: 12vw;
     height: 13vh;
 }
 @media(max-width: 1600px) {

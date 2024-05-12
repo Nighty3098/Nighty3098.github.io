@@ -14,6 +14,23 @@
     --color7: #5d6779;
 }
 
+.links {
+    display: block;
+}
+
+li {list-style: none;}
+li a{
+    text-decoration: none;
+    font-size:larger;
+    color: var(--fg2);
+    transition: all 0.3s ease 0s;
+}
+li a:hover{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    font-size:larger;
+    color: var(--color4);
+}
 
 .about_project {
     padding: 4vh 4vh;
@@ -147,7 +164,7 @@ h1 {
 }
 
 h2 {
-    font-size: 26px;
+    font-size: 30px;
     color: var(--fg2);
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -177,6 +194,7 @@ h3 {
 }
 
 .animated {
+    display: block;
     opacity: 0;
     transform: translateY(50px);
     transition: transform 1s, opacity 1s;
@@ -252,8 +270,8 @@ h3 {
     font-weight: 400;
     font-style: normal;
     display: inline-block;
-    height: 50px;
-    width: 200px;
+    height: 40px;
+    width: 150px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 0.5vh;
