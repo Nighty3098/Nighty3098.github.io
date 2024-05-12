@@ -184,7 +184,7 @@ h3 {
 
 .override {
     backdrop-filter: blur(0px);
-    background-color: rgba(19, 22, 27, 0.2);
+    /*background-color: rgba(19, 22, 27, 0.2);*/
     height: 100%;
     width: 100%;
     border-radius: 20px;
@@ -202,10 +202,10 @@ h3 {
 }
 
 .main-block {
-    background-image: url("../imgs/background.jpg");
+    /*background-image: url("../imgs/background.jpg");*/
     background-attachment: fixed;
     background-size: cover;
-    margin-top: 5vh;
+    /*margin-top: 5vh;*/
     margin-right: 10px;
     margin-left: 10px;
     filter: contrast(1.1);
