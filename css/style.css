@@ -193,8 +193,6 @@ h3 {
 .hello {
     margin-top: 50vh;
     display: flexbox;
-    height: 100%;
-    width: 100%;
 }
 
 .animated {
