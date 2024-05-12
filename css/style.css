@@ -42,6 +42,16 @@
     transition: all 0.3s ease 0s;
 }
 
+.fa-solid {
+    color: var(--color4);
+    animation: color-cycle 4s infinite; 
+}
+@keyframes color-cycle {
+    0% { color: var(--fg2); }
+    50% { color: var(--color4); }
+    100% { color: var(--fg2); }
+  }
+
 header {
     display: flex;
     display: box;
@@ -57,6 +67,9 @@ header {
     justify-content: space-between;
 }
 
+i {
+    color: var(--color4);
+}
 
 @media(max-width: 992px) {
     .logo {
@@ -191,8 +204,9 @@ h3 {
 }
 
 .hello {
+    margin-left: 1vw;
     margin-top: 50vh;
-    display: flexbox;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -250,8 +264,8 @@ h3 {
     background-size: cover;
     filter: contrast(1.1);
     background-position: center;
-    width: 70vw;
-    height: 10vh;
+    width: 40vw;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
