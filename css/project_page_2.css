@@ -22,15 +22,19 @@ summary {
     display: block;
 }
 
-li {list-style: none;}
-li a{
+li {
+    list-style: none;
+}
+
+li a {
     text-decoration: none;
-    font-size:larger;
+    font-size: larger;
     color: var(--fg2);
 }
-li a:hover{
+
+li a:hover {
     text-decoration: none;
-    font-size:larger;
+    font-size: larger;
     color: var(--color4);
 }
 
@@ -53,13 +57,13 @@ li a:hover{
     z-index: 100;
     border: 5px solid var(--color4);
     border-radius: 10px;
-    box-shadow:  0 0 5px var(--bg), 0 0 25px var(--bg);
+    box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
 }
 
 .perspective-image:hover {
     border: 5px solid var(--color4);
-    box-shadow:  0 0 5px var(--color4), 0 0 30px var(--color4);
+    box-shadow: 0 0 5px var(--color4), 0 0 30px var(--color4);
 }
 
 html {
@@ -133,6 +137,7 @@ header {
         align-items: center;
         justify-content: center;
     }
+
     .nav_buttons li {
         display: flexbox;
         padding: 0px 0px;
@@ -286,7 +291,7 @@ h3 {
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-    
+
     height: 50px;
     width: 50px;
     border: none;
@@ -334,7 +339,7 @@ footer {
     display: flex;
 }
 
-._footer{
+._footer {
     width: 100vh;
     display: flexbox;
     align-items: center;
