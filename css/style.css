@@ -446,28 +446,47 @@ h3 {
     font-weight: 400;
     font-style: normal;
     display: inline-block;
-    height: 60px;
-    width: 60px;
+    height: 3vh;
+    width: 6vw;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 0.5vh;
     border: none;
-    background-color: transparent;
+    border-radius: 10px;
+    background-color: var(--color4);
+    color: var(--bg);
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
 }
 .contact_button i {
-    color: var(--fg2);
+    color: var(--fg);
 }
-
+@media (max-width: 2000px) {
+    .contact_button {
+        height: 3.5vh;
+        width: 20vw;
+    }
+}
+@media (max-width: 1500px) {
+    .contact_button {
+        height: 3.5vh;
+        width: 50vw;
+    }
+}
 @media (hover: hover) {
-    .contact_button i:hover {
-        transition: color 0.5s ease;
-        color: var(--color4);
+    .button:hover {
+        transition: box-shadow 0.5s ease;
+        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
 
+
 @media (hover: none) {
-    .contact_button i:active {
-        color: var(--color4);
+    .button:active {
+        background-color: var(--color7);
     }
 }
 
