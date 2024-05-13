@@ -448,9 +448,9 @@ h3 {
     display: inline-block;
     height: 3vh;
     width: 6vw;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 0.5vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 1vh;
     border: none;
     border-radius: 10px;
     background-color: var(--color4);
@@ -477,7 +477,7 @@ h3 {
     }
 }
 @media (hover: hover) {
-    .button:hover {
+    .contact_button:hover {
         transition: box-shadow 0.5s ease;
         box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
@@ -485,7 +485,7 @@ h3 {
 
 
 @media (hover: none) {
-    .button:active {
+    .contact_button:active {
         background-color: var(--color7);
     }
 }
