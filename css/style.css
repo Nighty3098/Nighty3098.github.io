@@ -98,32 +98,8 @@ html {
 }
 
 .skill_badge {
-    height: 1.7vh;
+    height: 2vh;
     border-radius: 10px;
-}
-@media(max-width: 900px) {
-    .skill_badge {
-        height: 2vh;
-        border-radius: 10px;
-    }
-}
-@media(max-width: 1500px) {
-    .skill_badge {
-        height: 2vh;
-        border-radius: 10px;
-    }
-}
-@media(max-width: 1800px) {
-    .skill_badge {
-        height: 1.5vh;
-        border-radius: 10px;
-    }
-}
-@media(max-width: 2400px) {
-    .skill_badge {
-        height: 1.4vh;
-        border-radius: 10px;
-    }
 }
 
 
