@@ -2,9 +2,9 @@
 
 
 :root {
-    --bg: #21252b;
+    --bg: #1e1e2d;
     --fg2: #c7e7ef;
-    --fg: #21252b;
+    --fg: #1e1e2d;
     --color1: #263542;
     --color2: #5f7e95;
     --color3: #435a6f;
@@ -15,6 +15,7 @@
 }
 
 summary {
+    color: var(--bg);
     cursor: pointer;
 }
 
@@ -22,22 +23,54 @@ summary {
     display: block;
 }
 
-li {
-    list-style: none;
-}
-
-li a {
-    text-decoration: none;
-    font-size: larger;
+.item {
+    margin: 2vw;
     color: var(--fg2);
-    transition: all 0.3s ease 0s;
 }
 
-li a:hover {
-    transition: all 0.3s ease 0s;
+.item:hover i{
+    color: var(--fg2);
+}
+
+.navigation_links {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+
     text-decoration: none;
-    font-size: larger;
-    color: var(--color4);
+    font-size: medium;
+    color: var(--fg2);
+
+    cursor: default;
+}
+.navigation_links i{
+    color: var(--fg2);
+    margin: 10px;
+}
+
+.navigation_links:after {
+    background-color: var(--color4);
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0%;
+
+    -webkit-transition: width .2s ease-in-out;
+    -moz--transition: width .2s ease-in-out;
+    transition: width .2s ease-in-out;
+}
+
+.navigation_links:hover:after,
+.navigation_links:focus:after {
+    width: 110%;
+}
+
+.logo {
+    margin-left: 2vh;
+    height: 50px;
+}
+
+.logo:hover {
 }
 
 .about_project {
@@ -54,7 +87,7 @@ li a:hover {
 
 .perspective-image {
     margin: 1% 1%;
-    width: 30vw;
+    width: 40vw;
     transform-style: preserve-3d;
     z-index: 100;
     border: 5px solid var(--color4);
@@ -64,6 +97,22 @@ li a:hover {
 }
 
 .perspective-image:hover {
+    border: 5px solid var(--color4);
+    box-shadow: 0 0 5px var(--color4), 0 0 30px var(--color4);
+}
+
+.perspective-image-phone {
+    margin: 1% 1%;
+    width: 15vh;
+    transform-style: preserve-3d;
+    z-index: 100;
+    border: 5px solid var(--color4);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.perspective-image-phone:hover {
     border: 5px solid var(--color4);
     box-shadow: 0 0 5px var(--color4), 0 0 30px var(--color4);
 }
@@ -89,14 +138,6 @@ body {
     border-radius: 10px;
 }
 
-.logo {
-    cursor: default;
-    color: var(--fg2);
-    font-size: larger;
-    font-family: "Itim", cursive;
-    margin-left: 2vh;
-}
-
 .nav_buttons {
     list-style: none;
     padding: 0px 0px;
@@ -114,7 +155,7 @@ body {
 header {
     display: flex;
     display: box;
-    height: 5vh;
+    height: 4vh;
     background-color: rgba(19, 22, 27, 0);
     backdrop-filter: blur(10px);
     position: fixed;
@@ -129,6 +170,9 @@ header {
 
 @media(max-width: 992px) {
     .logo {
+        display: none;
+    }
+    .title {
         display: none;
     }
 
@@ -278,8 +322,8 @@ h3 {
     font-weight: 400;
     font-style: normal;
     display: inline-block;
-    height: 40px;
-    width: 150px;
+    height: 3vh;
+    width: 13vw;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 0.5vh;
@@ -292,6 +336,18 @@ h3 {
     transition: background-color 0.7s ease;
     transition: box-shadow 0.5s ease;
     box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
+}
+@media(max-width: 1500px) {
+    .button {
+        height: 3vh;
+        width: 30vw;
+    }
+}
+@media(max-width: 600px) {
+    .button {
+        height: 3vh;
+        width: 50vw;
+    }
 }
 
 .button2 {
@@ -424,6 +480,15 @@ footer {
     }
 
     .perspective-image {
-        width: 30vh;
+        width: 70vw;
+    }
+
+    .perspective-image-phone {
+        margin: 1% 1%;
+        width: 30vw;
+        transform-style: preserve-3d;
+        z-index: 100;
+        border-radius: 10px;
+        transition: border 0.5s ease-in-out;
     }
 }

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
 
 :root {
-    --bg: #21252b;
+    --bg: #1e1e2d;
     --fg2: #c7e7ef;
-    --fg: #21252b;
+    --fg: #1e1e2d;
     --color1: #263542;
     --color2: #5f7e95;
     --color3: #435a6f;
@@ -16,17 +16,52 @@
 .logo {
     margin-left: 2vh;
     height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
 }
 
 .logo:hover {
-    transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 30px var(--color7), 0 0 40px var(--color7);
 }
 
+.item {
+    margin: 2vw;
+    color: var(--fg2);
+}
+
+.item:hover i{
+    color: var(--fg2);
+}
+
+.navigation_links {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    text-decoration: none;
+    font-size: medium;
+    color: var(--fg2);
+
+    cursor: default;
+}
+.navigation_links i{
+    color: var(--fg2);
+    margin: 10px;
+}
+
+.navigation_links:after {
+    background-color: var(--color4);
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0%;
+
+    -webkit-transition: width .2s ease-in-out;
+    -moz--transition: width .2s ease-in-out;
+    transition: width .2s ease-in-out;
+}
+
+.navigation_links:hover:after,
+.navigation_links:focus:after {
+    width: 110%;
+}
 
 .nav_buttons {
     list-style: none;
@@ -55,7 +90,7 @@
 header {
     display: flex;
     display: box;
-    height: 5vh;
+    height: 4vh;
     background-color: rgba(19, 22, 27, 0);
     backdrop-filter: blur(10px);
     position: fixed;
@@ -73,6 +108,9 @@ i {
 
 @media(max-width: 992px) {
     .logo {
+        display: none;
+    }
+    .title {
         display: none;
     }
 
@@ -98,7 +136,7 @@ html {
 }
 
 .skill_badge {
-    height: 2vh;
+    height: 1.8vh;
     border-radius: 10px;
 }
 
@@ -203,7 +241,7 @@ h3 {
     margin-left: 10px;
     filter: contrast(1.1);
     background-position: center;
-    height: 85vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -508,7 +546,7 @@ footer {
 }
 
 .ag-projects_item {
-    transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease-in;
     box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg), 0 0 50px var(--bg);
 
     display: inline-block;
@@ -520,7 +558,7 @@ footer {
 
     border-radius: 30px;
 
-    width: 15vw;
+    width: 26vw;
     height: 13vh;
 }
 
@@ -532,13 +570,13 @@ footer {
 }
 @media(max-width: 1800px) {
     .ag-projects_item {
-        width: 30vw;
+        width: 60vw;
         height: 13vh;
     }
 }
 @media(max-width: 1700px) {
     .ag-projects_item {
-        width: 50vw;
+        width: 70vw;
         height: 12vh;
     }
 }
@@ -642,21 +680,21 @@ footer {
     font-weight: 400;
     font-style: normal;
 
-    -webkit-transition: color 1s ease;
-    -o-transition: color 1s ease;
-    transition: color 1s ease;
+    -webkit-transition: color 1s ease-in;
+    -o-transition: color 1s ease-in;
+    transition: color 1s ease-in;
 }
 
 @media (hover: hover) {
     .ag-projects_item:hover {
-        transition: box-shadow 0.5s ease;
+        transition: box-shadow 0.5s ease-in;
         box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
 
 @media (hover: none) {
     .ag-projects_item:hover {
-        transition: box-shadow 0.5s ease;
+        transition: box-shadow 0.5s ease-in;
         box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
     }
 }
