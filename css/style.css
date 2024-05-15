@@ -1,21 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
 
 :root {
-    --bg: #1e1e2d;
-    --fg2: #c7e7ef;
-    --fg: #1e1e2d;
-    --color1: #263542;
-    --color2: #5f7e95;
-    --color3: #435a6f;
-    --color4: #bf8a9d;
-    --color5: #5d6779;
-    --color6: #222d38;
-    --color7: #5d6779;
+    --bg: #202023;
+    --fg2: #EEEEEE;
+    --fg: #202023;
+    --color1: #f8d494;
+    --color2: #f8d494;
+    --color3: #46C2CB;
+    --color4: #5d6779;
+}
+
+.hello_text {
+    color: #f8d494;
+    font-size: 5vh;
+    margin-right: 3vw;
+    text-decoration: none;
 }
 
 .logo {
     margin-left: 2vh;
-    height: 50px;
+    height: 40px;
 }
 
 .logo:hover {
@@ -24,6 +28,9 @@
 .item {
     margin: 2vw;
     color: var(--fg2);
+}
+
+.item:hover{
 }
 
 .item:hover i{
@@ -47,10 +54,11 @@
 }
 
 .navigation_links:after {
-    background-color: var(--color4);
+    background-color: var(--color1);
     display: block;
     content: "";
-    height: 3px;
+    height: 5px;
+    border-radius: 2px;
     width: 0%;
 
     -webkit-transition: width .2s ease-in-out;
@@ -77,13 +85,9 @@
     transition: all 0.3s ease 0s;
 }
 
-.fa-solid {
-    color: var(--color4);
-    animation: color-cycle 4s infinite; 
-}
 @keyframes color-cycle {
     0% { color: var(--fg2); }
-    50% { color: var(--color4); }
+    50% { color: var(--color2); }
     100% { color: var(--fg2); }
 }
 
@@ -102,10 +106,6 @@ header {
     justify-content: space-between;
 }
 
-i {
-    color: var(--color4);
-}
-
 @media(max-width: 992px) {
     .logo {
         display: none;
@@ -113,21 +113,10 @@ i {
     .title {
         display: none;
     }
-
-    header {
-        display: flexbox;
-        align-items: center;
-        justify-content: center;
-    }
-    .nav_buttons li {
-        display: flexbox;
-        padding: 0px 0px;
-    }
 }
 
-
 html {
-    scrollbar-color: var(--color4) var(--bg);
+    scrollbar-color: var(--color1) var(--bg);
     scrollbar-arrow-color: var(--bg) var(--bg);
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -288,7 +277,7 @@ h3 {
     padding-top: 3vh;
     padding-bottom: 3vh;
     display: flexbox;
-    background-color: var(--color4);
+    background-color: var(--color1);
     color: var(--bg);
     border-radius: 1vh;
     width: 60%;
@@ -341,12 +330,12 @@ h3 {
     margin-bottom: 20px;
 
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
+    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
 }
 
 .user-avatar:hover {
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 5px var(--color7), 0 0 25px var(--color7), 0 0 60px var(--color7);
+    box-shadow: 0 0 5px var(--color2), 0 0 25px var(--color2), 0 0 60px var(--color2);
 }
 
 .svg_image {
@@ -380,13 +369,13 @@ h3 {
     margin-top: 0.5vh;
     border: none;
     border-radius: 10px;
-    background-color: var(--color4);
+    background-color: var(--color1);
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
+    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
 }
 @media(max-width: 992px) {
     .button {
@@ -417,8 +406,8 @@ h3 {
     
     border: none;
     border-radius: 10px;
-    background-color: var(--color4);
-    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
+    background-color: var(--color1);
+    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
@@ -431,27 +420,27 @@ h3 {
 @media (hover: hover) {
     .button:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
+        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
     }
 }
 
 
 @media (hover: none) {
     .button:active {
-        background-color: var(--color7);
+        background-color: var(--color2);
     }
 }
 
 @media (hover: hover) {
     .button2:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
+        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
     }
 }
 
 @media (hover: none) {
     .button2:active {
-        background-color: var(--color7);
+        background-color: var(--color2);
     }
 }
 
@@ -467,13 +456,13 @@ h3 {
     margin-top: 1vh;
     border: none;
     border-radius: 10px;
-    background-color: var(--color4);
+    background-color: var(--color1);
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
+    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
 }
 .contact_button i {
     color: var(--fg);
@@ -493,14 +482,14 @@ h3 {
 @media (hover: hover) {
     .contact_button:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
+        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
     }
 }
 
 
 @media (hover: none) {
     .contact_button:active {
-        background-color: var(--color7);
+        background-color: var(--color2);
     }
 }
 
@@ -528,13 +517,13 @@ footer {
     border-radius: 10vh;
 
     align-items: center;
-    background-color: var(--color4);
+    background-color: var(--color1);
     justify-content: center;
 }
 
-@media(max-width: 992px) {
+@media(max-width: 1200px) {
     .footer_content {
-        width: 80vw;
+        width: 85vw;
     }
     .svg_image {
         width: 80vw;
@@ -596,7 +585,7 @@ footer {
 .ag-projects-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: var(--color4);
+    background-color: var(--color1);
     color: transparent;
     border-radius: 30px;
     font-family: "Itim", cursive;
@@ -688,13 +677,13 @@ footer {
 @media (hover: hover) {
     .ag-projects_item:hover {
         transition: box-shadow 0.5s ease-in;
-        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
+        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
     }
 }
 
 @media (hover: none) {
     .ag-projects_item:hover {
         transition: box-shadow 0.5s ease-in;
-        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
+        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
     }
 }

@@ -2,16 +2,13 @@
 
 
 :root {
-    --bg: #1e1e2d;
-    --fg2: #c7e7ef;
-    --fg: #1e1e2d;
-    --color1: #263542;
-    --color2: #5f7e95;
-    --color3: #435a6f;
-    --color4: #bf8a9d;
-    --color5: #5d6779;
-    --color6: #222d38;
-    --color7: #5d6779;
+    --bg: #202023;
+    --fg2: #EEEEEE;
+    --fg: #202023;
+    --color1: #f8d494;
+    --color2: #f8d494;
+    --color3: #46C2CB;
+    --color4: #5d6779;
 }
 
 summary {
@@ -22,6 +19,7 @@ summary {
 .links {
     display: block;
 }
+
 
 .item {
     margin: 2vw;
@@ -49,10 +47,11 @@ summary {
 }
 
 .navigation_links:after {
-    background-color: var(--color4);
+    background-color: var(--color2);
     display: block;
     content: "";
-    height: 3px;
+    border-radius: 2px;
+    height: 4px;
     width: 0%;
 
     -webkit-transition: width .2s ease-in-out;
@@ -63,6 +62,20 @@ summary {
 .navigation_links:hover:after,
 .navigation_links:focus:after {
     width: 110%;
+}
+
+.nav_buttons {
+    list-style: none;
+    margin-right: 2vh;
+}
+
+.nav_buttons li {
+    display: inline-block;
+    padding: 0px 0px;
+}
+
+.nav_buttons li a {
+    transition: all 0.3s ease 0s;
 }
 
 .logo {
@@ -80,7 +93,7 @@ summary {
     align-items: center;
     font-size: large;
     width: 30vh;
-    background-color: var(--color4);
+    background-color: var(--color1);
     color: var(--bg);
     border-radius: 1vh;
 }
@@ -90,15 +103,15 @@ summary {
     width: 40vw;
     transform-style: preserve-3d;
     z-index: 100;
-    border: 5px solid var(--color4);
+    border: 5px solid var(--color1);
     border-radius: 10px;
     box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
 }
 
 .perspective-image:hover {
-    border: 5px solid var(--color4);
-    box-shadow: 0 0 5px var(--color4), 0 0 30px var(--color4);
+    border: 5px solid var(--color1);
+    box-shadow: 0 0 5px var(--color1), 0 0 30px var(--color1);
 }
 
 .perspective-image-phone {
@@ -106,19 +119,19 @@ summary {
     width: 15vh;
     transform-style: preserve-3d;
     z-index: 100;
-    border: 5px solid var(--color4);
+    border: 5px solid var(--color1);
     border-radius: 10px;
     box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
 }
 
 .perspective-image-phone:hover {
-    border: 5px solid var(--color4);
-    box-shadow: 0 0 5px var(--color4), 0 0 30px var(--color4);
+    border: 5px solid var(--color1);
+    box-shadow: 0 0 5px var(--color1), 0 0 30px var(--color1);
 }
 
 html {
-    scrollbar-color: var(--color4) var(--bg);
+    scrollbar-color: var(--color1) var(--bg);
     scroll-behavior: smooth;
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -199,6 +212,14 @@ header {
 li {
     font-size: 17px;
     color: var(--fg2);
+    text-decoration: none;
+    list-style: none;
+}
+ul {
+    font-size: 17px;
+    color: var(--fg2);
+    text-decoration: none;
+    list-style: none;
 }
 
 a {
@@ -228,6 +249,22 @@ h3 {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
+}
+@media(max-width: 992px) {
+    h1 {
+        font-size: 30px;
+        color: var(--fg2);
+    }
+
+    h2 {
+        font-size: 19px;
+        color: var(--fg2);
+    }
+
+    h3 {
+        font-size: 15px;
+        color: var(--fg);
+    }
 }
 
 .main {
@@ -329,7 +366,7 @@ h3 {
     margin-top: 0.5vh;
     border: none;
     border-radius: 10px;
-    background-color: var(--color4);
+    background-color: var(--color1);
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
@@ -363,7 +400,7 @@ h3 {
     width: 50px;
     border: none;
     border-radius: 10px;
-    background-color: var(--color4);
+    background-color: var(--color1);
     box-shadow: 0 0 0px var(--color7), 0 0 0px var(--color7);
     color: var(--bg);
     font-size: 16px;
@@ -376,7 +413,7 @@ h3 {
 @media (hover: hover) {
     .button:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
+        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
     }
 }
 
@@ -390,7 +427,7 @@ h3 {
 @media (hover: hover) {
     .button2:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color4), 0 0 25px var(--color4), 0 0 50px var(--color4);
+        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
     }
 }
 
@@ -404,76 +441,36 @@ footer {
     align-items: center;
     justify-content: center;
     display: flex;
-}
-
-._footer {
-    width: 100vh;
-    display: flexbox;
-    align-items: center;
-    justify-content: center;
+    vertical-align: middle;
+    flex-direction: column;
 }
 
 .footer_content {
-    color: var(--bg);
-    font-size: medium;
-    display: flex;
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
+    color: var(--bg);
+    font-size: medium;
+    display: flex;
 
-    height: 3vh;
-    width: 45%;
-    margin-left: 6vh;
-    margin-right: 6vh;
+    height: 2vh;
     margin-bottom: 3vh;
     border-radius: 10vh;
 
     align-items: center;
-    background-color: var(--color4);
+    background-color: var(--color1);
     justify-content: center;
 }
-
-@media only screen and (max-width: 900px) {
-    h1 {
-        font-size: 30px;
-        color: var(--fg2);
+@media(max-width: 1200px) {
+    .footer_content {
+        width: 85vw;
     }
-
-    h2 {
-        font-size: 19px;
-        color: var(--fg2);
-    }
-
-    h3 {
-        font-size: 15px;
-        color: var(--fg);
-    }
-
-
     .svg_image {
-        width: 100%;
+        width: 80vw;
     }
+}
 
-    .button {
-        display: inline-block;
-        height: 40px;
-        width: 150px;
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-top: 10px;
-        border: none;
-        border-radius: 10px;
-        background-color: var(--color4);
-        color: var(--bg);
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.7s ease;
-    }
-
-    .skillicons {
-        width: 25vh;
-    }
-
+@media(max-width: 900px) {
     .skill_badge {
         height: 2vh;
         border-radius: 10px;
