@@ -93,7 +93,6 @@
 
 header {
     display: flex;
-    display: box;
     height: 4vh;
     background-color: rgba(19, 22, 27, 0);
     backdrop-filter: blur(10px);
@@ -112,6 +111,11 @@ header {
     }
     .title {
         display: none;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
