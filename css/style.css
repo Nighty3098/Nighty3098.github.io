@@ -312,18 +312,18 @@ h3 {
 
 .projects {
     display: flex;
-    vertical-align: middle;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 
 .projects_list {
     display: flex;
-    vertical-align: middle;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 
 .user-avatar {
