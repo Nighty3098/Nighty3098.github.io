@@ -3,11 +3,11 @@
 :root {
     --bg: #1c1c2a;
     --fg2: #EEEEEE;
-    --fg: #1c1c2a;
+    --fg: #EEEEEE;
     --color1: #a6e0b8;
     --color2: #dbb6ed;
     --color3: #ef9f9c;
-    --color4: #b095d6;
+    --color4: #181824;
 }
 
 .hello_text {
@@ -539,8 +539,9 @@ footer {
 }
 
 .ag-projects_item {
-    transition: box-shadow 0.5s ease-in;
-    box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg), 0 0 50px var(--bg);
+    transition: transform 0.3s ease-out;
+    /*transition: box-shadow 0.5s ease-in;
+    box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg), 0 0 50px var(--bg);*/
 
     display: inline-block;
     -ms-flex-preferred-size: calc(33.33333% - 30px);
@@ -589,7 +590,8 @@ footer {
 .ag-projects-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: var(--color1);
+    background-color: var(--color4);
+    color: var(--fg2);
     color: transparent;
     border-radius: 30px;
     font-family: "Itim", cursive;
@@ -604,7 +606,7 @@ footer {
 .ag-projects-item_link:hover,
 .ag-projects-item_link:hover {
     text-decoration: none;
-    color: var(--bg);
+    color: var(--fg2);
 }
 
 .ag-projects-item_link:hover .ag-projects-item_bg {
@@ -614,7 +616,7 @@ footer {
 }
 
 .ag-projects-item_title {
-    color: var(--bg);
+    color: var(--fg2);
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
@@ -672,22 +674,25 @@ footer {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
+    color: var(--fg2);
 
-    -webkit-transition: color 1s ease-in;
+    /*-webkit-transition: color 1s ease-in;
     -o-transition: color 1s ease-in;
-    transition: color 1s ease-in;
+    transition: color 1s ease-in;*/
 }
 
 @media (hover: hover) {
     .ag-projects_item:hover {
-        transition: box-shadow 0.5s ease-in;
-        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
+        /*transition: box-shadow 0.5s ease-in;*/
+        transform: scale(1.1);
+        /*box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);*/
     }
 }
 
 @media (hover: none) {
     .ag-projects_item:hover {
-        transition: box-shadow 0.5s ease-in;
-        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
+        /*transition: box-shadow 0.5s ease-in;*/
+        transform: scale(1.1);
+        /*box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);*/
     }
 }

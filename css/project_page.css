@@ -4,11 +4,11 @@
 :root {
     --bg: #1c1c2a;
     --fg2: #EEEEEE;
-    --fg: #1c1c2a;
+    --fg: #EEEEEE;
     --color1: #a6e0b8;
     --color2: #dbb6ed;
     --color3: #ef9f9c;
-    --color4: #b095d6;
+    --color4: #181824;
 }
 
 summary {
@@ -47,7 +47,7 @@ summary {
 }
 
 .navigation_links:after {
-    background-color: var(--color2);
+    background-color: var(--color1);
     display: block;
     content: "";
     border-radius: 2px;
@@ -61,7 +61,7 @@ summary {
 
 .navigation_links:hover:after,
 .navigation_links:focus:after {
-    width: 110%;
+    width: 100%;
 }
 
 .nav_buttons {
