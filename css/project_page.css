@@ -2,13 +2,13 @@
 
 
 :root {
-    --bg: #0d1117;
+    --bg: #1c1c2a;
     --fg2: #EEEEEE;
-    --fg: #0d1117;
-    --color1: #f8d494;
-    --color2: #f8d494;
-    --color3: #46C2CB;
-    --color4: #5d6779;
+    --fg: #1c1c2a;
+    --color1: #a6e0b8;
+    --color2: #dbb6ed;
+    --color3: #ef9f9c;
+    --color4: #b095d6;
 }
 
 summary {
