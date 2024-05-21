@@ -484,13 +484,13 @@ h3 {
 }
 @media (max-width: 1500px) {
     .contact_button {
-        height: 3.5vh;
+        height: 3vh;
         width: 50vw;
     }
 }
 @media (max-width: 1300px) {
     .contact_button {
-        height: 3.5vh;
+        height: 3vh;
         width: 30vw;
     }
 }
