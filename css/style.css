@@ -129,12 +129,17 @@ html {
 }
 
 .skill_badge {
-    height: 1.8vh;
+    height: 1.6vh;
+    border-radius: 10px;
+}
+.skill_badge2 {
+    height: 1.5vh;
     border-radius: 10px;
 }
 
 
 body {
+    display: grid;
     background-color: var(--bg);
 }
 
@@ -483,6 +488,12 @@ h3 {
         width: 50vw;
     }
 }
+@media (max-width: 1300px) {
+    .contact_button {
+        height: 3.5vh;
+        width: 30vw;
+    }
+}
 @media (hover: hover) {
     .contact_button:hover {
         transition: box-shadow 0.5s ease;
@@ -533,6 +544,14 @@ footer {
         width: 80vw;
     }
 }
+@media(max-width: 900px) {
+    .footer_content {
+        width: 50vw;
+    }
+    .svg_image {
+        width: 60vw;
+    }
+}
 
 .badge {
     width: 20%;
@@ -564,26 +583,26 @@ footer {
 }
 @media(max-width: 1800px) {
     .ag-projects_item {
-        width: 60vw;
+        width: 30vw;
         height: 13vh;
     }
 }
 @media(max-width: 1700px) {
     .ag-projects_item {
-        width: 70vw;
+        width: 30vw;
         height: 12vh;
     }
 }
 @media(max-width: 1300px) {
     .ag-projects_item {
-        width: 85vw;
-        height: 14vh;
+        width: 50vw;
+        height: 12vh;
     }
 }
 @media(max-width: 900px) {
     .ag-projects_item {
-        width: 85vw;
-        height: 14vh;
+        width: 80vw;
+        height: 12vh;
     }
 }
 
@@ -640,25 +659,31 @@ footer {
     font-weight: 400;
     font-style: normal;
 
-    width: 12vw;
+    width: 15vw;
     height: 13vh;
 }
 @media(max-width: 1600px) {
     .ag-projects-item_content-box {
-        width: 20vw;
+        width: 15vw;
         height: 12vh;
     }
 }
 @media(max-width: 1800px) {
     .ag-projects-item_content-box {
-        width: 25vw;
+        width: 15vw;
         height: 14vh;
     }
 }
 @media(max-width: 1700px) {
     .ag-projects-item_content-box {
-        width: 40vw;
+        width: 20vw;
         height: 10vh;
+    }
+}
+@media(max-width: 1300px) {
+    .ag-projects-item_content-box {
+        width: 40vw;
+        height: 11vh;
     }
 }
 @media(max-width: 900px) {
