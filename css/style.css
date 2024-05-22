@@ -4,8 +4,8 @@
     --bg: #1c1c2a;
     --fg2: #EEEEEE;
     --fg: #EEEEEE;
-    --color1: #a6e0b8;
-    --color2: #dbb6ed;
+    --color3: #a6e0b8;
+    --color3: #dbb6ed;
     --color3: #ef9f9c;
     --color4: #181824;
 }
@@ -54,7 +54,7 @@
 }
 
 .navigation_links:after {
-    background-color: var(--color1);
+    background-color: var(--color3);
     display: block;
     content: "";
     height: 5px;
@@ -87,7 +87,7 @@
 
 @keyframes color-cycle {
     0% { color: var(--fg2); }
-    50% { color: var(--color2); }
+    50% { color: var(--color3); }
     100% { color: var(--fg2); }
 }
 
@@ -120,7 +120,7 @@ header {
 }
 
 html {
-    scrollbar-color: var(--color1) var(--bg);
+    scrollbar-color: var(--color3) var(--bg);
     scrollbar-arrow-color: var(--bg) var(--bg);
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -286,7 +286,7 @@ h3 {
     padding-top: 3vh;
     padding-bottom: 3vh;
     display: flexbox;
-    background-color: var(--color1);
+    background-color: var(--color3);
     color: var(--bg);
     border-radius: 1vh;
     width: 60%;
@@ -302,6 +302,9 @@ h3 {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
     height: 100vh;
     vertical-align: middle;
     flex-direction: column;
@@ -339,12 +342,12 @@ h3 {
     margin-bottom: 20px;
 
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
+    box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
 }
 
 .user-avatar:hover {
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 5px var(--color2), 0 0 25px var(--color2), 0 0 60px var(--color2);
+    box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 60px var(--color3);
 }
 
 .svg_image {
@@ -378,13 +381,13 @@ h3 {
     margin-top: 0.5vh;
     border: none;
     border-radius: 10px;
-    background-color: var(--color1);
+    background-color: var(--color3);
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
+    box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
 }
 @media(max-width: 992px) {
     .button {
@@ -415,8 +418,8 @@ h3 {
     
     border: none;
     border-radius: 10px;
-    background-color: var(--color1);
-    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
+    background-color: var(--color3);
+    box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
@@ -429,27 +432,27 @@ h3 {
 @media (hover: hover) {
     .button:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
+        box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);
     }
 }
 
 
 @media (hover: none) {
     .button:active {
-        background-color: var(--color2);
+        background-color: var(--color3);
     }
 }
 
 @media (hover: hover) {
     .button2:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
+        box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);
     }
 }
 
 @media (hover: none) {
     .button2:active {
-        background-color: var(--color2);
+        background-color: var(--color3);
     }
 }
 
@@ -465,13 +468,13 @@ h3 {
     margin-top: 1vh;
     border: none;
     border-radius: 10px;
-    background-color: var(--color1);
+    background-color: var(--color3);
     color: var(--bg);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
+    box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
 }
 .contact_button i {
     color: var(--fg);
@@ -497,14 +500,14 @@ h3 {
 @media (hover: hover) {
     .contact_button:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);
+        box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);
     }
 }
 
 
 @media (hover: none) {
     .contact_button:active {
-        background-color: var(--color2);
+        background-color: var(--color3);
     }
 }
 
@@ -526,13 +529,11 @@ footer {
 
     height: 2vh;
     width: 25%;
-    margin-left: 6vh;
-    margin-right: 6vh;
     margin-bottom: 3vh;
     border-radius: 10vh;
 
     align-items: center;
-    background-color: var(--color1);
+    background-color: var(--color3);
     justify-content: center;
 }
 
@@ -546,10 +547,10 @@ footer {
 }
 @media(max-width: 900px) {
     .footer_content {
-        width: 50vw;
+        width: 80vw;
     }
     .svg_image {
-        width: 60vw;
+        width: 80vw;
     }
 }
 
@@ -602,7 +603,7 @@ footer {
 @media(max-width: 900px) {
     .ag-projects_item {
         width: 80vw;
-        height: 12vh;
+        height: 15vh;
     }
 }
 
@@ -710,7 +711,7 @@ footer {
     .ag-projects_item:hover {
         /*transition: box-shadow 0.5s ease-in;*/
         transform: scale(1.1);
-        /*box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);*/
+        /*box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);*/
     }
 }
 
@@ -718,6 +719,6 @@ footer {
     .ag-projects_item:hover {
         /*transition: box-shadow 0.5s ease-in;*/
         transform: scale(1.1);
-        /*box-shadow: 0 0 5px var(--color1), 0 0 25px var(--color1), 0 0 50px var(--color1);*/
+        /*box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);*/
     }
 }
