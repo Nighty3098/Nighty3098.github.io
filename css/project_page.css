@@ -5,9 +5,9 @@
     --bg: #1c1c2a;
     --fg2: #EEEEEE;
     --fg: #EEEEEE;
-    --color3: #a6e0b8;
-    --color3: #ef9f9c;
-    --color3: #dbb6ed;
+    --color1: #a6e0b8;
+    --color2: #dbb6ed;
+    --color3: #a3ed81;
     --color4: #181824;
 }
 
@@ -100,7 +100,7 @@ summary {
 
 .perspective-image {
     margin: 1% 1%;
-    width: 40vw;
+    width: 55vw;
     transform-style: preserve-3d;
     z-index: 100;
     border: 5px solid var(--color1);
