@@ -5,8 +5,8 @@
     --fg2: #EEEEEE;
     --fg: #EEEEEE;
     --color3: #a6e0b8;
-    --color3: #ef9f9c;
     --color3: #dbb6ed;
+    --color3: #ff8f9c;
     --color4: #181824;
 }
 
@@ -211,7 +211,7 @@ h3 {
 .override {
     backdrop-filter: blur(0px);
     /*background-color: rgba(19, 22, 27, 0.2);*/
-    margin-top: 6vh;
+    margin-top: 0vh;
     height: 100%;
     width: 100%;
     border-radius: 20px;
@@ -219,7 +219,7 @@ h3 {
 
 .hello {
     margin-left: 1vw;
-    margin-top: 50vh;
+    margin-top: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,16 +233,15 @@ h3 {
 
 .main-block {
     /*background-image: url("../imgs/background.jpg");*/
-    background-image: linear-gradient(to bottom, #a6e0b8, #dbb6ed);
+    /*background-image: linear-gradient(to bottom, #7589d5, #236cbb);*/
     background-attachment: fixed;
     background-size: cover;
     margin-top: 4vh;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: 5vw;
     filter: contrast(1.1);
     background-position: center;
     height: 90vh;
-    width: 98vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -339,19 +338,19 @@ h3 {
 }
 
 .user-avatar {
-    width: 17vh;
-    height: 17vh;
+    width: 13vh;
+    height: 13vh;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
 
-    transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
+    /*transition: box-shadow 0.5s ease;*/
+    /*box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);*/
 }
 
 .user-avatar:hover {
-    transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 60px var(--color3);
+    /*transition: box-shadow 0.5s ease;*/
+    /*box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 60px var(--color3);*/
 }
 
 .svg_image {
