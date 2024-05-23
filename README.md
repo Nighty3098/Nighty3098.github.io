@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=black&color=7dc4e4" />
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=black&color=ef9f9c" />
     <br><br>
-    <a href="https://discord.gg/6xEc5WFK"><img src="https://img.shields.io/discord/1238858182403559505.svg?label=Discord&logo=Discord&style=for-the-badge&color=f5a7a0&logoColor=FFFFFF&labelColor=1c1c29" /></a>
+    <a href="https://discord.gg/KK4Xdcqb"><img src="https://img.shields.io/discord/1238858182403559505.svg?label=Discord&logo=Discord&style=for-the-badge&color=f5a7a0&logoColor=FFFFFF&labelColor=1c1c29" /></a>
 <br><br><br>
 
 
