@@ -1,18 +1,15 @@
 <h1 align="center">Nighty3098's homepage</h1>
 
 <div align="center">
-    <a href="./LICENSE.md"><img src="https://img.shields.io/github/license/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=85e185&logoColor=85e185&labelColor=0d1117" /></a>
-    <br>
-    <img src="https://img.shields.io/github/last-commit/Nighty3098/Nighty3098.github.io?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=0d1117"/>
-    <img src="https://img.shields.io/github/stars/Nighty3098/Nighty3098.github.io?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=0d1117"/>
-    <br>
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" class="skill_badge" />
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" class="skill_badge" />
-    <br>
-    <a href="https://discord.gg/#9707" target="blank"><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"/></a>
-    <a href="https://t.me/Night3098" target="blank"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/></a>
-    <a href="mailto:night3098game@gmail.com" target="blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-</div>
+    <a href="./LICENSE.md"><img src="https://img.shields.io/github/license/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=a6e0b8&logoColor=85e185&labelColor=1c1c29" /></a>
+    <br><br>
+    <img src="https://img.shields.io/github/last-commit/Nighty3098/Nighty3098.github.io?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29"/>
+    <img src="https://img.shields.io/github/stars/Nighty3098/Nighty3098.github.io?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29"/>
+    <br><br>
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=black&color=7dc4e4" />
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=black&color=ef9f9c" />
+    <br><br>
+    <a href="https://discord.gg/6xEc5WFK"><img src="https://img.shields.io/discord/1238858182403559505.svg?label=Discord&logo=Discord&style=for-the-badge&color=f5a7a0&logoColor=FFFFFF&labelColor=1c1c29" /></a>
 <br><br><br>
 
 
