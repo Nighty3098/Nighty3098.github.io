@@ -157,7 +157,7 @@ summary {
     font-size: large;
     width: 50vh;
     /*background-color: var(--color1);*/ 
-    color: var(--fg);
+    color: var(--fg2);
     border-radius: 1vh;
 }
 
