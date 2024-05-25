@@ -412,12 +412,6 @@ h3 {
     box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 60px var(--color3);
 }
 
-.svg_image {
-    width: 30%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
 .buttons {
     display: block;
     align-items: center;
@@ -585,18 +579,27 @@ footer {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
-    color: var(--bg);
-    font-size: medium;
+    color: var(--fg2);
+    font-size: large;
     display: flex;
 
     height: 2vh;
-    width: 25%;
     margin-bottom: 3vh;
     border-radius: 10vh;
 
+    width: 90vw;
+
     align-items: center;
-    background-color: var(--color3);
+    /*background-color: var(--color1);*/
     justify-content: center;
+}
+@media(max-width: 1200px) {
+    .footer_content {
+        width: 90vw;
+    }
+    .svg_image {
+        width: 90vw;
+    }
 }
 
 @media(max-width: 1200px) {
