@@ -8,9 +8,9 @@
     --bg: #1c1c2a;
     --fg2: #EEEEEE;
     --fg: #EEEEEE;
-    --color1: #a6e0b8;
+    --color1: #a3ed81;
     --color2: #dbb6ed;
-    --color3: #c9a9f3;
+    --color3: #a6e0b8;
     --color4: #181824;
 }
 
@@ -405,7 +405,7 @@ h3 {
 
 
 .svg_image {
-    width: 50%;
+    width: 70%;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -449,7 +449,7 @@ h3 {
 }
 @media(max-width: 600px) {
     .button {
-        height: 3vh;
+        height: 3.2vh;
         width: 50vw;
     }
 }
@@ -516,24 +516,26 @@ footer {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
-    color: var(--bg);
-    font-size: medium;
+    color: var(--fg2);
+    font-size: large;
     display: flex;
 
     height: 2vh;
     margin-bottom: 3vh;
     border-radius: 10vh;
 
+    width: 90vw;
+
     align-items: center;
-    background-color: var(--color1);
+    /*background-color: var(--color1);*/
     justify-content: center;
 }
 @media(max-width: 1200px) {
     .footer_content {
-        width: 85vw;
+        width: 90vw;
     }
     .svg_image {
-        width: 80vw;
+        width: 90vw;
     }
 }
 
