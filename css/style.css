@@ -11,6 +11,42 @@
 }
 
 
+hr,    
+hr:before,
+hr:after {
+    content: "";
+    background: var(--color1);
+    display: block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    position: absolute;
+    animation: anim-hr 6s linear infinite;
+    border: 0;
+    overflow: visible;
+}
+hr:before {
+    left: -32px;
+}
+hr:after {
+    left: 32px;
+}
+hr {
+    position: relative;
+    margin: 30px auto;
+}
+@keyframes anim-hr {
+    0% {
+        background: var(--color1);
+    }
+    50% {
+        background: var(--fg2);
+    }  
+    100% {
+        background: var(--color1);
+    }
+}
+
 .hello_text {
     color: #f8d494;
     font-size: 5vh;

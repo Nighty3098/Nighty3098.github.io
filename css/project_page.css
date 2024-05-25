@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
 
+.cards {
+    display: flex;
+}
 
 :root {
     --bg: #1c1c2a;
@@ -7,8 +10,63 @@
     --fg: #EEEEEE;
     --color1: #a6e0b8;
     --color2: #dbb6ed;
-    --color3: #a3ed81;
+    --color3: #c9a9f3;
     --color4: #181824;
+}
+
+hr,    
+hr:before,
+hr:after {
+    content: "";
+    background: var(--color1);
+    display: block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    position: absolute;
+    animation: anim-hr 6s linear infinite;
+    border: 0;
+    overflow: visible;
+}
+hr:before {
+    left: -32px;
+}
+hr:after {
+    left: 32px;
+}
+hr {
+    position: relative;
+    margin: 30px auto;
+}
+@keyframes anim-hr {
+    0% {
+        background: var(--color1);
+    }
+    50% {
+        background: var(--fg2);
+    }  
+    100% {
+        background: var(--color1);
+    }
+}
+
+.header_img {
+	position: absolute;
+	top: calc(83% - 5vw);
+	left: 5%;
+	width: 90%;
+	overflow: hidden;
+    box-shadow: 0px 30px 30px 0px rgba(1,6,13,0.75);
+}
+@media(min-width: 1800px) {
+    .header_img {
+        width: 40%;
+        position: absolute;
+        top: calc(90% - 5vw);
+        left: 30%;
+        overflow: hidden;
+        box-shadow: 0px 30px 30px 0px rgba(1,6,13,0.75);
+    }
 }
 
 summary {
@@ -86,31 +144,41 @@ summary {
 .logo:hover {
 }
 
+.about_text {
+    width: 30vh;
+    font-size: larger;
+}
+
 .about_project {
     padding: 4vh 4vh;
     display: flexbox;
     justify-content: center;
     align-items: center;
     font-size: large;
-    width: 30vh;
-    background-color: var(--color1);
-    color: var(--bg);
+    width: 50vh;
+    /*background-color: var(--color1);*/ 
+    color: var(--fg);
     border-radius: 1vh;
 }
 
 .perspective-image {
     margin: 1% 1%;
-    width: 55vw;
+    width: 50vw;
     transform-style: preserve-3d;
     z-index: 100;
-    border: 5px solid var(--color1);
+    border: 2px solid var(--color1);
     border-radius: 10px;
     box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
 }
+@media(min-width: 2000px) {
+    .perspective-image {
+        width: 20vw;
+    }
+}
 
 .perspective-image:hover {
-    border: 5px solid var(--color1);
+    border: 2px solid var(--color1);
     box-shadow: 0 0 5px var(--color1), 0 0 30px var(--color1);
 }
 
@@ -119,14 +187,14 @@ summary {
     width: 15vh;
     transform-style: preserve-3d;
     z-index: 100;
-    border: 5px solid var(--color1);
+    border: 2px solid var(--color1);
     border-radius: 10px;
     box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
 }
 
 .perspective-image-phone:hover {
-    border: 5px solid var(--color1);
+    border: 2px solid var(--color1);
     box-shadow: 0 0 5px var(--color1), 0 0 30px var(--color1);
 }
 
