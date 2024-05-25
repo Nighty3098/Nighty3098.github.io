@@ -94,7 +94,6 @@ summary {
     font-style: normal;
 
     text-decoration: none;
-    font-size: medium;
     color: var(--fg2);
 
     cursor: default;
@@ -119,7 +118,7 @@ summary {
 
 .navigation_links:hover:after,
 .navigation_links:focus:after {
-    width: 100%;
+    width: 110%;
 }
 
 .nav_buttons {
