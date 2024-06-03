@@ -28,6 +28,12 @@ hr:after {
     border: 0;
     overflow: visible;
 }
+@media(max-width: 992px) {
+    hr:after, hr, hr:before {
+        height: 10px;
+        width: 10px;
+    }
+}
 
 hr:before {
     left: -32px;
