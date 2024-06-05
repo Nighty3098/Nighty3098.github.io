@@ -422,11 +422,11 @@ h3 {
 }
 
 .user-avatar {
-    width: 14vh;
-    height: 14vh;
-    border-radius: 50%;
+    width: 17vh;
+    height: 17vh;
+    border-radius: 10%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 5vh;
 
     transition: box-shadow 0.5s ease;
     box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
@@ -434,7 +434,7 @@ h3 {
 
 .user-avatar:hover {
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 5px var(--fg2), 0 0 25px var(--fg2), 0 0 60px var(--fg2);
+    box-shadow: 0 0 0px var(--fg2), 0 0 0px var(--fg2), 0 0 0px var(--fg2);
 }
 
 .buttons {
@@ -444,6 +444,7 @@ h3 {
 
 .user-text {
     font-family: "Itim", cursive;
+    margin-bottom: 4vh;
     font-weight: 400;
     font-style: normal;
     text-align: center;
