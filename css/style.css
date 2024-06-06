@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
 
 :root {
-    --bg: #333d42;
-    --fg2: #EEEEEE;
-    --fg: #EEEEEE;
-    --color1: #e08581;
-    --color2: #a9bf85;
-    --color3: #d8bd85;
-    --color4: #485257;
+    --bg: #121821;
+    --fg2: #eb9672;
+    --fg: #eb9672;
+    --color1: #eb9672;
+    --color2: #33373f;
+    --color3: #eb9672;
+    --color4: #33373f;
 }
 
 
@@ -268,7 +268,7 @@ h3 {
 
 
 .override {
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(6px);
     /*background-color: rgba(19, 22, 27, 0.2);*/
     margin-top: 0vh;
     height: 100%;
@@ -316,7 +316,7 @@ h3 {
 }
 
 .main-block {
-    /*background-image: url("../imgs/background.jpg");*/
+    /*background-image: url("../imgs/bg.jpg");*/
     /*background-image: linear-gradient(to bottom, #7589d5, #236cbb);*/
     background-attachment: fixed;
     background-size: cover;
@@ -661,6 +661,7 @@ footer {
 }
 
 .ag-projects_item {
+    background-color: transparent;
     transition: transform 0.3s ease-out;
     /*transition: box-shadow 0.5s ease-in;
     box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg), 0 0 50px var(--bg);*/
@@ -716,7 +717,7 @@ footer {
 .ag-projects-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: var(--color4);
+    background-color: transparent;
     color: var(--fg2);
     color: transparent;
     border-radius: 30px;

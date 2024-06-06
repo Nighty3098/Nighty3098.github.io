@@ -1,0 +1,24 @@
+{
+  "name": "nighty3098.github.io",
+  "version": "1.2.1",
+  "description": "Dev portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nighty3098/Nighty3098.github.io.git"
+  },
+  "author": "Nighty3098",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nighty3098/Nighty3098.github.io/issues"
+  },
+  "homepage": "https://github.com/Nighty3098/Nighty3098.github.io#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

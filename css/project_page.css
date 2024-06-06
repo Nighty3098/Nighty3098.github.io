@@ -5,14 +5,15 @@
 }
 
 :root {
-    --bg: #333d42;
-    --fg2: #EEEEEE;
-    --fg: #EEEEEE;
-    --color1: #e08581;
-    --color2: #a9bf85;
-    --color3: #d8bd85;
-    --color4: #485257;
+    --bg: #121821;
+    --fg2: #eb9672;
+    --fg: #eb9672;
+    --color1: #eb9672;
+    --color2: #33373f;
+    --color3: #eb9672;
+    --color4: #33373f;
 }
+
 
 hr,
 hr:before,
