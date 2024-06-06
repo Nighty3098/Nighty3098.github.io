@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
 
 :root {
-    --bg: #1c1c2a;
+    --bg: #333d42;
     --fg2: #EEEEEE;
     --fg: #EEEEEE;
-    --color1: #a6e0b8;
-    --color2: #dbb6ed;
-    --color3: #a3ed81;
-    --color4: #181824;
+    --color1: #e08581;
+    --color2: #a9bf85;
+    --color3: #d8bd85;
+    --color4: #485257;
 }
 
 
