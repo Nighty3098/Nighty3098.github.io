@@ -273,6 +273,7 @@ header {
     }
 
     header {
+        height: 5vh;
         display: flexbox;
         align-items: center;
         justify-content: center;
