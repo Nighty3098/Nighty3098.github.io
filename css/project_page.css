@@ -367,6 +367,19 @@ h3 {
     width: 100%;
 }
 
+.stats {
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    display: flexbox;
+    width: 100%;
+}
+
+@media(max-width: 850px) {
+    .stats {
+        display: none;
+    }
+}
+
 .animated {
     display: block;
     opacity: 0;
