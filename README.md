@@ -24,11 +24,6 @@
 	<img class="badge" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"  style="border-radius: 5px;"/>
 </div>
 
-
-<div id="social" align=center>
-    <img src="https://invidget.switchblade.xyz/r8jWX8ugDd" style="border-radius: 15px;"/><br>
-</div>
-
 <div class="link" align="center">
     <h2><a align='center' href='https://Nighty3098.github.io/'>Nighty3098.github.io</a></h2>
 </div>
