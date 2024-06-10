@@ -65,14 +65,14 @@ hr {
 
 .header_img {
     position: absolute;
-    top: calc(83% - 5vw);
+    top: calc(90% - 5vw);
     left: 5%;
     width: 90%;
     overflow: hidden;
     box-shadow: 0px 30px 20px 0px rgba(1, 6, 13, 0.75);
 }
 
-@media(min-width: 1800px) {
+@media(min-width: 2500px) {
     .header_img {
         width: 40%;
         position: absolute;
@@ -470,7 +470,7 @@ h3 {
 
 @media(max-width: 600px) {
     .button {
-        height: 3.2vh;
+        height: 60px;
         width: 50vw;
     }
 }
