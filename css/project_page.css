@@ -6,14 +6,13 @@
 
 :root {
     --bg: #121821;
-    --fg2: #eb9672;
-    --fg: #eb9672;
-    --color1: #eb9672;
+    --fg2: #8a9c6b;
+    --fg: #8a9c6b;
+    --color1: #8a9c6b;
     --color2: #33373f;
-    --color3: #eb9672;
+    --color3: #8a9c6b;
     --color4: #33373f;
 }
-
 
 hr,
 hr:before,

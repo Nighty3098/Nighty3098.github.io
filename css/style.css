@@ -2,11 +2,11 @@
 
 :root {
     --bg: #121821;
-    --fg2: #eb9672;
-    --fg: #eb9672;
-    --color1: #eb9672;
+    --fg2: #8a9c6b;
+    --fg: #8a9c6b;
+    --color1: #8a9c6b;
     --color2: #33373f;
-    --color3: #eb9672;
+    --color3: #8a9c6b;
     --color4: #33373f;
 }
 
@@ -317,8 +317,8 @@ h3 {
 }
 
 .main-block {
-    /*background-image: url("../imgs/bg.jpg");*/
-    /*background-image: linear-gradient(to bottom, #7589d5, #236cbb);*/
+    background-image: url("../imgs/bg.jpg");
+    /*background-image: linear-gradient(to bottom, #71a95b, #d9c8f2);*/
     background-attachment: fixed;
     background-size: cover;
     margin-top: 4vh;
