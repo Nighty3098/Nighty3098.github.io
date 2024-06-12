@@ -19,9 +19,9 @@
 	<img class="badge" src="https://img.shields.io/github/stars/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29" style="border-radius: 5px;"/>
 	<img class="badge" src="https://img.shields.io/github/forks/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=9dc3ea&logoColor=D9E0EE&labelColor=1c1c29"  style="border-radius: 5px;"/>
 	<br><br>
-	<img class="badge" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=black&color=7dc4e4"  style="border-radius: 5px;"/>
-	<img class="badge" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=black&color=ef9f9c"  style="border-radius: 5px;"/>
-	<img class="badge" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"  style="border-radius: 5px;"/>
+    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_CSS.png?raw=true" height="40px" />
+    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_HTML.png?raw=true" height="40px" />
+    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_JS.png?raw=true" height="40px" />
 </div>
 
 <div class="link" align="center">
