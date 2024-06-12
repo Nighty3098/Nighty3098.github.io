@@ -53,6 +53,29 @@ hr {
     }
 }
 
+.to_git_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 150px;
+}
+
+.to_git {
+    border-radius: 20px;
+
+    transition: height 0.5s ease;
+    height: 100px;
+}
+.to_git:hover {
+    border-radius: 20px;
+
+    transition: height 0.5s ease;
+    height: 120px;
+}
+
+
 .hello_text {
     color: #f8d494;
     font-size: 5vh;
@@ -182,7 +205,7 @@ html {
 }
 
 .skill_badge {
-    height: 1.6vh;
+    height: 2vh;
     border-radius: 10px;
 }
 
