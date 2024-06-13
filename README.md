@@ -19,9 +19,9 @@
 	<img class="badge" src="https://img.shields.io/github/stars/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29" style="border-radius: 5px;"/>
 	<img class="badge" src="https://img.shields.io/github/forks/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=9dc3ea&logoColor=D9E0EE&labelColor=1c1c29"  style="border-radius: 5px;"/>
 	<br><br>
-    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_CSS.png?raw=true" height="40px" />
-    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_HTML.png?raw=true" height="40px" />
-    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_JS.png?raw=true" height="40px" />
+    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_css.png?raw=true" height="50px" />
+    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true" height="50px" />
+    <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true" height="50px" />
 </div>
 
 <div class="link" align="center">
