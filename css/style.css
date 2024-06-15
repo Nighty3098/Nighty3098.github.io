@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
 
 :root {
-    --bg: #121821;
-    --fg2: #8a9c6b;
-    --fg: #8a9c6b;
-    --color1: #8a9c6b;
-    --color2: #33373f;
-    --color3: #8a9c6b;
-    --color4: #33373f;
+    --bg: #0d0e11;
+    --fg2: #83c092;
+    --fg: #83c092;
+    --color1: #83c092;
+    --color2: #90acf9;
+    --color3: #83c092;
+    --color4: #1e2326;
 }
 
 
@@ -341,7 +341,6 @@ h3 {
 
 .main-block {
     background-image: url("../imgs/bg.jpg");
-    /*background-image: linear-gradient(to bottom, #71a95b, #d9c8f2);*/
     background-attachment: fixed;
     background-size: cover;
     margin-top: 4vh;
@@ -362,7 +361,6 @@ h3 {
     font-style: normal;
     height: 50vh;
     display: flex;
-    border-radius: 1vh;
 
     vertical-align: baseline;
     justify-content: center;
@@ -413,9 +411,7 @@ h3 {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    width: 90vw;
+    width: 100%;
     height: 100vh;
     vertical-align: middle;
     flex-direction: column;
@@ -646,7 +642,6 @@ footer {
     width: 90vw;
 
     align-items: center;
-    /*background-color: var(--color1);*/
     justify-content: center;
 }
 
