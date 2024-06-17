@@ -210,7 +210,7 @@ html {
 }
 
 .skill_badge2 {
-    height: 1.5vh;
+    height: 1.4vh;
     border-radius: 10px;
 }
 
@@ -749,17 +749,35 @@ footer {
     position: relative;
 }
 
-.ag-projects-item_link:hover,
-.ag-projects-item_link:hover {
-    text-decoration: none;
-    color: var(--fg2);
+@media (hover: hover) {
+    .ag-projects-item_link,
+    .ag-projects-item_link {
+        text-decoration: none;
+        color: var(--fg2);
+    }
+    
+    .ag-projects-item_link .ag-projects-item_bg {
+        -webkit-transform: scale(20);
+        -ms-transform: scale(20);
+        transform: scale(20);
+    }
 }
 
-.ag-projects-item_link:hover .ag-projects-item_bg {
-    -webkit-transform: scale(20);
-    -ms-transform: scale(20);
-    transform: scale(20);
+@media (hover: none) {
+    .ag-projects-item_link,
+    .ag-projects-item_link {
+        text-decoration: none;
+        color: var(--fg2);
+    }
+    
+    .ag-projects-item_link .ag-projects-item_bg {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
 }
+
+
 
 .ag-projects-item_title {
     color: var(--fg2);
