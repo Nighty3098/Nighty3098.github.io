@@ -249,7 +249,7 @@ body {
 header {
     display: flex;
     display: box;
-    height: 4vh;
+    height: 5%;
     background-color: rgba(19, 22, 27, 0);
     backdrop-filter: blur(10px);
     position: fixed;
@@ -272,7 +272,7 @@ header {
     }
 
     header {
-        height: 5vh;
+        height: 6%;
         display: flexbox;
         align-items: center;
         justify-content: center;
