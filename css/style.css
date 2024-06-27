@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap');
+
+
 
 :root {
-    --bg: #0d0e11;
-    --fg2: #83c092;
-    --fg: #83c092;
-    --color1: #83c092;
+    --bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --fg2: #1e2326;
+    --fg: #1e2326;
+    --color1: #ffa4c3;
     --color2: #90acf9;
-    --color3: #83c092;
+    --color3: #d991aa;
     --color4: #1e2326;
 }
 
+html {
+    background: var(--bg);
+    scrollbar-color: var(--color3) transparent;
+    scrollbar-arrow-color: transparent transparent;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
 
 hr,
 hr:before,
@@ -195,15 +206,6 @@ header {
     }
 }
 
-html {
-    scrollbar-color: var(--color3) var(--bg);
-    scrollbar-arrow-color: var(--bg) var(--bg);
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
-    scroll-behavior: smooth;
-}
-
 .skill_badge {
     height: 2vh;
     border-radius: 10px;
@@ -217,7 +219,7 @@ html {
 
 body {
     display: grid;
-    background-color: var(--bg);
+    background-color: transparent;
 }
 
 a {
@@ -340,7 +342,7 @@ h3 {
 }
 
 .main-block {
-    /*background-image: url("../imgs/bg.jpg");*/
+    background-color: transparent;
     background-attachment: fixed;
     background-size: cover;
     margin-top: 4vh;
@@ -356,6 +358,8 @@ h3 {
 }
 
 .contacts {
+    width: 90vw;
+    padding-left: 5vw;
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
@@ -406,6 +410,7 @@ h3 {
 .about {
     display: flex;
     width: 90vw;
+    margin-left: 5vw;
 }
 
 .quote {
@@ -415,10 +420,10 @@ h3 {
     padding-top: 3vh;
     padding-bottom: 3vh;
     display: flexbox;
-    background-color: var(--color3);
-    color: var(--bg);
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 10px rgba(255, 255, 255, 0.3);
     border-radius: 1vh;
-    width: 60%;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -504,7 +509,6 @@ h3 {
     border: none;
     border-radius: 10px;
     background-color: var(--color3);
-    color: var(--bg);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
@@ -543,7 +547,6 @@ h3 {
     border-radius: 10px;
     background-color: var(--color3);
     box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
-    color: var(--bg);
     font-size: 16px;
     cursor: pointer;
     transition: box-shadow 0.5s ease;
@@ -592,7 +595,6 @@ h3 {
     border: none;
     border-radius: 10px;
     background-color: var(--color3);
-    color: var(--bg);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
@@ -703,7 +705,7 @@ footer {
     background-color: transparent;
     transition: transform 0.3s ease-out;
     /*transition: box-shadow 0.5s ease-in;
-    box-shadow: 0 0 5px var(--bg), 0 0 25px var(--bg), 0 0 50px var(--bg);*/
+    box-shadow: 0 0 5px transparent, 0 0 25px transparent, 0 0 50px transparent;*/
 
     display: inline-block;
     -ms-flex-preferred-size: calc(33.33333% - 30px);
