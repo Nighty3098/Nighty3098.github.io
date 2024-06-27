@@ -1,17 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Pacifico&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Quicksand&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap');
+
 
 :root {
-    --bg: #0d0e11;
-    --fg2: #83c092;
-    --fg: #83c092;
-    --color1: #83c092;
+    --bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --fg2: #1e2326;
+    --fg: #1e2326;
+    --color1: #ffa4c3;
     --color2: #90acf9;
-    --color3: #83c092;
+    --color3: #d991aa;
     --color4: #1e2326;
+}
+
+html {
+    background: var(--bg);
+    scrollbar-color: var(--color1) var(--bg);
+    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cards {
     display: flex;
+}
+
+.quote {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: flexbox;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 10px rgba(255, 255, 255, 0.3);
+    border-radius: 1vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 hr,
@@ -102,7 +129,7 @@ summary {
 }
 
 .navigation_links {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -180,7 +207,7 @@ summary {
     z-index: 100;
     border: 5px solid var(--color1);
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--bg), 0 0 50px var(--bg);
+    box-shadow: 0 0 5px var(--bg), 0 0 70px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
 }
 
@@ -192,7 +219,7 @@ summary {
 
 .perspective-image:hover {
     border: 5px solid var(--color1);
-    box-shadow: 0 0 5px var(--color1), 0 0 50px var(--color1);
+    box-shadow: 0 0 5px var(--color1), 0 0 70px var(--color1);
 }
 
 .perspective-image-phone {
@@ -202,21 +229,13 @@ summary {
     z-index: 100;
     border: 5px solid var(--color1);
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--bg), 0 0 50px var(--bg);
+    box-shadow: 0 0 5px var(--bg), 0 0 70px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
 }
 
 .perspective-image-phone:hover {
     border: 5px solid var(--color1);
-    box-shadow: 0 0 5px var(--color1), 0 0 50px var(--color1);
-}
-
-html {
-    scrollbar-color: var(--color1) var(--bg);
-    scroll-behavior: smooth;
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
+    box-shadow: 0 0 5px var(--color1), 0 0 70px var(--color1);
 }
 
 body {
@@ -322,7 +341,7 @@ h1 {
 h2 {
     font-size: 30px;
     color: var(--fg2);
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -330,7 +349,7 @@ h2 {
 h3 {
     font-size: 22px;
     color: var(--fg);
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -453,7 +472,7 @@ h3 {
 }
 
 .button {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     display: inline-block;
@@ -488,7 +507,7 @@ h3 {
 }
 
 .button2 {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     position: fixed;
@@ -546,7 +565,7 @@ footer {
 }
 
 .footer_content {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: var(--fg2);
