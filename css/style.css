@@ -25,6 +25,43 @@ html {
 
 
 
+.label-text {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.switch input:not(:checked) + .slider + .label-text::before {
+    content: "RTX OFF";
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.switch input:not(:checked) + .slider + .label-text::after {
+    content: "RTX ON";
+    opacity: 0;
+    transform: translateY(10px);
+    position: absolute;
+    left: 0;
+}
+
+.switch input:checked + .slider + .label-text::before {
+    content: "RTX OFF";
+    opacity: 0;
+    transform: translateY(-10px);
+    position: absolute;
+    left: 0;
+}
+  
+.switch input:checked + .slider + .label-text::after {
+    content: "RTX ON";
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .container {
     text-align: center;
