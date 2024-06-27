@@ -1,3 +1,33 @@
+function showMessage(text) {
+    const message = document.createElement('div');
+    message.textContent = text;
+    message.style.position = 'fixed';
+    message.style.top = '20px';
+    message.style.left = '50%';
+    message.style.zIndex = '9999';
+    message.style.transform = 'translateX(-50%)';
+    message.style.backgroundColor = 'rgba(144, 172, 249, 0.6)';
+    message.style.backdropFilter = 'blur(10px)';
+    message.style.color = 'black';
+    message.style.padding = '20px 20px';
+    message.style.borderRadius = '5px';
+    message.style.opacity = '0';
+    message.style.transition = 'opacity 0.5s ease-in-out';
+
+    document.body.appendChild(message);
+
+    setTimeout(() => {
+        message.style.opacity = '1';
+    }, 10);
+
+    setTimeout(() => {
+        message.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(message);
+        }, 300);
+    }, 2000);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     let blocks = document.querySelectorAll('.animated');
 
@@ -37,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (timeDiff < 400) { // 300 миллисекунд для определения "быстрого" клика
             clickCount++;
             if (clickCount >= 3) {
+                showMessage("FBI: We're on our way!");
                 currentIndex = 2; // Показываем 3.jpg
                 clickCount = 0;
             }
