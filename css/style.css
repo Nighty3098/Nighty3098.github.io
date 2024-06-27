@@ -368,6 +368,17 @@ h3 {
     align-items: center;
 }
 
+.gitroll_badge {
+    border-radius: 30px;
+    width: 60%;
+}
+
+@media(max-width: 992px) {
+    .gitroll_badge {
+        width: 90%;
+    }
+}
+
 .paralax_block {
     background-image: url("../imgs/bg.jpg");
     backdrop-filter: blur(6px);
