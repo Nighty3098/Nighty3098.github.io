@@ -16,3 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', checkBlocksVisibility);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('imageToggle');
+    const images = document.querySelectorAll('.image-container img');
+
+    toggle.addEventListener('change', function() {
+        images.forEach(img => img.classList.toggle('active'));
+    });
+});
