@@ -19,9 +19,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const toggle = document.getElementById('imageToggle');
-    const images = document.querySelectorAll('.image-container img');
+    const imageContainer = document.querySelector('.image-container');
+    const images = ['imgs/1.jpg', 'imgs/2.jpg', 'imgs/3.jpg'];
+    let currentIndex = 0;
+    let clickCount = 0;
+    let lastClickTime = 0;
+
+    function switchImage() {
+        imageContainer.innerHTML = `<img src="${images[currentIndex]}" alt="Image ${currentIndex + 1}" class="active">`;
+    }
 
     toggle.addEventListener('change', function() {
-        images.forEach(img => img.classList.toggle('active'));
+        const currentTime = new Date().getTime();
+        const timeDiff = currentTime - lastClickTime;
+
+        if (timeDiff < 200) { // 300 миллисекунд для определения "быстрого" клика
+            clickCount++;
+            if (clickCount >= 3) {
+                currentIndex = 2; // Показываем 3.jpg
+                clickCount = 0;
+            }
+        } else {
+            clickCount = 1;
+            currentIndex = (currentIndex + 1) % 2; // Переключаемся между 1.jpg и 2.jpg
+        }
+
+        lastClickTime = currentTime;
+        switchImage();
     });
+
+    // Инициализация первого изображения
+    switchImage();
 });
