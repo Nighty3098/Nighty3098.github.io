@@ -719,7 +719,7 @@ footer {
     border-radius: 30px;
 
     width: 20vw;
-    height: 13vh;
+    height: 14vh;
 }
 
 @media(max-width: 1600px) {
@@ -753,7 +753,7 @@ footer {
 @media(max-width: 900px) {
     .ag-projects_item {
         width: 80vw;
-        height: 15vh;
+        height: 17vh;
     }
 }
 
