@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Itim&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Quicksand&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap');
 
 
 
@@ -16,7 +16,7 @@ html {
     background: var(--bg);
     scrollbar-color: var(--color3) transparent;
     scrollbar-arrow-color: transparent transparent;
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     scroll-behavior: smooth;
@@ -113,7 +113,7 @@ hr {
 }
 
 .navigation_links {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -253,7 +253,7 @@ h2 {
     cursor: default;
     font-size: 24px;
     color: var(--fg2);
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -275,7 +275,7 @@ h3 {
     cursor: default;
     font-size: 19px;
     color: var(--fg);
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -360,7 +360,7 @@ h3 {
 .contacts {
     width: 90vw;
     padding-left: 5vw;
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     height: 50vh;
@@ -414,12 +414,14 @@ h3 {
 }
 
 .quote {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     padding-top: 3vh;
     padding-bottom: 3vh;
     display: flexbox;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.6);
     border: 10px rgba(255, 255, 255, 0.3);
     border-radius: 1vh;
@@ -433,7 +435,7 @@ h3 {
 }
 
 .about_me {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     width: 100%;
@@ -488,7 +490,7 @@ h3 {
 }
 
 .user-text {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     margin-bottom: 4vh;
     font-weight: 400;
     font-style: normal;
@@ -497,7 +499,7 @@ h3 {
 }
 
 .button {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     display: inline-block;
@@ -532,7 +534,7 @@ h3 {
 
 
 .button2 {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     position: fixed;
@@ -583,7 +585,7 @@ h3 {
 }
 
 .contact_button {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     display: inline-block;
@@ -650,7 +652,7 @@ footer {
 }
 
 .footer_content {
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: var(--fg2);
@@ -762,7 +764,7 @@ footer {
     color: var(--fg2);
     color: transparent;
     border-radius: 30px;
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -803,7 +805,7 @@ footer {
 
 .ag-projects-item_title {
     color: var(--fg2);
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     min-height: 20px;
@@ -822,7 +824,7 @@ footer {
     font-size: 18px;
     z-index: 2;
     position: relative;
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -868,7 +870,7 @@ footer {
 
 .ag-projects-item_content {
     font-weight: bold;
-    font-family: "Itim", cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: var(--fg2);
