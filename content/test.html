@@ -1,0 +1,71 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<style>
+@import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Quicksand&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    scroll-behavior: smooth;
+}
+
+.content{
+    margin-top:  40vh;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: column;
+    display: flex;
+    border: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    height: 30%;
+    width: 30vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0.5vh;
+    border: 3px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 0px var(), 0 0 0px var();
+}
+
+@media (hover: hover) {
+    .button:hover {
+        transition: box-shadow 0.5s ease;
+        box-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff;
+    }
+}
+
+
+@media (hover: none) {
+    .button:active {
+        background-color: var(--color3);
+    }
+}
+</style>
+<html>
+<head>
+    <title>Demo Mini-App</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Demo Mini-App</h1>
+        <button class="button" id="launch-button">Launch</button>
+    </div>
+</body>
+</html>
