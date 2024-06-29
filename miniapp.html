@@ -43,17 +43,20 @@
 </body>
 <script>
     const currentUrl = window.location.href;
+
+    const tg = window.Telegram.WebApp;
     
     function getQueryParam(param) {
         var searchParams = new URLSearchParams(window.location.search);
         return searchParams.get(param);
     }
 
-    var userId = getQueryParam('user_id');
-    var botId = getQueryParam('bot_id');
+    const userId = tg.initDataUnsafe.user.id;
+    const chatId = tg.initDataUnsafe.chat.id;
+
     var isAdmin = getQueryParam('is_admin');
 
-    var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
+    var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + chatId;
 
     document.getElementById('user_info').textContent = userInfoString;
 
