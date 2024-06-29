@@ -53,8 +53,16 @@
 
     var botId = getQueryParam('bot_id');
 
-    var userInfoString = 'User ID: ' + userIdTG + ' / Chat ID: ' + botId;
+    const userId = url.searchParams.get('user_id');
+    const isAdmin = url.searchParams.get('is_admin');
 
-    document.getElementById('user_info').textContent = userInfoString;
+    if (userId && isAdmin && isAdmin == "true") {
+        var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
+        document.getElementById('user_info').textContent = userInfoString;
+    } else {
+        var userInfoString = 'User ID: ' + userIdTG + ' / Chat ID: ' + botId;
+        document.getElementById('user_info').textContent = userInfoString;
+    }
+
     </script>
 </html>
