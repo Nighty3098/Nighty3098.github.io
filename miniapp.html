@@ -41,15 +41,27 @@
     </div>
 </body>
 <script>
+    const currentUrl = window.location.href;
+    
     function getQueryParam(param) {
         var searchParams = new URLSearchParams(window.location.search);
         return searchParams.get(param);
+    }
+
+    function openNewWindow() {
+        const width = 800;
+        const height = 600;
+        const left = (screen.width - width) / 2;
+        const top = (screen.height - height) / 2;
+        window.open(currentUrl, '_blank', `width=${width}, height=${height}, left=${left}, top=${top}`);
     }
 
     var userId = getQueryParam('user_id');
     var botId = getQueryParam('bot_id');
 
     var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
+
+    openNewWindow()    
 
     document.getElementById('user_info').textContent = userInfoString;
     </script>
