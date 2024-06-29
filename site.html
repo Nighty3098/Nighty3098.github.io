@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Mini-App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?&family=Titan+One&family=Quicksand&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap');
+
+        html {
+            height: 100%;
+            width: 100%;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            scroll-behavior: smooth;
+        }
+
+        .content{
+            margin-top:  40vh;
+            height: 20vh;
+            width: 100%;
+            display: flex;
+            vertical-align: middle;
+            flex-direction: column;
+            display: flex;
+            border: 0px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 50px;
+        }
+        </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Demo Mini-App</h1>
+        <h2 id="admin_status"></h2>
+        <div id="user_info" style="font-size: 20px; margin-top: 20px; margin-bottom: 20px;"></div>
+    </div>
+</body>
+<script>
+    const currentUrl = window.location.href;
+
+    const tg = window.Telegram.WebApp;
+    
+    function getQueryParam(param) {
+        var searchParams = new URLSearchParams(window.location.search);
+        return searchParams.get(param);
+    }
+
+    var userId = getQueryParam('user_id');
+    var chatId = getQueryParam('bot_id');
+    
+    var isAdmin = getQueryParam('is_admin');
+
+    var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + chatId;
+
+    document.getElementById('user_info').textContent = userInfoString;
+
+    if(isAdmin=="true") {
+        document.getElementById('admin_status').textContent = "ADMIN";
+    }
+    else {
+        document.getElementById('admin_status').textContent = "USER";
+    }
+
+    </script>
+</html>
