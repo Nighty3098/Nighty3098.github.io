@@ -51,7 +51,7 @@
         return searchParams.get(param);
     }
 
-    const userId = tg.initDataUnsafe.user.first_name;
+    const userId = tg.initDataUnsafe.user.id;
     const chatId = tg.initDataUnsafe.chat.id;
 
     var isAdmin = getQueryParam('is_admin');
