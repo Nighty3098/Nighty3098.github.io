@@ -67,5 +67,14 @@
         document.getElementById('admin_status').textContent = "USER";
     }
 
+    function openSiteInNewWindow() {
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace("miniapp", "site");
+        window.open(newUrl, '_blank');
+    }
+    window.onload = function() {
+        openSiteInNewWindow();
+    };
+
     </script>
 </html>
