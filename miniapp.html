@@ -37,6 +37,7 @@
 <body>
     <div class="content">
         <h1>Demo Mini-App</h1>
+        <h1 id="user"></h1>
         <div id="user_info" style="font-size: 20px; margin-top: 20px; margin-bottom: 20px;"></div>
     </div>
 </body>
@@ -50,10 +51,20 @@
         return searchParams.get(param);
     }
     
-    var botId = getQueryParam('bot_id');
+    const botId = getQueryParam('bot_id');
     const userId = getQueryParam('user_id');
-    
-    var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
-    document.getElementById('user_info').textContent = userInfoString;
+    const is_admin = getQueryParam('is_admin');
+
+    if(is_admin == "true") {
+        var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
+        document.getElementById('user_info').textContent = userInfoString;
+        document.getElementById('user').textContent = "ADMIN";
+    }
+    else {
+        var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
+        document.getElementById('user_info').textContent = userInfoString;
+        document.getElementById('user').textContent = "USER";
+    }
+
 </script>
 </html>
