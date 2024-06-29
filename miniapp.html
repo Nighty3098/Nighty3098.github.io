@@ -42,8 +42,7 @@
 </body>
 <script>
     const webAppData = Telegram.WebApp.getData();
-    const userIdTG = webAppData.user.id;
-    
+
     const currentUrl = window.location.href;
     
     function getQueryParam(param) {
@@ -52,16 +51,9 @@
     }
     
     var botId = getQueryParam('bot_id');
-    
     const userId = getQueryParam('user_id');
-    const isAdmin = getQueryParam('is_admin');
     
-    if (userId && isAdmin && isAdmin === "true") {
-        var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
-        document.getElementById('user_info').textContent = userInfoString;
-    } else {
-        var userInfoString = 'User ID: ' + userIdTG + ' / Chat ID: ' + botId;
-        document.getElementById('user_info').textContent = userInfoString;
-    }
+    var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
+    document.getElementById('user_info').textContent = userInfoString;
 </script>
 </html>
