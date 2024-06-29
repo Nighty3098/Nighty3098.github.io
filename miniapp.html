@@ -41,6 +41,9 @@
     </div>
 </body>
 <script>
+    const webAppData = Telegram.WebApp.getData();
+    const userIdTG = webAppData.user.id;
+
     const currentUrl = window.location.href;
     
     function getQueryParam(param) {
@@ -48,10 +51,9 @@
         return searchParams.get(param);
     }
 
-    var userId = getQueryParam('user_id');
     var botId = getQueryParam('bot_id');
 
-    var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + botId;
+    var userInfoString = 'User ID: ' + userIdTG + ' / Chat ID: ' + botId;
 
     document.getElementById('user_info').textContent = userInfoString;
     </script>
