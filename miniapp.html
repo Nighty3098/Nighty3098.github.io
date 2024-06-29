@@ -51,8 +51,8 @@
         return searchParams.get(param);
     }
 
-    var userId = getQueryParam('user_id');
-    var chatId = getQueryParam('bot_id');
+    const userId = tg.initDataUnsafe.user.id;
+    const chatId = tg.initDataUnsafe.chat.id;
     
     var isAdmin = getQueryParam('is_admin');
 
