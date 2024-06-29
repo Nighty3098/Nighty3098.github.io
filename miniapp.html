@@ -53,10 +53,11 @@
 
     var userId = getQueryParam('user_id');
     var chatId = getQueryParam('bot_id');
+    var chatIdTG = getQueryParam('chat_id');
     
     var isAdmin = getQueryParam('is_admin');
 
-    var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + chatId;
+    var userInfoString = 'User ID: ' + userId + ' / Chat ID: ' + chatId + ' / TG Chat ID: ' + chatIdTG;
 
     document.getElementById('user_info').textContent = userInfoString;
 
