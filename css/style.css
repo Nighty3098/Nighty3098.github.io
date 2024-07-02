@@ -3,7 +3,7 @@
 
 
 :root {
-    --bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 80%);
     --fg2: #1e2326;
     --fg: #1e2326;
     --color1: #ffa4c3;
@@ -80,8 +80,8 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 40vw;
-    margin-left: 30vw;
+    width: 30vw;
+    margin-left: 35vw;
     opacity: 0;
     border-radius: 20px;
     transition: opacity 0.5s ease-in-out;
@@ -338,6 +338,11 @@ header {
         align-items: center;
     }
 }
+@media(max-width: 2000px) {
+    header {
+        height: 8%;
+    }
+}
 
 .skill_badge {
     height: 2vh;
@@ -496,13 +501,17 @@ h3 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-style: normal;
-    height: 50vh;
+    height: 55vh;
     display: flex;
 
     vertical-align: baseline;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+@media(max-height: 1000px) {
+    .contacts {height: 50vh;}
 }
 
 .gitroll_badge {
@@ -513,6 +522,12 @@ h3 {
 @media(max-width: 992px) {
     .gitroll_badge {
         width: 90%;
+    }
+}
+
+@media(max-width: 2000px) {
+    .gitroll_badge {
+        width: 60%;
     }
 }
 
@@ -581,6 +596,12 @@ h3 {
     justify-content: center;
 }
 
+@media(max-width: 2000px) {
+    .about_me {
+        height: 200vh;
+    }
+}
+
 .content {
     display: flex;
 }
@@ -591,6 +612,13 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 100vw;
+    height: 150vh;
+}
+
+@media(max-height: 1000px) {
+    .projects {
+        height: 200vh;
+    }
 }
 
 .projects_list {
@@ -610,6 +638,13 @@ h3 {
 
     transition: box-shadow 0.5s ease;
     box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
+}
+
+@media(max-width: 2000px) {
+    .user-avatar {
+        width: 25vh;
+        height: 25vh;
+    }
 }
 
 .user-avatar:hover {
@@ -750,14 +785,14 @@ h3 {
 
 @media (max-width: 1500px) {
     .contact_button {
-        height: 3vh;
-        width: 50vw;
+        height: 5vh;
+        width: 30vw;
     }
 }
 
 @media (max-width: 1300px) {
     .contact_button {
-        height: 3vh;
+        height: 4vh;
         width: 30vw;
     }
 }
@@ -782,6 +817,7 @@ footer {
     display: flex;
     vertical-align: middle;
     flex-direction: column;
+    background-color: transparent;
 }
 
 .footer_content {
@@ -800,6 +836,7 @@ footer {
 
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
 
 @media(max-width: 1200px) {
@@ -836,195 +873,20 @@ footer {
     width: 20%;
 }
 
-.ag-projects_item {
-    background-color: transparent;
-    transition: transform 0.3s ease-out;
-    /*transition: box-shadow 0.5s ease-in;
-    box-shadow: 0 0 5px transparent, 0 0 25px transparent, 0 0 50px transparent;*/
 
-    display: inline-block;
-    -ms-flex-preferred-size: calc(33.33333% - 30px);
-    flex-basis: calc(100% - 130px);
-
-    margin: 15px 15px;
-    overflow: hidden;
-
-    border-radius: 30px;
-
-    width: 20vw;
-    height: 14vh;
+.project_title {
+    font-size: larger;
+    text-decoration: none;
 }
 
-@media(max-width: 1600px) {
-    .ag-projects_item {
-        width: 50vw;
-        height: 12vh;
-    }
+.project_link {
+    font-size: larger;
+    text-decoration: none;
 }
 
-@media(max-width: 1800px) {
-    .ag-projects_item {
-        width: 30vw;
-        height: 13vh;
-    }
+.projects_item {
+    width: 70%;
 }
-
-@media(max-width: 1700px) {
-    .ag-projects_item {
-        width: 30vw;
-        height: 12vh;
-    }
-}
-
-@media(max-width: 1300px) {
-    .ag-projects_item {
-        width: 50vw;
-        height: 12vh;
-    }
-}
-
-@media(max-width: 900px) {
-    .ag-projects_item {
-        width: 80vw;
-        height: 17vh;
-    }
-}
-
-.ag-projects-item_link {
-    display: block;
-    padding: 30px 20px;
-    background-color: transparent;
-    color: var(--fg2);
-    color: transparent;
-    border-radius: 30px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-    overflow: hidden;
-
-    position: relative;
-}
-
-@media (hover: hover) {
-    .ag-projects-item_link,
-    .ag-projects-item_link {
-        text-decoration: none;
-        color: var(--fg2);
-    }
-    
-    .ag-projects-item_link .ag-projects-item_bg {
-        -webkit-transform: scale(20);
-        -ms-transform: scale(20);
-        transform: scale(20);
-    }
-}
-
-@media (hover: none) {
-    .ag-projects-item_link,
-    .ag-projects-item_link {
-        text-decoration: none;
-        color: var(--fg2);
-    }
-    
-    .ag-projects-item_link .ag-projects-item_bg {
-        -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-        transform: scale(0);
-    }
-}
-
-
-
-.ag-projects-item_title {
-    color: var(--fg2);
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    min-height: 20px;
-    margin: 0 0 25px;
-
-    overflow: hidden;
-
-    font-weight: bold;
-    font-size: 25px;
-
-    z-index: 2;
-    position: relative;
-}
-
-.ag-projects-item_content-box {
-    font-size: 18px;
-    z-index: 2;
-    position: relative;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-    width: 15vw;
-    height: 13vh;
-}
-
-@media(max-width: 1600px) {
-    .ag-projects-item_content-box {
-        width: 15vw;
-        height: 12vh;
-    }
-}
-
-@media(max-width: 1800px) {
-    .ag-projects-item_content-box {
-        width: 15vw;
-        height: 14vh;
-    }
-}
-
-@media(max-width: 1700px) {
-    .ag-projects-item_content-box {
-        width: 20vw;
-        height: 10vh;
-    }
-}
-
-@media(max-width: 1300px) {
-    .ag-projects-item_content-box {
-        width: 40vw;
-        height: 11vh;
-    }
-}
-
-@media(max-width: 900px) {
-    .ag-projects-item_content-box {
-        width: 70vw;
-        height: 11vh;
-    }
-}
-
-
-.ag-projects-item_content {
-    font-weight: bold;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--fg2);
-
-    /*-webkit-transition: color 1s ease-in;
-    -o-transition: color 1s ease-in;
-    transition: color 1s ease-in;*/
-}
-
-@media (hover: hover) {
-    .ag-projects_item:hover {
-        /*transition: box-shadow 0.5s ease-in;*/
-        transform: scale(1.1);
-        /*box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);*/
-    }
-}
-
-@media (hover: none) {
-    .ag-projects_item:hover {
-        /*transition: box-shadow 0.5s ease-in;*/
-        transform: scale(1.1);
-        /*box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);*/
-    }
+.projects_item ._hr {
+    height: 90px;
 }
