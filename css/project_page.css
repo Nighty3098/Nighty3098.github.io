@@ -2,13 +2,13 @@
 
 
 :root {
-    --bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --bg: #acc7db;
     --fg2: #1e2326;
     --fg: #1e2326;
-    --color1: #ffa4c3;
-    --color2: #90acf9;
-    --color3: #d991aa;
-    --color4: #1e2326;
+    --color1: #d091ac;
+    --color2: #e9bdbe;
+    --color3: #d091ac;
+    --color4: #acc7db;
 }
 
 html {
