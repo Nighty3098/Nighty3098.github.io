@@ -3,13 +3,13 @@
 
 
 :root {
-    --bg: #acc7db;
-    --fg2: #1e2326;
-    --fg: #1e2326;
-    --color1: #d091ac;
-    --color2: #e9bdbe;
-    --color3: #d091ac;
-    --color4: #acc7db;
+    --bg: #4b5577;
+    --fg2: #b5c7dc;
+    --fg: #b5c7dc;
+    --color1: #7586a9;
+    --color2: #aeb9d1;
+    --color3: #7586a9;
+    --color4: #4b5577;
 }
 
 html {
@@ -442,7 +442,7 @@ h3 {
 
 .hello {
     margin-left: 1vw;
-    margin-top: 40vh;
+    margin-top: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -468,9 +468,13 @@ h3 {
         color: var(--color3);
     }
 
-    .hello img {
+    .img {
         margin-bottom: 2vh;
     }
+}
+
+.img {
+    height: 20vh;
 }
 
 .animated {
@@ -748,12 +752,13 @@ h3 {
     margin-top: 1vh;
     border: none;
     border-radius: 10px;
-    background-color: var(--color3);
+    color: var(--bg);
+    background-color: var(--color2);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
+    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
 }
 
 .contact_button i {
@@ -784,14 +789,14 @@ h3 {
 @media (hover: hover) {
     .contact_button:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);
+        box-shadow: 0 0 5px var(--color2), 0 0 25px var(--color2), 0 0 50px var(--color2);
     }
 }
 
 
 @media (hover: none) {
     .contact_button:active {
-        background-color: var(--color3);
+        background-color: var(--color2);
     }
 }
 
@@ -859,30 +864,68 @@ footer {
 
 
 .project_title {
+    color: var(--bg);
     font-size: larger;
     text-decoration: none;
 }
 
 .project_link {
+    color: var(--bg);
     font-size: larger;
     text-decoration: none;
 }
 
 .projects_item {
+    color: var(--bg);
     width: 70%;
     background-color: var(--color2);
+    margin: 5%;
     border-radius: 20px;
-    transition: background-color 1s ease;
+    box-shadow: 0 0 10px var(--bg), 0 0 30px var(--bg);
+    transition: box-shadow 1s ease;
 }
 .projects_item ._hr {
     height: 90px;
 }
 
 .projects_item:hover {
-    transition: background-color 1s ease;
-    background-color: var(--color3);
+    transition: box-shadow 1s ease;
+    box-shadow: 0 0 10px var(--color2), 0 0 30px var(--color2);
+}
+
+.project_text {
+    color: var(--bg);
 }
 
 .project_content {
+    color: var(--bg);
     padding: 10%;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg); /* or any other background color you prefer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* to ensure it's on top of everything */
+}
+  
+.loader-svg {
+    width: 100%; /* adjust the size of your SVG logo */
+    height: 100%;
+    animation: spin 1.5s linear infinite; /* add animation to the SVG logo */
+}
+  
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
 }

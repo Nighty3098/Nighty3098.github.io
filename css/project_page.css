@@ -2,13 +2,13 @@
 
 
 :root {
-    --bg: #acc7db;
-    --fg2: #1e2326;
-    --fg: #1e2326;
-    --color1: #d091ac;
-    --color2: #e9bdbe;
-    --color3: #d091ac;
-    --color4: #acc7db;
+    --bg: #4b5577;
+    --fg2: #b5c7dc;
+    --fg: #b5c7dc;
+    --color1: #7586a9;
+    --color2: #aeb9d1;
+    --color3: #7586a9;
+    --color4: #4b5577;
 }
 
 html {
@@ -205,7 +205,7 @@ summary {
     width: 50vw;
     transform-style: preserve-3d;
     z-index: 100;
-    border: 5px solid var(--color1);
+    border: 5px solid var(--color2);
     border-radius: 10px;
     box-shadow: 0 0 5px var(--bg), 0 0 70px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
@@ -218,8 +218,8 @@ summary {
 }
 
 .perspective-image:hover {
-    border: 5px solid var(--color1);
-    box-shadow: 0 0 5px var(--color1), 0 0 70px var(--color1);
+    border: 5px solid var(--color2);
+    box-shadow: 0 0 5px var(--color2), 0 0 70px var(--color2);
 }
 
 .perspective-image-phone {
@@ -227,15 +227,15 @@ summary {
     width: 15vh;
     transform-style: preserve-3d;
     z-index: 100;
-    border: 5px solid var(--color1);
+    border: 5px solid var(--color2);
     border-radius: 10px;
     box-shadow: 0 0 5px var(--bg), 0 0 70px var(--bg);
     transition: box-shadow 0.5s ease-in-out;
 }
 
 .perspective-image-phone:hover {
-    border: 5px solid var(--color1);
-    box-shadow: 0 0 5px var(--color1), 0 0 70px var(--color1);
+    border: 5px solid var(--color2);
+    box-shadow: 0 0 5px var(--color2), 0 0 70px var(--color2);
 }
 
 body {
