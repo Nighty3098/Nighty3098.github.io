@@ -3,13 +3,13 @@
 
 
 :root {
-    --bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 80%);
+    --bg: #acc7db;
     --fg2: #1e2326;
     --fg: #1e2326;
-    --color1: #ffa4c3;
-    --color2: #90acf9;
-    --color3: #d991aa;
-    --color4: #1e2326;
+    --color1: #d091ac;
+    --color2: #e9bdbe;
+    --color3: #d091ac;
+    --color4: #acc7db;
 }
 
 html {
@@ -376,13 +376,13 @@ h1 {
 
 @media(max-width: 1500px) {
     h1 {
-        font-size: 80px;
+        font-size: 50px;
     }
 }
 
 @media(max-width: 900px) {
     h1 {
-        font-size: 60px;
+        font-size: 40px;
     }
 }
 
@@ -419,13 +419,13 @@ h3 {
 }
 
 @media(max-width: 1500px) {
-    h1 {
+    h3 {
         font-size: 20px;
     }
 }
 
 @media(max-width: 900px) {
-    h1 {
+    h3 {
         font-size: 20px;
     }
 }
@@ -568,10 +568,7 @@ h3 {
     padding-top: 3vh;
     padding-bottom: 3vh;
     display: flexbox;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 10px rgba(255, 255, 255, 0.3);
     border-radius: 1vh;
     width: 100%;
     align-items: center;
@@ -580,6 +577,7 @@ h3 {
 
 .about {
     display: flex;
+    height: 150vh;
 }
 
 .about_me {
@@ -587,19 +585,12 @@ h3 {
     font-weight: 400;
     font-style: normal;
     width: 100%;
-    height: 100vh;
     vertical-align: middle;
     flex-direction: column;
     display: flex;
     border: 0px;
     align-items: center;
     justify-content: center;
-}
-
-@media(max-width: 2000px) {
-    .about_me {
-        height: 200vh;
-    }
 }
 
 .content {
@@ -612,13 +603,6 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 150vh;
-}
-
-@media(max-height: 1000px) {
-    .projects {
-        height: 200vh;
-    }
 }
 
 .projects_list {
@@ -886,7 +870,19 @@ footer {
 
 .projects_item {
     width: 70%;
+    background-color: var(--color2);
+    border-radius: 20px;
+    transition: background-color 1s ease;
 }
 .projects_item ._hr {
     height: 90px;
+}
+
+.projects_item:hover {
+    transition: background-color 1s ease;
+    background-color: var(--color3);
+}
+
+.project_content {
+    padding: 10%;
 }
