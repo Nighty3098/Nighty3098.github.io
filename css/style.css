@@ -480,19 +480,16 @@ h3 {
 }
 
 .main-block {
-    background-color: transparent;
     background-attachment: fixed;
     background-size: cover;
-    margin-top: 4vh;
-    margin-left: 5vw;
+    width: 100%;
+    margin-top: 5vh;
     filter: contrast(1.1);
     background-position: center;
     height: 90vh;
-    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
 }
 
 .contacts {
