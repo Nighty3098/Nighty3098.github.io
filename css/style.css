@@ -3,13 +3,13 @@
 
 
 :root {
-    --bg: #4b5577;
-    --fg2: #b5c7dc;
-    --fg: #b5c7dc;
-    --color1: #7586a9;
-    --color2: #aeb9d1;
-    --color3: #7586a9;
-    --color4: #4b5577;
+    --bg: #efdccd;
+    --fg2: #343d48;
+    --fg: #343d48;
+    --color1: #e2f2f4;
+    --color2: #e9bdbe;
+    --color3: #e2f2f4;
+    --color4: #efdccd;
 }
 
 html {
@@ -71,7 +71,7 @@ html {
     margin-top: 20px;
     position: relative;
     width: 100%;
-    height: 40vh;
+    height: 70vh;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -332,7 +332,6 @@ header {
     }
 
     header {
-        bottom: 0;
         height: 6%;
         display: flex;
         justify-content: center;
@@ -443,7 +442,7 @@ h3 {
 
 .hello {
     margin-left: 1vw;
-    margin-top: 35vh;
+    margin-top: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -452,7 +451,7 @@ h3 {
 .hello h1 {
     margin-left: 2vw;
     font-size: 5vh;
-    color: var(--color3);
+    color: var(--fg);
 }
 
 
@@ -466,16 +465,12 @@ h3 {
 
     .hello h1 {
         font-size: 10vw;
-        color: var(--color3);
+        color: var(--fg);
     }
 
-    .img {
+    .hello img {
         margin-bottom: 2vh;
     }
-}
-
-.img {
-    height: 20vh;
 }
 
 .animated {
@@ -520,7 +515,7 @@ h3 {
 }
 
 .gitroll_badge {
-    border-radius: 20px;
+    border-radius: 30px;
     width: 60%;
 }
 
@@ -753,13 +748,12 @@ h3 {
     margin-top: 1vh;
     border: none;
     border-radius: 10px;
-    color: var(--bg);
-    background-color: var(--color2);
+    background-color: var(--color3);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0px var(--color2), 0 0 0px var(--color2);
+    box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
 }
 
 .contact_button i {
@@ -790,14 +784,14 @@ h3 {
 @media (hover: hover) {
     .contact_button:hover {
         transition: box-shadow 0.5s ease;
-        box-shadow: 0 0 5px var(--color2), 0 0 25px var(--color2), 0 0 50px var(--color2);
+        box-shadow: 0 0 5px var(--color3), 0 0 25px var(--color3), 0 0 50px var(--color3);
     }
 }
 
 
 @media (hover: none) {
     .contact_button:active {
-        background-color: var(--color2);
+        background-color: var(--color3);
     }
 }
 
@@ -832,7 +826,8 @@ footer {
 @media(max-width: 1200px) {
     .footer_content {
         width: 90vw;
-    
+    }
+
     .svg_image {
         width: 90vw;
     }
@@ -864,25 +859,21 @@ footer {
 
 
 .project_title {
-    color: var(--bg);
     font-size: larger;
     text-decoration: none;
 }
 
 .project_link {
-    color: var(--bg);
     font-size: larger;
     text-decoration: none;
 }
 
 .projects_item {
-    color: var(--bg);
     width: 70%;
-    background-color: var(--color2);
-    margin: 5%;
+    background-color: var(--color3);
     border-radius: 20px;
-    box-shadow: 0 0 20px var(--bg), 0 0 50px var(--bg);
     transition: box-shadow 1s ease;
+    box-shadow: 0 0 0px var(--color3), 0 0 0px var(--color3);
 }
 .projects_item ._hr {
     height: 90px;
@@ -890,42 +881,9 @@ footer {
 
 .projects_item:hover {
     transition: box-shadow 1s ease;
-    box-shadow: 0 0 20px var(--color2), 0 0 50px var(--color2);
-}
-
-.project_text {
-    color: var(--bg);
+    box-shadow: 0 0 10px var(--color3), 0 0 50px var(--color3);
 }
 
 .project_content {
-    color: var(--bg);
     padding: 10%;
-}
-
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--bg); /* or any other background color you prefer */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* to ensure it's on top of everything */
-}
-  
-.loader-svg {
-    width: 100%; /* adjust the size of your SVG logo */
-    height: 100%;
-    animation: spin 1.5s linear infinite; /* add animation to the SVG logo */
-}
-  
-@keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
 }

@@ -84,16 +84,3 @@ document.addEventListener('DOMContentLoaded', function() {
     switchImage();
 });
 
-
-window.addEventListener('load', function() {
-    const loader = document.getElementById('loader');
-    const content = document.body;
-
-    loader.style.display = 'flex';
-    content.style.display = 'none';
-
-    setTimeout(function() {
-      loader.style.display = 'none';
-      content.style.display = 'block';
-    }, 1000);
-  });
