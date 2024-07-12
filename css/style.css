@@ -3,13 +3,13 @@
 
 
 :root {
-    --bg: #efdccd;
+    --bg: #fbf1de;
     --fg2: #343d48;
     --fg: #343d48;
     --color1: #e2f2f4;
     --color2: #e9bdbe;
     --color3: #e2f2f4;
-    --color4: #efdccd;
+    --color4: #fbf1de;
 }
 
 html {
@@ -98,7 +98,6 @@ html {
     opacity: 1;
 }
 
-/* Toggle Switch Styles */
 .switch {
     position: relative;
     display: inline-block;
