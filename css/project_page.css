@@ -149,7 +149,7 @@ summary {
     display: block;
     content: "";
     border-radius: 2px;
-    height: 4px;
+    height: 7px;
     width: 0%;
 
     -webkit-transition: width .2s ease-in-out;
@@ -202,7 +202,7 @@ summary {
 
 .perspective-image {
     margin: 1% 1%;
-    width: 50vw;
+    width: 60vw;
     transform-style: preserve-3d;
     z-index: 100;
     border: 5px solid var(--color2);
@@ -213,7 +213,7 @@ summary {
 
 @media(min-width: 2000px) {
     .perspective-image {
-        width: 20vw;
+        width: 35vw;
     }
 }
 
@@ -484,7 +484,7 @@ h3 {
     border: none;
     border-radius: 10px;
     background-color: var(--color1);
-    color: var(--bg);
+    color: var(--fg);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.7s ease;
