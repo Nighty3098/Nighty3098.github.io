@@ -309,9 +309,9 @@ hr {
 
 header {
     display: flex;
-    height: 5%;
-    background-color: rgba(19, 22, 27, 0);
-    backdrop-filter: blur(10px);
+    height: 4%;
+    /*background-color: rgba(19, 22, 27, 0);
+    backdrop-filter: blur(10px);*/
     position: fixed;
     top: 0;
     left: 0;
@@ -339,7 +339,7 @@ header {
 }
 @media(max-width: 2000px) {
     header {
-        height: 8%;
+        height: 6%;
     }
 }
 
