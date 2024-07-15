@@ -547,6 +547,7 @@ h3 {
 }
 
 .about {
+    margin-top: 10%;
     display: flex;
 }
 
@@ -855,6 +856,7 @@ footer {
 }
 
 .projects_item {
+    margin-top: 2%;
     width: 70%;
     background-color: var(--color3);
     border-radius: 20px;
