@@ -200,6 +200,28 @@ summary {
     border-radius: 1vh;
 }
 
+.perspective-image-2 {
+    margin: 1% 1%;
+    width: 35vw;
+    transform-style: preserve-3d;
+    z-index: 100;
+    border: 5px solid var(--color2);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--bg), 0 0 70px var(--bg);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+@media(min-width: 2000px) {
+    .perspective-image-2 {
+        width: 20vw;
+    }
+}
+
+.perspective-image-2:hover {
+    border: 5px solid var(--color2);
+    box-shadow: 0 0 5px var(--color2), 0 0 70px var(--color2);
+}
+
 .perspective-image {
     margin: 1% 1%;
     width: 60vw;
