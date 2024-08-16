@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?&family=Titan+One&family=Quicksand&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap");
 
 :root {
-  --bg: #efdccd;
-  --fg2: #343d48;
-  --fg: #343d48;
-  --color1: #e2f2f4;
+  --bg: #1e1e2d;
+  --fg2: #c4a3f1;
+  --fg: #c4a3f1;
+  --color1: #abd89b;
   --color2: #e9bdbe;
-  --color3: #e2f2f4;
-  --color4: #efdccd;
+  --color3: #8eadf0;
+  --color4: #fbf1de;
 }
 
 .li {
@@ -303,8 +303,7 @@ body {
 
 header {
   display: flex;
-  display: box;
-  height: 5%;
+  height: 4%;
   background-color: rgba(19, 22, 27, 0);
   backdrop-filter: blur(10px);
   position: fixed;
@@ -314,7 +313,17 @@ header {
   z-index: 1030;
   align-items: center;
   justify-content: space-between;
+
+  transform: translateY(-100%);
+  transition: transform 1s ease;
 }
+
+@media (max-width: 2500px) {
+  header {
+    height: 7%;
+  }
+}
+
 
 @media (max-width: 992px) {
   .logo {
@@ -433,10 +442,14 @@ h3 {
   }
 }
 
+.slide-in {
+  transform: translateX(-100%);
+  transition: transform 1s ease;
+}
+
 .animated {
-  display: block;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(50%);
   transition:
     transform 1s,
     opacity 1s;
@@ -455,6 +468,9 @@ h3 {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+
+  transform: translateX(-100%);
+  transition: transform 1s ease;
 }
 
 .about {
@@ -519,7 +535,7 @@ h3 {
   border: none;
   border-radius: 10px;
   background-color: var(--color1);
-  color: var(--fg);
+  color: var(--bg);
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.7s ease;
