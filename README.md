@@ -16,23 +16,16 @@
     <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true" height="50px" />
     <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true" height="50px" />
 </div>
-<br><br>
+<br><br><br><br><br><br>
 <div class="link" align="center">
     <a align='center' href='https://Nighty3098.github.io/'><img src="imgs/PortfolioButton.png" width="40%"></a>
 </div>
-<br><br>
-
-<div align="center">
-    <h3>Imgs:</h3>
-    <img src="imgs/1.png" width="70%">
-    <img src="imgs/3.png" width="70%">
-</div>
+<br><br><br><br>
 
 <div align="center">
     <h3 align="center">Contact with me:</h3>
-    <a href="https://discord.gg/tnHSEc2cZv"><img src="https://invidget.switchblade.xyz/r8jWX8ugDd" style="border-radius: 15px;"/></a><br><br>
-    <a href="https://discord.gg/#9707" target="blank"><img src="https://img.shields.io/badge/Discord-%237589d5.svg?style=for-the-badge&logo=discord&logoColor=black"/></a>
-    <a href="https://t.me/Night3098" target="blank"><img src="https://img.shields.io/badge/Telegram-7dc4e4?style=for-the-badge&logo=telegram&logoColor=black"/></a>
-    <a href="mailto:night3098game@gmail.com" target="blank"><img src="https://img.shields.io/badge/Gmail-f5a7a0?style=for-the-badge&logo=gmail&logoColor=black"/></a>
-    <a href="https://www.reddit.com/user/Night3098" target="blank"><img src="https://img.shields.io/badge/Reddit-f5a7a0?style=for-the-badge&logo=reddit&logoColor=black"/></a>
+	<a href="https://t.me/Night3098" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true" width="60px" /></a>
+	<a href="https://discord.gg/#9707" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_discord.png?raw=true" width="60px"/></a>
+	<a href="https://www.reddit.com/user/DEVELOPER0x31/" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_reddit.png?raw=true" width="60px"/></a>
+	<a href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_signal.png?raw=true" width="60px"/></a>
 </div>
