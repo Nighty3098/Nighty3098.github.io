@@ -16,11 +16,11 @@
     <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true" height="50px" />
     <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true" height="50px" />
 </div>
-<br><br><br><br><br><br>
+<br><br>
 <div class="link" align="center">
-    <a align='center' href='https://Nighty3098.github.io/'><img src="imgs/PortfolioButton.png" width="40%"></a>
+	<a href="https://Nighty3098.github.io"><kbd><br> Open site <br></kbd></a>
 </div>
-<br><br><br><br>
+<br><br>
 
 <div align="center">
     <h3 align="center">Contact with me:</h3>
