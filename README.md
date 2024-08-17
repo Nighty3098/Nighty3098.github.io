@@ -22,6 +22,11 @@
 </div>
 <br><br>
 
+![Снимок экрана от 2024-08-17 23-28-35](https://github.com/user-attachments/assets/07d5cb2a-316c-40f0-855c-ffac75936e85)
+![Снимок экрана от 2024-08-17 23-28-41](https://github.com/user-attachments/assets/dfb4bcc2-fa1b-4579-9001-7f24dedfebbe)
+![Снимок экрана от 2024-08-17 23-28-51](https://github.com/user-attachments/assets/84a6a21e-095f-4846-8628-bf7ae661e9fa)
+
+
 <div align="center">
     <h3 align="center">Contact with me:</h3>
 	<a href="https://t.me/Night3098" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true" width="60px" /></a>
