@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?&family=Titan+One&family=Quicksand&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
   --bg: #1e1e2d;
@@ -6,8 +7,34 @@
   --fg: #c4a3f1;
   --color1: #abd89b;
   --color2: #e9bdbe;
-  --color3: #8eadf0;
+  --color3: #c4a3f1;
   --color4: #fbf1de;
+}
+
+.git_stats {
+  background-color: var(--color3);
+  width: 50%;
+  margin-left: 25%;
+  padding: 2%;
+  border-radius: 20px;
+  color: var(--bg);
+  text-decoration: none;
+  transition: background 0.5s;
+}
+
+.git_stats h1 {
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.git_stats h3 {
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.git_avatar {
+  border-radius: 50%;
+  width: 40%;
 }
 
 .slide-in {
@@ -497,7 +524,7 @@ h3 {
 }
 
 .main_image {
-  background-image: url("../imgs/bg.png");
+  background-image: url("../imgs/magenta-cat.png");
   background-attachment: fixed;
   background-size: cover;
   filter: contrast(1.1);
