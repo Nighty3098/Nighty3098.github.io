@@ -25,7 +25,6 @@
 <div align="center">
     <h3>Imgs:</h3>
     <img src="imgs/1.png" width="70%">
-    <img src="imgs/2.png" width="70%">
     <img src="imgs/3.png" width="70%">
 </div>
 
