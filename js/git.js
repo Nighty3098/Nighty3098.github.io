@@ -74,8 +74,6 @@ function displayUserData(data) {
     console.log(`Following ${username}:`, data.following);
     document.getElementById('git_repos').textContent = `Repos: ${data.public_repos}`;
     console.log(`Repos ${username}:`, data.public_repos);
-    document.getElementById('git_avatar').src = data.avatar_url;
-    console.log(`git_avatar ${username}:`, data.avatar_url);
 }
 
 fetchGitHubUserData(username);
