@@ -47,14 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkBlocksVisibility);
 });
 
-
-window.addEventListener('scroll', function() {
-    const scrollPosition = window.pageYOffset;
-    const mainImage = document.querySelector('.main_image');
-    const blurAmount = Math.min(scrollPosition * 0.1, 10);
-    mainImage.style.filter = `contrast(1.1) blur(${blurAmount}px)`;
-});
-
 window.addEventListener('scroll', function() {
     const slideIn = document.querySelector('.slide-in');
     const rect = slideIn.getBoundingClientRect();
