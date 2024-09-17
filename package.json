@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/Nighty3098/Nighty3098.github.io#readme",
   "dependencies": {
-    "express": "^4.19.2",
     "octokit": "^4.0.2"
   }
 }
