@@ -19,29 +19,46 @@ html {
   scroll-behavior: smooth;
 }
 
-.project_card a {
-  width: 100%;
-}
-
-.skill_badges {
+.badges_block {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.skill_badges div {
+.bb_block {
+  padding: 0%;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  align-content: center;
+}
+
+.btn_link {
+  width: 100%;
+  height: 100%;
+}
+
+.contacts_badge_block {
+  width: auto;
+  margin-left: 20%;
+}
+
+.contact_badge {
+  aspect-ratio: 1/1;
+  width: 12%;
+  margin: 1%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact_badge:hover {
+  transform: scale(1.2);
 }
 
 .skill_badge {
   aspect-ratio: 1/1;
   width: 6%;
-  padding: 0.5%;
+  margin: 0.5%;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -49,7 +66,7 @@ html {
   transform: scale(1.2);
 }
 
-.profile_card, .profile_stats, .profile_repos, .user_bio, .git_profile_card {
+.profile_card, .profile_stats, .profile_repos, .user_bio, .git_profile_card, .my_contacts {
   background-color: var(--color1);
   border-radius: 30px;
   color: var(--fg);
@@ -231,7 +248,7 @@ h3 {
     padding: 0.5%;
   }
 
-  .profile_card, .profile_stats, .profile_repos, .user_bio, .git_profile_card {
+  .profile_card, .profile_stats, .profile_repos, .user_bio, .git_profile_card, .my_contacts {
     margin: 10px;
   }
 }
