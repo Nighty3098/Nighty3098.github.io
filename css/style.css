@@ -186,23 +186,24 @@ h3 {
   transform: scale(1.03);
 }
 
-.button {
+.project_card .button {
   font-size : large;
   background-color: var(--color2);
   border-radius: 10px;
-  width: 30%;
+  width: 100%;
   border: none;
-  aspect-ratio: 2/0.5;
+  aspect-ratio: 2/1;
   color: var(--bg);
   cursor: pointer;
+  margin: 0%;
   transition: transform 0.2s ease-in-out;
 }
 
-.button:active {
+.project_card .button:active {
   transform: scale(0.95);
 }
 
-.button:hover {
+.project_card .button:hover {
   background-color: #7cba68;
 }
 
@@ -227,7 +228,6 @@ h3 {
     padding: 0.5%;
   }
 }
-
 
 @media screen and (max-width: 1000px) {
   .repos {
