@@ -206,7 +206,15 @@ h3 {
   background-color: #7cba68;
 }
 
-@media screen and (max-width: 2300px) {
+@media screen and (max-width: 1700px) {
+  .content {
+    display: grid;
+    grid-template-columns: 70%;
+    grid-gap: 1%;
+    align-items: baseline;
+    justify-content: center;
+  }
+
   .repos {
     display: grid;
     grid-template-columns: auto;
