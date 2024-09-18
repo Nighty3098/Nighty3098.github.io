@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?&family=Titan+One&family=Quicksand&family=Quicksand&family=Pacifico&family=Permanent+Marker&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap');
 
 :root {
   --bg: #20252d;
@@ -13,10 +12,40 @@ html {
   background: var(--bg);
   scrollbar-color: var(--color1) transparent;
   scrollbar-arrow-color: transparent transparent;
-  font-family: "Permanent Marker", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideLeft {
+  animation: slideLeft 1s ease forwards;
 }
 
 .badges_block {
@@ -99,7 +128,7 @@ html {
 }
 
 .profile_stats h3 {
-  font-family: "Victor Mono", sans-serif;
+  font-family: "Playpen Sans", sans-serif;
   line-height: 2;
   font-size: larger;
 }
@@ -119,21 +148,20 @@ html {
 }
 
 h1 {
-  font-family: "Victor Mono", sans-serif;
+  font-family: "Playpen Sans", cursive;
   font-size : xx-large;
 }
 
 h3 {
-  font-family: "Victor Mono", sans-serif;
+  font-family: "Playpen Sans", cursive;
   padding: 0%;
   margin: 5px;
   font-size: medium;
 }
 
 .text-box {
-  width: 60%;
+  width: 70%;
   padding: 2%;
-  margin: 2%;
   background-color: var(--color2);
   color: var(--bg);
   border-radius: 10px;
@@ -157,6 +185,13 @@ h3 {
   width: 50%;
   border-radius: 50%;
   margin: 3%;
+  border: 7px solid var(--color2);
+  transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.user_avatar:hover {
+  box-shadow: 0px 0px 10px 10px var(--color2);
+  border: 7px solid var(--color2);
 }
 
 .repos {
@@ -168,11 +203,11 @@ h3 {
 .project_card {
   width: auto;
   height: auto;
-  padding: 5%;
-  margin: 1%;
+  padding: 6%;
+  margin: 2%;
   background-color: var(--bg);
   color: var(--fg);
-  border-radius: 20px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,17 +221,26 @@ h3 {
   transform: scale(1.03);
 }
 
+.project_card a {
+  width: 60%;
+}
+
+.project_card h3 {
+  margin: 3%;
+}
+
 .project_card .button {
+  font-family: "Playpen Sans", cursive;
   font-size : large;
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
+  padding: 2%;
   border: none;
-  aspect-ratio: 2/1;
+  aspect-ratio: 2/0.2;
   color: var(--bg);
   cursor: pointer;
-  margin: 0%;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .project_card .button:active {
@@ -204,7 +248,8 @@ h3 {
 }
 
 .project_card .button:hover {
-  background-color: #7cba68;
+  box-shadow: 0px 0px 5px 5px var(--color2);
+  background-color: vaR(--color2)
 }
 
 @media screen and (max-width: 1700px) {
