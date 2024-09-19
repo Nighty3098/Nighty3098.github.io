@@ -150,6 +150,7 @@ html {
 h1 {
   font-family: "Playpen Sans", cursive;
   font-size : xx-large;
+  color: var(--color2);
 }
 
 h3 {
@@ -250,6 +251,21 @@ h3 {
 .project_card .button:hover {
   box-shadow: 0px 0px 5px 5px var(--color2);
   background-color: vaR(--color2)
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--fg);
+  align-items: center;
+  align-content: center;
+}
+
+footer a {
+  color: var(--color2);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1700px) {
