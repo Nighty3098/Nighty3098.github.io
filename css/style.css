@@ -18,6 +18,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.article-block {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.article-block:hover {
+  background-color: #f0f0f0;
+}
+
 @keyframes fadeInUp {
   0% {
     transform: translateY(-30%);
@@ -46,6 +58,12 @@ html {
 
 .slideLeft {
   animation: slideLeft 1s ease forwards;
+}
+
+.block {
+  margin: 0%;
+  border-radius: 30px;
+  height: auto;
 }
 
 .badges_block {
@@ -86,7 +104,7 @@ html {
 
 .skill_badge {
   aspect-ratio: 1/1;
-  width: 6%;
+  width: 8%;
   margin: 0.5%;
   transition: transform 0.3s ease-in-out;
 }
@@ -95,7 +113,7 @@ html {
   transform: scale(1.2);
 }
 
-.profile_card, .profile_stats, .profile_repos, .user_bio, .git_profile_card, .my_contacts {
+.profile_card, .profile_stats, .profile_repos, .user_bio, .git_profile_card, .my_contacts, .profile_blogs {
   background-color: var(--color1);
   border-radius: 30px;
   color: var(--fg);
@@ -104,7 +122,7 @@ html {
   align-items: center;
   align-content: center;
   padding: 4%;
-  margin: 30px;
+  margin: 10px;
 }
 
 .bio_info {
@@ -179,7 +197,7 @@ h3 {
   display: grid;
   grid-template-columns: 30% 70%;
   grid-gap: 0%;
-  margin: 2%;
+  margin: 1%;
 }
 
 .user_avatar {
@@ -291,6 +309,15 @@ footer a {
 }
 
 @media screen and (max-width: 1000px) {
+  .tabs {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
   .repos {
     display: grid;
     grid-template-columns: auto;
@@ -315,9 +342,5 @@ footer a {
     aspect-ratio: 1/1;
     width: 8%;
     padding: 0.5%;
-  }
-
-  .profile_card, .profile_stats, .profile_repos, .user_bio, .git_profile_card, .my_contacts {
-    margin: 10px;
   }
 }
