@@ -1,160 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width; initial-scale=0.8; maximum-scale=0.8; minimum-scale=0.8;" />
-        <title>✨ Nighty ✨</title>
-        <link href="css/style.css" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/a01328b26e.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-        <script src="js/script.js"></script>
-        <script src="js/get_git_info.js"></script>
-        <script src="js/blog_articles.js"></script>
-        <!--<script src="js/create_project_cards.js"></script>-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous" />
-    </head>
-    <body>
-        <div class="content">            
-            <div class="profile_info slideLeft">
-                <section id="profile_card" class="profile_card">
-                    <h1 id="username" class="username"><i class="fa-solid fa-user"></i>  Nighty3098</h1>
-                    <img src="https://avatars.githubusercontent.com/u/154594695?v=4" class="user_avatar"/> 
-                    <h3 class="text-box">Backend developer | Freelancer</h3>
-                    <br>
-                </section>
-                <section id="my_contacts" class="my_contacts">
-                    <h1><i class="fa-solid fa-comment"></i> Contact with me</h1>
-                    <div class="badges_block">
-                        <div class="contacts_badge_block">
-                            <a href="https://dev.to/nighty3098" target="blank" class="btn_link"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_dev.png?raw=true" class="contact_badge" /></a>
-                            <a href="https://t.me/Night3098" target="blank" class="btn_link"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true" class="contact_badge" /></a>
-                            <a href="https://discord.gg/#9707" target="blank" class="btn_link"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_discord.png?raw=true" class="contact_badge"/></a>
-                            <a href="https://www.reddit.com/user/DEVELOPER0x31/" target="blank" class="btn_link"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_reddit.png?raw=true" class="contact_badge"/></a>
-                            <a href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK" target="blank" class="btn_link"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_signal.png?raw=true" class="contact_badge"/></a>
-                        </div>
-                    </div>
-                </section>
-                <section id="profile_stats" class="profile_stats">
-                    <h1><i class="fa-solid fa-mug-hot"></i>  Tech stack</h1>
-                    <div class="badges_block">
-                        <div class="bb_block">
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_docker.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_dev.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_qt.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_api.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_git.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_sql.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_postman.png?raw=true" class="skill_badge"/>
-                        </div>
-                        <div class="bb_block">
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cpp.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_c.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_css.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_python.png?raw=true" class="skill_badge"/>
-                        </div>
-                        <div class="bb_block">
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_linux.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_vscode.png?raw=true" class="skill_badge"/>
-                            <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_nvim.png?raw=true" class="skill_badge"/>
-                        </div>
-                    </div>
-                </section>
-                <section id="git_profile_card" class="git_profile_card">
-                    <h1 id="stats" class="stats"><i class="fa-brands fa-github"></i>  GitHub</h1>
-                    <a href="https://github.com/Nighty3098"><h3>https://github.com/Nighty3098</h3></a>
-                    <h3 id="git_followers"></h3>
-                    <h3 id="git_following"></h3>
-                    <h3 id="git_stars"></h3>
-                    <h3 id="git_repos"></h3>
-                    <h3 id="top-languages"></h3>
-                </section>
-                <section id="blog" class="profile_blogs">
-                    <h1>Blog</h1>
-                </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=0.8; maximum-scale=0.8; minimum-scale=0.8;"
+    />
+    <title>✨ Nighty ✨</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/a01328b26e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="js/script.js"></script>
+    <script src="js/get_git_info.js"></script>
+    <script src="js/create_articles_card.js"></script>
+    <!--<script src="js/create_project_cards.js"></script>-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <div class="profile_info slideLeft">
+        <section id="profile_card" class="profile_card">
+          <h1 id="username" class="username">
+            <i class="fa-solid fa-user"></i> Nighty3098
+          </h1>
+          <img
+            src="https://avatars.githubusercontent.com/u/154594695?v=4"
+            class="user_avatar"
+          />
+          <h3 class="text-box">Backend developer | Freelancer</h3>
+          <br />
+        </section>
+        <section id="my_contacts" class="my_contacts">
+          <h1><i class="fa-solid fa-comment"></i> Contact with me</h1>
+          <div class="badges_block">
+            <div class="contacts_badge_block">
+              <a
+                href="https://dev.to/nighty3098"
+                target="blank"
+                class="btn_link"
+                ><img
+                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_dev.png?raw=true"
+                  class="contact_badge"
+              /></a>
+              <a href="https://t.me/Night3098" target="blank" class="btn_link"
+                ><img
+                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true"
+                  class="contact_badge"
+              /></a>
+              <a href="https://discord.gg/#9707" target="blank" class="btn_link"
+                ><img
+                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_discord.png?raw=true"
+                  class="contact_badge"
+              /></a>
+              <a
+                href="https://www.reddit.com/user/DEVELOPER0x31/"
+                target="blank"
+                class="btn_link"
+                ><img
+                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_reddit.png?raw=true"
+                  class="contact_badge"
+              /></a>
+              <a
+                href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK"
+                target="blank"
+                class="btn_link"
+                ><img
+                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_signal.png?raw=true"
+                  class="contact_badge"
+              /></a>
             </div>
-            <div class="block fadeInUp">
-                    <section id="user_bio" class="user_bio">
-                        <h1 id="bio" class="bio"><i class="fa-solid fa-ghost"></i>  About Me</h1>
-                        <div class="bio_info">
-                            <br><br>
-                            <img src="imgs/animation.png" />
-                            <br><br>
-                            <h3><i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend developer from Novosibirsk, I'm 17 years old and I'm studying in the 11th grade of school.<br>I've been developing for the last 4 years. Now I know how to write in Python, C++, C, JS and develop applications using QT, Flask, Aiogram, REST API.<br>Lately I've been studying frontend development and pumping up my skills with QT, Flask.</h3>
-                            <br><br>
-                        </div>
-                    </section>
-                    <section id="profile_repos" class="profile_repos">
-                        <h1><i class="fa-solid fa-fire"></i>  Projects</h1>
-                        <div id="repos" class="repos">
-                            <div class="project_card">
-                                <h1>DevIcons</h1>
-                                <h3>A package of various application icons and skills for developers</h3>
-                                <h3 class="text-box">SVG</h3>
-                                <a href="https://github.com/Nighty3098/DevIcons"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>SDash</h1>
-                                <h3>A simple server dashboard for smaller private servers</h3>
-                                <h3 class="text-box">Python | Flask | JS | HTML</h3>
-                                <a href="https://github.com/SDashS/SDash"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>CodeKeeper</h1>
-                                <h3>Project and task manager for developers with Git.</h3>
-                                <h3 class="text-box">C++ | QT</h3>
-                                <a href="https://github.com/Nighty3098/CodeKeeper"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>TechSupport Bot</h1>
-                                <h3>DXS GROUP technical support telegram bot</h3>
-                                <h3 class="text-box">Python | Aiogram</h3>
-                                <a href="https://github.com/DXS-GROUP/TechSupportBot"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>TGSB</h1>
-                                <h3>SMS bomber. TG bot service written in python and aiogram</h3>
-                                <h3 class="text-box">Python | Aiogram</h3>
-                                <a href="https://github.com/DXS-GROUP/TGSB"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>Finance Tracker Bot</h1>
-                                <h3>Telegram bot for tracking finances</h3>
-                                <h3 class="text-box">Python | Aiogram</h3>
-                                <a href="https://github.com/DXS-GROUP/FinanceTrackerBot"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>Saikt Bot</h1>
-                                <h3>Telegram bot for https://saikt.ru/</h3>
-                                <h3 class="text-box">Python | Aiogram</h3>
-                                <a href="https://github.com/Nighty3098/saikt_bot"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>FileEncrypt</h1>
-                                <h3>A simple program to encrypt and decrypt files with a user-defined password</h3>
-                                <h3 class="text-box">C++ | QT</h3>
-                                <a href="https://github.com/DXS-GROUP/FileEncrypt"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>MFetch</h1>
-                                <h3>A simple fetch tool for Linux written in bash</h3>
-                                <h3 class="text-box">BASH | Linux</h3>
-                                <a href="https://github.com/DXS-GROUP/mfetch"><button class="button">Open page</button></a>
-                            </div>
-                            <div class="project_card">
-                                <h1>Portfolio</h1>
-                                <h3>Dev portfolio website</h3>
-                                <h3 class="text-box">HTML | JS | CSS</h3>
-                                <a href="https://github.com/Nighty3098/Nighty3098.github.io"><button class="button">Open page</button></a>
-                            </div>
-                        </div>
-                    </section>
+          </div>
+        </section>
+        <section id="profile_stats" class="profile_stats">
+          <h1><i class="fa-solid fa-mug-hot"></i> Tech stack</h1>
+          <div class="badges_block">
+            <div class="bb_block">
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_docker.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_dev.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_qt.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_api.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_git.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_sql.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_postman.png?raw=true"
+                class="skill_badge"
+              />
             </div>
-        </div>
-    </body>
-    <footer class="fadeInUp">
-        <h3>© 2024 Nighty3098</h3>
-        <a href="https://github.com/Nighty3098/Nighty3098.github.io"><h3></h3></a>
-    </footer>
+            <div class="bb_block">
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cpp.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_c.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_css.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_python.png?raw=true"
+                class="skill_badge"
+              />
+            </div>
+            <div class="bb_block">
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_linux.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_vscode.png?raw=true"
+                class="skill_badge"
+              />
+              <img
+                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_nvim.png?raw=true"
+                class="skill_badge"
+              />
+            </div>
+          </div>
+        </section>
+        <section id="git_profile_card" class="git_profile_card">
+          <h1 id="stats" class="stats">
+            <i class="fa-brands fa-github"></i> GitHub
+          </h1>
+          <a href="https://github.com/Nighty3098"
+            ><h3>https://github.com/Nighty3098</h3></a
+          >
+          <h3 id="git_followers"></h3>
+          <h3 id="git_following"></h3>
+          <h3 id="git_stars"></h3>
+          <h3 id="git_repos"></h3>
+          <h3 id="top-languages"></h3>
+        </section>
+        <section id="blog" class="profile_blogs">
+          <h1>Blog</h1>
+        </section>
+      </div>
+      <div class="block fadeInUp">
+        <section id="user_bio" class="user_bio">
+          <h1 id="bio" class="bio">
+            <i class="fa-solid fa-ghost"></i> About Me
+          </h1>
+          <div class="bio_info">
+            <br /><br />
+            <img src="imgs/animation.png" />
+            <br /><br />
+            <h3>
+              <i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
+              developer from Novosibirsk, I'm 17 years old and I'm studying in
+              the 11th grade of school.<br />I've been developing for the last 4
+              years. Now I know how to write in Python, C++, C, JS and develop
+              applications using QT, Flask, Aiogram, REST API.<br />Lately I've
+              been studying frontend development and pumping up my skills with
+              QT, Flask.
+            </h3>
+            <br /><br />
+          </div>
+        </section>
+        <section id="profile_repos" class="profile_repos">
+          <h1><i class="fa-solid fa-fire"></i> Projects</h1>
+          <div id="repos" class="repos">
+            <div class="project_card">
+              <h1>DevIcons</h1>
+              <h3>
+                A package of various application icons and skills for developers
+              </h3>
+              <h3 class="text-box">SVG</h3>
+              <a href="https://github.com/Nighty3098/DevIcons"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>SDash</h1>
+              <h3>A simple server dashboard for smaller private servers</h3>
+              <h3 class="text-box">Python | Flask | JS | HTML</h3>
+              <a href="https://github.com/SDashS/SDash"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>CodeKeeper</h1>
+              <h3>Project and task manager for developers with Git.</h3>
+              <h3 class="text-box">C++ | QT</h3>
+              <a href="https://github.com/Nighty3098/CodeKeeper"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>TechSupport Bot</h1>
+              <h3>DXS GROUP technical support telegram bot</h3>
+              <h3 class="text-box">Python | Aiogram</h3>
+              <a href="https://github.com/DXS-GROUP/TechSupportBot"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>TGSB</h1>
+              <h3>SMS bomber. TG bot service written in python and aiogram</h3>
+              <h3 class="text-box">Python | Aiogram</h3>
+              <a href="https://github.com/DXS-GROUP/TGSB"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>Finance Tracker Bot</h1>
+              <h3>Telegram bot for tracking finances</h3>
+              <h3 class="text-box">Python | Aiogram</h3>
+              <a href="https://github.com/DXS-GROUP/FinanceTrackerBot"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>Saikt Bot</h1>
+              <h3>Telegram bot for https://saikt.ru/</h3>
+              <h3 class="text-box">Python | Aiogram</h3>
+              <a href="https://github.com/Nighty3098/saikt_bot"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>FileEncrypt</h1>
+              <h3>
+                A simple program to encrypt and decrypt files with a
+                user-defined password
+              </h3>
+              <h3 class="text-box">C++ | QT</h3>
+              <a href="https://github.com/DXS-GROUP/FileEncrypt"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>MFetch</h1>
+              <h3>A simple fetch tool for Linux written in bash</h3>
+              <h3 class="text-box">BASH | Linux</h3>
+              <a href="https://github.com/DXS-GROUP/mfetch"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+            <div class="project_card">
+              <h1>Portfolio</h1>
+              <h3>Dev portfolio website</h3>
+              <h3 class="text-box">HTML | JS | CSS</h3>
+              <a href="https://github.com/Nighty3098/Nighty3098.github.io"
+                ><button class="button">Open page</button></a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+  <footer class="fadeInUp">
+    <h3>© 2024 Nighty3098</h3>
+    <a href="https://github.com/Nighty3098/Nighty3098.github.io"><h3></h3></a>
+  </footer>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap");
 
 :root {
   --bg: #20252d;
@@ -113,7 +113,13 @@ html {
   transform: scale(1.2);
 }
 
-.profile_card, .profile_stats, .profile_repos, .user_bio, .git_profile_card, .my_contacts, .profile_blogs {
+.profile_card,
+.profile_stats,
+.profile_repos,
+.user_bio,
+.git_profile_card,
+.my_contacts,
+.profile_blogs {
   background-color: var(--color1);
   border-radius: 30px;
   color: var(--fg);
@@ -167,7 +173,7 @@ html {
 
 h1 {
   font-family: "Playpen Sans", cursive;
-  font-size : xx-large;
+  font-size: xx-large;
   color: var(--color2);
 }
 
@@ -205,7 +211,9 @@ h3 {
   border-radius: 50%;
   margin: 3%;
   border: 7px solid var(--color2);
-  transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+  transition:
+    box-shadow 0.3s ease-in-out,
+    border 0.3s ease-in-out;
 }
 
 .user_avatar:hover {
@@ -236,6 +244,37 @@ h3 {
   transition: transform 0.3s ease-in-out;
 }
 
+.article_card {
+  width: 100%;
+  height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: var(--bg);
+  color: var(--fg);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.article_card h1 {
+  font-size: larger;
+}
+
+.article_card h3 {
+  font-size: medium;
+}
+
+.article_card:hover {
+  transform: scale(1.03);
+}
+
 .project_card:hover {
   transform: scale(1.03);
 }
@@ -250,7 +289,7 @@ h3 {
 
 .project_card .button {
   font-family: "Playpen Sans", cursive;
-  font-size : large;
+  font-size: large;
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
@@ -259,7 +298,10 @@ h3 {
   aspect-ratio: 2/0.2;
   color: var(--bg);
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 
 .project_card .button:active {
@@ -268,7 +310,7 @@ h3 {
 
 .project_card .button:hover {
   box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: vaR(--color2)
+  background-color: vaR(--color2);
 }
 
 footer {
