@@ -1,9 +1,9 @@
-const username="Nighty3098"
+const username = "Nighty3098"
 const cache = {};
 
 async function fetchGitHubUserData(username) {
     const url = `https://api.github.com/users/${username}`;
-    
+
     if (cache[url]) {
         console.log('Returning cached user data');
         displayUserData(cache[url]);
@@ -92,14 +92,14 @@ function displayUserData(data) {
     getTopUserLanguages(username).then(topLanguages => {
         console.log(`Top langs ${username}:`, topLanguages);
         const topLanguagesText = topLanguages.join(' | ');
-        document.getElementById('top-languages').textContent = topLanguagesText;
+        document.getElementById('top-languages').innerHTML = '<i class="fa-solid fa-earth-americas"></i>' + topLanguagesText;
     });
 
-    document.getElementById('git_followers').textContent = `Followers: ${data.followers}`;
+    document.getElementById('git_followers').innerHTML = `<i class="fa-solid fa-user-plus"></i> Followers: ${data.followers}`;
     console.log(`Followers ${username}:`, data.followers);
-    document.getElementById('git_following').textContent = `Following: ${data.following}`;
+    document.getElementById('git_following').innerHTML = `<i class="fa-solid fa-user"></i> Following: ${data.following}`;
     console.log(`Following ${username}:`, data.following);
-    document.getElementById('git_repos').textContent = `Repos: ${data.public_repos}`;
+    document.getElementById('git_repos').innerHTML = `<i class="fa-solid fa-diagram-project"></i> Repos: ${data.public_repos}`;
     console.log(`Repos ${username}:`, data.public_repos);
 }
 

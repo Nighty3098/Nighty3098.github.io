@@ -11,13 +11,13 @@ function createArticleBlock(article) {
     articleBlock.classList.add('article_card');
 
     const title = document.createElement('h2');
-    title.textContent = article.title;
+    title.innerHTML = "  " + article.title + "  ";
 
     const date = document.createElement('p');
-    date.textContent = new Date(article.created_at).toLocaleDateString();
+    date.innerHTML = new Date(article.created_at).toLocaleDateString();
 
     const desc = document.createElement('p');
-    desc.textContent = article.description;
+    desc.innerHTML = article.description;
 
     articleBlock.appendChild(title);
     articleBlock.appendChild(desc);
