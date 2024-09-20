@@ -47,7 +47,7 @@ async function fetchGitHubUserRepos(username) {
             totalStars += repo.stargazers_count;
         });
         cache[url] = { totalStars };
-        document.getElementById('git_stars').textContent = 'Stars: ' + totalStars;
+        document.getElementById('git_stars').innerHTML = '<i class="fa-solid fa-star"></i> Stars: ' + totalStars;
     } catch (error) {
         console.error('Error:', error);
     }
