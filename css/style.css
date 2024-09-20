@@ -247,8 +247,6 @@ h3 {
 .article_card {
   width: 100%;
   height: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
   background-color: var(--bg);
   color: var(--fg);
   border-radius: 25px;
@@ -260,6 +258,7 @@ h3 {
   text-align: center;
   transition: transform 0.3s ease-in-out;
   margin: 1%;
+  padding: 2%;
   cursor: pointer;
 }
 
