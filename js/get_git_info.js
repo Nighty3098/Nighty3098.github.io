@@ -92,7 +92,7 @@ function displayUserData(data) {
     getTopUserLanguages(username).then(topLanguages => {
         console.log(`Top langs ${username}:`, topLanguages);
         const topLanguagesText = topLanguages.join(' | ');
-        document.getElementById('top-languages').innerHTML = '<i class="fa-solid fa-earth-americas"></i>' + topLanguagesText;
+        document.getElementById('top-languages').innerHTML = '<i class="fa-solid fa-earth-americas"></i>  ' + topLanguagesText;
     });
 
     document.getElementById('git_followers').innerHTML = `<i class="fa-solid fa-user-plus"></i> Followers: ${data.followers}`;
