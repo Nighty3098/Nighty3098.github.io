@@ -1,11 +1,16 @@
-const repos = document.querySelector('.repos');
+const reposContainer = document.querySelector('.repos');
+const username = 'Nighty3098';
+const token = 'your github token';
 
-const repoLinks = [
-    'https://api.github.com/repos/Nighty3098/CodeKeeper',
-    'https://api.github.com/repos/SDashS/SDash'
-];
-
-const repoDataCache = {};
+async function fetchUserRepos(username) {
+    const url = `https://api.github.com/users/${username}/repos`;
+    const response = await fetch(url, {
+        headers: {
+            'Authorization': `token ${token}`
+        }
+    });
+    return response.json();
+}
 
 async function fetchRepoData(repoUrl) {
     let retryCount = 0;
@@ -13,14 +18,18 @@ async function fetchRepoData(repoUrl) {
 
     while (retryCount < maxRetries) {
         try {
-            const response = await fetch(repoUrl);
+            const response = await fetch(repoUrl, {
+                headers: {
+                    'Authorization': `token ${token}`
+                }
+            });
             const data = await response.json();
             return data;
         } catch (error) {
             if (error.message.includes('net::ERR_NETWORK_CHANGED')) {
                 retryCount++;
                 console.log(`Retry ${retryCount} due to network change`);
-                await new Promise(resolve => setTimeout(resolve, 1000)); // wait 1 second before retrying
+                await new Promise(resolve => setTimeout(resolve, 1000));
             } else {
                 throw error;
             }
@@ -30,50 +39,50 @@ async function fetchRepoData(repoUrl) {
     throw new Error(`Failed to fetch data after ${maxRetries} retries`);
 }
 
-function createRepoCard(repoData, repoUrl) {
+function createRepoCard(repoData) {
     const card = document.createElement('div');
-    card.classList.add('repo_card');
+    card.classList.add('project_card');
+
+    const repoName = repoData.name;
+
+    const languages = repoData.language || 'Not specified';
+    const stats = `<i class="fa-solid fa-earth-americas"></i> Languages: ${languages} <br><i class="fa-solid fa-code-branch"></i> Forks: ${repoData.forks_count} <br><i class="fa-solid fa-star"></i> Stars: ${repoData.stargazers_count}`;
 
     card.innerHTML = `
-    <h3><i class="fa-solid fa-diagram-project"></i> ${repoUrl.split('/').pop()}</h3>
-    <p><i class="fa-solid fa-star"></i> Stars: ${repoData.stargazers_count}</p>
-    <p><i class="fa-solid fa-code-fork"></i> Forks: ${repoData.forks_count}</p>
-    <p><i class="fa-solid fa-globe"></i> Language: ${repoData.language}</p>
-    <p><i class="fa-solid fa-message"></i> Issues: ${repoData.open_issues_count}</p>
+        <h1>${repoName}</h1>
+        <h3>${repoData.description || 'No description available'}</h3>
+        <h3 class="text-box">${stats}</h3>
+        <a href="${repoData.html_url}" target="_blank">
+            <button class="button">
+                <i class="fa-solid fa-arrow-right"></i> Open page
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </a>
     `;
 
-    console.debug(`Project: ${repoUrl.split('/').pop()} Stars: ${repoData.stars} Forks: ${repoData.forks_count} Language: ${repoData.language}`)
+    console.debug(`Project: ${repoName} Stars: ${repoData.stargazers_count} Forks: ${repoData.forks_count} Language: ${languages}`);
 
     return card;
 }
 
 async function createRepoCards() {
-    const repos = document.querySelector('.repos');
-    if (!repos) {
+    const reposContainer = document.querySelector('.repos');
+    if (!reposContainer) {
         console.error('repos element not found in the DOM');
         return;
     }
 
-    for (const link of repoLinks) {
-        const repoData = await fetchRepoData(link);
-        const card = createRepoCard(repoData, link);
+    const userRepos = await fetchUserRepos(username);
+    
+    for (const repo of userRepos) {
+        const repoData = await fetchRepoData(repo.url);
+        const card = createRepoCard(repoData);
         if (card) {
-            repos.appendChild(card);
+            reposContainer.appendChild(card);
         }
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const observer = new MutationObserver(() => {
-        const repos = document.querySelector('.repos');
-        if (repos) {
-            createRepoCards('Nighty3098');
-            observer.disconnect();
-        }
-    });
-
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
+    createRepoCards();
 });

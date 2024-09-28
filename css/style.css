@@ -221,7 +221,7 @@ h3 {
   border: 7px solid var(--color2);
 }
 
-.repos {
+.repos, .nc_repos {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 0%;
@@ -354,7 +354,7 @@ h3 {
     justify-content: center;
   }
 
-  .repos {
+  .repos, .nc_repos {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
@@ -377,7 +377,7 @@ h3 {
     align-content: center;
   }
 
-  .repos {
+  .repos, .nc_repos {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
