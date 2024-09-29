@@ -2,26 +2,40 @@ const reposContainer = document.querySelector('.repos');
 const git_username = 'Nighty3098';
 
 async function fetchUserRepos(git_username) {
-    const userReposUrl = `https://api.github.com/users/${git_username}/repos`;
-    const userReposResponse = await fetch(userReposUrl);
-    const userRepos = await userReposResponse.json();
+    const nc_repos_block = document.getElementById('nc_repos');
+    const repos_block = document.getElementById('repos');
 
-    // Fetch organizations for the user
-    const orgsUrl = `https://api.github.com/users/${git_username}/orgs`;
-    const orgsResponse = await fetch(orgsUrl);
-    const orgs = await orgsResponse.json();
+    try {
+        const userReposUrl = `https://api.github.com/users/${git_username}/repos`;
+        const userReposResponse = await fetch(userReposUrl);
+        const userRepos = await userReposResponse.json();
 
-    let allRepos = [...userRepos]; // Start with user's repos
+        // Fetch organizations for the user
+        const orgsUrl = `https://api.github.com/users/${git_username}/orgs`;
+        const orgsResponse = await fetch(orgsUrl);
+        const orgs = await orgsResponse.json();
 
-    // Fetch repositories from each organization
-    for (const org of orgs) {
-        const orgReposUrl = `https://api.github.com/orgs/${org.login}/repos`;
-        const orgReposResponse = await fetch(orgReposUrl);
-        const orgRepos = await orgReposResponse.json();
-        allRepos = allRepos.concat(orgRepos); // Combine user's and organization's repos
+        let allRepos = [...userRepos]; // Start with user's repos
+
+        // Fetch repositories from each organization
+        for (const org of orgs) {
+            const orgReposUrl = `https://api.github.com/orgs/${org.login}/repos`;
+            const orgReposResponse = await fetch(orgReposUrl);
+            const orgRepos = await orgReposResponse.json();
+            allRepos = allRepos.concat(orgRepos); // Combine user's and organization's repos
+        }
+
+        repos_block.style.display = "normal";
+        nc_repos_block.style.display = "none";
+
+        return allRepos;
+    } catch (error) {
+        repos_block.style.display = "none";
+        nc_repos_block.style.display = "normal";
+
+        console.error(error.message);
+        return [];
     }
-
-    return allRepos;
 }
 
 async function fetchRepoData(repoUrl) {
