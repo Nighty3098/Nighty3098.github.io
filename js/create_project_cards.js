@@ -1,15 +1,27 @@
 const reposContainer = document.querySelector('.repos');
-const username = 'Nighty3098';
-const token = 'your github token';
+const git_username = 'Nighty3098';
 
-async function fetchUserRepos(username) {
-    const url = `https://api.github.com/users/${username}/repos`;
-    const response = await fetch(url, {
-        headers: {
-            'Authorization': `token ${token}`
-        }
-    });
-    return response.json();
+async function fetchUserRepos(git_username) {
+    const userReposUrl = `https://api.github.com/users/${git_username}/repos`;
+    const userReposResponse = await fetch(userReposUrl);
+    const userRepos = await userReposResponse.json();
+
+    // Fetch organizations for the user
+    const orgsUrl = `https://api.github.com/users/${git_username}/orgs`;
+    const orgsResponse = await fetch(orgsUrl);
+    const orgs = await orgsResponse.json();
+
+    let allRepos = [...userRepos]; // Start with user's repos
+
+    // Fetch repositories from each organization
+    for (const org of orgs) {
+        const orgReposUrl = `https://api.github.com/orgs/${org.login}/repos`;
+        const orgReposResponse = await fetch(orgReposUrl);
+        const orgRepos = await orgReposResponse.json();
+        allRepos = allRepos.concat(orgRepos); // Combine user's and organization's repos
+    }
+
+    return allRepos;
 }
 
 async function fetchRepoData(repoUrl) {
@@ -18,18 +30,14 @@ async function fetchRepoData(repoUrl) {
 
     while (retryCount < maxRetries) {
         try {
-            const response = await fetch(repoUrl, {
-                headers: {
-                    'Authorization': `token ${token}`
-                }
-            });
+            const response = await fetch(repoUrl);
             const data = await response.json();
             return data;
         } catch (error) {
             if (error.message.includes('net::ERR_NETWORK_CHANGED')) {
                 retryCount++;
                 console.log(`Retry ${retryCount} due to network change`);
-                await new Promise(resolve => setTimeout(resolve, 1000));
+                await new Promise(resolve => setTimeout(resolve, 1000)); // wait 1 second before retrying
             } else {
                 throw error;
             }
@@ -67,14 +75,23 @@ function createRepoCard(repoData) {
 
 async function createRepoCards() {
     const reposContainer = document.querySelector('.repos');
+
     if (!reposContainer) {
-        console.error('repos element not found in the DOM');
+        console.error("repos element not found in the DOM");
         return;
     }
 
-    const userRepos = await fetchUserRepos(username);
+    const userReposAndOrgs = await fetchUserRepos(git_username);
     
-    for (const repo of userRepos) {
+    // Filter out repositories with names ending in .github or .git
+    const filteredRepos = userReposAndOrgs.filter(repo => 
+        !repo.name.endsWith('.github') && !repo.name.endsWith('.git')
+    );
+
+    // Sort repositories by stargazers_count in descending order
+    filteredRepos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+    for (const repo of filteredRepos) {
         const repoData = await fetchRepoData(repo.url);
         const card = createRepoCard(repoData);
         if (card) {

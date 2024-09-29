@@ -292,7 +292,7 @@ h3 {
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
-  padding: 2%;
+  padding: 3%;
   border: none;
   aspect-ratio: 2/0.2;
   color: var(--bg);
@@ -324,7 +324,7 @@ h3 {
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
-  padding: 0%;
+  padding: 3%;
   margin: 0%;
   border: none;
   aspect-ratio: 2/0.2;
