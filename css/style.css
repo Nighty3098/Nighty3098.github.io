@@ -19,6 +19,13 @@ html {
   height: 100%;
 }
 
+.article_sub_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
 .article-block {
   border: 1px solid #ccc;
   padding: 10px;

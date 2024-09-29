@@ -10,18 +10,33 @@ function createArticleBlock(article) {
     const articleBlock = document.createElement('div');
     articleBlock.classList.add('article_card');
 
+    const articleSubBlock = document.createElement('div');
+    articleSubBlock.classList.add('article_sub_block');
+
     const title = document.createElement('h2');
-    title.innerHTML = "  " + article.title + "  ";
+    title.innerHTML = article.title;
 
     const date = document.createElement('p');
-    date.innerHTML = new Date(article.created_at).toLocaleDateString();
+    date.innerHTML = '  <i class="fa-solid fa-clock"></i>  ' + new Date(article.published_at).toLocaleDateString();
+
+    const reactions = document.createElement('p');
+    const reactionCount = parseInt(article.public_reactions_count);
+    reactions.innerHTML = '  <i class="fa-solid fa-heart"></i>  ' + (isNaN(reactionCount) ? '0' : reactionCount.toLocaleString());
+
+    const comments = document.createElement('p');
+    const commentsCount = parseInt(article.comments_count);
+    comments.innerHTML = '  <i class="fa-solid fa-comment"></i>  ' + (isNaN(commentsCount) ? '0' : commentsCount.toLocaleString());
 
     const desc = document.createElement('p');
     desc.innerHTML = article.description;
 
+    articleSubBlock.appendChild(date);
+    articleSubBlock.appendChild(reactions);
+    articleSubBlock.appendChild(comments);
+
     articleBlock.appendChild(title);
     articleBlock.appendChild(desc);
-    articleBlock.appendChild(date);
+    articleBlock.appendChild(articleSubBlock);
 
     articleBlock.onclick = () => {
         window.open(article.url, '_blank');
