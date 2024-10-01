@@ -10,19 +10,17 @@ async function fetchUserRepos(git_username) {
         const userReposResponse = await fetch(userReposUrl);
         const userRepos = await userReposResponse.json();
 
-        // Fetch organizations for the user
         const orgsUrl = `https://api.github.com/users/${git_username}/orgs`;
         const orgsResponse = await fetch(orgsUrl);
         const orgs = await orgsResponse.json();
 
-        let allRepos = [...userRepos]; // Start with user's repos
+        let allRepos = [...userRepos];
 
-        // Fetch repositories from each organization
         for (const org of orgs) {
             const orgReposUrl = `https://api.github.com/orgs/${org.login}/repos`;
             const orgReposResponse = await fetch(orgReposUrl);
             const orgRepos = await orgReposResponse.json();
-            allRepos = allRepos.concat(orgRepos); // Combine user's and organization's repos
+            allRepos = allRepos.concat(orgRepos);
         }
 
         repos_block.style.display = "normal";
@@ -51,7 +49,7 @@ async function fetchRepoData(repoUrl) {
             if (error.message.includes('net::ERR_NETWORK_CHANGED')) {
                 retryCount++;
                 console.log(`Retry ${retryCount} due to network change`);
-                await new Promise(resolve => setTimeout(resolve, 1000)); // wait 1 second before retrying
+                await new Promise(resolve => setTimeout(resolve, 1000));
             } else {
                 throw error;
             }
@@ -70,8 +68,18 @@ function createRepoCard(repoData) {
     const languages = repoData.language || 'Not specified';
     const stats = `<i class="fa-solid fa-earth-americas"></i> Languages: ${languages} <br><i class="fa-solid fa-code-branch"></i> Forks: ${repoData.forks_count} <br><i class="fa-solid fa-star"></i> Stars: ${repoData.stargazers_count}`;
 
+    const is_archived = repoData.archived;
+
+    let status;
+    if (is_archived === false) {
+        status = "";
+    } else {
+        status = "<i class='fa-solid fa-box'></i> ! Archived ! ";
+    }
+
     card.innerHTML = `
         <h1>${repoName}</h1>
+        <h3 style="color: #db3a3a;">${status}</h3>
         <h3>${repoData.description || 'No description available'}</h3>
         <h3 class="text-box">${stats}</h3>
         <a href="${repoData.html_url}" target="_blank">
@@ -97,12 +105,10 @@ async function createRepoCards() {
 
     const userReposAndOrgs = await fetchUserRepos(git_username);
     
-    // Filter out repositories with names ending in .github or .git
     const filteredRepos = userReposAndOrgs.filter(repo => 
         !repo.name.endsWith('.github') && !repo.name.endsWith('.git')
     );
 
-    // Sort repositories by stargazers_count in descending order
     filteredRepos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
     for (const repo of filteredRepos) {
