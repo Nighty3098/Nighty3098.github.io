@@ -25,11 +25,6 @@
     />
   </head>
   <body>
-    <div class="dock" id="dock">
-      <button class="btn" id="about_me_btn"><i class="fa-solid fa-circle-info"></i> About Me</button>
-      <button class="btn" id="projects_btn"><i class="fa-solid fa-diagram-project"></i> My projects</button>
-      <button class="btn" id="my_blog_btn"><i class="fa-regular fa-newspaper"></i> My Blog</button>
-    </div>
     <div class="content">
       <div class="profile_info slideLeft">
         <section id="profile_card" class="profile_card">
@@ -172,6 +167,14 @@
           <h3 id="git_repos"></h3>
           <h3 id="top-languages"></h3>
         </section>
+        <section id="blog" class="profile_blogs">
+          <h1><i class="fa-solid fa-cube"></i> Blog</h1>
+          <a href="https://dev.to/nighty3098"
+            ><button>
+              <i class="fa-solid fa-arrow-right"></i> My Blog
+              <i class="fa-solid fa-arrow-left"></i></button
+          ></a>
+        </section>
       </div>
       <div class="block fadeInUp">
         <section id="user_bio" class="user_bio">
@@ -179,9 +182,9 @@
             <i class="fa-solid fa-ghost"></i> About Me
           </h1>
           <div class="bio_info">
-            <br /><br /><br /><br />
+            <br /><br />
             <img src="imgs/animation.png" />
-            <br /><br /><br /><br />
+            <br /><br />
             <h3>
               <i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
               developer from Novosibirsk, I'm 17 years old and I'm studying in
@@ -191,10 +194,10 @@
               been studying frontend development and pumping up my skills with
               QT, Flask.
             </h3>
-            <br /><br /><br />
+            <br /><br />
           </div>
         </section>
-        <section id="profile_repos" class="profile_repos hidden">
+        <section id="profile_repos" class="profile_repos">
           <h1><i class="fa-solid fa-fire"></i> Projects</h1>
           <div id="repos" class="repos"></div>
           <div id="nc_repos" class="nc_repos">
@@ -302,14 +305,6 @@
               ></a>
             </div>
           </div>
-        </section>
-        <section id="blog" class="profile_blogs hidden">
-          <h1><i class="fa-solid fa-cube"></i> Blog</h1>
-          <a href="https://dev.to/nighty3098"
-            ><button>
-              <i class="fa-solid fa-arrow-right"></i> My Blog
-              <i class="fa-solid fa-arrow-left"></i></button
-          ></a>
         </section>
       </div>
     </div>
