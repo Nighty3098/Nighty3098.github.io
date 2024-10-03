@@ -19,6 +19,7 @@ async function fetchGitHubUserData(username) {
         cache[url] = data;
         displayUserData(data);
     } catch (error) {
+        document.getElementById("git_profile_card").style.display = "None";
         console.error('Error:', error);
     }
 }
@@ -102,6 +103,7 @@ function displayUserData(data) {
     document.getElementById('git_repos').innerHTML = `<i class="fa-solid fa-diagram-project"></i> Repos: ${data.public_repos}`;
     console.log(`Repos ${username}:`, data.public_repos);
 }
+
 
 fetchGitHubUserData(username);
 fetchGitHubUserRepos(username);

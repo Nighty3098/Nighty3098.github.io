@@ -16,6 +16,14 @@ html {
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+.article_sub_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
 }
 
 .article-block {
@@ -63,7 +71,6 @@ html {
 .block {
   margin: 0%;
   border-radius: 30px;
-  height: auto;
 }
 
 .badges_block {
@@ -83,7 +90,6 @@ html {
 
 .btn_link {
   width: 100%;
-  height: 100%;
 }
 
 .contacts_badge_block {
@@ -221,7 +227,7 @@ h3 {
   border: 7px solid var(--color2);
 }
 
-.repos {
+.repos, .nc_repos {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 0%;
@@ -229,7 +235,6 @@ h3 {
 
 .project_card {
   width: auto;
-  height: auto;
   padding: 6%;
   margin: 2%;
   background-color: var(--bg);
@@ -246,7 +251,6 @@ h3 {
 
 .article_card {
   width: 100%;
-  height: auto;
   background-color: var(--bg);
   color: var(--fg);
   border-radius: 25px;
@@ -292,7 +296,7 @@ h3 {
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
-  padding: 2%;
+  padding: 3%;
   border: none;
   aspect-ratio: 2/0.2;
   color: var(--bg);
@@ -324,7 +328,7 @@ h3 {
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
-  padding: 0%;
+  padding: 3%;
   margin: 0%;
   border: none;
   aspect-ratio: 2/0.2;
@@ -354,7 +358,7 @@ h3 {
     justify-content: center;
   }
 
-  .repos {
+  .repos, .nc_repos {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
@@ -377,7 +381,7 @@ h3 {
     align-content: center;
   }
 
-  .repos {
+  .repos, .nc_repos {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
