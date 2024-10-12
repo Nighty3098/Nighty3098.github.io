@@ -14,7 +14,7 @@
     <br><br>
     <a href="https://Nighty3098.github.io"><kbd><br> 🚀 Open site 🚀 <br><br></kbd></a>
     <br><br>
-    <img src="https://github.com/user-attachments/assets/924f3670-bdf2-4a5c-be58-11ac7b24a9d1" />
+    <img src="https://github.com/user-attachments/assets/aac830bc-4f42-493a-aa6c-fadf0d75e7c0" />
     <br>
     <h3 align="center">Contact with me:</h3>
     <a href="https://t.me/Night3098" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true" width="60px" /></a>
