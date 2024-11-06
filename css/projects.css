@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap");
+
+:root {
+  --bg: #20252d;
+  --fg2: #ffffff;
+  --fg: #ffffff;
+  --color1: #2b303b;
+  --color2: #9ad38c;
+}
+
+html {
+  background: var(--bg);
+  scrollbar-color: var(--color1) transparent;
+  scrollbar-arrow-color: transparent transparent;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideLeft {
+  animation: slideLeft 1s ease forwards;
+}
+
+.block {
+  margin: 0%;
+  border-radius: 30px;
+}
+
+.badges_block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bb_block {
+  padding: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn_link {
+  width: 100%;
+}
+
+.skill_badge:hover {
+  transform: scale(1.2);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    align-content: center;
+    border-radius: 20px;
+    margin: 4%;
+    height: 30%;
+    margin: 40px 40px 10px 40px;
+    background-color: var(--color1);
+}
+
+.header a {
+    width: 10%;
+    margin: 0px;
+    padding: 0%;
+    display: flex;
+    border: none;
+    aspect-ratio: none;
+}
+
+.header .button {
+    width: 100%;
+    margin: 10px 20px 10px 20px;
+    padding: 0%;
+    border: none;
+    aspect-ratio: none;
+}
+
+.header h1 {
+    margin: 10px 30px 10px 30px;
+}
+
+.main_header {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .header .button {
+        margin: 0px;
+        width: 100%;
+    }
+    .header h1 {
+        display: none;
+    }
+    .header {
+        height: 50px;
+        padding: 0px;
+        margin: 5%;
+        background-color: transparent;
+        justify-content: center;
+    }
+    .main_header {
+        display: block;
+    }
+    .header a {
+        margin: 0px;
+        width: 100%;
+    }
+}  
+
+.profile_card,
+.profile_stats,
+.profile_repos {
+  width: 100%;
+  background-color: var(--color1);
+  border-radius: 30px;
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 4%;
+  margin: 10px;
+}
+
+h1 {
+  font-family: "Playpen Sans", cursive;
+  font-size: xx-large;
+  color: var(--color2);
+}
+
+h3 {
+  font-family: "Playpen Sans", cursive;
+  padding: 0%;
+  margin: 5px;
+  font-size: medium;
+}
+
+.text-box {
+  width: 70%;
+  padding: 2%;
+  background-color: var(--color2);
+  color: var(--bg);
+  border-radius: 10px;
+  align-content: center;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  margin: 1%;
+}
+
+.repos, .nc_repos {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0%;
+}
+
+.project_card {
+  width: auto;
+  padding: 6%;
+  margin: 2%;
+  background-color: var(--bg);
+  color: var(--fg);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project_card:hover {
+  transform: scale(1.03);
+}
+
+.project_card a {
+  width: 60%;
+}
+
+.project_card h3 {
+  margin: 3%;
+}
+
+.button {
+  font-family: "Playpen Sans", cursive;
+  font-size: large;
+  background-color: var(--color2);
+  border-radius: 10px;
+  width: 100%;
+  padding: 3%;
+  border: none;
+  aspect-ratio: 2/0.2;
+  color: var(--bg);
+  cursor: pointer;
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:hover {
+  box-shadow: 0px 0px 5px 5px var(--color2);
+  background-color: vaR(--color2);
+}
+
+.profile_blogs a {
+  width: 40%;
+  margin: 1%;
+  padding: 0px;
+}
+
+@media screen and (max-width: 800px) {
+  .tabs {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .repos, .nc_repos {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
