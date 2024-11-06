@@ -13,12 +13,14 @@
     <img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true" height="50px" />
     <br><br>
     <a href="https://Nighty3098.github.io"><kbd><br> 🚀 Open site 🚀 <br><br></kbd></a>
-    <br><br>
-    <img src="https://github.com/user-attachments/assets/aac830bc-4f42-493a-aa6c-fadf0d75e7c0" />
     <br>
     <h3 align="center">Contact with me:</h3>
     <a href="https://t.me/Night3098" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true" width="60px" /></a>
     <a href="https://discord.gg/#9707" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_discord.png?raw=true" width="60px"/></a>
     <a href="https://www.reddit.com/user/DEVELOPER0x31/" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_reddit.png?raw=true" width="60px"/></a>
     <a href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_signal.png?raw=true" width="60px"/></a>
+    <br><br>
+    <img src="https://github.com/user-attachments/assets/0c30ea9a-c208-4389-bfe5-ade9b84bbf3a" />
+    <img src="https://github.com/user-attachments/assets/c0c86cff-947a-4360-9778-7256a7230059" />
+    <img src="https://github.com/user-attachments/assets/303b0e2c-a693-48f1-acb4-2b176170a29d" />
 </div>
