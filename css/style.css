@@ -42,37 +42,8 @@ html {
   background-color: #f0f0f0;
 }
 
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.fadeInUp {
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.slideLeft {
-  animation: slideLeft 1s ease forwards;
-}
-
 .block {
+  padding: 0px;
   margin: 0%;
   border-radius: 30px;
 }
@@ -201,7 +172,7 @@ h3 {
   font-family: "Playpen Sans", cursive;
   padding: 0%;
   margin: 5px;
-  font-size: large;
+  font-size: medium;
 }
 
 .text-box {
@@ -221,19 +192,20 @@ h3 {
 
 .content {
   display: grid;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 30% auto;
   grid-gap: 0%;
-  margin: 1%;
+  margin: 0%;
 }
 
 .user_avatar {
   width: 50%;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   margin: 3%;
   border: 7px solid var(--color2);
   transition:
-    box-shadow 0.3s ease-in-out,
-    border 0.3s ease-in-out;
+    box-shadow 0.6s ease-in-out,
+    border 0.6s ease-in-out;
 }
 
 .user_avatar:hover {

@@ -8,12 +8,13 @@
     />
     <title>✨ Nighty ✨</title>
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/animations.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/a01328b26e.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <script src="js/create_articles_card.js"></script>
     <script src="js/get_git_info.js"></script>
     <!--<script src="js/create_project_cards.js"></script>-->
@@ -26,7 +27,7 @@
   </head>
   <body>
     <div class="content">
-      <div class="profile_info slideLeft">
+      <div class="profile_info">
         <section id="profile_card" class="profile_card">
           <h1 id="username" class="username">
             <i class="fa-solid fa-user"></i> Nighty3098
@@ -36,8 +37,18 @@
             class="user_avatar"
           />
           <h3 class="text-box">Backend developer | Freelancer</h3>
-          <a href="projects.html"><h3 class="text-box"><i class="fa-solid fa-arrow-right"></i> My Projects <i class="fa-solid fa-arrow-left"></i></h3></a>
-          <a href="blog.html"><h3 class="text-box"><i class="fa-solid fa-arrow-right"></i> My Blog <i class="fa-solid fa-arrow-left"></i></h3></a>
+          <a href="projects.html"
+            ><h3 class="text-box"
+              ><i class="fa-solid fa-arrow-right"></i> My Projects
+              <i class="fa-solid fa-arrow-left"></i
+            ></h3></a
+          >
+          <a href="blog.html"
+            ><h3 class="text-box"
+              ><i class="fa-solid fa-arrow-right"></i> My Blog
+              <i class="fa-solid fa-arrow-left"></i
+            ></h3></a
+          >
           <br />
         </section>
         <section id="my_contacts" class="my_contacts">
@@ -52,12 +63,18 @@
                   src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_dev.png?raw=true"
                   class="contact_badge"
               /></a>
-              <a href="https://t.me/Night3098" target="blank" class="btn_link"
+              <a
+                href="https://t.me/Night3098"
+                target="blank"
+                class="btn_link"
                 ><img
                   src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true"
                   class="contact_badge"
               /></a>
-              <a href="https://discord.gg/#9707" target="blank" class="btn_link"
+              <a
+                href="https://discord.gg/#9707"
+                target="blank"
+                class="btn_link"
                 ><img
                   src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_discord.png?raw=true"
                   class="contact_badge"
@@ -68,7 +85,7 @@
                 class="btn_link"
                 ><img
                   src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_reddit.png?raw=true"
-                  class="contact_badge"
+                   class="contact_badge"
               /></a>
               <a
                 href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK"
@@ -157,7 +174,7 @@
           </div>
         </section>
       </div>
-      <div class="block fadeInUp">
+      <div class="block">
         <section id="user_bio" class="user_bio">
           <h1 id="bio" class="bio">
             <i class="fa-solid fa-ghost"></i> About Me
@@ -167,10 +184,7 @@
             <img src="imgs/animation.png" />
             <br /><br />
             <h3>
-              <i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
-              developer and freelancer, I'm 17 years old and I'm studying in
-              the 11th grade of school.<br />I've been developing for the last 4
-              years.
+              <i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend developer and freelancer, I'm 17 years old and I'm studying in the 11th grade of school.<br />I've been developing for the last 4 years.
             </h3>
             <br /><br />
           </div>

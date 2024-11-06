@@ -19,36 +19,6 @@ html {
   height: 100%;
 }
 
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.fadeInUp {
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.slideLeft {
-  animation: slideLeft 1s ease forwards;
-}
-
 .block {
   margin: 0%;
   border-radius: 30px;
@@ -85,6 +55,7 @@ html {
     align-content: center;
     border-radius: 20px;
     margin: 4%;
+    width: 60%;
     height: 30%;
     margin: 40px 40px 10px 40px;
     background-color: var(--color1);
@@ -180,6 +151,7 @@ h3 {
 .content {
   display: flex;
   margin: 1%;
+  justify-content: center;
 }
 
 .repos, .nc_repos {
@@ -263,4 +235,11 @@ h3 {
     grid-template-columns: auto;
     justify-content: center;
   }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

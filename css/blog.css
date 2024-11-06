@@ -77,36 +77,6 @@ html {
   background-color: #f0f0f0;
 }
 
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.fadeInUp {
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.slideLeft {
-  animation: slideLeft 1s ease forwards;
-}
-
 .bb_block {
   padding: 0%;
   width: 100%;
