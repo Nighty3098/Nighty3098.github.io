@@ -2,7 +2,6 @@
 
 :root {
   --bg: #20252d;
-  --bg2: #20252d;
   --fg2: #ffffff;
   --fg: #ffffff;
   --color1: #2b303b;
@@ -10,10 +9,7 @@
 }
 
 html {
-  background: var(--bg2);
-  background-origin: padding-box;
-  background-repeat: repeat;
-	background-attachment: scroll ;
+  background: var(--bg);
   scrollbar-color: var(--color1) transparent;
   scrollbar-arrow-color: transparent transparent;
   font-family: "JetBrains Mono", monospace;
@@ -21,6 +17,45 @@ html {
   font-style: normal;
   scroll-behavior: smooth;
   height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    align-content: center;
+    border-radius: 20px;
+    margin: 4%;
+    width: 60%;
+    height: 30%;
+    margin: 40px 40px 10px 40px;
+    background-color: var(--color1);
+}
+
+.header a {
+    width: 20%;
+    margin: 0px;
+    padding: 0%;
+    display: flex;
+    border: none;
+    aspect-ratio: none;
+}
+
+.header .button {
+    width: 100%;
+    margin: 10px 20px 10px 20px;
+    padding: 0%;
+    border: none;
+    aspect-ratio: none;
+}
+
+.header h1 {
+    margin: 10px 30px 10px 30px;
+}
+
+.main_header {
+    display: none;
 }
 
 .article_sub_block {
@@ -72,17 +107,6 @@ html {
   animation: slideLeft 1s ease forwards;
 }
 
-.block {
-  margin: 0%;
-  border-radius: 30px;
-}
-
-.badges_block {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 .bb_block {
   padding: 0%;
   width: 100%;
@@ -92,43 +116,6 @@ html {
   align-items: center;
 }
 
-.btn_link {
-  width: 100%;
-}
-
-.contacts_badge_block {
-  width: auto;
-  margin-left: 20%;
-}
-
-.contact_badge {
-  aspect-ratio: 1/1;
-  width: 12%;
-  margin: 1%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact_badge:hover {
-  transform: scale(1.2);
-}
-
-.skill_badge {
-  aspect-ratio: 1/1;
-  width: 6%;
-  margin: 0.5%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.skill_badge:hover {
-  transform: scale(1.2);
-}
-
-.profile_card,
-.profile_stats,
-.profile_repos,
-.user_bio,
-.git_profile_card,
-.my_contacts,
 .profile_blogs {
   background-color: var(--color1);
   border-radius: 30px;
@@ -139,56 +126,6 @@ html {
   align-content: center;
   padding: 4%;
   margin: 10px;
-}
-
-.profile_card a {
-  width: 100%;
-  height: auto;
-  margin: 0px;
-  padding: 0%;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
-
-.profile_card .button {
-  width: 50%;
-}
-
-.bio_info {
-  font-style: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.bio_info h3 {
-  font-size: larger;
-  line-height: 2;
-  align-content: center;
-  text-align: center;
-}
-
-.profile_stats h3 {
-  font-family: "Playpen Sans", sans-serif;
-  line-height: 2;
-  font-size: larger;
-}
-
-.profile_stats a {
-  line-height: 2;
-  font-size: larger;
-  color: var(--color2);
-  text-decoration: none;
-}
-
-.git_profile_card a {
-  line-height: 2;
-  font-size: larger;
-  color: var(--color2);
-  text-decoration: none;
 }
 
 h1 {
@@ -214,53 +151,10 @@ h3 {
   text-align: center;
 }
 
-.profile_info {
-  display: flex;
-  flex-direction: column;
-}
-
 .content {
-  display: grid;
-  grid-template-columns: 25% auto;
-  grid-gap: 0%;
-  margin: 1%;
-}
-
-.user_avatar {
-  width: 50%;
-  border-radius: 50%;
-  margin: 3%;
-  border: 7px solid var(--color2);
-  transition:
-    box-shadow 0.3s ease-in-out,
-    border 0.3s ease-in-out;
-}
-
-.user_avatar:hover {
-  box-shadow: 0px 0px 10px 10px var(--color2);
-  border: 7px solid var(--color2);
-}
-
-.repos, .nc_repos {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 0%;
-}
-
-.project_card {
-  width: auto;
-  padding: 6%;
-  margin: 2%;
-  background-color: var(--bg);
-  color: var(--fg);
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    margin: 1%;
 }
 
 .article_card {
@@ -331,7 +225,7 @@ h3 {
 }
 
 .profile_blogs a {
-  width: 40%;
+  width: 60%;
   margin: 1%;
   padding: 0px;
 }
@@ -345,7 +239,6 @@ h3 {
   padding: 3%;
   margin: 0%;
   border: none;
-  aspect-ratio: 2/0.2;
   color: var(--bg);
   cursor: pointer;
   transition:
@@ -363,78 +256,38 @@ h3 {
   background-color: vaR(--color2);
 }
 
-.sub_block {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 0%;
-  align-items: baseline;
-  justify-content: center;
-}
-
-@media screen and (max-width: 1600px) {
-  .content {
-    display: grid;
-    grid-template-columns: 70%;
-    grid-gap: 1%;
-    align-items: baseline;
+body {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-  }
-
-  .repos, .nc_repos {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-  }
-
-  .skill_badge {
-    aspect-ratio: 1/1;
-    width: 7%;
-    padding: 0.1%;
-  }
+    align-items: center;
 }
 
 @media screen and (max-width: 800px) {
-  .tabs {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }
-
-  .repos, .nc_repos {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-  }
-
-  .content {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-gap: 1%;
-    align-items: baseline;
-    justify-content: center;
-  }
-
-  .user_avatar {
-    width: 80%;
-    border-radius: 50%;
-    margin: 10%;
-  }
-
-  .skill_badge {
-    aspect-ratio: 1/1;
-    width: 8%;
-    padding: 0.5%;
-  }
-
-  .sub_block {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }  
-}
+    .header .button {
+        margin: 0px;
+        width: 100%;
+    }
+    .header h1 {
+        display: none;
+    }
+    .header {
+        height: 50px;
+        padding: 0px;
+        margin: 5%;
+        background-color: transparent;
+        justify-content: center;
+    }
+    .main_header {
+        display: block;
+    }
+    .header a {
+        margin: 0px;
+        width: 100%;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}  
