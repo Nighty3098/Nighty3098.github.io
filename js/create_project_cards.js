@@ -1,40 +1,18 @@
-const reposContainer = document.querySelector('.repos');
-const git_username = 'Nighty3098';
+const reposContainer = document.getElementById("repos");
+const users_repos = [
+    "https://api.github.com/repos/Nighty3098/SDash",
+    "https://api.github.com/repos/Nighty3098/CodeKeeper",
+    "https://api.github.com/repos/DXS-GROUP/LogInsight",
+    "https://api.github.com/repos/Nighty3098/InvestingAssistant",
+    "https://api.github.com/repos/Nighty3098/TechSupportBot",
+    "https://api.github.com/repos/Nighty3098/TGSB",
+    "https://api.github.com/repos/Nighty3098/FinanceTrackerBot",
+    "https://api.github.com/repos/Nighty3098/Nighty3098.github.io",
+];
 
-async function fetchUserRepos(git_username) {
-    const nc_repos_block = document.getElementById('nc_repos');
-    const repos_block = document.getElementById('repos');
-
-    try {
-        const userReposUrl = `https://api.github.com/users/${git_username}/repos`;
-        const userReposResponse = await fetch(userReposUrl);
-        const userRepos = await userReposResponse.json();
-
-        const orgsUrl = `https://api.github.com/users/${git_username}/orgs`;
-        const orgsResponse = await fetch(orgsUrl);
-        const orgs = await orgsResponse.json();
-
-        let allRepos = [...userRepos];
-
-        for (const org of orgs) {
-            const orgReposUrl = `https://api.github.com/orgs/${org.login}/repos`;
-            const orgReposResponse = await fetch(orgReposUrl);
-            const orgRepos = await orgReposResponse.json();
-            allRepos = allRepos.concat(orgRepos);
-        }
-
-        repos_block.style.display = "normal";
-        nc_repos_block.style.display = "none";
-
-        return allRepos;
-    } catch (error) {
-        repos_block.style.display = "none";
-        nc_repos_block.style.display = "normal";
-
-        console.error(error.message);
-        return [];
-    }
-}
+const CACHE_KEY = 'REPOS_CACHE_KEY';
+const CACHE_EXPIRY_KEY = 'REPOS_CACHE_EXPIRY';
+const CACHE_DURATION = 60 * 60 * 1000;
 
 async function fetchRepoData(repoUrl) {
     let retryCount = 0;
@@ -64,18 +42,11 @@ function createRepoCard(repoData) {
     card.classList.add('project_card');
 
     const repoName = repoData.name;
-
     const languages = repoData.language || 'Not specified';
     const stats = `<i class="fa-solid fa-earth-americas"></i> Languages: ${languages} <br><i class="fa-solid fa-code-branch"></i> Forks: ${repoData.forks_count} <br><i class="fa-solid fa-star"></i> Stars: ${repoData.stargazers_count}`;
 
     const is_archived = repoData.archived;
-
-    let status;
-    if (is_archived === false) {
-        status = "";
-    } else {
-        status = "<i class='fa-solid fa-box'></i> ! Archived ! ";
-    }
+    let status = is_archived ? "<i class='fa-solid fa-box'></i> ! Archived ! " : "";
 
     card.innerHTML = `
         <h1>${repoName}</h1>
@@ -96,27 +67,34 @@ function createRepoCard(repoData) {
 }
 
 async function createRepoCards() {
-    const reposContainer = document.querySelector('.repos');
-
     if (!reposContainer) {
         console.error("repos element not found in the DOM");
         return;
     }
 
-    const userReposAndOrgs = await fetchUserRepos(git_username);
-    
-    const filteredRepos = userReposAndOrgs.filter(repo => 
-        !repo.name.endsWith('.github') && !repo.name.endsWith('.git')
-    );
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    const cacheExpiry = localStorage.getItem(CACHE_EXPIRY_KEY);
+    const currentTime = new Date().getTime();
 
-    filteredRepos.sort((a, b) => b.stargazers_count - a.stargazers_count);
-
-    for (const repo of filteredRepos) {
-        const repoData = await fetchRepoData(repo.url);
-        const card = createRepoCard(repoData);
-        if (card) {
+    if (cachedData && cacheExpiry && currentTime < cacheExpiry) {
+        const repos = JSON.parse(cachedData);
+        console.log("Data restored from cache");
+        repos.forEach(repoData => {
+            const card = createRepoCard(repoData);
             reposContainer.appendChild(card);
+        });
+    } else {
+        const fetchedRepos = [];
+        for (const repoUrl of users_repos) {
+            const repoData = await fetchRepoData(repoUrl);
+            if (repoData) {
+                fetchedRepos.push(repoData);
+                const card = createRepoCard(repoData);
+                reposContainer.appendChild(card);
+            }
         }
+        localStorage.setItem(CACHE_KEY, JSON.stringify(fetchedRepos));
+        localStorage.setItem (CACHE_EXPIRY_KEY, currentTime + CACHE_DURATION);
     }
 }
 
