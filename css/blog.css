@@ -2,11 +2,13 @@
 
 :root {
   --bg: #20252d;
+  --bg2: #20252d;
   --fg2: #ffffff;
   --fg: #ffffff;
   --color1: #2b303b;
   --color2: #9ad38c;
 }
+
 
 html {
   background: var(--bg);
@@ -20,15 +22,17 @@ html {
 }
 
 .header {
-    display: flex;
+    display: inline-flex;
+    position: fixed;
+    z-index: 1000;
     flex-direction: row;
     justify-content: space-between;
     align-items: normal;
     align-content: center;
     border-radius: 20px;
-    margin: 4%;
+    top: 0px;
+    margin: 2%;
     width: 60%;
-    height: 30%;
     margin: 40px 40px 10px 40px;
     background-color: var(--color1);
 }
@@ -87,7 +91,7 @@ html {
 }
 
 .profile_blogs {
-  background-color: var(--color1);
+  background-color: var(--bg);
   border-radius: 30px;
   color: var(--fg);
   display: flex;
@@ -108,14 +112,14 @@ h3 {
   font-family: "Playpen Sans", cursive;
   padding: 0%;
   margin: 5px;
-  font-size: large;
+  font-size: medium;
 }
 
 .text-box {
   width: 70%;
   padding: 2%;
   background-color: var(--color2);
-  color: var(--bg);
+  color: var(--color1);
   border-radius: 10px;
   align-content: center;
   text-align: center;
@@ -125,11 +129,12 @@ h3 {
     display: flex;
     justify-content: center;
     margin: 1%;
+    margin-top: 10%;
 }
 
 .article_card {
   width: 100%;
-  background-color: var(--bg);
+  background-color: var(--color1);
   color: var(--fg);
   border-radius: 25px;
   display: flex;
@@ -140,12 +145,13 @@ h3 {
   text-align: center;
   transition: transform 0.3s ease-in-out;
   margin: 1%;
-  padding: 2%;
+  padding: 3%;
   cursor: pointer;
+  font-size: medium;
 }
 
 .article_card h1 {
-  font-size: larger;
+  font-size: medium;
 }
 
 .article_card h3 {
@@ -170,14 +176,14 @@ h3 {
 
 .button {
   font-family: "Playpen Sans", cursive;
-  font-size: large;
+  font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
   padding: 3%;
   border: none;
   aspect-ratio: 2/0.2;
-  color: var(--bg);
+  color: var(--color1);
   cursor: pointer;
   transition:
     transform 0.5s ease-in-out,
@@ -202,14 +208,14 @@ h3 {
 
 .profile_blogs button {
   font-family: "Playpen Sans", cursive;
-  font-size: large;
+  font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
   padding: 3%;
   margin: 0%;
   border: none;
-  color: var(--bg);
+  color: var(--color1);
   cursor: pointer;
   transition:
     transform 0.5s ease-in-out,
@@ -259,5 +265,17 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .article_card {
+      font-size: small;
+    }
+
+    .article_card h1 {
+      font-size: small;
+    }
+    
+    .article_card h3 {
+      font-size: small;
     }
 }  

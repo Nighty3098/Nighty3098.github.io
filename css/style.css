@@ -23,25 +23,6 @@ html {
   height: 100%;
 }
 
-.article_sub_block {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  column-gap: 20px;
-}
-
-.article-block {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.article-block:hover {
-  background-color: #f0f0f0;
-}
-
 .block {
   padding: 0px;
   margin: 0%;
@@ -347,7 +328,7 @@ h3 {
 @media screen and (max-width: 1600px) {
   .content {
     display: grid;
-    grid-template-columns: 70%;
+    grid-template-columns: 60%;
     grid-gap: 0%;
     align-items: baseline;
     justify-content: center;
@@ -386,8 +367,9 @@ h3 {
     display: grid;
     grid-template-columns: 100%;
     grid-gap: 0%;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
+    margin: 0px;
   }
 
   .user_avatar {
@@ -400,5 +382,10 @@ h3 {
     aspect-ratio: 1/1;
     width: 8%;
     padding: 0.5%;
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
   }
 }
