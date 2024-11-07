@@ -48,17 +48,19 @@ html {
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: normal;
-    align-content: center;
-    border-radius: 20px;
-    margin: 4%;
-    width: 60%;
-    height: 30%;
-    margin: 40px 40px 10px 40px;
-    background-color: var(--color1);
+  display: inline-flex;
+  position: fixed;
+  z-index: 1000;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+  align-content: center;
+  border-radius: 20px;
+  top: 0px;
+  margin: 2%;
+  width: 60%;
+  margin: 40px 40px 10px 40px;
+  background-color: var(--color1);
 }
 
 .header a {
@@ -114,7 +116,7 @@ html {
 .profile_stats,
 .profile_repos {
   width: 100%;
-  background-color: var(--color1);
+  background-color: var(--bg);
   border-radius: 30px;
   color: var(--fg);
   display: flex;
@@ -151,6 +153,7 @@ h3 {
 .content {
   display: flex;
   margin: 1%;
+  margin-top: 10%;
   justify-content: center;
 }
 
@@ -164,7 +167,7 @@ h3 {
   width: auto;
   padding: 6%;
   margin: 2%;
-  background-color: var(--bg);
+  background-color: var(--color1);
   color: var(--fg);
   border-radius: 25px;
   display: flex;
