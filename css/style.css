@@ -106,6 +106,7 @@ html {
   color: var(--fg);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   align-content: center;
   padding: 2%;
@@ -194,7 +195,7 @@ h3 {
   display: grid;
   grid-template-columns: 30% auto;
   grid-gap: 0%;
-  margin: 0%;
+  margin: 3%;
 }
 
 .user_avatar {
@@ -347,7 +348,7 @@ h3 {
   .content {
     display: grid;
     grid-template-columns: 70%;
-    grid-gap: 1%;
+    grid-gap: 0%;
     align-items: baseline;
     justify-content: center;
   }
@@ -384,7 +385,7 @@ h3 {
   .content {
     display: grid;
     grid-template-columns: 100%;
-    grid-gap: 1%;
+    grid-gap: 0%;
     align-items: baseline;
     justify-content: center;
   }
@@ -400,13 +401,4 @@ h3 {
     width: 8%;
     padding: 0.5%;
   }
-
-  .sub_block {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }  
 }

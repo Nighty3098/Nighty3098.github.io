@@ -15,7 +15,6 @@
     ></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <script src="js/script.js"></script>
-    <!--<script src="js/create_project_cards.js"></script>-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
@@ -31,112 +30,9 @@
     <div class="content">
         <section id="profile_repos" class="profile_repos">
           <h1 class="main_header"><i class="fa-solid fa-fire"></i> Projects</h1>
-          <div id="nc_repos" class="nc_repos">
-            <div class="project_card">
-              <h1>SDash</h1>
-              <h3>A simple server dashboard for smaller private servers</h3>
-              <h3 class="text-box">Python | Flask | HTML | CSS | JS | Docker</h3>
-              <a href="https://github.com/DXS-GROUP/SDash"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>CodeKeeper</h1>
-              <h3>Project and task manager for developers with Git.</h3>
-              <h3 class="text-box">C++ | QT</h3>
-              <a href="https://github.com/Nighty3098/CodeKeeper"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>LogInsight</h1>
-              <h3>Program for analyzing log files and detecting anomalies in program operation</h3>
-              <h3 class="text-box"> C / Python</h3>
-              <a href="https://github.com/Nighty3098/Nighty3098.github.io"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>TechSupport Bot</h1>
-              <h3>DXS GROUP technical support telegram bot</h3>
-              <h3 class="text-box">Python | Aiogram</h3>
-              <a href="https://github.com/DXS-GROUP/TechSupportBot"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>TGSB</h1>
-              <h3>SMS bomber. TG bot service written in python and aiogram</h3>
-              <h3 class="text-box">Python | Aiogram</h3>
-              <a href="https://github.com/DXS-GROUP/TGSB"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>Finance Tracker Bot</h1>
-              <h3>Telegram bot for tracking finances</h3>
-              <h3 class="text-box">Python | Aiogram</h3>
-              <a href="https://github.com/DXS-GROUP/FinanceTrackerBot"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>Saikt Bot</h1>
-              <h3>Telegram bot for https://saikt.ru/</h3>
-              <h3 class="text-box">Python | Aiogram</h3>
-              <a href="https://github.com/Nighty3098/saikt_bot"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>FileEncrypt</h1>
-              <h3>
-                A simple program to encrypt and decrypt files with a
-                user-defined password
-              </h3>
-              <h3 class="text-box">C++ | QT</h3>
-              <a href="https://github.com/DXS-GROUP/FileEncrypt"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>MFetch</h1>
-              <h3>A simple fetch tool for Linux written in bash</h3>
-              <h3 class="text-box">BASH | Linux</h3>
-              <a href="https://github.com/DXS-GROUP/mfetch"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-            <div class="project_card">
-              <h1>Portfolio</h1>
-              <h3>Dev portfolio website</h3>
-              <h3 class="text-box">HTML | JS | CSS</h3>
-              <a href="https://github.com/Nighty3098/Nighty3098.github.io"
-                ><button class="button">
-                  <i class="fa-solid fa-arrow-right"></i> Open page
-                  <i class="fa-solid fa-arrow-left"></i></button
-              ></a>
-            </div>
-          </div>
+          <div id="repos" class="repos"></div>
         </section>
     </div>
   </body>
+  <script src="js/create_project_cards.js"></script>
 </html>
