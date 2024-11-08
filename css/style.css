@@ -384,6 +384,10 @@ h3 {
     padding: 0.5%;
   }
 
+  .skill_badge {
+    width: 11%;
+  }
+
   body {
     margin: 0px;
     padding: 0px;
