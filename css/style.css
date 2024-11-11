@@ -13,7 +13,7 @@ html {
   background: var(--bg2);
   background-origin: padding-box;
   background-repeat: repeat;
-	background-attachment: scroll ;
+  background-attachment: scroll;
   scrollbar-color: var(--color1) transparent;
   scrollbar-arrow-color: transparent transparent;
   font-family: "JetBrains Mono", monospace;
@@ -118,7 +118,7 @@ html {
 }
 
 .bio_info h3 {
-  font-size: larger;
+  font-size: medium;
   line-height: 2;
   align-content: center;
   text-align: center;
@@ -160,6 +160,7 @@ h3 {
 .text-box {
   width: 70%;
   padding: 2%;
+  font-size: medium;
   background-color: var(--color2);
   color: var(--bg);
   border-radius: 10px;
@@ -195,7 +196,8 @@ h3 {
   border: 7px solid var(--color2);
 }
 
-.repos, .nc_repos {
+.repos,
+.nc_repos {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 0%;
@@ -260,13 +262,17 @@ h3 {
 
 .button {
   font-family: "Playpen Sans", cursive;
-  font-size: large;
+  font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
-  padding: 3%;
+  padding: 2%;
   border: none;
-  aspect-ratio: 2/0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
   color: var(--bg);
   cursor: pointer;
   transition:
@@ -334,7 +340,8 @@ h3 {
     justify-content: center;
   }
 
-  .repos, .nc_repos {
+  .repos,
+  .nc_repos {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
@@ -357,7 +364,8 @@ h3 {
     align-content: center;
   }
 
-  .repos, .nc_repos {
+  .repos,
+  .nc_repos {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
