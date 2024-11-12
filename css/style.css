@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Neonderthaw&family=Warnes&family=WindSong:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Rubik+Glitch&family=Tsukimi+Rounded&display=swap");
 
 :root {
   --bg: #20252d;
@@ -125,14 +127,14 @@ html {
 }
 
 .profile_stats h3 {
-  font-family: "Playpen Sans", sans-serif;
+  font-family: "Tsukimi Rounded", sans-serif;
   line-height: 2;
-  font-size: larger;
+  font-size: x-larger;
 }
 
 .profile_stats a {
   line-height: 2;
-  font-size: larger;
+  font-size: x-larger;
   color: var(--color2);
   text-decoration: none;
 }
@@ -144,14 +146,26 @@ html {
   text-decoration: none;
 }
 
+.handwrite {
+  padding: 3%;
+  margin: 1%;
+  border-radius: 15px;
+  background-color: var(--color2);
+  font-family: "WindSong", cursive;
+  font-optical-sizing: auto;
+  font-size: xx-large;
+  color: var(--bg);
+}
+
 h1 {
-  font-family: "Playpen Sans", cursive;
+  font-family: "Tsukimi Rounded", system-ui;
+  font-optical-sizing: auto;
   font-size: xx-large;
   color: var(--color2);
 }
 
 h3 {
-  font-family: "Playpen Sans", cursive;
+  font-family: "Tsukimi Rounded", system-ui;
   padding: 0%;
   margin: 5px;
   font-size: medium;
@@ -160,6 +174,7 @@ h3 {
 .text-box {
   width: 70%;
   padding: 2%;
+  font-family: "Nova Mono", monospace;
   font-size: medium;
   background-color: var(--color2);
   color: var(--bg);
@@ -261,7 +276,7 @@ h3 {
 }
 
 .button {
-  font-family: "Playpen Sans", cursive;
+  font-family: "Nova Mono", monospace;
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
