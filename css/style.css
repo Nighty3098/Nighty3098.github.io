@@ -3,12 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Rubik+Glitch&family=Tsukimi+Rounded&display=swap");
 
 :root {
-  --bg: #20252d;
-  --bg2: #20252d;
+  --bg: #161a1d;
+  --bg2: #161a1d;
   --fg2: #ffffff;
   --fg: #ffffff;
-  --color1: #2b303b;
-  --color2: #9ad38c;
+  --color1: #22272b;
+  --color2: #4bce97;
 }
 
 html {
@@ -22,13 +22,18 @@ html {
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
-  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 .block {
+  display: flex;
+  flex-direction: column;
   padding: 0px;
-  margin: 0%;
-  border-radius: 30px;
+  margin: 0px;
 }
 
 .badges_block {
@@ -92,7 +97,7 @@ html {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 2%;
+  padding: 20px;
   margin: 20px;
 }
 
@@ -139,7 +144,7 @@ html {
   text-decoration: none;
 }
 
-.git_profile_card a {
+.user_bio a {
   line-height: 2;
   font-size: larger;
   color: var(--color2);
@@ -186,13 +191,16 @@ h3 {
 .profile_info {
   display: flex;
   flex-direction: column;
+  margin: 0px;
+  padding: 0px;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 30% auto;
+  grid-template-columns: 30% 70%;
   grid-gap: 0%;
-  margin: 3%;
+  margin: 30px;
+  padding: 0px;
 }
 
 .user_avatar {
@@ -342,11 +350,13 @@ h3 {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 0%;
+  margin: 0px;
+  padding: 0px;
   align-items: baseline;
   justify-content: center;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1300px) {
   .content {
     display: grid;
     grid-template-columns: 60%;
@@ -369,7 +379,7 @@ h3 {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .tabs {
     display: flex;
     cursor: pointer;
