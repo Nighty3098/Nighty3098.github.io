@@ -3,12 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Rubik+Glitch&family=Tsukimi+Rounded&display=swap");
 
 :root {
-  --bg: #161a1d;
-  --bg2: #161a1d;
+  --bg: #20252d;
+  --bg2: #20252d;
   --fg2: #ffffff;
   --fg: #ffffff;
-  --color1: #22272b;
-  --color2: #4bce97;
+  --color1: #2b303b;
+  --color2: #9ad38c;
 }
 
 html {
