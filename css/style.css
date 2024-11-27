@@ -3,12 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Rubik+Glitch&family=Tsukimi+Rounded&display=swap");
 
 :root {
-  --bg: #161a1d;
-  --bg2: #161a1d;
-  --fg2: #ffffff;
-  --fg: #ffffff;
-  --color1: #22272b;
-  --color2: #4bce97;
+  --bg: #202a30;
+  --bg2: #202a30;
+  --fg2: #d4d9d5;
+  --fg: #d4d9d5;
+  --color1: #2f3843;
+  --color2: #748d8f;
 }
 
 html {
@@ -209,9 +209,7 @@ h3 {
   border-radius: 50%;
   margin: 3%;
   border: 7px solid var(--color2);
-  transition:
-    box-shadow 0.6s ease-in-out,
-    border 0.6s ease-in-out;
+  transition: box-shadow 0.6s ease-in-out, border 0.6s ease-in-out;
 }
 
 .user_avatar:hover {
@@ -298,9 +296,7 @@ h3 {
   text-align: center;
   color: var(--bg);
   cursor: pointer;
-  transition:
-    transform 0.5s ease-in-out,
-    box-shadow 0.3s ease-in-out,
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
 }
 
@@ -331,9 +327,7 @@ h3 {
   aspect-ratio: 2/0.2;
   color: var(--bg);
   cursor: pointer;
-  transition:
-    transform 0.5s ease-in-out,
-    box-shadow 0.3s ease-in-out,
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
 }
 
@@ -374,7 +368,7 @@ h3 {
 
   .skill_badge {
     aspect-ratio: 1/1;
-    width: 7%;
+    width: 8%;
     padding: 0.1%;
   }
 }
@@ -413,7 +407,6 @@ h3 {
 
   .skill_badge {
     aspect-ratio: 1/1;
-    width: 8%;
     padding: 0.5%;
   }
 
