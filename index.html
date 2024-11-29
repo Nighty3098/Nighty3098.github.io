@@ -7,6 +7,7 @@
       content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0;"
     />
     <title>Nighty</title>
+    <link href="css/blog.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/animations.css" rel="stylesheet" />
     <script
@@ -15,6 +16,7 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js" defer></script>
+    <script src="js/create_articles_card.js"></script>
     <script src="js/get_git_info.js"></script>
     <link
       rel="stylesheet"
@@ -37,9 +39,33 @@
             class="user_avatar"
           />
           <h3 class="text-box">Backend developer | Freelancer</h3>
-          <a href="projects.html"><h3 class="button">My Projects</h3></a>
-          <a href="blog.html"><h3 class="button">My Blog</h3></a>
+          <!--<a href="projects.html"><h3 class="button">My Projects</h3></a>-->
+          <!--<a href="blog.html"><h3 class="button">My Blog</h3></a>-->
+          <h3 class="button" type="button", onclick="overlayProjects.showModal()">MY PROJECTS</h3>
+          <h3 class="button" type="button", onclick="overlayBlog.showModal()">MY BLOG</h3>
           <br />
+          <dialog id="overlayProjects">
+            <section id="profile_repos" class="profile_repos">
+              <form method="dialog"><button class="button" type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+              <br />
+              <h1 class="main_header"><i class="fa-solid fa-fire"></i> Projects</h1>
+              <div id="repos" class="repos"></div>
+              <script src="js/create_project_cards.js"></script>
+            </section>
+          </dialog>
+          <dialog id="overlayBlog">
+                <section id="blog" class="profile_blogs">
+                  <form method="dialog"><button class="button" type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+                  <h1 class="main_header"><i class="fa-solid fa-cube"></i> Blog</h1>
+                  <br><br>
+                  <a href="https://dev.to/nighty3098"
+                    ><button>
+                      <i class="fa-solid fa-arrow-right"></i> My Blog on DEV.to
+                      <i class="fa-solid fa-arrow-left"></i></button
+                  ></a>
+                  <br><br>
+                </section>
+          </dialog>
         </section>
         <section id="my_contacts" class="my_contacts">
           <h1><i class="fa-solid fa-comment"></i> Contact with me</h1>

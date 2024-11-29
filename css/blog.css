@@ -9,17 +9,6 @@
   --color2: #748d8f;
 }
 
-html {
-  background: var(--bg);
-  scrollbar-color: var(--color1) transparent;
-  scrollbar-arrow-color: transparent transparent;
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
 .header {
   display: inline-flex;
   position: fixed;
@@ -132,7 +121,7 @@ h3 {
 }
 
 .article_card {
-  width: 100%;
+  width: 90%;
   background-color: var(--color1);
   color: var(--fg);
   border-radius: 25px;
@@ -155,14 +144,6 @@ h3 {
 
 .article_card h3 {
   font-size: medium;
-}
-
-.article_card:hover {
-  transform: scale(1.03);
-}
-
-.project_card:hover {
-  transform: scale(1.03);
 }
 
 .project_card a {
@@ -225,13 +206,6 @@ h3 {
 .profile_blogs button:hover {
   box-shadow: 0px 0px 5px 5px var(--color2);
   background-color: vaR(--color2);
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 @media screen and (max-width: 800px) {
