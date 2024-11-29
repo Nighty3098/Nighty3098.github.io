@@ -29,6 +29,29 @@ body {
   padding: 0px;
 }
 
+dialog {
+  opacity: 0;
+  padding: 0px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg);
+  border: none;
+  border-radius: 20px;
+  align-items: center;
+  outline: none;
+}
+
+form {
+  outline: none;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .block {
   display: flex;
   flex-direction: column;
@@ -56,19 +79,12 @@ body {
 }
 
 .contacts_badge_block {
-  width: auto;
-  margin-left: 20%;
-}
-
-.contact_badge {
-  aspect-ratio: 1/1;
-  width: 12%;
-  margin: 1%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact_badge:hover {
-  transform: scale(1.2);
+  width: 100%;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skill_badge {
@@ -99,6 +115,10 @@ body {
   align-content: center;
   padding: 20px;
   margin: 20px;
+}
+
+.profile_blogs {
+  background-color: var(--bg);
 }
 
 .profile_card a {
@@ -240,35 +260,6 @@ h3 {
   transition: transform 0.3s ease-in-out;
 }
 
-.article_card {
-  width: 100%;
-  background-color: var(--bg);
-  color: var(--fg);
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-  margin: 1%;
-  padding: 2%;
-  cursor: pointer;
-}
-
-.article_card h1 {
-  font-size: larger;
-}
-
-.article_card h3 {
-  font-size: medium;
-}
-
-.article_card:hover {
-  transform: scale(1.03);
-}
-
 .project_card:hover {
   transform: scale(1.03);
 }
@@ -281,12 +272,13 @@ h3 {
   margin: 3%;
 }
 
-.button {
+.contact_button {
   font-family: "Nova Mono", monospace;
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
-  width: 100%;
+  width: 50%;
+  height: auto;
   padding: 2%;
   border: none;
   display: flex;
@@ -298,6 +290,41 @@ h3 {
   cursor: pointer;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
+  outline: none;
+}
+
+.contact_button:active {
+  transform: scale(0.95);
+}
+
+.contact_button:hover {
+  box-shadow: 0px 0px 5px 5px var(--color2);
+  background-color: vaR(--color2);
+}
+
+.contact_button i {
+  margin-right: 10px;
+}
+
+.button {
+  font-family: "Nova Mono", monospace;
+  font-size: medium;
+  background-color: var(--color2);
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: var(--bg);
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  outline: none;
 }
 
 .button:active {
@@ -305,37 +332,6 @@ h3 {
 }
 
 .button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: vaR(--color2);
-}
-
-.profile_blogs a {
-  width: 40%;
-  margin: 1%;
-  padding: 0px;
-}
-
-.profile_blogs button {
-  font-family: "Playpen Sans", cursive;
-  font-size: large;
-  background-color: var(--color2);
-  border-radius: 10px;
-  width: 100%;
-  padding: 3%;
-  margin: 0%;
-  border: none;
-  aspect-ratio: 2/0.2;
-  color: var(--bg);
-  cursor: pointer;
-  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-}
-
-.profile_blogs button:active {
-  transform: scale(0.95);
-}
-
-.profile_blogs button:hover {
   box-shadow: 0px 0px 5px 5px var(--color2);
   background-color: vaR(--color2);
 }
@@ -364,12 +360,6 @@ h3 {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
-  }
-
-  .skill_badge {
-    aspect-ratio: 1/1;
-    width: 8%;
-    padding: 0.1%;
   }
 }
 

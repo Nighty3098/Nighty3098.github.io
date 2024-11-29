@@ -151,13 +151,6 @@ h3 {
   text-align: center;
 }
 
-.content {
-  display: flex;
-  margin: 1%;
-  margin-top: 10%;
-  justify-content: center;
-}
-
 .repos,
 .nc_repos {
   display: grid;
@@ -239,11 +232,4 @@ h3 {
     grid-template-columns: auto;
     justify-content: center;
   }
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }

@@ -1,210 +1,221 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0;"
-    />
-    <title>Nighty</title>
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/animations.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/a01328b26e.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js" defer></script>
-    <script src="js/get_git_info.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="imgs/icon.svg" />
-  </head>
-  <body>
-    <div class="content">
-      <div class="profile_info">
-        <br />
-        <section id="profile_card" class="profile_card">
-          <h1 id="username" class="username">
-            <i class="fa-solid fa-user"></i> Nighty3098
-          </h1>
-          <img
-            src="https://avatars.githubusercontent.com/u/154594695?v=4"
-            class="user_avatar"
-          />
-          <h3 class="text-box">Backend developer | Freelancer</h3>
-          <a href="projects.html"><h3 class="button">My Projects</h3></a>
-          <a href="blog.html"><h3 class="button">My Blog</h3></a>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0;"
+			/>
+		<title>Nighty</title>
+		<link href="css/blog.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/animations.css" rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/a01328b26e.js"
+			crossorigin="anonymous"
+			></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/script.js" defer></script>
+		<script src="js/create_articles_card.js"></script>
+		<script src="js/get_git_info.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+			integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+			crossorigin="anonymous"
+			/>
+		<link rel="shortcut icon" href="imgs/icon.svg" />
+	</head>
+	<body>
+		<div class="content">
+			<div class="profile_info">
+				<br />
+				<section id="profile_card" class="profile_card">
+					<h1 id="username" class="username">
+						<i class="fa-solid fa-user"></i> Nighty3098
+					</h1>
+					<img
+						src="https://avatars.githubusercontent.com/u/154594695?v=4"
+						class="user_avatar"
+						/>
           <br />
-        </section>
-        <section id="my_contacts" class="my_contacts">
-          <h1><i class="fa-solid fa-comment"></i> Contact with me</h1>
-          <div class="contacts_badge_block">
-            <a
-              href="https://t.me/Night3098"
-              ,
-              target="_blank"
-              ,
-              class="contact_badge_2"
-              ><img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true"
-                class="contact_badge"
-            /></a>
-            <a
-              href="https://discord.gg/#9707"
-              ,
-              target="_blank"
-              ,
-              class="contact_badge_2"
-              ><img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_discord.png?raw=true"
-                class="contact_badge"
-            /></a>
-            <a
-              href="https://www.reddit.com/user/DEVELOPER0x31/"
-              ,
-              target="_blank"
-              ,
-              class="contact_badge_2"
-              ><img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_reddit.png?raw=true"
-                class="contact_badge"
-            /></a>
-            <a
-              href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK"
-              ,
-              class="contact_badge_2"
-              ,
-              target="_blank"
-              ><img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_signal.png?raw=true"
-                class="contact_badge"
-            /></a>
-            <a
-              href="https://dev.to/nighty3098"
-              class="contact_badge_2"
-              target="_blank"
-              ><img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_dev.png?raw=true"
-                class="contact_badge"
-            /></a>
-          </div>
-        </section>
-        <section id="profile_stats" class="profile_stats">
-          <h1><i class="fa-solid fa-mug-hot"></i> Tech stack</h1>
-          <div class="badges_block">
-            <div class="bb_block">
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_docker.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_qt.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_api.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_git.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_sql.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_postman.png?raw=true"
-                class="skill_badge"
-              />
-            </div>
-            <div class="bb_block">
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cpp.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_c.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cs.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_css.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_python.png?raw=true"
-                class="skill_badge"
-              />
-            </div>
-            <div class="bb_block">
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_linux.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_vscode.png?raw=true"
-                class="skill_badge"
-              />
-              <img
-                src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_nvim.png?raw=true"
-                class="skill_badge"
-              />
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="block">
-        <section id="user_bio" class="user_bio">
-          <h1 id="bio" class="bio">
-            <i class="fa-solid fa-compass-drafting"></i> About Me
-          </h1>
-          <div class="bio_info">
-            <br /><br />
-            <img src="imgs/animation.png" width="40%" />
-            <br /><br />
-            <h3>
-              <i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
-              developer and freelancer, I'm 17 years old and I'm studying in the
-              11th grade of school.<br />I've been developing for the last 4
-              years.
-            </h3>
-            <br />
-            <h3 class="text-box">API | Desktop | Web | Telegram | Discord</h3>
-            <br /><br />
-            <h1 class="handwrite">Nighty3098</h1
-            <br /><br />
-          </div>
-        </section>
-        <br />
-        <section id="git_profile_card" class="git_profile_card">
-          <h1 id="stats" class="stats">
-            <i class="fa-brands fa-github"></i> GitHub
-          </h1>
-          <h3 id="git_name"></h3>
-          <h3 id="git_company"></h3>
-          <h3 id="git_followers"></h3>
-          <h3 id="git_stars"></h3>
-          <h3 id="git_repos"></h3>
-          <h3 id="top-languages"></h3>
-        </section>
-      </div>
-    </div>
-  </body>
+					<h3 class="text-box">Backend developer | Freelancer</h3>
+					<!--<a href="projects.html"><h3 class="button">My Projects</h3></a>-->
+					<!--<a href="blog.html"><h3 class="button">My Blog</h3></a>-->
+          <h3 class="button" type="button" onclick="overlayProjects.showModal()">MY PROJECTS</h3>
+          <h3 class="button" type="button" onclick="overlayBlog.showModal()">MY BLOG</h3>
+          <br />
+          <dialog id="overlayProjects">
+              <section id="profile_repos" class="profile_repos">
+                  <form method="dialog">
+                      <button class="button" type="submit"><i class="fa-solid fa-arrow-left"></i></button>
+                  </form>
+                  <br />
+                  <h1 class="main_header"><i class="fa-solid fa-fire"></i> Projects</h1>
+                  <div id="repos" class="repos"></div>
+                  <script src="js/create_project_cards.js"></script>
+              </section>
+          </dialog>
+          <dialog id="overlayBlog">
+              <section id="blog" class="profile_blogs">
+                  <form method="dialog">
+                      <button class="button" type="submit"><i class="fa-solid fa-arrow-left"></i></button>
+                  </form>
+                  <h1 class="main_header"><i class="fa-solid fa-cube"></i> Blog</h1>
+                  <br><br>
+                  <a href="https://dev.to/nighty3098">
+                      <button><i class="fa-solid fa-arrow-right"></i> My Blog on DEV.to <i class="fa-solid fa-arrow-left"></i></button>
+                  </a>
+                  <br><br>
+              </section>
+          </dialog>
+          <br />
+          <br />
+					<h1><i class="fa-solid fa-comment"></i> Contact with me</h1>
+					<div class="contacts_badge_block">
+						<a
+							href="https://t.me/Night3098"
+							,
+							target="_blank"
+							,
+							>
+            <h3 class="contact_button"><i class="fa-brands fa-telegram"></i>Telegram</h3></a>
+						<a
+							href="https://discord.gg/#9707"
+							,
+							target="_blank"
+							,
+							><h3 class="contact_button"><i class="fa-brands fa-discord"></i>Discord</h3></a>
+						<a
+							href="https://www.reddit.com/user/DEVELOPER0x31/"
+							,
+							target="_blank"
+							,
+							><h3 class="contact_button"><i class="fa-brands fa-reddit"></i>Reddit</h3></a>
+						<a
+							href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK"
+							,
+							,
+							target="_blank"
+							><h3 class="contact_button"><i class="fa-brands fa-signal-messenger"></i>Signal</h3></a>
+						<a
+							href="https://dev.to/nighty3098"
+							target="_blank"
+							><h3 class="contact_button"><i class="fa-brands fa-dev"></i>Dev.to</h3></a>
+					</div>
+          <br /><br />
+					<h1><i class="fa-solid fa-mug-hot"></i>Tech stack</h1>
+					<div class="badges_block">
+						<div class="bb_block">
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_docker.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_qt.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_api.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_git.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_sql.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_postman.png?raw=true"
+								class="skill_badge"
+								/>
+						</div>
+						<div class="bb_block">
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cpp.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_c.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cs.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_css.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_python.png?raw=true"
+								class="skill_badge"
+								/>
+						</div>
+						<div class="bb_block">
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_linux.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_vscode.png?raw=true"
+								class="skill_badge"
+								/>
+							<img
+								src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_nvim.png?raw=true"
+								class="skill_badge"
+								/>
+						</div>
+					</div>
+          <br /><br />
+				</section>
+			</div>
+			<div class="block">
+				<section id="user_bio" class="user_bio">
+					<h1 id="bio" class="bio">
+						<i class="fa-solid fa-compass-drafting"></i> About Me
+					</h1>
+					<div class="bio_info">
+						<br /><br />
+						<img src="imgs/animation.png" width="40%" />
+						<br /><br />
+						<h3>
+							<i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
+							developer and freelancer, I'm 17 years old and I'm studying in the
+							11th grade of school.<br />I've been developing for the last 4
+							years.
+						</h3>
+						<br />
+						<h3 class="text-box">API | Desktop | Web | Telegram | Discord</h3>
+						<br /><br />
+						<h1 class="handwrite">
+						Nighty3098</h1
+						<br /><br />
+					</div>
+				</section>
+				<br />
+				<section id="git_profile_card" class="git_profile_card">
+					<h1 id="stats" class="stats">
+						<i class="fa-brands fa-github"></i> GitHub
+					</h1>
+					<h3 id="git_name"></h3>
+					<h3 id="git_company"></h3>
+					<h3 id="git_followers"></h3>
+					<h3 id="git_stars"></h3>
+					<h3 id="git_repos"></h3>
+					<h3 id="top-languages"></h3>
+				</section>
+			</div>
+		</div>
+	</body>
 </html>
