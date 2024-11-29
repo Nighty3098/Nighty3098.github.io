@@ -11,6 +11,10 @@
   --color2: #748d8f;
 }
 
+.svg_image {
+  width: 30%;
+}
+
 html {
   background: var(--bg2);
   background-origin: padding-box;
@@ -79,10 +83,17 @@ dialog {
   flex-direction: column;
   justify-content: center;
   background-color: var(--bg);
-  border: none;
+  border: 30px;
+  border-color: transparent;
   border-radius: 20px;
   align-items: center;
   outline: none;
+  max-height: 80%;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
 form {
@@ -161,7 +172,8 @@ form {
   margin: 20px;
 }
 
-.profile_blogs, .profile_repos {
+.profile_blogs,
+.profile_repos {
   background-color: var(--bg);
 }
 
@@ -273,7 +285,9 @@ h3 {
   border-radius: 50%;
   margin: 3%;
   border: 7px solid var(--color2);
-  transition: box-shadow 0.6s ease-in-out, border 0.6s ease-in-out;
+  transition:
+    box-shadow 0.6s ease-in-out,
+    border 0.6s ease-in-out;
 }
 
 .user_avatar:hover {
@@ -297,7 +311,9 @@ h3 {
   text-align: center;
   color: var(--bg);
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
   outline: none;
 }
@@ -331,7 +347,9 @@ h3 {
   text-align: center;
   color: var(--bg);
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
   outline: none;
 }
@@ -372,7 +390,7 @@ h3 {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .tabs {
     display: flex;
     cursor: pointer;
