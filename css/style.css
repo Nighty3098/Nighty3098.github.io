@@ -79,19 +79,12 @@ form {
 }
 
 .contacts_badge_block {
-  width: auto;
-  margin-left: 20%;
-}
-
-.contact_badge {
-  aspect-ratio: 1/1;
-  width: 12%;
-  margin: 1%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact_badge:hover {
-  transform: scale(1.2);
+  width: 100%;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skill_badge {
@@ -279,13 +272,48 @@ h3 {
   margin: 3%;
 }
 
+.contact_button {
+  font-family: "Nova Mono", monospace;
+  font-size: medium;
+  background-color: var(--color2);
+  border-radius: 10px;
+  width: 50%;
+  height: auto;
+  padding: 2%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: var(--bg);
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  outline: none;
+}
+
+.contact_button:active {
+  transform: scale(0.95);
+}
+
+.contact_button:hover {
+  box-shadow: 0px 0px 5px 5px var(--color2);
+  background-color: vaR(--color2);
+}
+
+.contact_button i {
+  margin-right: 10px;
+}
+
 .button {
   font-family: "Nova Mono", monospace;
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
   width: 100%;
-  padding: 2%;
+  height: auto;
+  padding: 1%;
   border: none;
   display: flex;
   justify-content: center;
@@ -332,12 +360,6 @@ h3 {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
-  }
-
-  .skill_badge {
-    aspect-ratio: 1/1;
-    width: 8%;
-    padding: 0.1%;
   }
 }
 
