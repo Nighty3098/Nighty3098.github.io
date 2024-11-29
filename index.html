@@ -8,6 +8,7 @@
 			/>
 		<title>Nighty</title>
 		<link href="css/blog.css" rel="stylesheet" />
+		<link href="css/projects.css" rel="stylesheet" />
 		<link href="css/style.css" rel="stylesheet" />
 		<link href="css/animations.css" rel="stylesheet" />
 		<script
@@ -31,6 +32,11 @@
 			<div class="profile_info">
 				<br />
 				<section id="profile_card" class="profile_card">
+					<div class="mac_header">
+						<div class="dot red"></div>
+						<div class="dot yellow"></div>
+						<div class="dot green"></div>
+					</div>
 					<h1 id="username" class="username">
 						<i class="fa-solid fa-user"></i> Nighty3098
 					</h1>
@@ -38,39 +44,37 @@
 						src="https://avatars.githubusercontent.com/u/154594695?v=4"
 						class="user_avatar"
 						/>
-          <br />
+					<br />
 					<h3 class="text-box">Backend developer | Freelancer</h3>
-					<!--<a href="projects.html"><h3 class="button">My Projects</h3></a>-->
-					<!--<a href="blog.html"><h3 class="button">My Blog</h3></a>-->
-          <h3 class="button" type="button" onclick="overlayProjects.showModal()">MY PROJECTS</h3>
-          <h3 class="button" type="button" onclick="overlayBlog.showModal()">MY BLOG</h3>
-          <br />
-          <dialog id="overlayProjects">
-              <section id="profile_repos" class="profile_repos">
-                  <form method="dialog">
-                      <button class="button" type="submit"><i class="fa-solid fa-arrow-left"></i></button>
-                  </form>
-                  <br />
-                  <h1 class="main_header"><i class="fa-solid fa-fire"></i> Projects</h1>
-                  <div id="repos" class="repos"></div>
-                  <script src="js/create_project_cards.js"></script>
-              </section>
-          </dialog>
-          <dialog id="overlayBlog">
-              <section id="blog" class="profile_blogs">
-                  <form method="dialog">
-                      <button class="button" type="submit"><i class="fa-solid fa-arrow-left"></i></button>
-                  </form>
-                  <h1 class="main_header"><i class="fa-solid fa-cube"></i> Blog</h1>
-                  <br><br>
-                  <a href="https://dev.to/nighty3098">
-                      <button><i class="fa-solid fa-arrow-right"></i> My Blog on DEV.to <i class="fa-solid fa-arrow-left"></i></button>
-                  </a>
-                  <br><br>
-              </section>
-          </dialog>
-          <br />
-          <br />
+					<h3 class="button" type="button" onclick="overlayProjects.showModal()">MY PROJECTS</h3>
+					<h3 class="button" type="button" onclick="overlayBlog.showModal()">MY BLOG</h3>
+					<br />
+					<dialog id="overlayProjects">
+						<section id="profile_repos" class="profile_repos">
+							<form method="dialog">
+								<button class="button" type="submit"><i class="fa-solid fa-arrow-left"></i></button>
+							</form>
+							<br />
+							<h1 class="main_header"><i class="fa-solid fa-fire"></i> Projects</h1>
+							<div id="repos" class="repos"></div>
+							<script src="js/create_project_cards.js"></script>
+						</section>
+					</dialog>
+					<dialog id="overlayBlog">
+						<section id="blog" class="profile_blogs">
+							<form method="dialog">
+								<button class="button" type="submit"><i class="fa-solid fa-arrow-left"></i></button>
+							</form>
+							<h1 class="main_header"><i class="fa-solid fa-cube"></i> Blog</h1>
+							<br><br>
+							<a href="https://dev.to/nighty3098">
+							<button><i class="fa-solid fa-arrow-right"></i> My Blog on DEV.to <i class="fa-solid fa-arrow-left"></i></button>
+							</a>
+							<br><br>
+						</section>
+					</dialog>
+					<br />
+					<br />
 					<h1><i class="fa-solid fa-comment"></i> Contact with me</h1>
 					<div class="contacts_badge_block">
 						<a
@@ -79,31 +83,40 @@
 							target="_blank"
 							,
 							>
-            <h3 class="contact_button"><i class="fa-brands fa-telegram"></i>Telegram</h3></a>
+							<h3 class="contact_button"><i class="fa-brands fa-telegram"></i>Telegram</h3>
+						</a>
 						<a
 							href="https://discord.gg/#9707"
 							,
 							target="_blank"
 							,
-							><h3 class="contact_button"><i class="fa-brands fa-discord"></i>Discord</h3></a>
+							>
+							<h3 class="contact_button"><i class="fa-brands fa-discord"></i>Discord</h3>
+						</a>
 						<a
 							href="https://www.reddit.com/user/DEVELOPER0x31/"
 							,
 							target="_blank"
 							,
-							><h3 class="contact_button"><i class="fa-brands fa-reddit"></i>Reddit</h3></a>
+							>
+							<h3 class="contact_button"><i class="fa-brands fa-reddit"></i>Reddit</h3>
+						</a>
 						<a
 							href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK"
 							,
 							,
 							target="_blank"
-							><h3 class="contact_button"><i class="fa-brands fa-signal-messenger"></i>Signal</h3></a>
+							>
+							<h3 class="contact_button"><i class="fa-brands fa-signal-messenger"></i>Signal</h3>
+						</a>
 						<a
 							href="https://dev.to/nighty3098"
 							target="_blank"
-							><h3 class="contact_button"><i class="fa-brands fa-dev"></i>Dev.to</h3></a>
+							>
+							<h3 class="contact_button"><i class="fa-brands fa-dev"></i>Dev.to</h3>
+						</a>
 					</div>
-          <br /><br />
+					<br /><br />
 					<h1><i class="fa-solid fa-mug-hot"></i>Tech stack</h1>
 					<div class="badges_block">
 						<div class="bb_block">
@@ -177,7 +190,7 @@
 								/>
 						</div>
 					</div>
-          <br /><br />
+					<br /><br />
 				</section>
 			</div>
 			<div class="block">
@@ -187,7 +200,7 @@
 					</h1>
 					<div class="bio_info">
 						<br /><br />
-						<img src="imgs/animation.png" width="40%" />
+						<img src="imgs/cat.svg" class="svg_image"/>
 						<br /><br />
 						<h3>
 							<i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend

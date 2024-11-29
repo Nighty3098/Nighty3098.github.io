@@ -9,43 +9,14 @@
   --color2: #748d8f;
 }
 
-html {
-  background: var(--bg);
-  scrollbar-color: var(--color1) transparent;
-  scrollbar-arrow-color: transparent transparent;
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
-.block {
-  margin: 0%;
-  border-radius: 30px;
-}
-
 .badges_block {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.bb_block {
-  padding: 0%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-}
-
 .btn_link {
   width: 100%;
-}
-
-.skill_badge:hover {
-  transform: scale(1.2);
 }
 
 .header {
@@ -111,34 +82,6 @@ html {
     margin: 0px;
     width: 100%;
   }
-}
-
-.profile_card,
-.profile_stats,
-.profile_repos {
-  width: 100%;
-  background-color: var(--bg);
-  border-radius: 30px;
-  color: var(--fg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  padding: 4%;
-  margin: 10px;
-}
-
-h1 {
-  font-family: "Playpen Sans", cursive;
-  font-size: xx-large;
-  color: var(--color2);
-}
-
-h3 {
-  font-family: "Playpen Sans", cursive;
-  padding: 0%;
-  margin: 5px;
-  font-size: medium;
 }
 
 .text-box {

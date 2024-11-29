@@ -11,6 +11,10 @@
   --color2: #748d8f;
 }
 
+.svg_image {
+  width: 30%;
+}
+
 html {
   background: var(--bg2);
   background-origin: padding-box;
@@ -29,16 +33,67 @@ body {
   padding: 0px;
 }
 
+.mac_header {
+  background-color: transparent;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  margin-right: 75px;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background-color: #a97174;
+}
+
+.yellow {
+  background-color: #9f9d77;
+}
+
+.green {
+  background-color: #799f77;
+}
+
+.output {
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 16px;
+}
+
 dialog {
   opacity: 0;
   padding: 0px;
   flex-direction: column;
   justify-content: center;
   background-color: var(--bg);
-  border: none;
+  border: 30px;
+  border-color: transparent;
   border-radius: 20px;
   align-items: center;
   outline: none;
+  max-height: 80%;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
 form {
@@ -117,7 +172,8 @@ form {
   margin: 20px;
 }
 
-.profile_blogs {
+.profile_blogs,
+.profile_repos {
   background-color: var(--bg);
 }
 
@@ -229,47 +285,14 @@ h3 {
   border-radius: 50%;
   margin: 3%;
   border: 7px solid var(--color2);
-  transition: box-shadow 0.6s ease-in-out, border 0.6s ease-in-out;
+  transition:
+    box-shadow 0.6s ease-in-out,
+    border 0.6s ease-in-out;
 }
 
 .user_avatar:hover {
   box-shadow: 0px 0px 10px 10px var(--color2);
   border: 7px solid var(--color2);
-}
-
-.repos,
-.nc_repos {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 0%;
-}
-
-.project_card {
-  width: auto;
-  padding: 6%;
-  margin: 2%;
-  background-color: var(--bg);
-  color: var(--fg);
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.project_card:hover {
-  transform: scale(1.03);
-}
-
-.project_card a {
-  width: 60%;
-}
-
-.project_card h3 {
-  margin: 3%;
 }
 
 .contact_button {
@@ -288,7 +311,9 @@ h3 {
   text-align: center;
   color: var(--bg);
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
   outline: none;
 }
@@ -322,7 +347,9 @@ h3 {
   text-align: center;
   color: var(--bg);
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
   outline: none;
 }
@@ -363,7 +390,7 @@ h3 {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .tabs {
     display: flex;
     cursor: pointer;
