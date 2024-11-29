@@ -29,6 +29,50 @@ body {
   padding: 0px;
 }
 
+.mac_header {
+  background-color: transparent;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  margin-right: 75px;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background-color: #a97174;
+}
+
+.yellow {
+  background-color: #9f9d77;
+}
+
+.green {
+  background-color: #799f77;
+}
+
+.output {
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 16px;
+}
+
 dialog {
   opacity: 0;
   padding: 0px;
@@ -117,7 +161,7 @@ form {
   margin: 20px;
 }
 
-.profile_blogs {
+.profile_blogs, .profile_repos {
   background-color: var(--bg);
 }
 
@@ -235,41 +279,6 @@ h3 {
 .user_avatar:hover {
   box-shadow: 0px 0px 10px 10px var(--color2);
   border: 7px solid var(--color2);
-}
-
-.repos,
-.nc_repos {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 0%;
-}
-
-.project_card {
-  width: auto;
-  padding: 6%;
-  margin: 2%;
-  background-color: var(--bg);
-  color: var(--fg);
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.project_card:hover {
-  transform: scale(1.03);
-}
-
-.project_card a {
-  width: 60%;
-}
-
-.project_card h3 {
-  margin: 3%;
 }
 
 .contact_button {
