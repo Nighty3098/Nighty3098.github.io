@@ -11,6 +11,10 @@
   --color2: #748d8f;
 }
 
+* {
+  outline: none;
+}
+
 .svg_image {
   width: 30%;
 }
@@ -116,8 +120,11 @@ form {
 
 .badges_block {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .bb_block {
@@ -144,8 +151,8 @@ form {
 
 .skill_badge {
   aspect-ratio: 1/1;
-  width: 6%;
-  margin: 0.5%;
+  width: 100px;
+  margin: 10px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -159,6 +166,7 @@ form {
 .user_bio,
 .git_profile_card,
 .my_contacts,
+.my_skills,
 .profile_blogs {
   background-color: var(--color1);
   border-radius: 30px;
@@ -173,7 +181,8 @@ form {
 }
 
 .profile_blogs,
-.profile_repos {
+.profile_repos,
+.my_skills {
   background-color: var(--bg);
 }
 
@@ -296,7 +305,7 @@ h3 {
 }
 
 .contact_button {
-  font-family: "Nova Mono", monospace;
+  font-family: "Tsukimi Rounded";
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
@@ -332,7 +341,7 @@ h3 {
 }
 
 .button {
-  font-family: "Nova Mono", monospace;
+  font-family: "Tsukimi Rounded";
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
@@ -363,6 +372,10 @@ h3 {
   background-color: vaR(--color2);
 }
 
+.button i {
+  margin-right: 10px;
+}
+
 .sub_block {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -381,13 +394,6 @@ h3 {
     align-items: baseline;
     justify-content: center;
   }
-
-  .repos,
-  .nc_repos {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-  }
 }
 
 @media screen and (max-width: 850px) {
@@ -398,13 +404,6 @@ h3 {
     flex-direction: column;
     align-items: center;
     align-content: center;
-  }
-
-  .repos,
-  .nc_repos {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
   }
 
   .content {
@@ -423,16 +422,12 @@ h3 {
   }
 
   .skill_badge {
-    aspect-ratio: 1/1;
-    padding: 0.5%;
+    width: 90%;
+    margin: 10px;
   }
 
-  .skill_badge {
-    width: 11%;
-  }
-
-  body {
-    margin: 0px;
-    padding: 0px;
+  .button,
+  .contact_button {
+    height: 50px;
   }
 }

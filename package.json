@@ -1,7 +1,7 @@
 {
   "name": "nighty3098.github.io",
-  "version": "2.1.3",
-  "description": "Dev portfolio",
+  "version": "2.2.7",
+  "description": "My portfolio website",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
