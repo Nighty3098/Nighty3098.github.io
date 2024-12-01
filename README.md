@@ -1,6 +1,6 @@
 <div class="badges" align="center">
     <br><br>
-    <img src="imgs/icon.svg" width="70%">
+    <img src="https://avatars.githubusercontent.com/u/154594695?v=4">
     <br><br><br>
     <a href="./LICENSE.md"><img class="badge" src="https://img.shields.io/github/license/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=a6e0b8&logoColor=ffffff&labelColor=1c1c29" style="border-radius: 5px;"/></a>
     <br><br>

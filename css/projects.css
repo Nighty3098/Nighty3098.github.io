@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap");
 
-:root {
-  --bg: #202a30;
-  --bg2: #202a30;
-  --fg2: #d4d9d5;
-  --fg: #d4d9d5;
-  --color1: #2f3843;
-  --color2: #748d8f;
-}
-
 .badges_block {
   width: 100%;
   display: flex;
@@ -84,16 +75,6 @@
   }
 }
 
-.text-box {
-  width: 70%;
-  padding: 2%;
-  background-color: var(--color2);
-  color: var(--bg);
-  border-radius: 10px;
-  align-content: center;
-  text-align: center;
-}
-
 .repos,
 .nc_repos {
   display: grid;
@@ -101,12 +82,26 @@
   grid-gap: 0%;
 }
 
-.project_card {
-  width: auto;
-  padding: 6%;
-  margin: 2%;
+.project_card_block {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
   background-color: var(--color1);
   color: var(--fg);
+  width: auto;
+  margin: 20px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project_card {
+  width: auto;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -117,40 +112,18 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.project_card:hover {
+.project_card_block:hover {
   transform: scale(1.03);
 }
 
+.project_card_block a,
 .project_card a {
   width: 60%;
 }
 
-.project_card h3 {
+.project_card_block h3 {
   margin: 3%;
-}
-
-.button {
-  font-family: "Playpen Sans", cursive;
-  font-size: large;
-  background-color: var(--color2);
-  border-radius: 10px;
-  width: 100%;
-  padding: 3%;
-  border: none;
-  aspect-ratio: 2/0.2;
-  color: var(--bg);
-  cursor: pointer;
-  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-}
-
-.button:active {
-  transform: scale(0.95);
-}
-
-.button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: vaR(--color2);
+  color: var(--color2);
 }
 
 .profile_blogs a {
@@ -174,5 +147,13 @@
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
+  }
+
+  .project_card {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 }

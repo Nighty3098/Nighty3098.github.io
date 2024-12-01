@@ -41,7 +41,7 @@ async function fetchRepoData(repoUrl) {
 
 function createRepoCard(repoData) {
     const card = document.createElement('div');
-    card.classList.add('project_card');
+    card.classList.add('project_card_block');
 
     const repoName = repoData.name;
     const languages = repoData.language || 'Not specified';
@@ -51,19 +51,15 @@ function createRepoCard(repoData) {
     let status = is_archived ? "<i class='fa-solid fa-box'></i> ! Archived ! " : "";
 
     card.innerHTML = `
+        <a class="project_card" href="${repoData.html_url}" target="_blank">
         <h1>${repoName}</h1>
         <h3 style="color: #db3a3a;">${status}</h3>
         <h3>${repoData.description || 'No description available'}</h3>
-        <h3 class="text-box">${stats}</h3>
-        <a href="${repoData.html_url}" target="_blank">
-            <button class="button">
-                <i class="fa-solid fa-arrow-right"></i> Open page
-                <i class="fa-solid fa-arrow-left"></i>
-            </button>
+        <h2 class="text-box">${stats}</h2>
         </a>
     `;
 
-    console.debug(`Project: ${repoName} Stars: ${repoData.stargazers_count} Forks: ${repoData.forks_count} Language: ${languages}`);
+    console.debug(`Loaded project: ${repoName} Stars: ${repoData.stargazers_count} Forks: ${repoData.forks_count} Language: ${languages}`);
 
     return card;
 }

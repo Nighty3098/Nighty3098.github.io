@@ -3,12 +3,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Rubik+Glitch&family=Tsukimi+Rounded&display=swap");
 
 :root {
-  --bg: #202a30;
-  --bg2: #202a30;
-  --fg2: #d4d9d5;
-  --fg: #d4d9d5;
-  --color1: #2f3843;
-  --color2: #748d8f;
+  --bg: #232634;
+  --bg2: #232634;
+  --fg2: #f4dbd6;
+  --fg: #f4dbd6;
+  --color1: #303446;
+  --color2: #babbf1;
+  --red: #e78284;
+  --green: #a6d189;
+  --yellow: #e5c890;
+}
+
+:root.light {
+  --bg: #dce0e8;
+  --bg2: #dce0e8;
+  --fg2: #4c4f69;
+  --fg: #4c4f69;
+  --color1: #ccd0da;
+  --color2: #7287fd;
+  --red: #d20f39;
+  --green: #40a02b;
+  --yellow: #df8e1d;
+}
+
+h1 {
+  font-family: "Nova Mono", system-ui;
+  font-optical-sizing: auto;
+  font-size: 35px;
+  color: var(--color2);
+}
+
+h3 {
+  font-family: "Tsukimi Rounded", system-ui;
+  padding: 0%;
+  margin: 5px;
+  font-size: medium;
+  line-height: 2;
+}
+
+svg path {
+  stroke: var(--color2);
+}
+
+* {
+  outline: none;
 }
 
 .svg_image {
@@ -60,15 +98,15 @@ body {
 }
 
 .red {
-  background-color: #a97174;
+  background-color: var(--red);
 }
 
 .yellow {
-  background-color: #9f9d77;
+  background-color: var(--yellow);
 }
 
 .green {
-  background-color: #799f77;
+  background-color: var(--green);
 }
 
 .output {
@@ -116,8 +154,11 @@ form {
 
 .badges_block {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .bb_block {
@@ -144,8 +185,8 @@ form {
 
 .skill_badge {
   aspect-ratio: 1/1;
-  width: 6%;
-  margin: 0.5%;
+  width: 100px;
+  margin: 10px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -159,10 +200,12 @@ form {
 .user_bio,
 .git_profile_card,
 .my_contacts,
+.my_skills,
 .profile_blogs {
   background-color: var(--color1);
   border-radius: 30px;
-  color: var(--fg);
+  color: var(--color2);
+  font-size: x-large;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,7 +216,8 @@ form {
 }
 
 .profile_blogs,
-.profile_repos {
+.profile_repos,
+.my_skills {
   background-color: var(--bg);
 }
 
@@ -214,16 +258,22 @@ form {
 }
 
 .profile_stats a {
-  line-height: 2;
-  font-size: x-larger;
+  line-height: 1.5;
+  font-size: medium;
   color: var(--color2);
   text-decoration: none;
 }
 
 .user_bio a {
-  line-height: 2;
-  font-size: larger;
+  line-height: 1.5;
+  font-size: medium;
   color: var(--color2);
+  text-decoration: none;
+}
+
+.user_bio h3 {
+  line-height: 1.5;
+  font-size: medium;
   text-decoration: none;
 }
 
@@ -238,22 +288,8 @@ form {
   color: var(--bg);
 }
 
-h1 {
-  font-family: "Tsukimi Rounded", system-ui;
-  font-optical-sizing: auto;
-  font-size: xx-large;
-  color: var(--color2);
-}
-
-h3 {
-  font-family: "Tsukimi Rounded", system-ui;
-  padding: 0%;
-  margin: 5px;
-  font-size: medium;
-}
-
 .text-box {
-  width: 70%;
+  width: 90%;
   padding: 2%;
   font-family: "Nova Mono", monospace;
   font-size: medium;
@@ -296,7 +332,7 @@ h3 {
 }
 
 .contact_button {
-  font-family: "Nova Mono", monospace;
+  font-family: "Tsukimi Rounded";
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
@@ -331,13 +367,23 @@ h3 {
   margin-right: 10px;
 }
 
+.theme-toggle {
+  position: fixed;
+  width: 45px;
+  aspect-ratio: 1/1;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
 .button {
-  font-family: "Nova Mono", monospace;
+  font-family: "Tsukimi Rounded";
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
-  width: 100%;
-  height: auto;
   padding: 1%;
   border: none;
   display: flex;
@@ -354,13 +400,23 @@ h3 {
   outline: none;
 }
 
-.button:active {
-  transform: scale(0.95);
-}
-
 .button:hover {
   box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: vaR(--color2);
+  background-color: var(--color2);
+}
+
+.button i {
+  margin-right: 10px;
+}
+
+.theme-toggle i {
+  margin: 0px;
+  padding: 0px;
+}
+
+.theme-toggle:hover {
+  box-shadow: 0px 0px 0px 0px var(--color2);
+  background-color: var(--color2);
 }
 
 .sub_block {
@@ -381,13 +437,6 @@ h3 {
     align-items: baseline;
     justify-content: center;
   }
-
-  .repos,
-  .nc_repos {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-  }
 }
 
 @media screen and (max-width: 850px) {
@@ -398,13 +447,6 @@ h3 {
     flex-direction: column;
     align-items: center;
     align-content: center;
-  }
-
-  .repos,
-  .nc_repos {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
   }
 
   .content {
@@ -423,16 +465,12 @@ h3 {
   }
 
   .skill_badge {
-    aspect-ratio: 1/1;
-    padding: 0.5%;
+    width: 90%;
+    margin: 10px;
   }
 
-  .skill_badge {
-    width: 11%;
-  }
-
-  body {
-    margin: 0px;
-    padding: 0px;
+  .button,
+  .contact_button {
+    height: 45px;
   }
 }
