@@ -1,6 +1,6 @@
 <div class="badges" align="center">
     <br><br>
-    <img src="imgs/icon.svg" width="70%">
+    <img src="https://avatars.githubusercontent.com/u/154594695?v=4">
     <br><br><br>
     <a href="./LICENSE.md"><img class="badge" src="https://img.shields.io/github/license/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=a6e0b8&logoColor=ffffff&labelColor=1c1c29" style="border-radius: 5px;"/></a>
     <br><br>
@@ -35,7 +35,4 @@ npm start
     <a href="https://www.reddit.com/user/DEVELOPER0x31/" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_reddit.png?raw=true" width="60px"/></a>
     <a href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_signal.png?raw=true" width="60px"/></a>
     <br><br>
-    <img src="https://github.com/user-attachments/assets/0c30ea9a-c208-4389-bfe5-ade9b84bbf3a" />
-    <img src="https://github.com/user-attachments/assets/c0c86cff-947a-4360-9778-7256a7230059" />
-    <img src="https://github.com/user-attachments/assets/303b0e2c-a693-48f1-acb4-2b176170a29d" />
 </div>
