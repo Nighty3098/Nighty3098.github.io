@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap");
 
-:root {
-  --bg: #202a30;
-  --bg2: #202a30;
-  --fg2: #d4d9d5;
-  --fg: #d4d9d5;
-  --color1: #2f3843;
-  --color2: #748d8f;
-}
-
 .badges_block {
   width: 100%;
   display: flex;
