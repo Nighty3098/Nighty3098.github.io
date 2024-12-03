@@ -31,18 +31,19 @@ function getClientInfo() {
 }
 
 function getClientIpInfo() {
-    fetch('http://ip-api.com/json/')
+    fetch('https://ipapi.co/json/')
         .then(response => response.json())
         .then(data => {
-            console.log(`IP: ${data.query}`);
-            console.log(`City: ${data.city}`);
-            console.log(`Country: ${data.country}`);
-            console.log(`Lat: ${data.lat}, Lon: ${data.lon}`);
+            console.log(`IP: ${data.ip}`);
+            console.log(`Город: ${data.city}`);
+            console.log(`Страна: ${data.country_name}`);
+            console.log(`Широта: ${data.latitude}, Долгота: ${data.longitude}`);
 
-            document.getElementById('ip').innerText = `IP: ${data.query}`;
+            document.getElementById('ip').innerText = `IP: ${data.ip}`;
             document.getElementById('city').innerText = `City: ${data.city}`;
-            document.getElementById('country').innerText = `Country: ${data.country}`;
-            document.getElementById('coordinates').innerText = `Lat: ${data.lat}, Lon: ${data.lon}`;
+            document.getElementById('org_client').innerText = `${data.org}`;
+            document.getElementById('country').innerText = `Country: ${data.country_name}`;
+            document.getElementById('coordinates').innerText = `Lat: ${data.latitude}, Lon: ${data.longitude}`;
         })
         .catch(error => console.error('Error:', error));
 }
