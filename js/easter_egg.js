@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.svg_image').addEventListener('click', function () {
         clickCount++;
 
-        if (clickCount === 6) {
+        if (clickCount === 2) {
             openModal();
             clickCount = 0;
         }

@@ -15,6 +15,7 @@
 	<script src="js/easter_egg.js"></script>
 	<script src="js/create_articles_card.js"></script>
 	<script src="js/get_git_info.js"></script>
+	<script src="js/script.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
 		integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous" />
 	<link rel="shortcut icon" href="imgs/icon.svg" />
@@ -26,7 +27,27 @@
 		<div class="modal-content">
 			<span class="close">&times;</span>
 			<br>
-			<h1>HELLO</h1>
+			<div class="client_username_request"
+				style="display: flex; justify-content: center; flex-direction: column; align-items: center; align-content: center;">
+				<h1>Enter your nickname</h1>
+				<input type="text" id="inputData" placeholder="Player name..." />
+				<br>
+				<button class="button submitButton" id="submitButton">Play</button>
+			</div>
+			<div class="client_data">
+				<h1>Hello from</h1>
+				<br />
+				<img src="imgs/fbi.png" class="fbi_badge" />
+				<br />
+				<h3 id="ip"></h3>
+				<h3 id="city"></h3>
+				<h3 id="country"></h3>
+				<h3 id="device"></h3>
+				<h3 id="lang"></h3>
+				<h3 id="platform"></h3>
+				<h3 id="coordinates"></h3>
+				<h3 id="browser"></h3>
+			</div>
 		</div>
 	</div>
 	<div class="content">
