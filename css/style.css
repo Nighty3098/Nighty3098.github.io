@@ -26,6 +26,71 @@
   --yellow: #df8e1d;
 }
 
+.fbi_badge {
+  aspect-ratio: 1/1;
+  width: 150px;
+}
+
+.client_data {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: var(--color1);
+  color: var(--color2);
+  font-family: "JetBrains Mono", monospace;
+  border: none;
+  border-radius: 15px;
+}
+
+.submitButton {
+  width: 50%;
+  height: 40px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  background-color: var(--bg);
+  color: var(--fg);
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 h1 {
   font-family: "Nova Mono", system-ui;
   font-optical-sizing: auto;
@@ -437,6 +502,11 @@ form {
     align-items: baseline;
     justify-content: center;
   }
+
+  .fbi_badge {
+    aspect-ratio: 1/1;
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -472,5 +542,10 @@ form {
   .button,
   .contact_button {
     height: 45px;
+  }
+
+  .fbi_badge {
+    aspect-ratio: 1/1;
+    width: 70%;
   }
 }
