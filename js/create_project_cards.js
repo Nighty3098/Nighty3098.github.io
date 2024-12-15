@@ -6,14 +6,15 @@ const users_repos = [
     "https://api.github.com/repos/Nighty3098/nfetch",
     "https://api.github.com/repos/Nighty3098/DevDotfiles",
     "https://api.github.com/repos/Nighty3098/InvestingAssistant",
+    "https://api.github.com/repos/Nighty3098/IPSA_MODEL",
     "https://api.github.com/repos/Nighty3098/TechSupportBot",
     "https://api.github.com/repos/Nighty3098/TGSB",
     "https://api.github.com/repos/Nighty3098/FinanceTrackerBot",
     "https://api.github.com/repos/Nighty3098/Nighty3098.github.io",
 ];
 
-const CACHE_KEY = 'REPOS_CACHE_KEY';
-const CACHE_EXPIRY_KEY = 'REPOS_CACHE_EXPIRY';
+const CACHE_KEY = 'USER_REPOS';
+const CACHE_EXPIRY_KEY = 'USER_REPOS_EXPIRY';
 const CACHE_DURATION = 60 * 60 * 1000;
 
 async function fetchRepoData(repoUrl) {
