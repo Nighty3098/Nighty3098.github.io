@@ -74,7 +74,7 @@ input {
   color: var(--fg);
   border-radius: 20px;
   padding: 20px;
-  width: 80%;
+  width: 50%;
 }
 
 .close {
@@ -511,6 +511,7 @@ form {
     width: 15%;
     margin-top: 25px;
     margin-bottom: 25px;
+
   }
 }
 
@@ -551,6 +552,10 @@ form {
 
   .fbi_badge {
     aspect-ratio: 1/1;
-    width: 70%;
+    width: 60%;
+  }
+
+  .modal-content {
+    width: 80%;
   }
 }
