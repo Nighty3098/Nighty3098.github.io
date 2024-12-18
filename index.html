@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0;"
+      content="width=device-width; initial-scale=0.8; maximum-scale=0.8; minimum-scale=0.8;"
     />
     <title>Nighty</title>
     <link href="css/blog.css" rel="stylesheet" />
@@ -20,6 +20,7 @@
     <script src="js/create_articles_card.js"></script>
     <script src="js/get_git_info.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/user_skills.js"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
@@ -49,21 +50,22 @@
             class="user_avatar"
           />
           <br />
-          <h3 class="text-box">Backend developer | Freelancer | Student</h3>
+          <h3 class="text-box"><i class="fa-solid fa-user"></i> Backend developer | Freelancer | Student</h3>
+          <h3 class="text-box">
+            <i class="fa-solid fa-location-dot"></i> Novosibirsk
+          </h3>
           <br />
           <br />
-          <h3
-            class="button"
-            type="button"
-            onclick="overlayProjects.showModal()"
-          >
-            <i class="fa-solid fa-diagram-project"></i>MY PROJECTS
-          </h3>
-          <h3 class="button" type="button" onclick="overlayBlog.showModal()">
-            <i class="fa-regular fa-newspaper"></i>MY BLOG
+          <a href="https://github.com/Nighty3098?tab=repositories">
+            <h3 class="text-box">
+              <i class="fa-solid fa-compass-drafting"></i> MY PROJECTS
+            </h3>
+          </a>
+          <h3 class="text-box" type="button" onclick="overlayBlog.showModal()">
+            <i class="fa-regular fa-newspaper"></i> MY BLOG
           </h3>
           <h3
-            class="button"
+            class="text-box"
             type="button"
             onclick="overlayTechStack.showModal()"
           >
@@ -243,6 +245,7 @@
       </div>
       <div class="block">
         <section id="user_bio" class="user_bio">
+          <br><br>
           <h1 id="bio" class="bio">
             <i class="fa-solid fa-compass-drafting"></i> About Me
           </h1>
@@ -325,8 +328,8 @@
               years.
             </h3>
             <br /><br />
-            <h3 class="text-box">
-              DESKTOP APPS | TELEGRAM API | WEB DEV | DISCORD API | AI DEV
+            <h3 class="text-box" id="skills_categories">
+              
             </h3>
             <br />
             <h3 class="text-box" id="top-languages"></h3>

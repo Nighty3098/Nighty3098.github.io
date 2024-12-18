@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap");
 
+* {
+  outline: none;
+  text-decoration: none;
+}
+
 .badges_block {
   width: 100%;
   display: flex;
@@ -10,69 +15,13 @@
   width: 100%;
 }
 
-.header {
-  display: inline-flex;
-  position: fixed;
-  z-index: 1000;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: normal;
-  align-content: center;
-  border-radius: 20px;
-  top: 0px;
-  margin: 2%;
-  width: 60%;
-  margin: 40px 40px 10px 40px;
-  background-color: var(--color1);
-}
-
-.header a {
-  width: 10%;
+a .button {
+  width: 150px;
+  height: 50px;
   margin: 0px;
-  padding: 0%;
-  display: flex;
+  padding: 0px;
   border: none;
-  aspect-ratio: none;
-}
-
-.header .button {
-  width: 100%;
-  margin: 10px 20px 10px 20px;
-  padding: 0%;
-  border: none;
-  aspect-ratio: none;
-}
-
-.header h1 {
-  margin: 10px 30px 10px 30px;
-}
-
-.main_header {
-  display: none;
-}
-
-@media screen and (max-width: 800px) {
-  .header .button {
-    margin: 0px;
-    width: 100%;
-  }
-  .header h1 {
-    display: none;
-  }
-  .header {
-    height: 50px;
-    padding: 0px;
-    margin: 5%;
-    background-color: transparent;
-    justify-content: center;
-  }
-  .main_header {
-    display: block;
-  }
-  .header a {
-    margin: 0px;
-    width: 100%;
-  }
+  border-radius: 5px;
 }
 
 .repos,

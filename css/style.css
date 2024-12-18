@@ -26,34 +26,6 @@
   --yellow: #df8e1d;
 }
 
-.fbi_badge {
-  aspect-ratio: 1/1;
-  width: 150px;
-}
-
-.client_data {
-  display: none;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-}
-
-input {
-  padding: 10px;
-  margin-right: 10px;
-  background-color: var(--color1);
-  color: var(--color2);
-  font-family: "JetBrains Mono", monospace;
-  border: none;
-  border-radius: 15px;
-}
-
-.submitButton {
-  width: 50%;
-  height: 40px;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -74,7 +46,7 @@ input {
   color: var(--fg);
   border-radius: 20px;
   padding: 20px;
-  width: 50%;
+  width: 80%;
 }
 
 .close {
@@ -115,9 +87,7 @@ svg path {
 }
 
 .svg_image {
-  width: 30%;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  width: 20%;
 }
 
 html {
@@ -348,8 +318,6 @@ form {
 .handwrite {
   padding: 3%;
   margin: 1%;
-  margin-top: 10px;
-  margin-bottom: 10px;
   border-radius: 15px;
   background-color: var(--color2);
   font-family: "WindSong", cursive;
@@ -359,8 +327,8 @@ form {
 }
 
 .text-box {
-  width: 80%;
-  padding: 2%;
+  width: 70%;
+  padding: 15px;
   font-family: "Nova Mono", monospace;
   font-size: medium;
   background-color: var(--color2);
@@ -368,6 +336,14 @@ form {
   border-radius: 10px;
   align-content: center;
   text-align: center;
+}
+
+a .text-box .i {
+  margin-left: 10px;
+}
+
+.text-box .i {
+  margin-left: 10px;
 }
 
 .profile_info {
@@ -408,7 +384,7 @@ form {
   border-radius: 10px;
   width: 50%;
   height: auto;
-  padding: 2%;
+  padding: 10px;
   border: none;
   display: flex;
   justify-content: center;
@@ -453,8 +429,8 @@ form {
   font-family: "Tsukimi Rounded";
   font-size: medium;
   background-color: var(--color2);
-  border-radius: 10px;
-  padding: 1%;
+  border-radius: 5px;
+  padding: 10px;
   border: none;
   display: flex;
   justify-content: center;
@@ -502,17 +478,10 @@ form {
 @media screen and (max-width: 1300px) {
   .content {
     display: grid;
-    grid-template-columns: 80%;
+    grid-template-columns: 60%;
     grid-gap: 0%;
     align-items: baseline;
     justify-content: center;
-  }
-
-  .svg_image {
-    width: 15%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-
   }
 }
 
@@ -549,14 +518,5 @@ form {
   .button,
   .contact_button {
     height: 45px;
-  }
-
-  .fbi_badge {
-    aspect-ratio: 1/1;
-    width: 60%;
-  }
-
-  .modal-content {
-    width: 80%;
   }
 }

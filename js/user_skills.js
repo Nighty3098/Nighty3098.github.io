@@ -30,23 +30,23 @@ function analyzeSkills(repositories) {
         if (language) {
             // Frontend
             if (['JavaScript', 'HTML', 'CSS', 'TypeScript', 'React', 'Vue', 'Angular', 'Sass', 'Bootstrap'].includes(language)) {
-                skills.add('Frontend');
+                skills.add('FRONTEND');
             }
             // Backend
             if (['Python', 'Java', 'Ruby', 'PHP', 'C#', 'Go', 'Node.js', 'Rust', 'Elixir'].includes(language)) {
-                skills.add('Backend');
+                skills.add('BACKEND');
             }
             // Full-stack
             if (['Node.js', 'React', 'Angular', 'Vue', 'Django', 'Ruby on Rails', 'Spring Boot'].includes(language)) {
-                skills.add('Full-stack');
+                skills.add('FULL-STACK');
             }
             // Deep Learning
             if (['Python', 'R', 'Java'].includes(language)) {
-                skills.add('Deep learning');
+                skills.add('DEEP LEARNING');
             }
             // Mobile Development
             if (['Swift', 'Kotlin', 'Dart', 'React Native'].includes(language)) {
-                skills.add('Mobile dev');
+                skills.add('MOBILE');
             }
             // DevOps
             if (['Docker', 'Kubernetes', 'Ansible', 'Terraform', 'Jenkins'].includes(language)) {
@@ -54,24 +54,24 @@ function analyzeSkills(repositories) {
             }
             // Game Development
             if (['C#', 'Unity', 'Unreal Engine', 'Java'].includes(language)) {
-                skills.add('Game dev');
+                skills.add('GAME DEV');
             }
             // Data Science
             if (['Python', 'R'].includes(language)) {
-                skills.add('Data Science');
+                skills.add('DATA SCIENCE');
             }
             // Cloud Computing
             if (['AWS', 'Azure', 'Google Cloud'].includes(language)) {
-                skills.add('Cloud Computing');
+                skills.add('CLOUD');
             }
             // Cybersecurity
             if (['Python', 'C++'].includes(language)) {
-                skills.add('Cybersecurity');
+                skills.add('CYBERSEC');
             }
             // Telegram Bot Development
             if (['Python', 'JavaScript'].includes(language) || 
                 repo.description && /telegram/i.test(repo.description)) {
-                skills.add('Telegram Bot Development');
+                skills.add('TG BOT DEV');
             }
         }
     });
@@ -79,15 +79,20 @@ function analyzeSkills(repositories) {
     return Array.from(skills);
 }
 
-
 async function main(username) {
     try {
+        const block = document.getElementById('skills_categories');
         const repositories = await getUserRepositories(username);
         const skills = analyzeSkills(repositories);
-        console.log(`User ${username}: ${skills.join(', ')}`);
+
+        console.log(`User  ${username}: ${skills.join(', ')}`);
+        
+        block.innerHTML = `<i class='fa-solid fa-compass'></i> ${skills.join(', ')}`;
     } catch (error) {
         console.error('Error:', error);
     }
 }
 
-main('Nighty3098');
+document.addEventListener('DOMContentLoaded', () => {
+    main('Nighty3098');
+});
