@@ -101,6 +101,7 @@ html {
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
+  margin: 1%;
 }
 
 body {
@@ -128,8 +129,8 @@ body {
 }
 
 .dot {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   display: inline-block;
 }
