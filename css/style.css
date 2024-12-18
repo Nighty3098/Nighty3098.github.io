@@ -87,7 +87,7 @@ svg path {
 }
 
 .svg_image {
-  width: 30%;
+  width: 20%;
 }
 
 html {
@@ -326,8 +326,8 @@ form {
 }
 
 .text-box {
-  width: 90%;
-  padding: 2%;
+  width: 70%;
+  padding: 15px;
   font-family: "Nova Mono", monospace;
   font-size: medium;
   background-color: var(--color2);
@@ -335,6 +335,14 @@ form {
   border-radius: 10px;
   align-content: center;
   text-align: center;
+}
+
+a .text-box .i {
+  margin-left: 10px;
+}
+
+.text-box .i {
+  margin-left: 10px;
 }
 
 .profile_info {
@@ -375,7 +383,7 @@ form {
   border-radius: 10px;
   width: 50%;
   height: auto;
-  padding: 2%;
+  padding: 10px;
   border: none;
   display: flex;
   justify-content: center;
@@ -420,8 +428,8 @@ form {
   font-family: "Tsukimi Rounded";
   font-size: medium;
   background-color: var(--color2);
-  border-radius: 10px;
-  padding: 1%;
+  border-radius: 5px;
+  padding: 10px;
   border: none;
   display: flex;
   justify-content: center;
