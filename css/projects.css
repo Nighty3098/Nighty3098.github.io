@@ -10,98 +10,15 @@
   width: 100%;
 }
 
-.header {
-  display: inline-flex;
-  position: fixed;
-  z-index: 1000;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: normal;
-  align-content: center;
-  border-radius: 20px;
-  top: 0px;
-  margin: 2%;
-  width: 60%;
-  margin: 40px 40px 10px 40px;
-  background-color: var(--color1);
-}
-
-.header a {
-  width: 10%;
-  margin: 0px;
-  padding: 0%;
-  display: flex;
-  border: none;
-  aspect-ratio: none;
-}
-
-.header .button {
-  width: 100%;
-  margin: 10px 20px 10px 20px;
-  padding: 0%;
-  border: none;
-  aspect-ratio: none;
-}
-
-.header h1 {
-  margin: 10px 30px 10px 30px;
-}
-
-.main_header {
-  display: none;
-}
-
-@media screen and (max-width: 800px) {
-  .header .button {
-    margin: 0px;
-    width: 100%;
-  }
-  .header h1 {
-    display: none;
-  }
-  .header {
-    height: 50px;
-    padding: 0px;
-    margin: 5%;
-    background-color: transparent;
-    justify-content: center;
-  }
-  .main_header {
-    display: block;
-  }
-  .header a {
-    margin: 0px;
-    width: 100%;
-  }
-}
-
 .repos,
 .nc_repos {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 40%;
   grid-gap: 0%;
 }
 
-.project_card_block {
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  background-color: var(--color1);
-  color: var(--fg);
-  width: auto;
-  margin: 20px;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 25px;
-  transition: transform 0.3s ease-in-out;
-}
-
 .project_card {
-  width: auto;
+  width: 40%;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -109,11 +26,12 @@
   align-items: center;
   align-content: center;
   text-align: center;
+  background-color: var(--bg2);
   transition: transform 0.3s ease-in-out;
 }
 
 .project_card_block:hover {
-  transform: scale(1.03);
+  transform: scale(1);
 }
 
 .project_card_block a,
@@ -122,38 +40,15 @@
 }
 
 .project_card_block h3 {
-  margin: 3%;
+  margin: 0;
   color: var(--color2);
 }
 
-.profile_blogs a {
-  width: 40%;
-  margin: 1%;
-  padding: 0px;
-}
-
 @media screen and (max-width: 800px) {
-  .tabs {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }
-
   .repos,
   .nc_repos {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
     justify-content: center;
-  }
-
-  .project_card {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
 }
