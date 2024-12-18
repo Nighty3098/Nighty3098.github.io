@@ -31,6 +31,7 @@
   padding: 0%;
   border: none;
   aspect-ratio: none;
+  color: var(--color1);
 }
 
 .header h1 {
