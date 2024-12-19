@@ -35,9 +35,9 @@ function getClientIpInfo() {
         .then(response => response.json())
         .then(data => {
             console.log(`IP: ${data.ip}`);
-            console.log(`Город: ${data.city}`);
-            console.log(`Страна: ${data.country_name}`);
-            console.log(`Широта: ${data.latitude}, Долгота: ${data.longitude}`);
+            console.log(`City: ${data.city}`);
+            console.log(`Country: ${data.country_name}`);
+            console.log(`lat: ${data.latitude}, long: ${data.longitude}`);
 
             document.getElementById('ip').innerText = `IP: ${data.ip}`;
             document.getElementById('city').innerText = `City: ${data.city}`;

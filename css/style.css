@@ -3,27 +3,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Rubik+Glitch&family=Tsukimi+Rounded&display=swap");
 
 :root {
-  --bg: #232634;
-  --bg2: #232634;
-  --fg2: #f4dbd6;
-  --fg: #f4dbd6;
-  --color1: #303446;
-  --color2: #babbf1;
-  --red: #e78284;
-  --green: #a6d189;
-  --yellow: #e5c890;
+  --bg: #333c43;
+  --bg2: #333c43;
+  --fg2: #d3c6aa;
+  --fg: #d3c6aa;
+  --color1: #293136;
+  --color2: #a7c080;
+  --color3: #434f55;
+  --red: #e67e80;
+  --green: #a7c080;
+  --yellow: #dbbc7f;
 }
 
 :root.light {
-  --bg: #dce0e8;
-  --bg2: #dce0e8;
-  --fg2: #4c4f69;
-  --fg: #4c4f69;
-  --color1: #ccd0da;
-  --color2: #7287fd;
-  --red: #d20f39;
-  --green: #40a02b;
-  --yellow: #df8e1d;
+  --bg: #f3ead3;
+  --bg2: #f3ead3;
+  --fg2: #5c6a72;
+  --fg: #5c6a72;
+  --color1: #e5dfc5;
+  --color2: #3a94c5;
+  --color3: #e5dfc5;
+  --red: #f85552;
+  --green: #8da101;
+  --yellow: #dfa000;
 }
 
 .modal {
@@ -102,6 +104,7 @@ html {
   font-style: normal;
   scroll-behavior: smooth;
   margin: 1%;
+  transition: all 0.5s ease-in-out;
 }
 
 body {
@@ -129,10 +132,11 @@ body {
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   display: inline-block;
+  transition: all 1s ease-in-out;
 }
 
 .red {
@@ -251,6 +255,7 @@ form {
   align-content: center;
   padding: 20px;
   margin: 20px;
+  transition: all 0.5s ease-in-out;
 }
 
 .profile_blogs,
@@ -303,14 +308,16 @@ form {
 }
 
 .user_bio a {
-  line-height: 1.5;
+  line-height: 2;
   font-size: medium;
   color: var(--color2);
+  font-family: "JetBrains", sans-serif;
   text-decoration: none;
 }
 
 .user_bio h3 {
-  line-height: 1.5;
+  line-height: 2;
+  font-family: "Tsukimi Rounded", sans-serif;
   font-size: medium;
   text-decoration: none;
 }
@@ -336,14 +343,15 @@ form {
   border-radius: 10px;
   align-content: center;
   text-align: center;
+  cursor: pointer;
 }
 
 a .text-box .i {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .text-box .i {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .profile_info {
@@ -396,7 +404,7 @@ a .text-box .i {
   transition:
     transform 0.5s ease-in-out,
     box-shadow 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
+    background-color 0.5s ease-in-out;
   outline: none;
 }
 
@@ -411,18 +419,6 @@ a .text-box .i {
 
 .contact_button i {
   margin-right: 10px;
-}
-
-.theme-toggle {
-  position: fixed;
-  width: 45px;
-  aspect-ratio: 1/1;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
 }
 
 .button {
@@ -442,7 +438,7 @@ a .text-box .i {
   transition:
     transform 0.5s ease-in-out,
     box-shadow 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
+    background-color 0.5s ease-in-out;
   outline: none;
 }
 
@@ -453,6 +449,23 @@ a .text-box .i {
 
 .button i {
   margin-right: 10px;
+}
+
+.theme-toggle {
+  position: fixed;
+  width: 60px;
+  aspect-ratio: 1/1;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  background-color: var(--color2);
+  transition: all 1s;
 }
 
 .theme-toggle i {
@@ -475,10 +488,10 @@ a .text-box .i {
   justify-content: center;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
   .content {
     display: grid;
-    grid-template-columns: 60%;
+    grid-template-columns: 75%;
     grid-gap: 0%;
     align-items: baseline;
     justify-content: center;
