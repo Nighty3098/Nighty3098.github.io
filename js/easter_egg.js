@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     let clickCount = 0;
+    let clickTimeout;
 
-    document.querySelector('.svg_image').addEventListener('click', function () {
+    document.querySelector('.user_avatar').addEventListener('click', function () {
         clickCount++;
 
-        if (clickCount === 2) {
+        if (clickCount === 1) {
+            clickTimeout = setTimeout(function () {
+                clickCount = 0;
+            }, 300);
+        } else if (clickCount === 2) {
+            clearTimeout(clickTimeout);
             openModal();
             clickCount = 0;
         }

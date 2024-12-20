@@ -4,15 +4,12 @@ function getDeviceName() {
 
     if (/iPad|iPhone|iPod/.test(userAgent)) {
         deviceName = "iOS Device";
-    }
-    else if (/Android/.test(userAgent)) {
+    } else if (/Android/.test(userAgent)) {
         const androidVersion = userAgent.match(/Android\s([0-9\.]+)/);
         deviceName = `Android Device: ${androidVersion ? androidVersion[1] : 'Unknown Version'}`;
-    }
-    else if (/Windows/.test(userAgent)) {
+    } else if (/Windows/.test(userAgent)) {
         deviceName = "Windows Device";
-    }
-    else if (/Macintosh/.test(userAgent)) {
+    } else if (/Macintosh/.test(userAgent)) {
         deviceName = "Mac Device";
     }
 
@@ -65,5 +62,10 @@ function start_fun() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('submitButton').addEventListener('click', start_fun);
+    const submitButton = document.getElementById('submitButton');
+    if (submitButton) { // Check if the element exists
+        submitButton.addEventListener('click', start_fun);
+    } else {
+        console.error('Element with ID "submitButton" not found.');
+    }
 });

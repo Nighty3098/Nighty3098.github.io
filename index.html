@@ -11,12 +11,12 @@
     <link href="css/projects.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/animations.css" rel="stylesheet" />
+    <script src="js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/a01328b26e.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/create_articles_card.js"></script>
     <script src="js/get_git_info.js"></script>
     <script src="js/theme.js"></script>
@@ -33,9 +33,36 @@
     <button class="theme-toggle" id="theme-toggle">
       <i class="fa-solid fa-moon"></i>
     </button>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <br>
+        <div class="client_username_request"
+          style="display: flex; justify-content: center; flex-direction: column; align-items: center; align-content: center;">
+          <h1>Enter your nickname</h1>
+          <input type="text" id="inputData" placeholder="Player name..." />
+          <br>
+          <button class="button submitButton" id="submitButton">Play</button>
+        </div>
+        <div class="client_data">
+          <h1>Hello from FBI</h1>
+          <br />
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f923/512.gif" alt="🤣" class="fbi_badge">
+          <br />
+          <h3 id="ip"></h3>
+          <h3 id="city"></h3>
+          <h3 id="org_client"></h3>
+          <h3 id="country"></h3>
+          <h3 id="device"></h3>
+          <h3 id="lang"></h3>
+          <h3 id="platform"></h3>
+          <h3 id="coordinates"></h3>
+          <h3 id="browser"></h3>
+        </div>
+      </div>
+    </div>
     <div class="content">
       <div class="profile_info">
-        <br />
         <section id="profile_card" class="profile_card">
           <div class="mac_header">
             <div class="dot red"></div>
@@ -49,15 +76,12 @@
             src="https://avatars.githubusercontent.com/u/154594695?v=4"
             class="user_avatar"
           />
-          <br />
           <h3 class="text-box"><i class="fa-solid fa-user"></i> Backend developer | Freelancer | Student</h3>
           <h3 class="text-box">
             <i class="fa-solid fa-location-dot"></i> Novosibirsk, Russia
           </h3>
-          <br />
         </section>
         <section class="profile_card">
-          <br />
           <a href="https://github.com/Nighty3098?tab=repositories">
             <h3 class="text-box">
               <i class="fa-solid fa-compass-drafting"></i> MY PROJECTS
@@ -73,7 +97,6 @@
           >
             <i class="fa-solid fa-compass-drafting"></i> MY SKILLS
           </h3>
-          <br />
           <dialog id="overlayProjects">
             <section id="profile_repos" class="profile_repos">
               <form method="dialog">
@@ -81,7 +104,6 @@
                   <i class="fa-solid fa-arrow-left"></i>
                 </button>
               </form>
-              <br />
               <h1 class="main_header">
                 <i class="fa-solid fa-fire"></i> Projects
               </h1>
@@ -97,14 +119,12 @@
                 </button>
               </form>
               <h1 class="main_header"><i class="fa-solid fa-cube"></i> Blog</h1>
-              <br />
               <a href="https://dev.to/nighty3098">
                 <button>
                   <i class="fa-solid fa-arrow-right"></i> My Blog on DEV.to
                   <i class="fa-solid fa-arrow-left"></i>
                 </button>
               </a>
-              <br /><br />
             </section>
           </dialog>
           <dialog id="overlayTechStack">
@@ -114,9 +134,7 @@
                   <i class="fa-solid fa-arrow-left"></i>
                 </button>
               </form>
-              <br />
               <h1><i class="fa-solid fa-mug-hot"></i> Tech stack</h1>
-              <br /><br />
               <div class="badges_block">
                 <img
                   src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_docker.png?raw=true"
@@ -199,12 +217,10 @@
                   loading="lazy"
                 />
               </div>
-              <br /><br />
             </section>
           </dialog>
         </section>
         <section class="profile_card">
-          <br />
           <h1><i class="fa-solid fa-comment"></i> Contact with me</h1>
           <div class="contacts_badge_block">
             <a href="https://t.me/Night3098" , target="_blank" ,>
@@ -243,17 +259,14 @@
               </h3>
             </a>
           </div>
-          <br /><br />
         </section>
       </div>
       <div class="block">
         <section id="user_bio" class="user_bio">
-          <br><br>
           <h1 id="bio" class="bio">
             <i class="fa-solid fa-compass-drafting"></i> About Me
           </h1>
           <div class="bio_info">
-            <br /><br />
             <svg
               class="svg_image"
               viewBox="0 0 32.622986 58.785004"
@@ -321,26 +334,19 @@
                 class="icon-path"
               />
             </svg>
-            <br /><br />
             <h1 class="handwrite">Nighty3098</h1>
-            <br /><br />
             <h3>
               <i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
               developer and freelancer, I'm 17 years old and I'm studying in the
               11th grade of school.<br />I've been developing for the last 4
               years.
             </h3>
-            <br /><br />
             <h3 class="text-box" id="skills_categories">
               
             </h3>
-            <br />
             <h3 class="text-box" id="top-languages"></h3>
-            <br /><br />
           </div>
-          <br /><br />
         </section>
-        <br />
         <section class="git_profile_card">
           <h1 id="stats" class="stats">
             <i class="fa-brands fa-github"></i> GitHub stats
