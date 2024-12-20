@@ -90,6 +90,7 @@ svg path {
 
 .svg_image {
   width: 20%;
+  margin: 30px;
 }
 
 html {
@@ -254,8 +255,14 @@ form {
   align-items: center;
   align-content: center;
   padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: 20px;
   transition: all 0.5s ease-in-out;
+}
+
+.user_bio h3 {
+  margin: 30px;
 }
 
 .profile_blogs,
@@ -324,7 +331,7 @@ form {
 
 .handwrite {
   padding: 3%;
-  margin: 1%;
+  margin: 30px;
   border-radius: 15px;
   background-color: var(--color2);
   font-family: "WindSong", cursive;
