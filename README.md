@@ -1,6 +1,6 @@
 <div class="badges" align="center">
     <br><br>
-    <img src="https://avatars.githubusercontent.com/u/154594695?v=4">
+    <img src="imgs/light.png">
     <br><br><br>
     <a href="./LICENSE.md"><img class="badge" src="https://img.shields.io/github/license/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=a6e0b8&logoColor=ffffff&labelColor=1c1c29" style="border-radius: 5px;"/></a>
     <br><br>
@@ -28,6 +28,9 @@ npm start
 ```
 
 <div class="badges" align="center">
+    <br><br>
+    <img src="imgs/dark.png">
+    <img src="imgs/light.png">
     <br><br>
     <h3 align="center">Contact with me:</h3>
     <a href="https://t.me/Night3098" target="blank"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_telegram.png?raw=true" width="60px" /></a>
