@@ -9,8 +9,7 @@ const users_repos = [
     "https://api.github.com/repos/Nighty3098/IPSA_MODEL",
     "https://api.github.com/repos/Nighty3098/TechSupportBot",
     "https://api.github.com/repos/Nighty3098/TGSB",
-    "https://api.github.com/repos/Nighty3098/FinanceTrackerBot",
-    "https://api.github.com/repos/Nighty3098/Nighty3098.github.io",
+    "https://api.github.com/repos/Nighty3098/FinanceTrackerBot"
 ];
 
 const CACHE_KEY = 'USER_REPOS';
@@ -77,11 +76,16 @@ async function createRepoCards() {
 
     if (cachedData && cacheExpiry && currentTime < cacheExpiry) {
         const repos = JSON.parse(cachedData);
-        console.log("Data restored from cache");
-        repos.forEach(repoData => {
-            const card = createRepoCard(repoData);
-            reposContainer.appendChild(card);
-        });
+        console.log("Data restored from cache", repos);
+
+        if (Array.isArray(repos)) {
+            repos.forEach(repoData => {
+                const card = createRepoCard(repoData);
+                reposContainer.appendChild(card);
+            });
+        } else {
+            console.error("Cached data is not an array:", repos);
+        }
     } else {
         const fetchedRepos = [];
         for (const repoUrl of users_repos) {
@@ -93,7 +97,7 @@ async function createRepoCards() {
             }
         }
         localStorage.setItem(CACHE_KEY, JSON.stringify(fetchedRepos));
-        localStorage.setItem (CACHE_EXPIRY_KEY, currentTime + CACHE_DURATION);
+        localStorage.setItem(CACHE_EXPIRY_KEY, currentTime + CACHE_DURATION);
     }
 }
 

@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const scrollButton = document.getElementById('scrollButton');
+    if (scrollButton) {
+        scrollButton.addEventListener('click', function() {
+            const section = document.getElementById('user_bio');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.error("Element with id 'user_bio' not found.");
+            }
+        });
+    } else {
+        console.error("Element with id 'scrollButton' not found.");
+    }
+
     const animatedElements = document.querySelectorAll('.git_profile_card, .profile_card, .user_bio');
 
     const animateOnScroll = (entries, observer) => {

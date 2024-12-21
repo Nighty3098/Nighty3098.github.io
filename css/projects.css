@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap');
 
 * {
   outline: none;
   text-decoration: none;
+}
+
+.content {
+  width: 100%;
 }
 
 .badges_block {
@@ -41,28 +45,24 @@ a .button {
   text-align: center;
   background-color: var(--color1);
   color: var(--fg);
-  width: 100%;
+  width: 80%;
   padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 25px;
-  transition: transform 0.3s ease-in-out;
+  margin: 20px;
+  border-radius: 20px;
 }
 
 .project_card {
-  width: auto;
-  border-radius: 25px;
+  width: 100%;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Madimi One";
   align-items: center;
   align-content: center;
   text-align: center;
   transition: transform 0.3s ease-in-out;
-}
-
-.project_card_block:hover {
-  transform: scale(1.03);
+  line-height: 1.4;
 }
 
 .project_card_block a,
@@ -73,12 +73,13 @@ a .button {
 .project_card_block h3 {
   margin: 0%;
   color: var(--color2);
+  font-family: "Madimi One";
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .repos,
   .nc_repos {
-    width: 100%;
+    width: 90%;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -92,7 +93,5 @@ a .button {
     width: 100%;
     padding: 0px;
     margin: 0px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
   }
 }

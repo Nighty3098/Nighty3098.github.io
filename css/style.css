@@ -1,32 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Neonderthaw&family=Warnes&family=WindSong:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Rubik+Glitch&family=Tsukimi+Rounded&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap');
 
 :root {
-  --bg: #333c43;
-  --bg2: #333c43;
-  --fg2: #d3c6aa;
-  --fg: #d3c6aa;
-  --color1: #293136;
-  --color2: #3a94c5;
-  --color3: #434f55;
-  --red: #e67e80;
-  --green: #a7c080;
-  --yellow: #dbbc7f;
+  --bg: #2b303b;
+  --bg2: #2b303b;
+  --fg2: #eff1f5;
+  --fg: #eff1f5;
+  --color1: #252932;
+  --color2: #8fa1b3;
+  --color3: #65737e;
+  --red: #bf616a;
+  --green: #a3be8c;
+  --yellow: #ebcb8b;
 }
 
 :root.light {
-  --bg: #f3ead3;
-  --bg2: #f3ead3;
-  --fg2: #5c6a72;
-  --fg: #5c6a72;
-  --color1: #e5dfc5;
-  --color2: #a7c080;
-  --color3: #e5dfc5;
-  --red: #f85552;
-  --green: #8da101;
-  --yellow: #dfa000;
+  --bg: #c0c5ce;
+  --bg2: #c0c5ce;
+  --fg2: #65737e;
+  --fg: #65737e;
+  --color1: #96b5b4;
+  --color2: #2b303b;
+  --color3: #b48ead;
+  --red: #bf616a;
+  --green: #a3be8c;
+  --yellow: #ebcb8b;
 }
+
+/*
+WindSong
+Playwrite HR Lijeva
+Madimi One
+*/
 
 .modal {
   display: none;
@@ -69,14 +73,14 @@
 }
 
 h1 {
-  font-family: "Nova Mono", system-ui;
+  font-family: "Playwrite HR Lijeva", system-ui;
   font-optical-sizing: auto;
   font-size: 35px;
   color: var(--color2);
 }
 
 h3 {
-  font-family: "Tsukimi Rounded", system-ui;
+  font-family: "Playwrite HR Lijeva", system-ui;
   padding: 0%;
   margin: 5px;
   font-size: medium;
@@ -103,7 +107,7 @@ html {
   background-attachment: scroll;
   scrollbar-color: var(--color1) transparent;
   scrollbar-arrow-color: transparent transparent;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Madimi One", monospace;
   font-weight: 400;
   display: flex;
   justify-content: center;
@@ -122,6 +126,20 @@ body {
   align-items: center;
   align-content: center;
   flex-direction: column;
+}
+
+.scrollButton {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: var(--color2);
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-30%);
 }
 
 .mac_header {
@@ -283,6 +301,7 @@ input {
   align-items: center;
   align-content: center;
   margin: 20px;
+  opacity: 1;
   transition: all 0.5s ease-in-out;
 }
 
@@ -327,7 +346,7 @@ input {
 }
 
 .profile_stats h3 {
-  font-family: "Tsukimi Rounded", sans-serif;
+  font-family: "Playwrite HR Lijeva", sans-serif;
   line-height: 2;
   font-size: x-larger;
 }
@@ -343,13 +362,13 @@ input {
   line-height: 2;
   font-size: medium;
   color: var(--color2);
-  font-family: "Tsukimi Rounded", sans-serif;
+  font-family: "Madimi One", sans-serif;
   text-decoration: none;
 }
 
 .user_bio h3 {
   line-height: 2;
-  font-family: "Tsukimi Rounded", sans-serif;
+  font-family: "Madimi One", sans-serif;
   font-size: medium;
   text-decoration: none;
 }
@@ -368,7 +387,7 @@ input {
 .text-box {
   width: 70%;
   padding: 15px;
-  font-family: "Tsukimi Rounded", sans-serif;
+  font-family: "Madimi One", sans-serif;
   font-size: medium;
   background-color: var(--color2);
   color: var(--bg);
@@ -432,7 +451,7 @@ a .text-box .i {
 }
 
 .contact_button {
-  font-family: "Tsukimi Rounded";
+  font-family: "Madimi One";
   font-size: medium;
   background-color: var(--color2);
   border-radius: 20px;
@@ -482,7 +501,7 @@ a .text-box .i {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0px;
   width: 100%;
   padding: 0px;
@@ -493,10 +512,10 @@ a .text-box .i {
 }
 
 .button {
-  font-family: "Tsukimi Rounded";
+  font-family: "Madimi One";
   font-size: medium;
   background-color: var(--color2);
-  border-radius: 5px;
+  border-radius: 10px;
   height: 40px;
   padding: 10px;
   border: none;
@@ -512,6 +531,7 @@ a .text-box .i {
     box-shadow 0.3s ease-in-out,
     background-color 0.5s ease-in-out;
   outline: none;
+  text-decoration: none;
 }
 
 .button:hover {
@@ -523,7 +543,7 @@ a .text-box .i {
   margin-right: 10px;
 }
 
-.theme-toggle {
+.theme-toggle, .back_button {
   position: fixed;
   width: 60px;
   aspect-ratio: 1/1;
@@ -537,18 +557,26 @@ a .text-box .i {
   border: none;
   box-shadow: none;
   background-color: var(--color2);
+  color: var(--bg);
   transition: all 1s;
 }
 
-.theme-toggle i {
+.theme-toggle, .back_button i {
+  color: var(--bg);
   margin: 0px;
   padding: 0px;
+  font-size: 20px;
 }
 
-.theme-toggle:hover {
+.theme-toggle, .back_button:hover {
   box-shadow: 0px 0px 0px 0px var(--color2);
   background-color: var(--color2);
 }
+
+.back_button {
+  bottom: 100px;
+}
+
 
 .sub_block {
   display: grid;
@@ -566,6 +594,32 @@ a .text-box .i {
   border: none;
 }
 
+.left_text {
+  width: 75%;
+  text-align: left;
+  align-items: left;
+  align-content: left;
+  justify-content: left;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  font-family: "Madimi One", monospace;
+  font-size: medium;
+  line-height: 2;
+  padding-left: 10px;
+  border-left: 5px solid var(--color2);
+  border-radius: 10px;
+}
+
+.username {
+  align-items: center;
+  text-align: center;
+  font-size: 120px;
+  font-family: "Playwrite HR Lijeva";
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (min-width :1500px) {
   .content {
     width: 50%;
@@ -576,6 +630,15 @@ a .text-box .i {
   }
   .skill_badge {
     width: 80%;
+  }
+
+  .svg_image {
+    width: 15%;
+    margin: 30px;
+  }
+
+  .username {
+    font-size: 90px;
   }
 }
 
@@ -590,6 +653,10 @@ a .text-box .i {
 
   .sub_links_block {
     flex-direction: column;
+  }
+
+  .username {
+    font-size: 70px;
   }
 }
 
@@ -625,5 +692,13 @@ a .text-box .i {
   .skill_badge {
     width: 90%;
     margin: 10px;
+  }
+
+  .left_text {
+    width: 90%;
+  }
+
+  .username {
+    font-size: 50px;
   }
 }
