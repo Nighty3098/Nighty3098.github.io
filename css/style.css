@@ -8,7 +8,7 @@
   --fg2: #d3c6aa;
   --fg: #d3c6aa;
   --color1: #293136;
-  --color2: #a7c080;
+  --color2: #3a94c5;
   --color3: #434f55;
   --red: #e67e80;
   --green: #a7c080;
@@ -21,7 +21,7 @@
   --fg2: #5c6a72;
   --fg: #5c6a72;
   --color1: #e5dfc5;
-  --color2: #3a94c5;
+  --color2: #a7c080;
   --color3: #e5dfc5;
   --red: #f85552;
   --green: #8da101;
@@ -318,7 +318,7 @@ form {
   line-height: 2;
   font-size: medium;
   color: var(--color2);
-  font-family: "JetBrains", sans-serif;
+  font-family: "Tsukimi Rounded", sans-serif;
   text-decoration: none;
 }
 
