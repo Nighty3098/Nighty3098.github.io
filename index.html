@@ -1,364 +1,347 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width; initial-scale=0.9; maximum-scale=0.9; minimum-scale=0.9;"
-    />
-    <title>Nighty</title>
-    <link href="css/blog.css" rel="stylesheet" />
-    <link href="css/projects.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/animations.css" rel="stylesheet" />
-    <script src="js/script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/a01328b26e.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/create_articles_card.js"></script>
-    <script src="js/get_git_info.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/user_skills.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="imgs/icon.svg" />
-  </head>
-  <body>
-    <button class="theme-toggle" id="theme-toggle">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <br>
-        <div class="client_username_request"
-          style="display: flex; justify-content: center; flex-direction: column; align-items: center; align-content: center;">
-          <h1>Enter your nickname</h1>
-          <input type="text" id="inputData" placeholder="Player name..." />
-          <br>
-          <button class="button submitButton" id="submitButton">Play</button>
-        </div>
-        <div class="client_data">
-          <h1>Hello from FBI</h1>
-          <br />
-          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f923/512.gif" alt="🤣" class="fbi_badge">
-          <br />
-          <h3 id="ip"></h3>
-          <h3 id="city"></h3>
-          <h3 id="org_client"></h3>
-          <h3 id="country"></h3>
-          <h3 id="device"></h3>
-          <h3 id="lang"></h3>
-          <h3 id="platform"></h3>
-          <h3 id="coordinates"></h3>
-          <h3 id="browser"></h3>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="profile_info">
-        <section id="profile_card" class="profile_card">
-          <div class="mac_header">
-            <div class="dot red"></div>
-            <div class="dot yellow"></div>
-            <div class="dot green"></div>
-          </div>
-          <h1 id="username" class="username">
-            <i class="fa-solid fa-user"></i> Nighty3098
-          </h1>
-          <img
-            src="https://avatars.githubusercontent.com/u/154594695?v=4"
-            class="user_avatar"
-          />
-          <h3 class="text-box"><i class="fa-solid fa-user"></i> Backend developer | Freelancer | Student</h3>
-          <h3 class="text-box">
-            <i class="fa-solid fa-location-dot"></i> Novosibirsk, Russia
-          </h3>
-        </section>
-        <section class="profile_card">
-          <a href="https://github.com/Nighty3098?tab=repositories">
-            <h3 class="text-box">
-              <i class="fa-solid fa-compass-drafting"></i> MY PROJECTS
-            </h3>
-          </a>
-          <h3 class="text-box" type="button" onclick="overlayBlog.showModal()">
-            <i class="fa-regular fa-newspaper"></i> MY BLOG
-          </h3>
-          <h3
-            class="text-box"
-            type="button"
-            onclick="overlayTechStack.showModal()"
-          >
-            <i class="fa-solid fa-compass-drafting"></i> MY SKILLS
-          </h3>
-          <dialog id="overlayProjects">
-            <section id="profile_repos" class="profile_repos">
-              <form method="dialog">
-                <button class="button" type="submit">
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </form>
-              <h1 class="main_header">
-                <i class="fa-solid fa-fire"></i> Projects
-              </h1>
-              <div id="repos" class="repos"></div>
-              <script src="js/create_project_cards.js"></script>
-            </section>
-          </dialog>
-          <dialog id="overlayBlog">
-            <section id="blog" class="profile_blogs">
-              <form method="dialog">
-                <button class="button" type="submit">
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </form>
-              <h1 class="main_header"><i class="fa-solid fa-cube"></i> Blog</h1>
-              <a href="https://dev.to/nighty3098">
-                <button>
-                  <i class="fa-solid fa-arrow-right"></i> My Blog on DEV.to
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </a>
-            </section>
-          </dialog>
-          <dialog id="overlayTechStack">
-            <section id="my_skills" class="my_skills">
-              <form method="dialog">
-                <button class="button" type="submit">
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </form>
-              <h1><i class="fa-solid fa-mug-hot"></i> Tech stack</h1>
-              <div class="badges_block">
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_docker.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_qt.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_api.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_git.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_sql.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_postman.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cpp.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_c.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cs.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_css.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_python.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_linux.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_vscode.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-                <img
-                  src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_nvim.png?raw=true"
-                  class="skill_badge"
-                  loading="lazy"
-                />
-              </div>
-            </section>
-          </dialog>
-        </section>
-        <section class="profile_card">
-          <h1><i class="fa-solid fa-comment"></i> Contact with me</h1>
-          <div class="contacts_badge_block">
-            <a href="https://t.me/Night3098" , target="_blank" ,>
-              <h3 class="contact_button">
-                <i class="fa-brands fa-telegram"></i>Telegram
-              </h3>
-            </a>
-            <a href="https://discord.gg/#9707" , target="_blank" ,>
-              <h3 class="contact_button">
-                <i class="fa-brands fa-discord"></i>Discord
-              </h3>
-            </a>
-            <a
-              href="https://www.reddit.com/user/DEVELOPER0x31/"
-              ,
-              target="_blank"
-              ,
-            >
-              <h3 class="contact_button">
-                <i class="fa-brands fa-reddit"></i>Reddit
-              </h3>
-            </a>
-            <a
-              href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK"
-              ,
-              ,
-              target="_blank"
-            >
-              <h3 class="contact_button">
-                <i class="fa-brands fa-signal-messenger"></i>Signal
-              </h3>
-            </a>
-            <a href="https://dev.to/nighty3098" target="_blank">
-              <h3 class="contact_button">
-                <i class="fa-brands fa-dev"></i>Dev.to
-              </h3>
-            </a>
-          </div>
-        </section>
-      </div>
-      <div class="block">
-        <section id="user_bio" class="user_bio">
-          <h1 id="bio" class="bio">
-            <i class="fa-solid fa-compass-drafting"></i> About Me
-          </h1>
-          <div class="bio_info">
-            <svg
-              class="svg_image"
-              viewBox="0 0 32.622986 58.785004"
-              version="1.1"
-              style="
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                stroke-miterlimit: 1.5;
-              "
-              id="svg9"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:svg="http://www.w3.org/2000/svg"
-            >
-              <defs id="defs9" />
-              <path
-                d="m 20.177993,42.407 c 0,-3.891 -3.336,-4.466 -3.336,-14.894"
-                style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
-                id="path1"
-                class="icon-path"
-              />
-              <path
-                d="m 23.765993,32.334 v 9.997"
-                style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
-                id="path2"
-                class="icon-path"
-              />
-              <path
-                d="m 27.251993,42.162 c 0,-3.435 2.17,-7.598 2.17,-13.068 0,-5.471 -0.66,-10.289 -0.837,-13.274"
-                style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
-                id="path3"
-                class="icon-path"
-              />
-              <path
-                d="m 27.319993,16.251 c 0,0 3.384,-0.265 4.553,-5.546"
-                style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
-                id="path4"
-                class="icon-path"
-              />
-              <path
-                d="m 22.156993,5.8529996 c 0,0 -1.419,-4.409 -2.619,-4.409 -1.2,0 -3.299,5.753 -3.299,14.4280004 0,2.241 -11.6889999,8.123 -9.2109999,21.709 0.398,2.18 1.394,6.337 1.394,6.353 0,0.016 2.5179999,9.529 -2.869,9.529 -1.121,0 -1.658,-0.62 -2.779,-0.62 -1.12,0 -2.02399996,0.765 -2.02399996,1.758 0,0.993 1.10999996,3.434 5.06499996,3.434 7.1469999,0 7.4189999,-5.987 7.4189999,-9.867 0,-3.88 -0.036,-2.679 -0.036,-3.314 0,-2.127 1.772,-2.56 2.43,-2.801"
-                style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
-                id="path5"
-                class="icon-path"
-              />
-              <ellipse
-                transform="matrix(0.92765078,-0.37344882,0.37345044,0.92765013,0,0)"
-                cx="20.477234"
-                cy="17.924828"
-                rx="1.1177608"
-                ry="1.4385843"
-                style="fill: #ca9ee6; fill-opacity: 1; stroke-width: 1.03697"
-                id="ellipse5"
-                class="icon-path"
-              />
-              <path
-                d="m 24.442993,4.3569996 c 3.543,0 4.374,4.288 7.066,4.288"
-                style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
-                id="path6"
-                class="icon-path"
-              />
-              <path
-                d="m 26.936993,3.0839996 c 0,0 -1.015,-2.33399998 -1.891,-2.33399998 -0.876,0 -2.14,2.42899998 -2.14,2.42899998"
-                style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
-                id="path7"
-                class="icon-path"
-              />
-            </svg>
-            <h1 class="handwrite">Nighty3098</h1>
-            <h3>
-              <i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
-              developer and freelancer, I'm 17 years old and I'm studying in the
-              11th grade of school.<br />I've been developing for the last 4
-              years.
-            </h3>
-            <h3 class="text-box" id="skills_categories">
-              
-            </h3>
-            <h3 class="text-box" id="top-languages"></h3>
-          </div>
-        </section>
-        <section class="git_profile_card">
-          <h1 id="stats" class="stats">
-            <i class="fa-brands fa-github"></i> GitHub stats
-          </h1>
-          <h3 id="git_name"></h3>
-          <h3 id="git_company"></h3>
-          <h3 id="git_followers"></h3>
-          <h3 id="git_stars"></h3>
-          <h3 id="git_repos"></h3>
-        </section>
-        <br />
-      </div>
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta property="og:title" content="Nighty3098's Portfolio">
+		<meta property="og:description" content="My Portfolio">
+		<meta name="viewport" content="width=device-width; initial-scale=0.9; maximum-scale=0.9; minimum-scale=0.9;" />
+		<title>Nighty</title>
+		<link href="css/blog.css" rel="stylesheet" />
+		<link href="css/projects.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<script src="js/script.js"></script>
+		<script src="https://kit.fontawesome.com/a01328b26e.js" crossorigin="anonymous" ></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/easter_egg.js"></script>
+		<script src="js/create_articles_card.js"></script>
+		<script src="js/get_git_info.js"></script>
+		<script src="js/theme.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+			integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+			crossorigin="anonymous"
+			/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+			/>
+		<link rel="shortcut icon" href="imgs/icon.svg" />
+	</head>
+	<body>
+		<button class="theme-toggle animate__animated animate__backInLeft" id="theme-toggle">
+		<i class="fa-solid fa-moon"></i>
+		</button>
+		<div id="modal" class="modal">
+			<div class="modal-content">
+				<span class="submit_btn close">&times;</span>
+				<br>
+				<div class="client_username_request"
+					style="display: flex; justify-content: center; flex-direction: column; align-items: center; align-content: center;">
+					<h1>Enter your nickname</h1>
+					<input type="text" id="inputData" placeholder="Player name..." />
+					<br>
+					<button class="button submitButton" id="submitButton">Play</button>
+				</div>
+				<div class="client_data">
+					<h1>Hello :)</h1>
+					<br />
+					<h3 id="ip"></h3>
+					<h3 id="city"></h3>
+					<h3 id="org_client"></h3>
+					<h3 id="country"></h3>
+					<h3 id="device"></h3>
+					<h3 id="lang"></h3>
+					<h3 id="platform"></h3>
+					<h3 id="coordinates"></h3>
+					<h3 id="browser"></h3>
+				</div>
+			</div>
+		</div>
+		<dialog id="overlayProjects">
+			<section id="profile_repos" class="profile_repos">
+				<form method="dialog">
+					<button class="submit_btn" type="submit">
+						<div class="dot red"></div>
+					</button>
+				</form>
+				<h1 class="main_header">
+					<i class="fa-solid fa-fire"></i> Projects
+				</h1>
+				<div id="repos" class="repos"></div>
+				<script src="js/create_project_cards.js"></script>
+			</section>
+		</dialog>
+		<dialog id="overlayBlog">
+			<section id="blog" class="profile_blogs">
+				<form method="dialog">
+					<button class="submit_btn" type="submit">
+						<div class="dot red"></div>
+					</button>
+				</form>
+				<h1 class="main_header"><i class="fa-solid fa-cube"></i> Blog</h1>
+				<a href="https://dev.to/nighty3098">
+				<button class="button">
+				<i class="fa-solid fa-arrow-right"></i> My Blog on DEV.to
+				<i class="fa-solid fa-arrow-left"></i>
+				</button>
+				</a>
+			</section>
+		</dialog>
+		<dialog id="overlayTechStack">
+			<section id="my_skills" class="my_skills">
+				<form method="dialog">
+					<button class="submit_btn" type="submit">
+						<div class="dot red"></div>
+					</button>
+				</form>
+				<h1><i class="fa-solid fa-mug-hot"></i> Tech stack</h1>
+				<div class="badges_block">
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_docker.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_qt.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_api.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_git.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_sql.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_postman.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cpp.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_c.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cs.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_css.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_python.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_linux.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_vscode.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+					<img
+						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_nvim.png?raw=true"
+						class="skill_badge"
+						loading="lazy"
+						/>
+				</div>
+			</section>
+		</dialog>
+		</div>
+		<div class="content">
+		<div class="profile_info">
+		<section id="profile_card" class="welcome_card animate__animated animate__wobble">
+			<h1 id="username" class="username">
+				<i class="fa-solid fa-heart"></i> Hi, I'm Nighty3098
+			</h1>
+			<img
+				src="https://avatars.githubusercontent.com/u/154594695?v=4"
+				class="user_avatar"
+				/>
+			<h3 class="text-box"><i class="fa-solid fa-user"></i> Freelancer | Developer | Student</h3>
+			<h3 class="text-box">
+				<i class="fa-solid fa-location-dot"></i> Novosibirsk, Russia
+			</h3>
+		</section>
+		<section id="user_bio" class="user_bio" data-animation="animate__headShake">
+			<h1 id="bio" class="bio">
+				<i class="fa-solid fa-compass-drafting"></i> About Me
+			</h1>
+			<div class="bio_info">
+				<svg
+					class="svg_image"
+					viewBox="0 0 32.622986 58.785004"
+					version="1.1"
+					style="
+					stroke-linecap: round;
+					stroke-linejoin: round;
+					stroke-miterlimit: 1.5;
+					"
+					id="svg9"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					>
+					<defs id="defs9" />
+					<path
+						d="m 20.177993,42.407 c 0,-3.891 -3.336,-4.466 -3.336,-14.894"
+						style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
+						id="path1"
+						class="icon-path"
+						/>
+					<path
+						d="m 23.765993,32.334 v 9.997"
+						style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
+						id="path2"
+						class="icon-path"
+						/>
+					<path
+						d="m 27.251993,42.162 c 0,-3.435 2.17,-7.598 2.17,-13.068 0,-5.471 -0.66,-10.289 -0.837,-13.274"
+						style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
+						id="path3"
+						class="icon-path"
+						/>
+					<path
+						d="m 27.319993,16.251 c 0,0 3.384,-0.265 4.553,-5.546"
+						style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
+						id="path4"
+						class="icon-path"
+						/>
+					<path
+						d="m 22.156993,5.8529996 c 0,0 -1.419,-4.409 -2.619,-4.409 -1.2,0 -3.299,5.753 -3.299,14.4280004 0,2.241 -11.6889999,8.123 -9.2109999,21.709 0.398,2.18 1.394,6.337 1.394,6.353 0,0.016 2.5179999,9.529 -2.869,9.529 -1.121,0 -1.658,-0.62 -2.779,-0.62 -1.12,0 -2.02399996,0.765 -2.02399996,1.758 0,0.993 1.10999996,3.434 5.06499996,3.434 7.1469999,0 7.4189999,-5.987 7.4189999,-9.867 0,-3.88 -0.036,-2.679 -0.036,-3.314 0,-2.127 1.772,-2.56 2.43,-2.801"
+						style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
+						id="path5"
+						class="icon-path"
+						/>
+					<ellipse
+						transform="matrix(0.92765078,-0.37344882,0.37345044,0.92765013,0,0)"
+						cx="20.477234"
+						cy="17.924828"
+						rx="1.1177608"
+						ry="1.4385843"
+						style="fill: #ca9ee6; fill-opacity: 1; stroke-width: 1.03697"
+						id="ellipse5"
+						class="icon-path"
+						/>
+					<path
+						d="m 24.442993,4.3569996 c 3.543,0 4.374,4.288 7.066,4.288"
+						style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
+						id="path6"
+						class="icon-path"
+						/>
+					<path
+						d="m 26.936993,3.0839996 c 0,0 -1.015,-2.33399998 -1.891,-2.33399998 -0.876,0 -2.14,2.42899998 -2.14,2.42899998"
+						style="fill: none; stroke-width: 1.5px; stroke-opacity: 1"
+						id="path7"
+						class="icon-path"
+						/>
+				</svg>
+				<h1 class="handwrite">Nighty3098</h1>
+				<h3>
+					<i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
+					developer and freelancer, I'm 17 years old and I'm studying in the
+					11th grade of school.<br />I've been developing for the last 4
+					years.
+				</h3>
+				<h3 class="text-box" id="skills_categories">frontend | backend | tg bots | deep learning | desktop apps</h3>
+				<h3 class="text-box" id="top-languages"></h3>
+			</div>
+		</section>
+		<div class="spacer"></div>
+		<div class="sub_links_block">
+			<section class="profile_card" data-animation="animate__fadeInUp">
+				<h1><i class="fa-solid fa-mug-hot"></i> Links</h1>
+				<div class="links_badge_block">
+					<h3 class="link_badge text-box" type="button" onclick="overlayProjects.showModal()">
+						<i class="fa-solid fa-compass-drafting"></i> PROJECTS
+					</h3>
+					<h3 class="link_badge text-box" type="button" onclick="overlayBlog.showModal()">
+						<i class="fa-regular fa-newspaper"></i> BLOG
+					</h3>
+					<h3 class="link_badge text-box" type="button" onclick="overlayTechStack.showModal()">
+						<i class="fa-solid fa-compass-drafting"></i> SKILLS
+					</h3>
+			</section>
+			<section class="profile_card" data-animation="animate__fadeInUp">
+			<h1><i class="fa-solid fa-comment"></i> Contacts</h1>
+			<div class="contacts_badge_block">
+			<a href="https://t.me/Night3098" , target="_blank" ,>
+			<h3 class="contact_button">
+			<i class="fa-brands fa-telegram"></i>
+			</h3>
+			</a>
+			<a href="https://discord.gg/#9707" , target="_blank" ,>
+			<h3 class="contact_button">
+			<i class="fa-brands fa-discord"></i>
+			</h3>
+			</a>
+			<a
+				href="https://www.reddit.com/user/DEVELOPER0x31/"
+				,
+				target="_blank"
+				,
+				>
+			<h3 class="contact_button">
+			<i class="fa-brands fa-reddit"></i>
+			</h3>
+			</a>
+			<a
+				href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK"
+				,
+				,
+				target="_blank"
+				>
+			<h3 class="contact_button">
+			<i class="fa-brands fa-signal-messenger"></i>
+			</h3>
+			</a>
+			</div>
+			</section>
+			</div>
+			<div class="spacer"></div>
+			<section class="git_profile_card" data-animation="animate__backInLeft">
+				<h1 id="stats" class="stats">
+					<i class="fa-brands fa-github"></i> GitHub stats
+				</h1>
+				<h3 id="git_name"></h3>
+				<h3 id="git_company"></h3>
+				<h3 id="git_followers"></h3>
+				<h3 id="git_stars"></h3>
+				<h3 id="git_repos"></h3>
+			</section>
+			<div class="spacer"></div>
+		</div>
+	</body>
 </html>

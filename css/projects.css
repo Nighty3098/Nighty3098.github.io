@@ -41,10 +41,10 @@ a .button {
   text-align: center;
   background-color: var(--color1);
   color: var(--fg);
-  width: auto;
-  margin: 20px;
+  width: 100%;
   padding: 20px;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 25px;
   transition: transform 0.3s ease-in-out;
 }
@@ -67,34 +67,24 @@ a .button {
 
 .project_card_block a,
 .project_card a {
-  width: 60%;
+  width: 100%;
 }
 
 .project_card_block h3 {
-  margin: 3%;
+  margin: 0%;
   color: var(--color2);
 }
 
-.profile_blogs a {
-  width: 40%;
-  margin: 1%;
-  padding: 0px;
-}
-
 @media screen and (max-width: 800px) {
-  .tabs {
+  .repos,
+  .nc_repos {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
     display: flex;
-    cursor: pointer;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     align-content: center;
-  }
-
-  .repos,
-  .nc_repos {
-    display: grid;
-    grid-template-columns: auto;
     justify-content: center;
   }
 

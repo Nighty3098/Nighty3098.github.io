@@ -44,6 +44,9 @@
 }
 
 .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--bg);
   color: var(--fg);
   border-radius: 20px;
@@ -102,6 +105,9 @@ html {
   scrollbar-arrow-color: transparent transparent;
   font-family: "JetBrains Mono", monospace;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   font-style: normal;
   scroll-behavior: smooth;
   margin: 1%;
@@ -111,6 +117,11 @@ html {
 body {
   margin: 0px;
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 .mac_header {
@@ -142,6 +153,7 @@ body {
 
 .red {
   background-color: var(--red);
+  transition: all 0.2s;
 }
 
 .yellow {
@@ -150,6 +162,10 @@ body {
 
 .green {
   background-color: var(--green);
+}
+
+.red:hover {
+  opacity: 0.7;
 }
 
 .output {
@@ -173,7 +189,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
 }
 
@@ -217,13 +233,13 @@ form {
   width: 100%;
 }
 
-.contacts_badge_block {
-  width: 100%;
-  padding: 0%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+input {
+  height: 40px;
+  width: 50%;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--color2);
+  color: var(--fg);
 }
 
 .skill_badge {
@@ -233,11 +249,23 @@ form {
   transition: transform 0.3s ease-in-out;
 }
 
-.skill_badge:hover {
-  transform: scale(1.2);
+.submitButton {
+  width: 50%;
+  height: 25px;
+  padding: 0px;
+  margin: 0px;
+  color: var(--fg);
+}
+
+.client_data {
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile_card,
+.welcome_card,
+.profile_card_2,
 .profile_stats,
 .profile_repos,
 .user_bio,
@@ -245,7 +273,7 @@ form {
 .my_contacts,
 .my_skills,
 .profile_blogs {
-  background-color: var(--color1);
+  background-color: transparent;
   border-radius: 30px;
   color: var(--color2);
   font-size: x-large;
@@ -254,9 +282,6 @@ form {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
   margin: 20px;
   transition: all 0.5s ease-in-out;
 }
@@ -333,17 +358,17 @@ form {
   padding: 3%;
   margin: 30px;
   border-radius: 15px;
-  background-color: var(--color2);
+  background-color: transparent;
   font-family: "WindSong", cursive;
   font-optical-sizing: auto;
   font-size: xx-large;
-  color: var(--bg);
+  color: var(--color2);
 }
 
 .text-box {
   width: 70%;
   padding: 15px;
-  font-family: "Nova Mono", monospace;
+  font-family: "Tsukimi Rounded", sans-serif;
   font-size: medium;
   background-color: var(--color2);
   color: var(--bg);
@@ -366,39 +391,53 @@ a .text-box .i {
   flex-direction: column;
   margin: 0px;
   padding: 0px;
+  height: 100%;
+}
+
+.welcome_card {
+  height: 100vh;
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  grid-gap: 0%;
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  width: 50%;
   padding: 0px;
 }
 
 .user_avatar {
-  width: 50%;
+  width: 25%;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  margin: 3%;
-  border: 7px solid var(--color2);
-  transition:
-    box-shadow 0.6s ease-in-out,
-    border 0.6s ease-in-out;
+  margin: 5%;
+  z-index: -1000;
 }
 
-.user_avatar:hover {
-  box-shadow: 0px 0px 10px 10px var(--color2);
-  border: 7px solid var(--color2);
+.contacts_badge_block {
+  width: 60%;
+  padding: 0%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 100px 100px;
+}
+
+.links_badge_block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact_button {
   font-family: "Tsukimi Rounded";
   font-size: medium;
   background-color: var(--color2);
-  border-radius: 10px;
-  width: 50%;
-  height: auto;
+  border-radius: 20px;
+  width: 70px;
+  aspect-ratio: 1/1;
   padding: 10px;
   border: none;
   display: flex;
@@ -425,7 +464,32 @@ a .text-box .i {
 }
 
 .contact_button i {
-  margin-right: 10px;
+  font-size: 50px;
+}
+
+.submit_btn {
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  width: 100%;
+  text-align: left;
+  align-content: left;
+  color: var(--red);
+  cursor:pointer;
+}
+
+.sub_links_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+}
+
+.link_badge {
+  width: 200px;
 }
 
 .button {
@@ -433,6 +497,7 @@ a .text-box .i {
   font-size: medium;
   background-color: var(--color2);
   border-radius: 5px;
+  height: 40px;
   padding: 10px;
   border: none;
   display: flex;
@@ -495,17 +560,48 @@ a .text-box .i {
   justify-content: center;
 }
 
+.spacer {
+  height: 150px;
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (min-width :1500px) {
+  .content {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .user_avatar {
+    width: 20%;
+  }
+  .skill_badge {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .content {
-    display: grid;
-    grid-template-columns: 75%;
-    grid-gap: 0%;
-    align-items: baseline;
-    justify-content: center;
+    width: 60%;
+    margin: 0px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 0px;
+  }
+
+  .sub_links_block {
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 850px) {
+  .sub_links_block {
+    flex-direction: column;
+  }
+
+  .link_badge {
+    width: 200px;
+  }
+
   .tabs {
     display: flex;
     cursor: pointer;
@@ -516,27 +612,18 @@ a .text-box .i {
   }
 
   .content {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-gap: 0%;
-    align-items: center;
     justify-content: center;
+    width: 100%;
     margin: 0px;
   }
 
   .user_avatar {
-    width: 80%;
+    width: 50%;
     border-radius: 50%;
-    margin: 10%;
   }
 
   .skill_badge {
     width: 90%;
     margin: 10px;
-  }
-
-  .button,
-  .contact_button {
-    height: 45px;
   }
 }

@@ -25,7 +25,7 @@
   aspect-ratio: none;
 }
 
-.header .button {
+.header {
   width: 100%;
   margin: 10px 20px 10px 20px;
   padding: 0%;
@@ -124,7 +124,8 @@ h3 {
   align-content: center;
   text-align: center;
   transition: transform 0.3s ease-in-out;
-  margin: 1%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 3%;
   cursor: pointer;
   font-size: medium;
@@ -146,68 +147,15 @@ h3 {
   margin: 3%;
 }
 
-.button {
-  font-family: "Playpen Sans", cursive;
-  font-size: medium;
-  background-color: var(--color2);
-  border-radius: 10px;
-  width: 100%;
-  padding: 3%;
-  height: auto;
-  border: none;
-  aspect-ratio: 2/0.2;
-  color: var(--color1);
-  cursor: pointer;
-  transition:
-    transform 0.5s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-}
-
-.button:active {
-  transform: scale(0.95);
-}
-
-.button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: vaR(--color2);
-}
-
 .profile_blogs a {
   width: 60%;
   margin: 1%;
   padding: 0px;
 }
 
-.profile_blogs button {
-  font-family: "Playpen Sans", cursive;
-  font-size: medium;
-  background-color: var(--color2);
-  border-radius: 10px;
-  width: 100%;
-  padding: 3%;
-  height: auto;
-  margin: 0%;
-  border: none;
-  color: var(--color1);
-  cursor: pointer;
-  transition:
-    transform 0.5s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-}
-
-.profile_blogs button:active {
-  transform: scale(0.95);
-}
-
-.profile_blogs button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: vaR(--color2);
-}
 
 @media screen and (max-width: 800px) {
-  .header .button {
+  .header {
     margin: 0px;
     width: 100%;
   }
