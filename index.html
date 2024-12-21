@@ -29,21 +29,17 @@
 		<link rel="shortcut icon" href="imgs/icon.svg" />
 	</head>
 	<body>
-		<button class="theme-toggle animate__animated animate__backInLeft" id="theme-toggle">
-		<i class="fa-solid fa-moon"></i>
-		</button>
 		<div id="modal" class="modal">
 			<div class="modal-content">
 				<span class="submit_btn close">&times;</span>
 				<br>
-				<div class="client_username_request"
-					style="display: flex; justify-content: center; flex-direction: column; align-items: center; align-content: center;">
+				<div class="client_username_request" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
 					<h1>Enter your nickname</h1>
 					<input type="text" id="inputData" placeholder="Player name..." />
 					<br>
 					<button class="button submitButton" id="submitButton">Play</button>
 				</div>
-				<div class="client_data">
+				<div class="client_data" style="display: none;">
 					<h1>Hello :)</h1>
 					<br />
 					<h3 id="ip"></h3>
@@ -58,134 +54,15 @@
 				</div>
 			</div>
 		</div>
-		<dialog id="overlayProjects">
-			<section id="profile_repos" class="profile_repos">
-				<form method="dialog">
-					<button class="submit_btn" type="submit">
-						<div class="dot red"></div>
-					</button>
-				</form>
-				<h1 class="main_header">
-					<i class="fa-solid fa-fire"></i> Projects
-				</h1>
-				<div id="repos" class="repos"></div>
-				<script src="js/create_project_cards.js"></script>
-			</section>
-		</dialog>
-		<dialog id="overlayBlog">
-			<section id="blog" class="profile_blogs">
-				<form method="dialog">
-					<button class="submit_btn" type="submit">
-						<div class="dot red"></div>
-					</button>
-				</form>
-				<h1 class="main_header"><i class="fa-solid fa-cube"></i> Blog</h1>
-				<a href="https://dev.to/nighty3098">
-				<button class="button">
-				<i class="fa-solid fa-arrow-right"></i> My Blog on DEV.to
-				<i class="fa-solid fa-arrow-left"></i>
-				</button>
-				</a>
-			</section>
-		</dialog>
-		<dialog id="overlayTechStack">
-			<section id="my_skills" class="my_skills">
-				<form method="dialog">
-					<button class="submit_btn" type="submit">
-						<div class="dot red"></div>
-					</button>
-				</form>
-				<h1><i class="fa-solid fa-mug-hot"></i> Tech stack</h1>
-				<div class="badges_block">
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_docker.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_qt.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_api.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_git.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_sql.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_postman.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cpp.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_c.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_cs.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_css.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_html.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_javascript.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_python.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_linux.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_vscode.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-					<img
-						src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_nvim.png?raw=true"
-						class="skill_badge"
-						loading="lazy"
-						/>
-				</div>
-			</section>
-		</dialog>
+		<button class="theme-toggle animate__animated animate__backInLeft" id="theme-toggle">
+		<i class="fa-solid fa-moon"></i>
+		</button>
 		</div>
 		<div class="content">
 		<div class="profile_info">
 		<section id="profile_card" class="welcome_card animate__animated animate__wobble">
 			<h1 id="username" class="username">
-				<i class="fa-solid fa-heart"></i> Hi, I'm Nighty3098
+				Nighty3098
 			</h1>
 			<img
 				src="https://avatars.githubusercontent.com/u/154594695?v=4"
@@ -195,6 +72,7 @@
 			<h3 class="text-box">
 				<i class="fa-solid fa-location-dot"></i> Novosibirsk, Russia
 			</h3>
+			<button class="scrollButton" id="scrollButton"><i class="fa-solid fa-angles-down"></i></button>
 		</section>
 		<section id="user_bio" class="user_bio" data-animation="animate__headShake">
 			<h1 id="bio" class="bio">
@@ -269,13 +147,14 @@
 						/>
 				</svg>
 				<h1 class="handwrite">Nighty3098</h1>
-				<h3>
-					<i class="fa-solid fa-heart"></i> Hi. I'm Artem - backend
-					developer and freelancer, I'm 17 years old and I'm studying in the
-					11th grade of school.<br />I've been developing for the last 4
-					years.
-				</h3>
-				<h3 class="text-box" id="skills_categories">frontend | backend | tg bots | deep learning | desktop apps</h3>
+				<p class="left_text">
+					Hi. I'm Artem - backend developer and freelancer. I'm 17 years old, studying in 11th grade at school and 5 years at programming academy.
+					<br><br>
+                                                  I have been doing development for the last 4 years, mainly focusing on backend technologies. I am proficient in languages such as Python, C, C++ and have experience with frameworks such as Flask, QT and Node.js.
+                                                  <br><br>
+					I am also working on several projects such as project and task managers, server monitoring dashboards, various telegram bots and neural networks. You can check out my projects on GitHub.
+				</p>
+				<h3 class="text-box" id="skills_categories">FRONTEND | BACKEND | TG API | DEEP LEARNING</h3>
 				<h3 class="text-box" id="top-languages"></h3>
 			</div>
 		</section>
@@ -284,15 +163,13 @@
 			<section class="profile_card" data-animation="animate__fadeInUp">
 				<h1><i class="fa-solid fa-mug-hot"></i> Links</h1>
 				<div class="links_badge_block">
-					<h3 class="link_badge text-box" type="button" onclick="overlayProjects.showModal()">
+					<a href="content/projects.html"><button class="link_badge text-box">
 						<i class="fa-solid fa-compass-drafting"></i> PROJECTS
-					</h3>
-					<h3 class="link_badge text-box" type="button" onclick="overlayBlog.showModal()">
+					</button></a>
+					<br>
+					<a href="content/blog.html"><button class="link_badge text-box">
 						<i class="fa-regular fa-newspaper"></i> BLOG
-					</h3>
-					<h3 class="link_badge text-box" type="button" onclick="overlayTechStack.showModal()">
-						<i class="fa-solid fa-compass-drafting"></i> SKILLS
-					</h3>
+					</button></a>
 			</section>
 			<section class="profile_card" data-animation="animate__fadeInUp">
 			<h1><i class="fa-solid fa-comment"></i> Contacts</h1>
