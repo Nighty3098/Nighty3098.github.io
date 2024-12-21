@@ -264,6 +264,8 @@ input {
 }
 
 .profile_card,
+.welcome_card,
+.profile_card_2,
 .profile_stats,
 .profile_repos,
 .user_bio,
@@ -476,6 +478,20 @@ a .text-box .i {
   cursor:pointer;
 }
 
+.sub_links_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+}
+
+.link_badge {
+  width: 200px;
+}
+
 .button {
   font-family: "Tsukimi Rounded";
   font-size: medium;
@@ -544,6 +560,25 @@ a .text-box .i {
   justify-content: center;
 }
 
+.spacer {
+  height: 150px;
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (min-width :1500px) {
+  .content {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .user_avatar {
+    width: 20%;
+  }
+  .skill_badge {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .content {
     width: 60%;
@@ -552,9 +587,21 @@ a .text-box .i {
     margin-right: 15%;
     padding: 0px;
   }
+
+  .sub_links_block {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 850px) {
+  .sub_links_block {
+    flex-direction: column;
+  }
+
+  .link_badge {
+    width: 200px;
+  }
+
   .tabs {
     display: flex;
     cursor: pointer;

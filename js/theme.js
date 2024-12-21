@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const themeToggle = document.getElementById('theme-toggle'); // Или: document.querySelector('.button');
+    const themeToggle = document.getElementById('theme-toggle');
     const root = document.documentElement;
 
     function loadTheme() {

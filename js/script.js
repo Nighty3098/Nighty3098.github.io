@@ -1,71 +1,22 @@
-function getDeviceName() {
-    const userAgent = navigator.userAgent;
-    let deviceName = "Unknown Device";
+document.addEventListener("DOMContentLoaded", function() {
+    const animatedElements = document.querySelectorAll('.git_profile_card, .profile_card, .user_bio');
 
-    if (/iPad|iPhone|iPod/.test(userAgent)) {
-        deviceName = "iOS Device";
-    } else if (/Android/.test(userAgent)) {
-        const androidVersion = userAgent.match(/Android\s([0-9\.]+)/);
-        deviceName = `Android Device: ${androidVersion ? androidVersion[1] : 'Unknown Version'}`;
-    } else if (/Windows/.test(userAgent)) {
-        deviceName = "Windows Device";
-    } else if (/Macintosh/.test(userAgent)) {
-        deviceName = "Mac Device";
-    }
+    const animateOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const animationClass = entry.target.getAttribute('data-animation');
+                entry.target.classList.add('animate__animated', `${animationClass}`);
+                observer.unobserve(entry.target);
+                console.debug("Animated", entry.target);
+            }
+        });
+    };
 
-    document.getElementById('device').innerText = `Device: ${deviceName}`;
-}
-
-function getClientInfo() {
-    console.log('Browser:', navigator.userAgent);
-    console.log('Platform:', navigator.platform);
-    console.log('Country: ', navigator.country);
-    console.log('Lang: ', navigator.language);
-    console.log('Plugins: ', navigator.plugins);
-    document.getElementById('lang').innerText = `Lang: ${navigator.language}`;
-    document.getElementById('platform').innerText = `Platform: ${navigator.platform}`;
-    document.getElementById('browser').innerText = `Browser: ${navigator.userAgent}`;
-}
-
-function getClientIpInfo() {
-    fetch('https://ipapi.co/json/')
-        .then(response => response.json())
-        .then(data => {
-            console.log(`IP: ${data.ip}`);
-            console.log(`City: ${data.city}`);
-            console.log(`Country: ${data.country_name}`);
-            console.log(`lat: ${data.latitude}, long: ${data.longitude}`);
-
-            document.getElementById('ip').innerText = `IP: ${data.ip}`;
-            document.getElementById('city').innerText = `City: ${data.city}`;
-            document.getElementById('org_client').innerText = `${data.org}`;
-            document.getElementById('country').innerText = `Country: ${data.country_name}`;
-            document.getElementById('coordinates').innerText = `Lat: ${data.latitude}, Lon: ${data.longitude}`;
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-function hideUnusedElements() {
-    Array.from(document.getElementsByClassName("client_username_request")).forEach(element => {
-        element.style.display = 'none';
+    const observer = new IntersectionObserver(animateOnScroll, {
+        threshold: 0.1
     });
-    Array.from(document.getElementsByClassName("client_data")).forEach(element => {
-        element.style.display = 'flex';
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
     });
-}
-
-function start_fun() {
-    hideUnusedElements();
-    getClientIpInfo();
-    getClientInfo();
-    getDeviceName();
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    const submitButton = document.getElementById('submitButton');
-    if (submitButton) { // Check if the element exists
-        submitButton.addEventListener('click', start_fun);
-    } else {
-        console.error('Element with ID "submitButton" not found.');
-    }
 });
