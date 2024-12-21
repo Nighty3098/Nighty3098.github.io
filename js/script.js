@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Element with id 'scrollButton' not found.");
     }
 
-    const animatedElements = document.querySelectorAll('.git_profile_card, .profile_card, .user_bio');
+    const animatedElements = document.querySelectorAll('.git_profile_card, .profile_card, .user_bio, .rights');
 
     const animateOnScroll = (entries, observer) => {
         entries.forEach(entry => {
@@ -32,5 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     animatedElements.forEach(element => {
         observer.observe(element);
+    });
+
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
     });
 });
