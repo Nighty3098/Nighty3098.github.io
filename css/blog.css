@@ -13,7 +13,7 @@
   margin: 2%;
   width: 60%;
   margin: 40px 40px 10px 40px;
-  background-color: var(--color1);
+  background-color: var(--color2);
 }
 
 .header a {
@@ -46,15 +46,11 @@
 }
 
 .article-block {
-  border: 1px solid #ccc;
+  border: 0px solid #ccc;
   padding: 10px;
   margin: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
-}
-
-.article-block:hover {
-  background-color: #f0f0f0;
 }
 
 .bb_block {
@@ -114,8 +110,8 @@ a button {
 
 .article_card {
   width: 95%;
-  background-color: var(--color1);
-  color: var(--color2);
+  background-color: var(--color2);
+  color: var(--bg);
   border-radius: 25px;
   display: flex;
   flex-direction: column;

@@ -45,8 +45,8 @@ a .button {
   align-items: center;
   align-content: center;
   text-align: center;
-  background-color: var(--color1);
-  color: var(--fg);
+  background-color: var(--color2);
+  color: var(--bg);
   padding: 20px;
   margin: 20px;
   border-radius: 20px;
@@ -64,6 +64,7 @@ a .button {
   text-align: center;
   transition: transform 0.3s ease-in-out;
   line-height: 1.4;
+  color: var(--bg);
 }
 
 .project_card_block a,
@@ -73,8 +74,29 @@ a .button {
 
 .project_card_block h3 {
   margin: 0%;
-  color: var(--color2);
+  color: var(--bg);
   font-family: "Madimi One";
+}
+
+.project_card_block h1 {
+  color: var(--bg);
+}
+
+.project_card_block .text-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_card_block .text-box i {
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.project_card_block .text-box a {
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 950px) {
