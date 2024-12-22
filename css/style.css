@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap");
 
 :root {
-  --bg: #2b303b;
-  --bg2: #2b303b;
+  --bg: #252932;
   --fg2: #eff1f5;
   --fg: #eff1f5;
-  --color1: #252932;
+  --color1: #2b303b;
   --color2: #8fa1b3;
   --color3: #65737e;
   --red: #bf616a;
@@ -15,7 +14,6 @@
 
 :root.light {
   --bg: #c0c5ce;
-  --bg2: #c0c5ce;
   --fg2: #65737e;
   --fg: #65737e;
   --color1: #96b5b4;
@@ -39,6 +37,32 @@ Madimi One
 .rights {
   font-family: "Madimi One";
   color: var(--color2);
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  height: 50px;
+  z-index: 10000;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+  align-content: center;
+  backdrop-filter: blur(5px);
+  color: var(--color2);
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--color2);
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: color 0.5s;
+}
+
+.header a:hover {
+  color: var(--color3);
 }
 
 .modal {
@@ -110,7 +134,7 @@ svg path {
 }
 
 html {
-  background: var(--bg2);
+  background: var(--bg);
   background-origin: padding-box;
   background-repeat: repeat;
   background-attachment: scroll;
@@ -147,7 +171,7 @@ body {
   cursor: pointer;
   font-size: 20px;
   position: absolute;
-  bottom: 100px;
+  bottom: 150px;
   left: 50%;
   transform: translateX(-30%);
 }
@@ -533,7 +557,7 @@ a .text-box .i {
   text-align: left;
   align-content: left;
   color: var(--red);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .sub_links_block {
@@ -582,7 +606,25 @@ a .text-box .i {
   margin-right: 10px;
 }
 
-.theme-toggle, .back_button {
+a {
+  text-decoration: none;
+}
+
+a button {
+  border: none;
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    background-color 0.5s ease-in-out;
+}
+
+a button:hover {
+  box-shadow: 0px 0px 5px 5px var(--color2);
+  background-color: var(--color2);
+}
+
+.theme-toggle,
+.back_button {
   position: fixed;
   width: 60px;
   aspect-ratio: 1/1;
@@ -600,14 +642,16 @@ a .text-box .i {
   transition: all 1s;
 }
 
-.theme-toggle, .back_button i {
+.theme-toggle,
+.back_button i {
   color: var(--bg);
   margin: 0px;
   padding: 0px;
   font-size: 20px;
 }
 
-.theme-toggle, .back_button:hover {
+.theme-toggle,
+.back_button:hover {
   box-shadow: 0px 0px 0px 0px var(--color2);
   background-color: var(--color2);
 }
@@ -615,7 +659,6 @@ a .text-box .i {
 .back_button {
   bottom: 100px;
 }
-
 
 .sub_block {
   display: grid;
@@ -659,7 +702,7 @@ a .text-box .i {
   padding: 0;
 }
 
-@media screen and (min-width :1500px) {
+@media screen and (min-width: 1500px) {
   .content {
     width: 50%;
     margin: 0 auto;
@@ -697,9 +740,21 @@ a .text-box .i {
   .username {
     font-size: 70px;
   }
+
+  .header {
+    justify-content: center;
+  }
+
+  .user_avatar {
+    width: 35%;
+  }
 }
 
 @media screen and (max-width: 850px) {
+  .header {
+    justify-content: center;
+  }
+
   .sub_links_block {
     flex-direction: column;
   }
@@ -741,7 +796,8 @@ a .text-box .i {
     font-size: 50px;
   }
 
-  .cross_block, .cross_block_2 {
+  .cross_block,
+  .cross_block_2 {
     width: 90%;
   }
 }

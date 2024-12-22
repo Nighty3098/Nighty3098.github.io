@@ -6,8 +6,6 @@
 		<meta property="og:description" content="My Portfolio">
 		<meta name="viewport" content="width=device-width; initial-scale=0.9; maximum-scale=0.9; minimum-scale=0.9;" />
 		<title>Nighty</title>
-		<link href="css/blog.css" rel="stylesheet" />
-		<link href="css/projects.css" rel="stylesheet" />
 		<link href="css/style.css" rel="stylesheet" />
 		<script src="js/script.js"></script>
 		<script src="https://kit.fontawesome.com/a01328b26e.js" crossorigin="anonymous" ></script>
@@ -28,6 +26,9 @@
 			/>
 		<link rel="shortcut icon" href="imgs/icon.svg" />
 	</head>
+	<header class="header animate__animated animate__bounceInRight">
+		<a href="#main_block">MAIN</a>|<a href="#user_bio">ABOUT ME</a>|<a href="#bio_links">LINKS / CONTACTS</a>|<a href="#bio_github">GITHUB</a>
+	</header>
 	<body>
 		<div id="modal" class="modal">
 			<div class="modal-content">
@@ -59,7 +60,7 @@
 		</button>
 		</div>
 		<div class="content">
-		<div class="profile_info">
+		<div class="profile_info" id="main_block">
 		<section id="profile_card" class="welcome_card animate__animated animate__shakeX">
 			<section class="cross_block">
 				<svg class="cross_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>cross</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-469.000000, -1041.000000)"> <path d="M487.148,1053.48 L492.813,1047.82 C494.376,1046.26 494.376,1043.72 492.813,1042.16 C491.248,1040.59 488.712,1040.59 487.148,1042.16 L481.484,1047.82 L475.82,1042.16 C474.257,1040.59 471.721,1040.59 470.156,1042.16 C468.593,1043.72 468.593,1046.26 470.156,1047.82 L475.82,1053.48 L470.156,1059.15 C468.593,1060.71 468.593,1063.25 470.156,1064.81 C471.721,1066.38 474.257,1066.38 475.82,1064.81 L481.484,1059.15 L487.148,1064.81 C488.712,1066.38 491.248,1066.38 492.813,1064.81 C494.376,1063.25 494.376,1060.71 492.813,1059.15 L487.148,1053.48" id="cross" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
@@ -172,7 +173,7 @@
 			</div>
 		</section>
 		<div class="spacer"></div>
-		<div class="sub_links_block">
+		<div class="sub_links_block" id="bio_links">
 			<section class="profile_card" data-animation="animate__fadeInUp">
 				<h1><i class="fa-solid fa-mug-hot"></i> Links</h1>
 				<div class="links_badge_block">
@@ -189,7 +190,7 @@
 			<div class="contacts_badge_block">
 			<a href="https://t.me/Night3098" , target="_blank" ,>
 			<h3 class="contact_button">
-			<i class="fa-brands fa-telegram"></i>
+		    <i class="fa-brands fa-telegram"></i>
 			</h3>
 			</a>
 			<a href="https://discord.gg/#9707" , target="_blank" ,>
@@ -221,7 +222,7 @@
 			</section>
 			</div>
 			<div class="spacer"></div>
-			<section class="git_profile_card" data-animation="animate__backInLeft">
+			<section class="git_profile_card" id="bio_github" data-animation="animate__backInLeft">
 				<h1 id="stats" class="stats">
 					<i class="fa-brands fa-github"></i> GitHub stats
 				</h1>
@@ -230,6 +231,8 @@
 				<h3 id="git_followers"></h3>
 				<h3 id="git_stars"></h3>
 				<h3 id="git_repos"></h3>
+				<br>
+				<a href="https://github.com/Nighty3098"><button class="button">OPEN GITHUB</button></a>
 			</section>
 			<div class="spacer"></div>
 		</div>
