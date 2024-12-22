@@ -153,21 +153,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.getElementById('git_profile_card')) {
             document.getElementById('git_profile_card').style.display = "flex";
         }
-
         if (document.getElementById('top-languages')) {
             getTopUserLanguages(username).then(topLanguages => {
                 document.getElementById('top-languages').innerHTML = '<i class="fa-solid fa-code"></i> ' + topLanguages.join(', ');
             });
         }
-
         if (document.getElementById('git_followers')) {
             document.getElementById('git_followers').innerHTML = '<i class="fa-solid fa-user"></i> Followers: ' + data.followers;
         }
-
         if (document.getElementById('git_profile_card')) {
             document.getElementById('git_profile_card').style.display = "flex";
         }
-
         if (document.getElementById('git_name')) {
             document.getElementById('git_name').innerHTML = data.name || 'No name available';
         }

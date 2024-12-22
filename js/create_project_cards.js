@@ -45,7 +45,7 @@ function createRepoCard(repoData) {
 
     const repoName = repoData.name;
     const languages = repoData.language || 'Not specified';
-    const stats = `<i class="fa-solid fa-earth-americas"></i> Languages: ${languages} <br><i class="fa-solid fa-code-branch"></i> Forks: ${repoData.forks_count} <br><i class="fa-solid fa-star"></i> Stars: ${repoData.stargazers_count}`;
+    const stats = `<i class="fa-solid fa-code"></i><a>${languages}</a> | <i class="fa-solid fa-code-branch"></i> <a>${repoData.forks_count}</a> | <i class="fa-solid fa-star"></i> <a>${repoData.stargazers_count}</a> | <i class="fa-solid fa-hammer"></i> <a>${repoData.open_issues_count}<a/>`;
 
     const is_archived = repoData.archived;
     let status = is_archived ? "<i class='fa-solid fa-box'></i> ! Archived ! " : "";
