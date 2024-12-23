@@ -339,6 +339,13 @@ input {
   transition: all 0.5s ease-in-out;
 }
 
+.git_profile_card {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .user_bio h3 {
   margin: 30px;
 }
@@ -437,13 +444,13 @@ a .text-box .i {
 }
 
 .cross_svg {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .cross_svg g path {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .cross_svg path {
@@ -698,6 +705,14 @@ a button:hover {
   border: none;
 }
 
+.bio_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .left_text {
   width: 75%;
   text-align: left;
@@ -728,9 +743,19 @@ a button:hover {
   font-size: 12px;
 }
 
-@media screen and (max-height: 500px and min-width: 600px) {
+@media screen and (max-height: 500px) and (min-width: 600px) {
   .welcome_card {
     height: 100%;
+  }
+
+  .bio_content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .user_avatar {
+    width: 250px;
   }
 }
 
@@ -738,9 +763,6 @@ a button:hover {
   .content {
     width: 50%;
     margin: 0 auto;
-  }
-  .user_avatar {
-    width: 25%;
   }
   .skill_badge {
     width: 80%;
@@ -782,7 +804,21 @@ a button:hover {
   }
 }
 
+@media screen and (max-width: 2000px) {
+  .bio_content {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 850px) {
+  .bio_content {
+    flex-direction: column;
+  }
+
+  .left_text {
+    border: none;
+  }
+
   .header {
     justify-content: center;
   }
