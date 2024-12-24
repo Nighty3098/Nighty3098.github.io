@@ -25,11 +25,9 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     };
-
+    
     const observer = new IntersectionObserver(animateOnScroll, {
-        threshold: 0.1
     });
-
     animatedElements.forEach(element => {
         observer.observe(element);
     });

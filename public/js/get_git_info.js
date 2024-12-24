@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data && data.repos) {
             console.log('Returning cached repos data');
             totalStars = data.repos.totalStars;
-            document.getElementById('git_stars').innerHTML = '<i class="fa-solid fa-star"></i> Stars: ' + totalStars;
+            document.getElementById('git_stars').innerHTML = '<i class="fa-solid fa-star"></i>  Stars: ' + totalStars;
         } else {
             try {
                 const response = await fetch(url);

@@ -39,6 +39,12 @@ Madimi One
   color: var(--color2);
 }
 
+.date {
+  display: block;
+  font-size: 0.9em;
+  color: gray;
+}
+
 header {
   display: flex;
   position: fixed;
@@ -166,14 +172,14 @@ body {
   background-color: transparent;
   width: 50px;
   height: 50px;
-  border: none;
+  border: 3px solid var(--color2);
+  border-radius: 50%;
   color: var(--color2);
   cursor: pointer;
   font-size: 20px;
   position: absolute;
   bottom: 100px;
   left: 50%;
-  transform: translateX(-30%);
 }
 
 .mac_header {
@@ -340,7 +346,7 @@ input {
 }
 
 .git_profile_card {
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -348,6 +354,10 @@ input {
 
 .user_bio h3 {
   margin: 30px;
+}
+
+.user_bio h1 {
+  margin-bottom: 50px;
 }
 
 .profile_blogs,
@@ -423,6 +433,26 @@ input {
   font-optical-sizing: auto;
   font-size: xx-large;
   color: var(--color2);
+}
+
+.text-box-outline {
+  width: auto;
+  padding: 15px;
+  margin: 5px;
+  font-family: "Madimi One", sans-serif;
+  font-size: medium;
+  background-color: transparent;
+  color: var(--color2);
+  border: 5px solid var(--color2);
+  border-radius: 10px;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.text-box-outline i {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .text-box {
@@ -619,6 +649,7 @@ a .text-box .i {
 
 .button i {
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 a {
@@ -801,6 +832,10 @@ a button:hover {
 
   .user_avatar {
     width: 40%;
+  }
+
+  .left_text {
+    width: 100%;
   }
 }
 
