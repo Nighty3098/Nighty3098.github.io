@@ -172,7 +172,6 @@ body {
   background-color: transparent;
   width: 50px;
   height: 50px;
-  border: 3px solid var(--color2);
   border-radius: 50%;
   color: var(--color2);
   cursor: pointer;
@@ -180,6 +179,8 @@ body {
   position: absolute;
   bottom: 100px;
   left: 50%;
+  border: none;
+  transform: translateX(-30%);
 }
 
 .mac_header {
@@ -354,10 +355,6 @@ input {
 
 .user_bio h3 {
   margin: 30px;
-}
-
-.user_bio h1 {
-  margin-bottom: 50px;
 }
 
 .profile_blogs,
