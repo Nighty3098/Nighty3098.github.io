@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="Nighty3098's Portfolio" />
+    <meta property="og:description" content="My Portfolio" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=0.8; maximum-scale=0.8; minimum-scale=0.8;"
+    />
+    <title>Nighty</title>
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="../../css/OWL.css" rel="stylesheet" />
+    <script src="../../js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a01328b26e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../js/theme.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="shortcut icon" href="../../../public/imgs/icon.svg" />
+  </head>
+  <header class="header animate__animated animate__bounceInRight">
+    <a href="#about_app"> ABOUT</a>| 
+    <a href="#download_app"> DOWNLOAD APP</a>| 
+    <a href="#contacts"> CONTACTS</a>
+  </header>
+  <body>
+		<a href="../../index.html"><button class="back_button animate__animated animate__backInLeft" id="back_button">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button></a>
+    <button class="theme-toggle animate__animated animate__backInLeft" id="theme-toggle">
+          <i class="fa-solid fa-moon"></i>
+    </button>
+    <div class="main_block animate__animated animate__bounceInRight">
+      <h1>OWL</h1>
+      <div class="small_spacer"></div>
+      <h3>OWL is an application and project management application for developers.</h3>
+    </div>
+    <div class="content" id="about_app">
+      <h2>ABOUT APP</h2>
+      <div class="small_spacer"></div>
+      <img src="imgs/1.png" />
+      <div class="small_spacer"></div>
+      <h3>OWL is an application and project management application developed using electronic and NodeJS.</h3>
+      <div class="spacer"></div>
+      <div class="imgs">
+        <img src="imgs/tweaks.png">
+        <img src="imgs/theme_1.png">
+      </div>
+      <div class="small_spacer"></div>
+      <h3>The app supports various design themes and tweaks from users.</h3>
+    </div>
+    <div class="spacer"></div>
+    <div class="content" id="download_app">
+      <h3>You can download the free trial version</h3>
+      <br>
+      <a href="https://github.com/Nighty3098/OWL"><button class="button"><i class="fa-solid fa-download"></i> DOWNLOAD</button></a>
+    </div>
+    <div class="spacer"></div>
+    <div class="footer">
+      <p class="rights animate__animated animate__backInUp">
+        &copy; <span id="year"></span> Semenov Artem (Nighty3098). All Rights
+        Reserved.
+      </p>
+      <p class="rights animate__animated animate__backInUp">
+        Attribution-NonCommercial-NoDerivatives 4.0 International
+      </p>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

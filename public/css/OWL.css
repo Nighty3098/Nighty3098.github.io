@@ -1,0 +1,85 @@
+.main_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+}
+
+h1 {
+    font-size: 60px;
+    color: var(--color2);
+}
+
+h2 {
+    font-family: "Playwrite HR Lijeva";
+    font-size: x-large;
+    color: var(--color2);
+}
+
+h3 {
+    font-family: "Madimi One";
+    font-size: medium;
+    color: var(--color2);
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    text-wrap: pretty;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: var(--color2);
+}
+
+img {
+    width: 90%;
+    border-radius: 15px;
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+.imgs img {
+    width: 40%;
+    border-radius: 15px;
+}
+
+.small_spacer {
+    height: 50px;
+    background-color: transparent;
+}
+
+@media screen and (min-width: 1000px) {
+    img {
+        width: 900px;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .imgs img {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    img {
+        width: 1300px;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .imgs img {
+        width: 400px;
+    }
+}
