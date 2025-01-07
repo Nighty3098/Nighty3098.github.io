@@ -9,11 +9,11 @@ const users_repos = [
     "https://api.github.com/repos/Nighty3098/IPSA_MODEL",
     "https://api.github.com/repos/Nighty3098/TechSupportBot",
     "https://api.github.com/repos/Nighty3098/TGSB",
-    "https://api.github.com/repos/Nighty3098/FinanceTrackerBot"
+    "https://api.github.com/repos/Nighty3098/FinanceTrackerBot",
 ];
 
-const CACHE_KEY = 'USER_REPOS';
-const CACHE_EXPIRY_KEY = 'USER_REPOS_EXPIRY';
+const CACHE_KEY = "USER_REPOS";
+const CACHE_EXPIRY_KEY = "USER_REPOS_EXPIRY";
 const CACHE_DURATION = 60 * 60 * 1000;
 
 async function fetchRepoData(repoUrl) {
@@ -26,10 +26,10 @@ async function fetchRepoData(repoUrl) {
             const data = await response.json();
             return data;
         } catch (error) {
-            if (error.message.includes('net::ERR_NETWORK_CHANGED')) {
+            if (error.message.includes("net::ERR_NETWORK_CHANGED")) {
                 retryCount++;
                 console.log(`Retry ${retryCount} due to network change`);
-                await new Promise(resolve => setTimeout(resolve, 1000));
+                await new Promise((resolve) => setTimeout(resolve, 1000));
             } else {
                 throw error;
             }
@@ -40,26 +40,31 @@ async function fetchRepoData(repoUrl) {
 }
 
 function createRepoCard(repoData) {
-    const card = document.createElement('div');
-    card.classList.add('project_card_block');
+    const card = document.createElement("div");
+    card.classList.add("project_card_block");
 
     const repoName = repoData.name;
-    const languages = repoData.language || 'Not specified';
-    const stats = `<i class="fa-solid fa-code"></i><a>${languages}</a> / <i class="fa-solid fa-code-branch"></i> <a>${repoData.forks_count}</a> / <i class="fa-solid fa-star"></i> <a>${repoData.stargazers_count}</a> / <i class="fa-solid fa-hammer"></i> <a>${repoData.open_issues_count}<a/>`;
+    const languages = repoData.language || "Not specified";
+    const stats =
+        `<i class="fa-solid fa-code"></i><a>${languages}</a> / <i class="fa-solid fa-code-branch"></i> <a>${repoData.forks_count}</a> / <i class="fa-solid fa-star"></i> <a>${repoData.stargazers_count}</a> / <i class="fa-solid fa-hammer"></i> <a>${repoData.open_issues_count}<a/>`;
 
     const is_archived = repoData.archived;
-    let status = is_archived ? "<i class='fa-solid fa-box'></i> ! Archived ! " : "";
+    let status = is_archived
+        ? "<i class='fa-solid fa-box'></i> ! Archived ! "
+        : "";
 
     card.innerHTML = `
         <a class="project_card" href="${repoData.html_url}" target="_blank">
         <h1>${repoName}</h1>
         <h3 style="color: #db3a3a;">${status}</h3>
-        <h3>${repoData.description || 'No description available'}</h3>
+        <h3>${repoData.description || "No description available"}</h3>
         <h2 class="text-box">${stats}</h2>
         </a>
     `;
 
-    console.debug(`Loaded project: ${repoName} Stars: ${repoData.stargazers_count} Forks: ${repoData.forks_count} Language: ${languages}`);
+    console.debug(
+        `Loaded project: ${repoName} Stars: ${repoData.stargazers_count} Forks: ${repoData.forks_count} Language: ${languages}`,
+    );
 
     return card;
 }
@@ -79,7 +84,7 @@ async function createRepoCards() {
         console.log("Data restored from cache", repos);
 
         if (Array.isArray(repos)) {
-            repos.forEach(repoData => {
+            repos.forEach((repoData) => {
                 const card = createRepoCard(repoData);
                 reposContainer.appendChild(card);
             });
@@ -101,6 +106,6 @@ async function createRepoCards() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     createRepoCards();
 });

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Element with id 'scrollButton' not found.");
     }
 
-    const animatedElements = document.querySelectorAll('.git_profile_card, .profile_card, .user_bio, .rights');
+    const animatedElements = document.querySelectorAll('.owl_app, .git_profile_card, .profile_card, .user_bio, .rights');
 
     const animateOnScroll = (entries, observer) => {
         entries.forEach(entry => {
