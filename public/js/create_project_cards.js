@@ -1,12 +1,12 @@
 const reposContainer = document.getElementById("repos");
 const users_repos = [
+    "https://api.github.com/repos/Nighty3098/OWL_APP",
     "https://api.github.com/repos/Nighty3098/SDash",
     "https://api.github.com/repos/Nighty3098/CodeKeeper",
+    "https://api.github.com/repos/Nighty3098/InvestingAssistant",
     "https://api.github.com/repos/DXS-GROUP/LogInsight",
     "https://api.github.com/repos/Nighty3098/nfetch",
     "https://api.github.com/repos/Nighty3098/DevDotfiles",
-    "https://api.github.com/repos/Nighty3098/InvestingAssistant",
-    "https://api.github.com/repos/Nighty3098/IPSA_MODEL",
     "https://api.github.com/repos/Nighty3098/TechSupportBot",
     "https://api.github.com/repos/Nighty3098/TGSB",
     "https://api.github.com/repos/Nighty3098/FinanceTrackerBot",
