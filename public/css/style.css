@@ -438,9 +438,8 @@ input {
   margin: 5px;
   font-family: "Madimi One", sans-serif;
   font-size: medium;
-  background-color: transparent;
-  color: var(--color2);
-  border: 5px solid var(--color2);
+  background-color: var(--color2);
+  color: var(--bg);
   border-radius: 10px;
   align-content: center;
   text-align: center;
@@ -769,7 +768,6 @@ a .button:hover {
   font-size: medium;
   line-height: 2;
   padding-left: 10px;
-  border-left: 5px solid var(--color2);
   border-radius: 10px;
 }
 
