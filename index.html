@@ -11,7 +11,6 @@
 		<script src="https://kit.fontawesome.com/a01328b26e.js" crossorigin="anonymous" ></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="public/js/easter_egg.js"></script>
-		<script src="public/js/create_articles_card.js"></script>
 		<script src="public/js/get_git_info.js"></script>
 		<script src="public/js/theme.js"></script>
 		<link
@@ -27,10 +26,10 @@
 		<link rel="shortcut icon" href="public/imgs/icon.svg" />
 	</head>
 	<header class="header animate__animated animate__bounceInRight">
-		<a href="#main_block"> MAIN</a>|
-		<a href="#user_bio"> ABOUT ME</a>|
-		<a href="#bio_links"> LINKS / CONTACTS</a>|
-		<a href="#bio_github"> GITHUB</a>
+		<a href="#main_block"> <i class="fa-solid fa-house"></i>  HOME </a>
+		<a href="#user_bio"> <i class="fa-solid fa-info"></i>  ABOUT ME </a>
+		<a href="#bio_links"> <i class="fa-solid fa-paperclip"></i>  LINKS </a>
+		<a href="#bio_github"> <i class="fa-brands fa-github-alt"></i>  GIT </a>
 	</header>
 	<body>
 		<div id="modal" class="modal">
@@ -68,15 +67,79 @@
 			<h1 id="username" class="username">
 				Hi, I'm Nighty3098
 			</h1>
-			<img
-				src="https://avatars.githubusercontent.com/u/154594695?v=4"
-				class="user_avatar"
-				/>
+			<svg class="user_avatar"
+			   viewBox="0 0 14.528579 19.371439"
+			   version="1.1"
+			   id="svg1"
+			   xmlns="http://www.w3.org/2000/svg"
+			   xmlns:svg="http://www.w3.org/2000/svg">
+			  <defs
+				 id="defs1">
+				<linearGradient
+				   id="swatch13">
+				  <stop
+					 style="stop-color:#000000;stop-opacity:1;"
+					 offset="0"
+					 id="stop13" />
+				</linearGradient>
+			  </defs>
+			  <g
+				 id="layer22-8"
+				 transform="translate(-136.269,-93.404792)">
+				<g
+				   id="SVGRepo_iconCarrier-9-8"
+				   transform="matrix(0.69183708,0,0,0.69183708,132.11798,92.021118)"
+				  <style
+					 type="text/css"
+					 id="style1-5"> .st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} </style>
+				  <circle
+					 class="st0"
+					 cx="16"
+					 cy="12"
+					 r="9"
+					 id="circle1-1-0"
+					 style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+				  <g
+					 id="g1-7-9"
+					 style="stroke-opacity:1">
+					<path
+					   class="st0"
+					   d="M 20.5,4.2 C 19.2,3.4 17.6,3 16,3 14.4,3 12.8,3.4 11.5,4.2 14.2,5.8 16,8.7 16,12 16,8.7 17.8,5.8 20.5,4.2 Z"
+					   id="path1-71-6"
+					   style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+				  </g>
+				  <circle
+					 class="st0"
+					 cx="12"
+					 cy="12"
+					 r="1"
+					 id="circle2-1-3"
+					 style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+				  <circle
+					 class="st0"
+					 cx="20"
+					 cy="12"
+					 r="1"
+					 id="circle3-8"
+					 style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+				  <path
+					 class="st0"
+					 d="m 16.1,21 c 2.2,2.3 5.4,3.8 8.9,3.8 v 0 V 12"
+					 id="path3-5"
+					 style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+				  <path
+					 class="st0"
+					 d="m 7,12 c 0,9 9.7,17 19,17"
+					 id="path4-5-6"
+					 style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+				</g>
+			  </g>
+			</svg>
 			<h3 class="text-box"><i class="fa-solid fa-user"></i> Freelancer | Developer | Student</h3>
 			<h3 class="text-box">
 				<i class="fa-solid fa-location-dot"></i> Novosibirsk, Russia
 			</h3>
-			<button class="scrollButton" id="scrollButton"><i class="fa-solid fa-angles-down"></i></button>
+			<!--<button class="scrollButton" id="scrollButton"><i class="fa-solid fa-angles-down"></i></button>-->
 		</section>
 		<section id="user_bio" class="user_bio" data-animation="animate__fadeInRightBig">
 			<div class="spacer"></div>
@@ -99,9 +162,8 @@
 				<h3 class="text-box-outline"><i class="fa-solid fa-earth-asia"></i>Russian - Native | English - A2<i class="fa-solid fa-earth-asia"></i></h3>
 			</div>
 		</section>
-		<div class="spacer"></div>
 		<section id="my_skills" class="user_bio" data-animation="animate__backInLeft">
-			<h1><i class="fa-solid fa-compass-drafting"></i> MY TECH STACK</h1>
+			<h1><i class="fa-solid fa-compass-drafting"></i> My tech stack</h1>
 			<h3 class="text-box" id="skills_categories"><i class="fa-solid fa-gears"></i>   FRONTEND | BACKEND | TG API | DEEP LEARNING</h3>
 			<h3 class="text-box" id="top-languages"></h3>
 		</section>
@@ -109,18 +171,18 @@
 		<div class="sub_links_block" id="bio_links">
 			<section class="profile_card" data-animation="animate__fadeInUp">
 				<h1><i class="fa-solid fa-mug-hot"></i> Links</h1>
-				<div class="links_badge_block">
+				<div class="links_badge_block block_l">
 					<a href="public/content/projects.html"><button class="link_badge text-box">
 						<i class="fa-solid fa-compass-drafting"></i> PROJECTS
 					</button></a>
-					<br>
 					<a href="public/content/blog.html"><button class="link_badge text-box">
 						<i class="fa-regular fa-newspaper"></i> BLOG
 					</button></a>
+				</div>
 			</section>
 			<section class="profile_card" data-animation="animate__fadeInUp">
 			<h1><i class="fa-solid fa-comment"></i> Contacts</h1>
-			<div class="contacts_badge_block">
+			<div class="contacts_badge_block block_l">
 				<a href="https://t.me/Night3098" , target="_blank" ,>
 				<h3 class="contact_button">
 					<i class="fa-brands fa-telegram"></i>
@@ -153,30 +215,23 @@
 				</a>
 			</div>
 			</section>
-			<div class="spacer"></div>
-			<section class="profile_card" id="owl_app" data-animation="animate__backInLeft">
-				<h1 style="font-size: x-large;">Are you looking for an application for convenient project and task management?<br>Try my app - OWL</h1>
-				<br><br>
-				<a href="public/content/OWL/owl.html"><button class="button"><i class="fa-solid fa-download"></i>DOWNLOAD</button></a>
-			</section>
 			</div>
 			<section class="git_profile_card" id="bio_github" data-animation="animate__backInLeft">
 				<div class="spacer"></div>
 				<h1 id="stats" class="stats">
 					<i class="fa-brands fa-github"></i> GitHub stats
 				</h1>
-				<h3 id="git_name"></h3>
-				<h3 id="git_company"></h3>
-				<h3 id="git_followers"></h3>
-				<h3 id="git_stars"></h3>
-				<h3 id="git_repos"></h3>
+				<h3 class="git_stats" id="git_name"></h3>
+				<h3 class="git_stats" id="git_company"></h3>
+				<h3 class="git_stats" id="git_followers"></h3>
+				<h3 class="git_stats" id="git_stars"></h3>
+				<h3 class="git_stats" id="git_repos"></h3>
 				<br>
 				<a href="https://github.com/Nighty3098"><button class="button"><i class="fa-brands fa-github-alt"></i>  OPEN GITHUB  <i class="fa-brands fa-github-alt"></i></button></a>
 				<div class="spacer"></div>
 			</section>
 		</div>
 		<div class="footer">
-			<h1 class="handwrite">Nighty3098</h1>
 			<p class="rights animate__animated animate__backInUp">&copy; <span id="year"></span> Semenov Artem (Nighty3098). All Rights Reserved.</p>
 			<p class="rights animate__animated animate__backInUp">Attribution-NonCommercial-NoDerivatives 4.0 International</p>
 		</div>

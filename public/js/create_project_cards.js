@@ -44,9 +44,10 @@ function createRepoCard(repoData) {
     card.classList.add("project_card_block");
 
     const repoName = repoData.name;
-    const languages = repoData.language || "Not specified";
+    const languages = repoData.language || "None";
+
     const stats =
-        `<i class="fa-solid fa-code"></i><a>${languages}</a> / <i class="fa-solid fa-code-branch"></i> <a>${repoData.forks_count}</a> / <i class="fa-solid fa-star"></i> <a>${repoData.stargazers_count}</a> / <i class="fa-solid fa-hammer"></i> <a>${repoData.open_issues_count}<a/>`;
+        `<i class="fa-solid fa-code"></i><a>${languages}</a> / <i class="fa-solid fa-code-branch"></i> <a>${repoData.forks_count}</a> / <i class="fa-solid fa-star"></i> <a>${repoData.stargazers_count}</a> / <i class="fa-solid fa-hammer"></i> <a>${repoData.open_issues_count}</a>`;
 
     const is_archived = repoData.archived;
     let status = is_archived
