@@ -41,29 +41,31 @@ Madimi One
 
 .date {
   display: block;
-  font-size: 0.9em;
+  font-size: medium;
   color: gray;
 }
 
 header {
   display: flex;
   position: fixed;
-  top: 0px;
+  bottom: 10px;
   height: 50px;
   z-index: 10000;
-  width: 100%;
+  width: auto;
   justify-content: right;
   align-items: center;
   align-content: center;
+  background-color: var(--color2);
   backdrop-filter: blur(5px);
-  color: var(--color2);
+  color: var(--bg);
+  border-radius: 15px;
 }
 
 .header a {
   text-decoration: none;
-  color: var(--color2);
-  margin-left: 10px;
-  margin-right: 10px;
+  color: var(--bg);
+  margin-left: 20px;
+  margin-right: 20px;
   transition: color 0.5s;
 }
 
@@ -114,7 +116,7 @@ header {
 h1 {
   font-family: "Playwrite HR Lijeva", system-ui;
   font-optical-sizing: auto;
-  font-size: 35px;
+  font-size: xx-large;
   color: var(--color2);
 }
 
@@ -128,6 +130,12 @@ h3 {
 
 svg path {
   stroke: var(--color2);
+  background-color: var(--color2);
+}
+
+svg circle {
+  stroke: var(--color2);
+  background-color: var(--color2);
 }
 
 * {
@@ -177,7 +185,7 @@ body {
   cursor: pointer;
   font-size: 20px;
   position: absolute;
-  bottom: 100px;
+  bottom: 150px;
   left: 50%;
   border: none;
   transform: translateX(-30%);
@@ -452,7 +460,7 @@ input {
 }
 
 .text-box {
-  width: 70%;
+  width: 85%;
   padding: 15px;
   margin: 5px;
   font-family: "Madimi One", sans-serif;
@@ -530,7 +538,7 @@ a .text-box .i {
 }
 
 .user_avatar {
-  width: 30%;
+  width: 40%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   margin: 5%;
@@ -543,7 +551,7 @@ a .text-box .i {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 100px 100px;
+  grid-template-columns: auto auto auto auto;
 }
 
 .links_badge_block {
@@ -552,6 +560,7 @@ a .text-box .i {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .contact_button {
@@ -611,16 +620,29 @@ a .text-box .i {
   padding: 0px;
 }
 
+.block_l {
+  height: 200px;
+} 
+
 .link_badge {
-  width: 200px;
+  width: 300px;
+  height: 100%;
+  border: none;
+  transition: all 0.5s;
 }
+
+.link_badge:hover {
+  box-shadow: 0px 0px 10px 10px var(--color2);
+  background-color: var(--color2);
+}
+
 
 .button {
   font-family: "Madimi One";
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
-  height: 40px;
+  height: 50px;
   padding: 10px;
   border: none;
   display: flex;
@@ -657,7 +679,7 @@ a .button {
   font-size: medium;
   background-color: var(--color2);
   border-radius: 10px;
-  height: 40px;
+  height: 50px;
   padding: 10px;
   border: none;
   display: flex;
@@ -780,8 +802,20 @@ a .button:hover {
   padding: 0;
 }
 
+.git_stats {
+  font-size: medium;
+  font-family: "Madimi One", monospace;
+  width: auto;
+  text-align: left;
+}
+
+.footer {
+  margin-bottom: 100px;
+  font-size: medium;
+}
+
 .footer p {
-  font-size: 12px;
+  font-size: small;
 }
 
 @media screen and (max-height: 500px) and (min-width: 600px) {
@@ -796,7 +830,7 @@ a .button:hover {
 
 @media screen and (min-width: 1500px) {
   .user_avatar {
-    width: 250px;
+    width: 300px;
   }
 }
 
@@ -841,7 +875,7 @@ a .button:hover {
   }
 
   .user_avatar {
-    width: 40%;
+    width: 45%;
   }
 
   .left_text {
