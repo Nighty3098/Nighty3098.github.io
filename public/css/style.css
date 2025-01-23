@@ -710,7 +710,7 @@ a .button:hover {
   position: fixed;
   width: 50px;
   aspect-ratio: 1/1;
-  bottom: 20px;
+  bottom: 40px;
   right: 20px;
   z-index: 1000;
   align-items: center;
@@ -748,7 +748,7 @@ a .button:hover {
 }
 
 .back_button {
-  bottom: 100px;
+  bottom: 120px;
 }
 
 .sub_block {
