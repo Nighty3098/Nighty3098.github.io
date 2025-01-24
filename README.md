@@ -1,13 +1,6 @@
 <div class="badges" align="center">
     <br><br>
     <img src="imgs/light.png">
-    <br><br><br>
-    <a href="./LICENSE.md"><img class="badge" src="https://img.shields.io/github/license/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=a6e0b8&logoColor=ffffff&labelColor=1c1c29" style="border-radius: 5px;"/></a>
-    <br><br>
-    <a href="./LICENSE.md"><img  class="badge" src="https://img.shields.io/github/license/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=a6e0b8&logoColor=ffffff&labelColor=1c1c29"  style="border-radius: 5px;"/></a>
-    <img class="badge" src="https://img.shields.io/github/issues-pr/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=ef9f9c&logoColor=85e185&labelColor=1c1c29" style="border-radius: 5px;" />
-    <img class="badge" src="https://img.shields.io/github/stars/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29" style="border-radius: 5px;"/>
-    <img class="badge" src="https://img.shields.io/github/forks/Nighty3098/Nighty3098.github.io?style=for-the-badge&color=9dc3ea&logoColor=D9E0EE&labelColor=1c1c29"  style="border-radius: 5px;"/>
     <br><br>
     <a href="https://t.me/DXS_TechSupport_bot"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_TechSupport.png?raw=true" height="30px"/></a>
     <a href="https://discord.gg/tnHSEc2cZv"><img src="https://github.com/Nighty3098/DevIcons/blob/main/badges/badges_discord_server.png?raw=true" height="30px" /></a>  
