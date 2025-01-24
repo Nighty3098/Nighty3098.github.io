@@ -45,10 +45,10 @@ Madimi One
   color: gray;
 }
 
-header {
+.header {
   display: flex;
   position: fixed;
-  bottom: 10px;
+  top: 10px;
   height: 50px;
   z-index: 10000;
   width: auto;
@@ -152,7 +152,7 @@ html {
   background-origin: padding-box;
   background-repeat: repeat;
   background-attachment: scroll;
-  scrollbar-color: var(--color1) transparent;
+  scrollbar-color: var(--color2) transparent;
   scrollbar-arrow-color: transparent transparent;
   font-family: "Madimi One", monospace;
   font-weight: 400;
@@ -355,11 +355,13 @@ input {
 }
 
 .user_bio {
-  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .git_profile_card {
-  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -623,7 +625,7 @@ a .text-box .i {
 
 .block_l {
   height: 200px;
-} 
+}
 
 .link_badge {
   width: 300px;
@@ -636,7 +638,6 @@ a .text-box .i {
   box-shadow: 0px 0px 10px 10px var(--color2);
   background-color: var(--color2);
 }
-
 
 .button {
   font-family: "Madimi One";
@@ -702,8 +703,6 @@ a .button:hover {
   box-shadow: 0px 0px 5px 5px var(--color2);
   background-color: var(--color2);
 }
-
-
 
 .theme-toggle,
 .back_button {
@@ -799,6 +798,7 @@ a .button:hover {
   font-family: "Playwrite HR Lijeva";
   margin: 0;
   padding: 0;
+  text-shadow: 0px 5px 5px rgba(0,0,0,.25);
 }
 
 .git_stats {
@@ -960,4 +960,60 @@ a .button:hover {
   .cross_block_2 {
     width: 90%;
   }
+}
+
+
+.roller{
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+  width: 100%;
+}
+
+#flip {
+  text-shadow: 0px 5px 5px rgba(0,0,0,.25);
+  margin-top: 60px;
+  height:70px;
+  overflow:hidden;
+  width: 100%;
+  font-size: 50px;
+}
+
+#flip > div > div {
+  color: var(--bg);
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  color: var(--accent);
+}
+#flip div:first-child div {
+  color: var(--accent);
+}
+#flip div:last-child div {
+  color: var(--accent);
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
 }

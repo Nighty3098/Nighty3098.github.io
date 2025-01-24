@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateButtonText(theme) {
         if (theme === 'light') {
-            themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            themeToggle.innerHTML = '<i class="fa-solid fa-mountain-sun"></i>';
         } else {
             themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
         }
