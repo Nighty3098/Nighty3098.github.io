@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let clickCount = 0;
     let clickTimeout;
 
-    document.querySelector('.user_avatar').addEventListener('click', function () {
+    document.querySelector('.gsdfgsdfgdf').addEventListener('click', function () {
         clickCount++;
 
         if (clickCount === 1) {
