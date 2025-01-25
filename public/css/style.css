@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 :root {
   --bg: #252932;
@@ -28,6 +29,7 @@
 WindSong
 Playwrite HR Lijeva
 Madimi One
+Varela Round
 */
 
 * {
@@ -35,8 +37,10 @@ Madimi One
 }
 
 .rights {
-  font-family: "Madimi One";
+  font-family: "Varela Round", monospace;
   color: var(--color2);
+  font-size: medium;
+  font-weight: 800;
 }
 
 .date {
@@ -59,6 +63,7 @@ Madimi One
   backdrop-filter: blur(5px);
   color: var(--bg);
   border-radius: 15px;
+  font-family: 'Madimi One';
 }
 
 .header a {
@@ -93,10 +98,15 @@ Madimi One
   flex-direction: column;
   align-items: center;
   background-color: var(--bg);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
   color: var(--fg);
   border-radius: 20px;
   padding: 20px;
   width: 80%;
+}
+
+#inputData {
+  color: var(--bg);
 }
 
 .close {
@@ -114,14 +124,14 @@ Madimi One
 }
 
 h1 {
-  font-family: "Playwrite HR Lijeva", system-ui;
+  font-family: "Madimi One", system-ui;
   font-optical-sizing: auto;
   font-size: xx-large;
   color: var(--color2);
 }
 
 h3 {
-  font-family: "Playwrite HR Lijeva", system-ui;
+  font-family: "Madimi One", system-ui;
   padding: 0%;
   margin: 5px;
   font-size: medium;
@@ -330,6 +340,12 @@ input {
   align-items: center;
 }
 
+.client_data h3 {
+  color: var(--color2);
+  font-family: "Madimi One", monospace;
+  font-size: medium;
+}
+
 .profile_card,
 .welcome_card,
 .profile_card_2,
@@ -405,10 +421,11 @@ input {
   line-height: 2;
   align-content: center;
   text-align: center;
+  font-family: "Madimi One", sans-serif;
 }
 
 .profile_stats h3 {
-  font-family: "Playwrite HR Lijeva", sans-serif;
+  font-family: "Madimi One", sans-serif;
   line-height: 2;
   font-size: x-larger;
 }
@@ -430,8 +447,9 @@ input {
 
 .user_bio h3 {
   line-height: 2;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: medium;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -449,7 +467,8 @@ input {
 .text-box-outline {
   width: 85%;
   padding: 15px;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Varela Round";
+  font-weight: 700;
   font-size: medium;
   background-color: var(--color2);
   color: var(--bg);
@@ -467,7 +486,8 @@ input {
 .text-box {
   width: 85%;
   padding: 15px;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Varela Round";
+  font-weight: 700;
   font-size: medium;
   background-color: var(--color2);
   color: var(--bg);
@@ -479,42 +499,6 @@ input {
 
 a .text-box .i {
   margin-left: 20px;
-}
-
-.cross_svg {
-  width: 30px;
-  height: 30px;
-}
-
-.cross_svg g path {
-  width: 30px;
-  height: 30px;
-}
-
-.cross_svg path {
-  fill: var(--color2);
-}
-
-.cross_block {
-  margin-bottom: 10px;
-  width: 100%;
-  height: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: left;
-  align-content: left;
-}
-
-.cross_block_2 {
-  margin-top: 10px;
-  height: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: right;
-  align-content: right;
 }
 
 .text-box .i {
@@ -567,7 +551,8 @@ a .text-box .i {
 }
 
 .contact_button {
-  font-family: "Madimi One";
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700;
   font-size: medium;
   background-color: var(--color2);
   border-radius: 20px;
@@ -640,8 +625,9 @@ a .text-box .i {
 }
 
 .button {
-  font-family: "Madimi One";
+  font-family: "Varela Round", sans-serif;
   font-size: medium;
+  font-weight: 700;
   background-color: var(--color2);
   border-radius: 10px;
   height: 50px;
@@ -677,8 +663,9 @@ a {
 }
 
 a .button {
-  font-family: "Madimi One";
+  font-family: "Varela Round", sans-serif;
   font-size: medium;
+  font-weight: 700;
   background-color: var(--color2);
   border-radius: 10px;
   height: 50px;
@@ -784,7 +771,9 @@ a .button:hover {
   flex-direction: row;
   margin: 20px;
   margin-left: 50px;
-  font-family: "Madimi One", monospace;
+  font-family: "Varela Round", monospace;
+  font-weight: 700;
+  font-style: normal;
   font-size: medium;
   line-height: 2;
   padding-left: 10px;
@@ -794,16 +783,17 @@ a .button:hover {
 .username {
   align-items: center;
   text-align: center;
-  font-size: 100px;
-  font-family: "Playwrite HR Lijeva";
+  font-size: 10vw;
+  font-family: "Madimi One", monospace;
   margin: 0;
   padding: 0;
-  text-shadow: 0px 5px 5px rgba(0,0,0,.25);
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 .git_stats {
   font-size: medium;
-  font-family: "Madimi One", monospace;
+  font-family: "Varela Round", monospace;
+  font-weight: 700;
   width: auto;
   text-align: left;
 }
@@ -817,6 +807,89 @@ a .button:hover {
   font-size: small;
 }
 
+.roller {
+  height: 5.5rem;
+  line-height: 5rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+}
+
+#flip {
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  margin-top: 60px;
+  height: 100px;
+  overflow: hidden;
+  width: 100%;
+  font-size: 50px;
+}
+
+#flip > div > div {
+  color: var(--bg);
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  color: var(--accent);
+  font-family: "Madimi One";
+}
+
+#flip div:first-child div {
+  color: var(--accent);
+  font-family: "Madimi One";
+}
+
+#flip div:last-child div {
+  color: var(--accent);
+  font-family: "Madimi One";
+}
+
+
+@keyframes show {
+  0% {
+    margin-top: -360px;
+  }
+  5% {
+    margin-top: -270px;
+  }
+  33% {
+    margin-top: -270px;
+  }
+  38% {
+    margin-top: -180px;
+  }
+  66% {
+    margin-top: -180px;
+  }
+  71% {
+    margin-top: -90px;
+  }
+  83% {
+    margin-top: -90px;
+  }
+  88% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -360px;
+  }
+}
+
+
 @media screen and (max-height: 500px) and (min-width: 600px) {
   .welcome_card {
     height: 100%;
@@ -825,11 +898,19 @@ a .button:hover {
   .bio_content {
     flex-direction: column;
   }
+
+  .username {
+    font-size: 70px;
+  }
 }
 
 @media screen and (min-width: 1500px) {
   .user_avatar {
     width: 300px;
+  }
+
+  .username {
+    font-size: 250px;
   }
 }
 
@@ -846,10 +927,6 @@ a .button:hover {
     width: 15%;
     margin: 30px;
   }
-
-  .username {
-    font-size: 80px;
-  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -863,10 +940,6 @@ a .button:hover {
 
   .sub_links_block {
     flex-direction: column;
-  }
-
-  .username {
-    font-size: 70px;
   }
 
   .header {
@@ -897,6 +970,10 @@ a .button:hover {
 }
 
 @media screen and (max-width: 850px) {
+  .username {
+    font-size: 70px;
+  }
+
   .left_text {
     margin-left: 0px;
   }
@@ -950,70 +1027,4 @@ a .button:hover {
   .left_text {
     width: 90%;
   }
-
-  .username {
-    font-size: 50px;
-    margin-top: 0px;
-  }
-
-  .cross_block,
-  .cross_block_2 {
-    width: 90%;
-  }
-}
-
-
-.roller{
-  height: 4.125rem;
-  line-height: 4rem;
-  position: relative;
-  overflow: hidden; 
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--accent);
-  width: 100%;
-}
-
-#flip {
-  text-shadow: 0px 5px 5px rgba(0,0,0,.25);
-  margin-top: 60px;
-  height:70px;
-  overflow:hidden;
-  width: 100%;
-  font-size: 50px;
-}
-
-#flip > div > div {
-  color: var(--bg);
-  padding:4px 12px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
-}
-
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-#flip div div {
-  color: var(--accent);
-}
-#flip div:first-child div {
-  color: var(--accent);
-}
-#flip div:last-child div {
-  color: var(--accent);
-}
-
-@keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
 }
