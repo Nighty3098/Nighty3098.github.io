@@ -1,156 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Nighty3098's Portfolio" />
-        <meta property="og:description" content="My Portfolio" />
-        <meta name="viewport" content="width=device-width; initial-scale=0.8; maximum-scale=0.8; minimum-scale=0.8;" />
-        <title>Nighty</title>
-        <link href="public/css/style.css" rel="stylesheet" />
-        <script src="public/js/script.js"></script>
-        <script src="https://kit.fontawesome.com/a01328b26e.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="public/js/get_git_info.js"></script>
-        <script src="public/js/theme.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-        <link rel="shortcut icon" href="public/imgs/icon.svg" />
-    </head>
-    <header class="header animate__animated animate__bounceInRight">
-        <a href="#main_block"> HOME </a>
-        <a href="#user_bio"> ABOUT ME </a>
-        <a href="#bio_links"> LINKS </a>
-        <a href="#bio_github"> GIT </a>
-    </header>
-    <body>
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="submit_btn close">&times;</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="Nighty3098's Portfolio" />
+    <meta property="og:description" content="My Portfolio" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=0.8; maximum-scale=0.8; minimum-scale=0.8;"
+    />
+    <title>Nighty</title>
+    <link href="public/css/style.css" rel="stylesheet" />
+    <script src="public/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a01328b26e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="public/js/get_git_info.js"></script>
+    <script src="public/js/theme.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="shortcut icon" href="public/imgs/icon.svg" />
+  </head>
+  <header class="header animate__animated animate__bounceInRight">
+    <a class="navbar_button" href="#main_block">
+      <i class="fa-solid fa-rocket"></i>
+    </a>
+    <a class="navbar_button" href="#user_bio">
+      <i class="fa-solid fa-lightbulb"></i>
+    </a>
+    <a class="navbar_button" href="#bio_links">
+      <i class="fa-solid fa-paperclip"></i>
+    </a>
+    <a class="navbar_button" href="#bio_github">
+      <i class="fa-brands fa-github-alt"></i>
+    </a>
+  </header>
+  <body>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="submit_btn close">&times;</span>
+        <br />
+        <div
+          class="client_username_request"
+          style="
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <h1>Enter your nickname</h1>
+          <input type="text" id="inputData" placeholder="Player name..." />
+          <br />
+          <button class="button submitButton" id="submitButton">Play</button>
+        </div>
+        <div class="client_data" style="display: none">
+          <h1>Hello :)</h1>
+          <br />
+          <h3 id="ip"></h3>
+          <h3 id="city"></h3>
+          <h3 id="org_client"></h3>
+          <h3 id="country"></h3>
+          <h3 id="device"></h3>
+          <h3 id="lang"></h3>
+          <h3 id="platform"></h3>
+          <h3 id="coordinates"></h3>
+          <h3 id="browser"></h3>
+        </div>
+      </div>
+    </div>
+    <button
+      class="theme-toggle animate__animated animate__fadeInUp"
+      id="theme-toggle"
+    >
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <div class="content">
+      <div class="profile_info" id="main_block">
+        <section
+          id="profile_card"
+          class="welcome_card animate__animated animate__shakeX"
+        >
+          <h1 id="username" class="username">
+            Hi, I'm <br />
+            Nighty3098
+          </h1>
+          <div id="container" class="gsdfgsdfgdf">
+            <div id="flip">
+              <div><div>.. ? ..</div></div>
+              <div><div>DEVELOPER</div></div>
+              <div><div>FREELANCER</div></div>
+              <div><div>STUDENT</div></div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="user_bio"
+          class="user_bio"
+          data-animation="animate__fadeInRightBig"
+        >
+          <h1 id="bio" class="bio">
+            <i class="fa-solid fa-circle-info"></i> About Me
+          </h1>
+          <div class="bio_info">
+            <div class="bio_content">
+              <img src="public/imgs/me.png" class="user_avatar" />
+              <p class="left_text">
+                Hello. I'm Artem - backend developer and freelancer. I'm 17
+                years old, studying in 11th grade at school and 5 years at
+                programming academy.
                 <br />
-                <div class="client_username_request" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-                    <h1>Enter your nickname</h1>
-                    <input type="text" id="inputData" placeholder="Player name..." />
-                    <br />
-                    <button class="button submitButton" id="submitButton">Play</button>
-                </div>
-                <div class="client_data" style="display: none;">
-                    <h1>Hello :)</h1>
-                    <br />
-                    <h3 id="ip"></h3>
-                    <h3 id="city"></h3>
-                    <h3 id="org_client"></h3>
-                    <h3 id="country"></h3>
-                    <h3 id="device"></h3>
-                    <h3 id="lang"></h3>
-                    <h3 id="platform"></h3>
-                    <h3 id="coordinates"></h3>
-                    <h3 id="browser"></h3>
-                </div>
+                <br />
+                I have been doing development for the last 4 years, mainly
+                focusing on backend technologies. I am proficient in languages
+                such as Python, C, C++, TypeScript, JavaScript and have
+                experience with frameworks such as Flask, QT and React.
+                <br />
+                <br />
+                I am also working on several projects such as project and task
+                managers, server monitoring dashboards, various telegram bots
+                and neural networks. You can check out my projects on GitHub.
+                <br />
+                <br />
+                I'm currently studying English and Japanese
+              </p>
             </div>
+            <h3 class="text-box" id="top-languages"></h3>
+          </div>
+        </section>
+        <div class="spacer"></div>
+        <div class="sub_links_block" id="bio_links">
+          <section class="profile_card" data-animation="animate__fadeInUp">
+            <h1><i class="fa-solid fa-mug-hot"></i> Links</h1>
+            <div class="links_badge_block block_l">
+              <a href="public/content/projects.html">
+                <button class="link_badge text-box">
+                  <i class="fa-solid fa-compass-drafting"></i> PROJECTS
+                </button>
+              </a>
+              <a href="public/content/blog.html">
+                <button class="link_badge text-box">
+                  <i class="fa-regular fa-newspaper"></i> BLOG
+                </button>
+              </a>
+            </div>
+          </section>
+          <section class="profile_card" data-animation="animate__fadeInUp">
+            <h1><i class="fa-solid fa-comment"></i> Contacts</h1>
+            <div class="contacts_badge_block block_l">
+              <a href="https://t.me/Night3098" , target="_blank" ,>
+                <h3 class="contact_button">
+                  <i class="fa-brands fa-telegram"></i>
+                </h3>
+              </a>
+              <a href="https://discord.gg/#9707" , target="_blank" ,>
+                <h3 class="contact_button">
+                  <i class="fa-brands fa-discord"></i>
+                </h3>
+              </a>
+              <a
+                href="https://www.reddit.com/user/DEVELOPER0x31/"
+                ,
+                target="_blank"
+                ,
+              >
+                <h3 class="contact_button">
+                  <i class="fa-brands fa-reddit"></i>
+                </h3>
+              </a>
+              <a
+                href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK"
+                ,
+                ,
+                target="_blank"
+              >
+                <h3 class="contact_button">
+                  <i class="fa-brands fa-signal-messenger"></i>
+                </h3>
+              </a>
+            </div>
+          </section>
         </div>
-        <button class="theme-toggle animate__animated animate__fadeInUp" id="theme-toggle">
-            <i class="fa-solid fa-moon"></i>
-        </button>
-        <div class="content">
-            <div class="profile_info" id="main_block">
-                <section id="profile_card" class="welcome_card animate__animated animate__shakeX">
-                    <h1 id="username" class="username">
-                        Hi, I'm <br />
-                        Nighty3098
-                    </h1>
-                    <div id="container" class="gsdfgsdfgdf">
-                        <div id="flip">
-                            <div><div>.. ? ..</div></div>
-                            <div><div>DEVELOPER</div></div>
-                            <div><div>FREELANCER</div></div>
-                            <div><div>STUDENT</div></div>
-                        </div>
-                    </div>
-                </section>
-                <section id="user_bio" class="user_bio" data-animation="animate__fadeInRightBig">
-                    <h1 id="bio" class="bio"><i class="fa-solid fa-circle-info"></i> About Me</h1>
-                    <div class="bio_info">
-                        <div class="bio_content">
-                            <img src="public/imgs/me.png" class="user_avatar" />
-                            <p class="left_text">
-                                Hello. I'm Artem - backend developer and freelancer. I'm 17 years old, studying in 11th grade at school and 5 years at programming academy.
-                                <br />
-                                <br />
-                                I have been doing development for the last 4 years, mainly focusing on backend technologies. I am proficient in languages such as Python, C, C++, TypeScript, JavaScript and have experience with frameworks
-                                such as Flask, QT and React.
-                                <br />
-                                <br />
-                                I am also working on several projects such as project and task managers, server monitoring dashboards, various telegram bots and neural networks. You can check out my projects on GitHub.
-                                <br />
-                                <br />
-                                I'm currently studying English and Japanese
-                            </p>
-                        </div>
-                        <h3 class="text-box" id="top-languages"></h3>
-                    </div>
-                </section>
-                <div class="spacer"></div>
-                <div class="sub_links_block" id="bio_links">
-                    <section class="profile_card" data-animation="animate__fadeInUp">
-                        <h1><i class="fa-solid fa-mug-hot"></i> Links</h1>
-                        <div class="links_badge_block block_l">
-                            <a href="public/content/projects.html">
-                                <button class="link_badge text-box"><i class="fa-solid fa-compass-drafting"></i> PROJECTS</button>
-                            </a>
-                            <a href="public/content/blog.html">
-                                <button class="link_badge text-box"><i class="fa-regular fa-newspaper"></i> BLOG</button>
-                            </a>
-                        </div>
-                    </section>
-                    <section class="profile_card" data-animation="animate__fadeInUp">
-                        <h1><i class="fa-solid fa-comment"></i> Contacts</h1>
-                        <div class="contacts_badge_block block_l">
-                            <a href="https://t.me/Night3098" , target="_blank" ,>
-                                <h3 class="contact_button">
-                                    <i class="fa-brands fa-telegram"></i>
-                                </h3>
-                            </a>
-                            <a href="https://discord.gg/#9707" , target="_blank" ,>
-                                <h3 class="contact_button">
-                                    <i class="fa-brands fa-discord"></i>
-                                </h3>
-                            </a>
-                            <a href="https://www.reddit.com/user/DEVELOPER0x31/" , target="_blank" ,>
-                                <h3 class="contact_button">
-                                    <i class="fa-brands fa-reddit"></i>
-                                </h3>
-                            </a>
-                            <a href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK" , , target="_blank">
-                                <h3 class="contact_button">
-                                    <i class="fa-brands fa-signal-messenger"></i>
-                                </h3>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-                <section class="git_profile_card" id="bio_github" data-animation="animate__backInLeft">
-                    <div class="spacer"></div>
-                    <h1 id="stats" class="stats"><i class="fa-brands fa-github"></i> GitHub stats</h1>
-                    <h3 class="git_stats" id="git_name"></h3>
-                    <h3 class="git_stats" id="git_company"></h3>
-                    <h3 class="git_stats" id="git_followers"></h3>
-                    <h3 class="git_stats" id="git_stars"></h3>
-                    <h3 class="git_stats" id="git_repos"></h3>
-                    <br />
-                    <a href="https://github.com/Nighty3098">
-                        <button class="button"><i class="fa-brands fa-github-alt"></i> OPEN GITHUB <i class="fa-brands fa-github-alt"></i></button>
-                    </a>
-                    <div class="spacer"></div>
-                </section>
-            </div>
-            <div class="footer">
-                <p class="rights animate__animated animate__backInUp">&copy; <span id="year"></span> Semenov Artem (Nighty3098). All Rights Reserved.</p>
-                <p class="rights animate__animated animate__backInUp">Attribution-NonCommercial-NoDerivatives 4.0 International</p>
-            </div>
-            <script>
-                document.getElementById("year").textContent = new Date().getFullYear();
-            </script>
-        </div>
-		<script src="public/js/easter_egg.js"></script>
-    </body>
+        <section
+          class="git_profile_card"
+          id="bio_github"
+          data-animation="animate__backInLeft"
+        >
+          <div class="spacer"></div>
+          <h1 id="stats" class="stats">
+            <i class="fa-brands fa-github"></i> GitHub stats
+          </h1>
+          <h3 class="git_stats" id="git_name"></h3>
+          <h3 class="git_stats" id="git_company"></h3>
+          <h3 class="git_stats" id="git_followers"></h3>
+          <h3 class="git_stats" id="git_stars"></h3>
+          <h3 class="git_stats" id="git_repos"></h3>
+          <br />
+          <a href="https://github.com/Nighty3098">
+            <button class="button">
+              <i class="fa-brands fa-github-alt"></i> OPEN GITHUB
+              <i class="fa-brands fa-github-alt"></i>
+            </button>
+          </a>
+          <div class="spacer"></div>
+        </section>
+      </div>
+      <div class="footer">
+        <p class="rights animate__animated animate__backInUp">
+          &copy; <span id="year"></span> Semenov Artem (Nighty3098). All Rights
+          Reserved.
+        </p>
+        <p class="rights animate__animated animate__backInUp">
+          Attribution-NonCommercial-NoDerivatives 4.0 International
+        </p>
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </body>
 </html>

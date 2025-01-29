@@ -1,25 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 :root {
-  --bg: #252932;
-  --fg2: #eff1f5;
-  --fg: #eff1f5;
-  --color1: #2b303b;
-  --color2: #8fa1b3;
-  --color3: #65737e;
+  --bg: #1c2a3a;
+  --fg: #bbcbdd;
+  --color1: #bbcbdd;
   --red: #bf616a;
   --green: #a3be8c;
   --yellow: #ebcb8b;
 }
 
 :root.light {
-  --bg: #c0c5ce;
-  --fg2: #65737e;
-  --fg: #65737e;
-  --color1: #96b5b4;
-  --color2: #2b303b;
-  --color3: #b48ead;
+  --bg: #bbcbdd;
+  --fg: #1c2a3a;
+  --color1: #1c2a3a;
   --red: #bf616a;
   --green: #a3be8c;
   --yellow: #ebcb8b;
@@ -38,7 +32,7 @@ Varela Round
 
 .rights {
   font-family: "Varela Round", monospace;
-  color: var(--color2);
+  color: var(--color1);
   font-size: medium;
   font-weight: 800;
 }
@@ -59,23 +53,44 @@ Varela Round
   justify-content: right;
   align-items: center;
   align-content: center;
-  background-color: var(--color2);
+  background-color: var(--color1);
   backdrop-filter: blur(5px);
   color: var(--bg);
   border-radius: 15px;
-  font-family: 'Madimi One';
+  font-family: "Madimi One";
 }
 
-.header a {
+.navbar_button_text {
+  width: auto;
+  padding: 10px;
+  height: 40px;
+  color: var(--bg);
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.navbar_button {
   text-decoration: none;
   color: var(--bg);
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   transition: color 0.5s;
+  width: 20px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
 }
 
-.header a:hover {
-  color: var(--color3);
+.navbar_button:hover {
+  background-color: var(--bg);
+  color: var(--color1);
+}
+
+.navbar_button:active {
+  background-color: var(--bg);
+  color: var(--color1);
 }
 
 .modal {
@@ -127,7 +142,7 @@ h1 {
   font-family: "Madimi One", system-ui;
   font-optical-sizing: auto;
   font-size: xx-large;
-  color: var(--color2);
+  color: var(--color1);
 }
 
 h3 {
@@ -139,13 +154,13 @@ h3 {
 }
 
 svg path {
-  stroke: var(--color2);
-  background-color: var(--color2);
+  stroke: var(--color1);
+  background-color: var(--color1);
 }
 
 svg circle {
-  stroke: var(--color2);
-  background-color: var(--color2);
+  stroke: var(--color1);
+  background-color: var(--color1);
 }
 
 * {
@@ -162,7 +177,7 @@ html {
   background-origin: padding-box;
   background-repeat: repeat;
   background-attachment: scroll;
-  scrollbar-color: var(--color2) transparent;
+  scrollbar-color: var(--color1) transparent;
   scrollbar-arrow-color: transparent transparent;
   font-family: "Madimi One", monospace;
   font-weight: 400;
@@ -191,7 +206,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: var(--color2);
+  color: var(--color1);
   cursor: pointer;
   font-size: 20px;
   position: absolute;
@@ -315,7 +330,7 @@ input {
   width: 50%;
   border-radius: 10px;
   border: none;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: var(--fg);
 }
 
@@ -341,7 +356,7 @@ input {
 }
 
 .client_data h3 {
-  color: var(--color2);
+  color: var(--color1);
   font-family: "Madimi One", monospace;
   font-size: medium;
 }
@@ -358,7 +373,7 @@ input {
 .profile_blogs {
   background-color: transparent;
   border-radius: 30px;
-  color: var(--color2);
+  color: var(--color1);
   font-size: x-large;
   display: flex;
   flex-direction: column;
@@ -433,14 +448,14 @@ input {
 .profile_stats a {
   line-height: 1.5;
   font-size: medium;
-  color: var(--color2);
+  color: var(--color1);
   text-decoration: none;
 }
 
 .user_bio a {
   line-height: 2;
   font-size: medium;
-  color: var(--color2);
+  color: var(--color1);
   font-family: "Madimi One", sans-serif;
   text-decoration: none;
 }
@@ -461,7 +476,7 @@ input {
   font-family: "WindSong", cursive;
   font-optical-sizing: auto;
   font-size: xx-large;
-  color: var(--color2);
+  color: var(--color1);
 }
 
 .text-box-outline {
@@ -470,7 +485,7 @@ input {
   font-family: "Varela Round";
   font-weight: 700;
   font-size: medium;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: var(--bg);
   border-radius: 10px;
   align-content: center;
@@ -489,7 +504,7 @@ input {
   font-family: "Varela Round";
   font-weight: 700;
   font-size: medium;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: var(--bg);
   border-radius: 10px;
   align-content: center;
@@ -554,7 +569,7 @@ a .text-box .i {
   font-family: "Varela Round", sans-serif;
   font-weight: 700;
   font-size: medium;
-  background-color: var(--color2);
+  background-color: var(--color1);
   border-radius: 20px;
   width: 70px;
   aspect-ratio: 1/1;
@@ -579,8 +594,8 @@ a .text-box .i {
 }
 
 .contact_button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: vaR(--color2);
+  box-shadow: 0px 0px 5px 5px var(--color1);
+  background-color: vaR(--color1);
 }
 
 .contact_button i {
@@ -620,15 +635,15 @@ a .text-box .i {
 }
 
 .link_badge:hover {
-  box-shadow: 0px 0px 10px 10px var(--color2);
-  background-color: var(--color2);
+  box-shadow: 0px 0px 10px 10px var(--color1);
+  background-color: var(--color1);
 }
 
 .button {
   font-family: "Varela Round", sans-serif;
   font-size: medium;
   font-weight: 700;
-  background-color: var(--color2);
+  background-color: var(--color1);
   border-radius: 10px;
   height: 50px;
   padding: 10px;
@@ -649,8 +664,8 @@ a .text-box .i {
 }
 
 .button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: var(--color2);
+  box-shadow: 0px 0px 5px 5px var(--color1);
+  background-color: var(--color1);
 }
 
 .button i {
@@ -666,7 +681,7 @@ a .button {
   font-family: "Varela Round", sans-serif;
   font-size: medium;
   font-weight: 700;
-  background-color: var(--color2);
+  background-color: var(--color1);
   border-radius: 10px;
   height: 50px;
   padding: 10px;
@@ -687,8 +702,8 @@ a .button {
 }
 
 a .button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color2);
-  background-color: var(--color2);
+  box-shadow: 0px 0px 5px 5px var(--color1);
+  background-color: var(--color1);
 }
 
 .theme-toggle,
@@ -705,7 +720,7 @@ a .button:hover {
   border-radius: 50%;
   border: none;
   box-shadow: none;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: var(--bg);
   transition: all 1s;
 }
@@ -719,13 +734,13 @@ a .button:hover {
 }
 
 .theme-toggle:hover {
-  box-shadow: 0px 0px 20px var(--color2);
-  background-color: var(--color2);
+  box-shadow: 0px 0px 20px var(--color1);
+  background-color: var(--color1);
 }
 
 .back_button:hover {
-  box-shadow: 0px 0px 20px var(--color2);
-  background-color: var(--color2);
+  box-shadow: 0px 0px 20px var(--color1);
+  background-color: var(--color1);
 }
 
 .theme-toggle:active,
@@ -855,7 +870,6 @@ a .button:hover {
   font-family: "Madimi One";
 }
 
-
 @keyframes show {
   0% {
     margin-top: -360px;
@@ -888,7 +902,6 @@ a .button:hover {
     margin-top: -360px;
   }
 }
-
 
 @media screen and (max-height: 500px) and (min-width: 600px) {
   .welcome_card {

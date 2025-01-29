@@ -13,7 +13,7 @@
   margin: 2%;
   width: 60%;
   margin: 40px 40px 10px 40px;
-  background-color: var(--color2);
+  background-color: var(--color1);
 }
 
 .header a {
@@ -77,7 +77,7 @@
 h1 {
   font-family: "Playpen Sans", cursive;
   font-size: xx-large;
-  color: var(--color2);
+  color: var(--color1);
 }
 
 h3 {
@@ -90,8 +90,8 @@ h3 {
 .text-box {
   width: 100%;
   padding: 2%;
-  background-color: var(--color2);
-  color: var(--color2);
+  background-color: var(--color1);
+  color: var(--color1);
   border-radius: 10px;
   align-content: center;
   text-align: center;
@@ -110,7 +110,7 @@ a button {
 
 .article_card {
   width: 95%;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: var(--bg);
   border-radius: 25px;
   display: flex;
@@ -149,7 +149,6 @@ a button {
   margin: 1%;
   padding: 0px;
 }
-
 
 @media screen and (max-width: 800px) {
   .header {
