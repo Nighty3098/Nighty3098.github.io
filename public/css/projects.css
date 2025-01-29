@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap");
 
 * {
   outline: none;
@@ -45,7 +45,7 @@ a .button {
   align-items: center;
   align-content: center;
   text-align: center;
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: var(--bg);
   padding: 20px;
   margin: 20px;
