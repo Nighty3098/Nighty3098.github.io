@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 :root {
-  --bg: #1c2a3a;
+  --bg: #2A303D;
   --fg: #bbcbdd;
   --color1: #bbcbdd;
   --red: #bf616a;
@@ -12,8 +13,8 @@
 
 :root.light {
   --bg: #bbcbdd;
-  --fg: #1c2a3a;
-  --color1: #1c2a3a;
+  --fg: #2A303D;
+  --color1: #2A303D;
   --red: #bf616a;
   --green: #a3be8c;
   --yellow: #ebcb8b;
@@ -24,6 +25,7 @@ WindSong
 Playwrite HR Lijeva
 Madimi One
 Varela Round
+Permanent Marker
 */
 
 * {
@@ -57,6 +59,8 @@ Varela Round
   backdrop-filter: blur(5px);
   color: var(--bg);
   border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-family: "Madimi One";
 }
 
@@ -168,8 +172,18 @@ svg circle {
 }
 
 .svg_image {
-  width: 20%;
+  width: 350px;
   margin: 30px;
+}
+
+.svg_image path {
+  stroke: var(--color1);
+  background-color: var(--color1);
+}
+
+.svg_image circle {
+  stroke: var(--color1);
+  background-color: var(--color1);
 }
 
 html {
@@ -571,7 +585,7 @@ a .text-box .i {
   font-size: medium;
   background-color: var(--color1);
   border-radius: 20px;
-  width: 70px;
+  width: 50px;
   aspect-ratio: 1/1;
   padding: 10px;
   border: none;
@@ -599,7 +613,7 @@ a .text-box .i {
 }
 
 .contact_button i {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .submit_btn {
@@ -734,12 +748,12 @@ a .button:hover {
 }
 
 .theme-toggle:hover {
-  box-shadow: 0px 0px 20px var(--color1);
+  box-shadow: 0px 0px 10px var(--color1);
   background-color: var(--color1);
 }
 
 .back_button:hover {
-  box-shadow: 0px 0px 20px var(--color1);
+  box-shadow: 0px 0px 10px var(--color1);
   background-color: var(--color1);
 }
 
@@ -798,8 +812,8 @@ a .button:hover {
 .username {
   align-items: center;
   text-align: center;
-  font-size: 10vw;
-  font-family: "Madimi One", monospace;
+  font-size: 15vw;
+  font-family: "Permanent Marker";
   margin: 0;
   padding: 0;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -937,7 +951,7 @@ a .button:hover {
   }
 
   .svg_image {
-    width: 15%;
+    width: 200px;
     margin: 30px;
   }
 }
