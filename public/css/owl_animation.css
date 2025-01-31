@@ -1,0 +1,90 @@
+/* Анимации для элементов */
+@keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 58.548667764616276px;
+    stroke-dasharray: 58.548667764616276px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 58.548667764616276px;
+  }
+}
+
+.svg-elem-1 {
+  animation: animate-svg-stroke-1 1.5s ease-in 0s both;
+}
+
+@keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 30.275970458984375px;
+    stroke-dasharray: 30.275970458984375px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 30.275970458984375px;
+  }
+}
+
+.svg-elem-2 {
+  animation: animate-svg-stroke-2 1.5s ease-in 0.12s both;
+}
+
+@keyframes animate-svg-stroke-3 {
+  0% {
+    stroke-dashoffset: 8.283185307179586px;
+    stroke-dasharray: 8.283185307179586px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 8.283185307179586px;
+  }
+}
+
+.svg-elem-3 {
+  animation: animate-svg-stroke-3 1.5s ease-in 0.24s both;
+}
+
+@keyframes animate-svg-stroke-4 {
+  0% {
+    stroke-dashoffset: 8.283185307179586px;
+    stroke-dasharray: 8.283185307179586px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 8.283185307179586px;
+  }
+}
+
+.svg-elem-4 {
+  animation: animate-svg-stroke-4 1.5s ease-in 0.36s both;
+}
+
+@keyframes animate-svg-stroke-5 {
+  0% {
+    stroke-dashoffset: 24.743122100830078px;
+    stroke-dasharray: 24.743122100830078px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 24.743122100830078px;
+  }
+}
+
+.svg-elem-5 {
+  animation: animate-svg-stroke-5 1.5s ease-in 0.48s both;
+}
+
+@keyframes animate-svg-stroke-6 {
+  0% {
+    stroke-dashoffset: 29.976118087768555px;
+    stroke-dasharray: 29.976118087768555px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 29.976118087768555px;
+  }
+}
+
+.svg-elem-6 {
+  animation: animate-svg-stroke-6 1s ease-in 0.6s both;
+}
