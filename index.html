@@ -54,7 +54,9 @@
                     <h1 id="bio" class="bio"><i class="fa-solid fa-circle-info"></i> About Me</h1>
                     <div class="bio_info">
                         <div class="bio_content">
-                            <img src="https://avatars.githubusercontent.com/u/154594695?v=4" class="user_avatar" />
+                            <div class="image-container">
+                                <img src="public/imgs/1.gif" class="user_avatar" id="avatar" />
+                            </div>
                             <p class="left_text">
                                 Hello. I'm Artem - backend developer and freelancer. I'm 17 years old, studying in 11th grade at school and 5 years at programming academy.
                                 <br />
@@ -88,29 +90,36 @@
                     <section class="profile_card" data-animation="animate__fadeInUp">
                         <h1><i class="fa-solid fa-comment"></i> Contacts</h1>
                         <div class="contacts_badge_block block_l">
-                            <a href="https://t.me/Night3098" , target="_blank" ,>
-                                <h3 class="contact_button">
-                                    <i class="fa-brands fa-telegram"></i>
-                                </h3>
-                            </a>
-                            <a href="https://discord.gg/#9707" , target="_blank" ,>
-                                <h3 class="contact_button">
-                                    <i class="fa-brands fa-discord"></i>
-                                </h3>
-                            </a>
-                            <a href="https://www.reddit.com/user/DEVELOPER0x31/" , target="_blank" ,>
-                                <h3 class="contact_button">
-                                    <i class="fa-brands fa-reddit"></i>
-                                </h3>
-                            </a>
-                            <a href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK" , , target="_blank">
-                                <h3 class="contact_button">
-                                    <i class="fa-brands fa-signal-messenger"></i>
-                                </h3>
-                            </a>
+                            <ul>
+                                <li style="--bg-color: var(--blue);">
+                                    <a href="https://t.me/Night3098" target="_blank">
+                                        <span class="icon"><i class="fa-brands fa-telegram"></i></span>
+                                        <span class="text">Telegram</span>
+                                    </a>
+                                </li>
+                                <li style="--bg-color: var(--purple);">
+                                    <a href="https://discord.gg/#9707" target="_blank">
+                                        <span class="icon"><i class="fa-brands fa-discord"></i></span>
+                                        <span class="text">Discord</span>
+                                    </a>
+                                </li>
+                                <li style="--bg-color: var(--red);">
+                                    <a href="https://www.reddit.com/user/DEVELOPER0x31/" target="_blank">
+                                        <span class="icon"><i class="fa-brands fa-reddit"></i></span>
+                                        <span class="text">Reddit</span>
+                                    </a>
+                                </li>
+                                <li style="--bg-color: var(--green);">
+                                    <a href="https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK" target="_blank">
+                                        <span class="icon"><i class="fa-brands fa-signal-messenger"></i></span>
+                                        <span class="text">Signal</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </section>
                 </div>
+                <div class="spacer"></div>
                 <section class="git_profile_card" id="bio_github" data-animation="animate__backInLeft">
                     <div class="spacer"></div>
                     <h1 id="stats" class="stats"><i class="fa-brands fa-github"></i> GitHub stats</h1>
@@ -126,16 +135,6 @@
                             <i class="fa-brands fa-github-alt"></i>
                         </button>
                     </a>
-                </section>
-                <section class="profile_card" data-animation="animate__fadeInUp" id="owl_app">
-                  <h3>
-                      Are you looking for an application for convenient project and task management?<br />
-                      Try my app - OWL
-                  </h3>
-                  <br />
-                  <a href="OWL/owl.html">
-                      <button class="button"><i class="fa-solid fa-download"></i>DOWNLOAD</button>
-                  </a>
                 </section>
                 <div class="spacer"></div>
             </div>

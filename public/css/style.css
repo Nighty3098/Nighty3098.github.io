@@ -3,22 +3,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 :root {
-  --bg: #2A303D;
-  --fg: #bbcbdd;
-  --color1: #bbcbdd;
-  --red: #bf616a;
-  --green: #a3be8c;
-  --yellow: #ebcb8b;
+  --bg: hsl(220, 20%, 22%);
+  --bg2: hsl(220, 15%, 32%);
+  --bg3: hsl(220, 15%, 36%);
+  --fg: hsl(220, 30%, 88%);
+  --fg2: hsl(220, 20%, 92%);
+  --color1: hsl(220, 30%, 88%);
+  --red: hsl(350, 40%, 55%);
+  --green: hsl(100, 30%, 60%);
+  --blue: hsl(210, 40%, 60%);
+  --yellow: hsl(40, 60%, 70%);
+  --pink: hsl(320, 30%, 60%);
+  --purple: hsl(280, 30%, 60%);
+  --cyan: hsl(200, 50%, 65%);
+  --blur: hsla(220, 15%, 32%, 0.5);
 }
 
 :root.light {
-  --bg: #bbcbdd;
-  --fg: #2A303D;
-  --color1: #2A303D;
-  --red: #bf616a;
-  --green: #a3be8c;
-  --yellow: #ebcb8b;
+  --bg: hsl(220, 30%, 88%);
+  --bg2: hsl(220, 20%, 92%);
+  --bg3: hsl(220, 20%, 94%);
+  --fg: hsl(220, 20%, 22%);
+  --fg2: hsl(220, 15%, 32%);
+  --color1: hsl(220, 15%, 32%);
+  --red: hsl(350, 40%, 55%);
+  --green: hsl(100, 30%, 60%);
+  --blue: hsl(210, 40%, 60%);
+  --yellow: hsl(40, 60%, 70%);
+  --pink: hsl(320, 30%, 60%);
+  --purple: hsl(280, 30%, 60%);
+  --cyan: hsl(200, 50%, 65%);
+  --blur: hsla(220, 20%, 92%, 0.5);
 }
+
 
 /*
 WindSong
@@ -85,6 +102,7 @@ Permanent Marker
   width: 20px;
   border-radius: 10px;
   aspect-ratio: 1/1;
+  transition: all 0.5s ease-in-out;
 }
 
 .navbar_button:hover {
@@ -118,7 +136,7 @@ Permanent Marker
   align-items: center;
   background-color: var(--bg);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
-  color: var(--fg);
+  color: var(--color1);
   border-radius: 20px;
   padding: 20px;
   width: 80%;
@@ -345,7 +363,7 @@ input {
   border-radius: 10px;
   border: none;
   background-color: var(--color1);
-  color: var(--fg);
+  color: var(--color1);
 }
 
 .skill_badge {
@@ -360,7 +378,7 @@ input {
   height: 25px;
   padding: 0px;
   margin: 0px;
-  color: var(--fg);
+  color: var(--color1);
 }
 
 .client_data {
@@ -405,7 +423,7 @@ input {
 }
 
 .git_profile_card {
-  min-height: 100vh;
+  min-height: 100%;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
@@ -555,19 +573,105 @@ a .text-box .i {
 }
 
 .user_avatar {
-  width: 40%;
+  height: 100%;
   aspect-ratio: 1/1;
-  border-radius: 50%;
+  border-radius: 40px;
   z-index: -1000;
 }
 
 .contacts_badge_block {
   width: 60%;
-  padding: 0%;
+  padding: 0;
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: auto auto auto auto;
+}
+
+ul {
+  position: relative;
+  display: flex;
+  gap: 28px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  width: 72px;
+  height: 72px;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 72px;
+  background: var(--color1);
+  cursor: pointer;
+  display: flex;
+  transition: 300ms;
+}
+
+ul li:hover {
+  width: 180px;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 72px;
+  background: var(--bg-color);
+  opacity: 0;
+  transition: 300ms;
+}
+
+ul li:hover::before {
+  opacity: 1;
+}
+
+ul li span {
+  position: absolute;
+}
+
+ul li i {
+  color: var(--bg);
+  font-size: 1.5em;
+  transition: 300ms;
+  transition-delay: 150ms;
+}
+
+ul li:hover i {
+  transform: scale(0);
+  color: var(--bg);
+  transition-delay: 0s;
+}
+
+ul li .text {
+  color: var(--bg);
+  font-size: 1.5em;
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.024em;
+  opacity: 0;
+  transition: 300ms;
+  letter-spacing: -0.125px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li * {
+  color: var(--bg);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li:hover .text {
+  opacity: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .links_badge_block {
@@ -577,43 +681,6 @@ a .text-box .i {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-}
-
-.contact_button {
-  font-family: "Varela Round", sans-serif;
-  font-weight: 700;
-  font-size: medium;
-  background-color: var(--color1);
-  border-radius: 20px;
-  width: 50px;
-  aspect-ratio: 1/1;
-  padding: 10px;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  color: var(--bg);
-  cursor: pointer;
-  transition:
-    transform 0.5s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    background-color 0.5s ease-in-out;
-  outline: none;
-}
-
-.contact_button:active {
-  transform: scale(0.95);
-}
-
-.contact_button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color1);
-  background-color: vaR(--color1);
-}
-
-.contact_button i {
-  font-size: 40px;
 }
 
 .submit_btn {
@@ -649,8 +716,8 @@ a .text-box .i {
 }
 
 .link_badge:hover {
-  box-shadow: 0px 0px 10px 10px var(--color1);
-  background-color: var(--color1);
+  background-color: var(--blue);
+  width: 350px;
 }
 
 .button {
@@ -660,6 +727,7 @@ a .text-box .i {
   background-color: var(--color1);
   border-radius: 10px;
   height: 50px;
+  width: 270px;
   padding: 10px;
   border: none;
   display: flex;
@@ -669,17 +737,14 @@ a .text-box .i {
   text-align: center;
   color: var(--bg);
   cursor: pointer;
-  transition:
-    transform 0.5s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    background-color 0.5s ease-in-out;
+  transition: all 0.5s;
   outline: none;
   text-decoration: none;
 }
 
 .button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color1);
-  background-color: var(--color1);
+  background-color: var(--green);
+  width: 350px;
 }
 
 .button i {
@@ -697,6 +762,7 @@ a .button {
   font-weight: 700;
   background-color: var(--color1);
   border-radius: 10px;
+  width: 270px;
   height: 50px;
   padding: 10px;
   border: none;
@@ -707,17 +773,14 @@ a .button {
   text-align: center;
   color: var(--bg);
   cursor: pointer;
-  transition:
-    transform 0.5s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    background-color 0.5s ease-in-out;
+  transition: all 0.5s;
   outline: none;
   text-decoration: none;
 }
 
 a .button:hover {
-  box-shadow: 0px 0px 5px 5px var(--color1);
-  background-color: var(--color1);
+  background-color: var(--blue);
+  width: 350px;
 }
 
 .theme-toggle,
@@ -748,17 +811,16 @@ a .button:hover {
 }
 
 .theme-toggle:hover {
-  box-shadow: 0px 0px 10px var(--color1);
   background-color: var(--color1);
 }
 
 .back_button:hover {
-  box-shadow: 0px 0px 10px var(--color1);
-  background-color: var(--color1);
+  background-color: var(--blue);
 }
 
 .theme-toggle:active,
 .back_button:active {
+  background-color: var(--blue);
   transform: scale(0.8);
 }
 

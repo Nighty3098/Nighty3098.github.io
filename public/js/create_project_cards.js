@@ -47,7 +47,7 @@ function createRepoCard(repoData) {
     const languages = repoData.language || "None";
 
     const stats =
-        `<i class="fa-solid fa-code"></i><a>${languages}</a> / <i class="fa-solid fa-code-branch"></i> <a>${repoData.forks_count}</a> / <i class="fa-solid fa-star"></i> <a>${repoData.stargazers_count}</a> / <i class="fa-solid fa-hammer"></i> <a>${repoData.open_issues_count}</a>`;
+        `<i class="fa-solid fa-code"></i>${languages}<div class="text-spacer"></div><i class="fa-solid fa-code-branch"></i> ${repoData.forks_count}<div class="text-spacer"></div><i class="fa-solid fa-star"></i> ${repoData.stargazers_count}<div class="text-spacer"></div><i class="fa-solid fa-hammer"></i> ${repoData.open_issues_count}`;
 
     const is_archived = repoData.archived;
     let status = is_archived
@@ -59,8 +59,8 @@ function createRepoCard(repoData) {
         <h1>${repoName}</h1>
         <h3 style="color: #db3a3a;">${status}</h3>
         <h3>${repoData.description || "No description available"}</h3>
-        <h2 class="text-box">${stats}</h2>
         </a>
+        <h3 class="about_project">${stats}</h3>
     `;
 
     console.debug(
