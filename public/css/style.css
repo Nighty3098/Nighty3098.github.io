@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 :root {
-  --bg: hsl(220, 20%, 22%);
+  --bg: hsl(220, 20%, 18%);
   --bg2: hsl(220, 15%, 32%);
   --bg3: hsl(220, 15%, 36%);
   --fg: hsl(220, 30%, 88%);
@@ -220,6 +220,7 @@ html {
   scroll-behavior: smooth;
   margin: 1%;
   transition: all 0.5s ease-in-out;
+  scroll-snap-type: x mandatory;
 }
 
 body {
@@ -231,6 +232,7 @@ body {
   align-content: center;
   flex-direction: column;
   text-align: center;
+  scroll-snap-type: x mandatory;
 }
 
 .scrollButton {
@@ -580,14 +582,41 @@ a .text-box .i {
 }
 
 .contacts_badge_block {
-  width: 60%;
+  width: 100%;
   padding: 0;
-  display: grid;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
+.contact_button {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700;
+  font-size: medium;
+  background-color: var(--color1);
+  color: var(--bg);
+  border-radius: 20px;
+  width: 50px;
+  aspect-ratio: 1/1;
+  padding: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact_button:hover {
+  background-color: var(--blue);
+}
+
 ul {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
   position: relative;
   display: flex;
   gap: 28px;
@@ -702,10 +731,6 @@ ul li:hover .text {
   margin: 0px;
   width: 100%;
   padding: 0px;
-}
-
-.block_l {
-  height: 200px;
 }
 
 .link_badge {
@@ -1103,9 +1128,9 @@ a .button:hover {
   }
 
   .user_avatar {
-    width: 55%;
+    width: 70%;
     margin: 5%;
-    border-radius: 50%;
+    border-radius: 30%;
   }
 
   .skill_badge {
