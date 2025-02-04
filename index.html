@@ -1,12 +1,12 @@
 <!--
-
-WindSong
-Playwrite HR Lijeva
-Madimi One
-Varela Round
-Permanent Marker
-
-
+●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
+Made by ~
+Nighty3098 ❥
+●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
+──────▄▀▄─────▄▀▄
+─────▄█░░▀▀▀▀▀░░█▄
+─▄▄──█░░░░░░░░░░░█──▄▄
+█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█
 -->
 
 <!DOCTYPE html>
@@ -48,16 +48,15 @@ Permanent Marker
         <div class="content">
             <div class="profile_info" id="main_block">
                 <section id="profile_card" class="welcome_card animate__animated animate__shakeX">
-                    <h1 id="username" class="username">
-                        Hi, I'm <br />
-                        Nighty<sup>3098</sup>
-                    </h1>
-                    <div id="container" class="gsdfgsdfgdf">
-                        <div id="flip">
-                            <div><div>.. ? ..</div></div>
-                            <div><div>DEVELOPER</div></div>
-                            <div><div>FREELANCER</div></div>
-                            <div><div>STUDENT</div></div>
+                    <div class="square twitch" style="margin-bottom: 50px;">
+                        <span class="one" ></span>
+                        <span class="two"></span>
+                        <span class="three"></span>
+                        <div class="circle">
+                            <h1 id="username" class="username">
+                                Hi, I'm <br />
+                                Nighty
+                            </h1>
                         </div>
                     </div>
                 </section>
@@ -86,12 +85,13 @@ Permanent Marker
                     </div>
                 </section>
                 <div class="spacer"></div>
+                <div class="base">
                 <div class="sub_links_block" id="bio_links">
                     <section class="profile_card" data-animation="animate__fadeInUp">
                         <h1><i class="fa-solid fa-mug-hot"></i> Links</h1>
                         <div class="links_badge_block block_l">
                             <a href="public/content/OWL/owl.html">
-                                <button class="link_badge text-box"><i class="fa-solid fa-rocket"></i> TRY OWL <br /><br /> PROJECT AND TASKS MANAGER</button>
+                                <button class="link_badge text-box"><i class="fa-solid fa-rocket"></i> TRY MY APP - OWL</button>
                             </a>
                             <a href="public/content/projects.html">
                                 <button class="link_badge text-box"><i class="fa-solid fa-compass-drafting"></i> PROJECTS</button>
@@ -133,7 +133,7 @@ Permanent Marker
                         </div>
                     </section>
                 </div>
-                <div class="spacer"></div>
+                <div class="spacer" style="height: 50px"></div>
                 <section class="git_profile_card" id="bio_github" data-animation="animate__backInLeft">
                     <div class="spacer"></div>
                     <h1 id="stats" class="stats"><i class="fa-brands fa-github"></i> GitHub stats</h1>
@@ -144,23 +144,24 @@ Permanent Marker
                     <h3 class="git_stats" id="git_repos"></h3>
                     <br />
                     <a href="https://github.com/Nighty3098">
-                        <button class="button">
+                        <button class="button" id="open_git_button">
                             <i class="fa-brands fa-github-alt"></i> OPEN GITHUB
                             <i class="fa-brands fa-github-alt"></i>
                         </button>
                     </a>
                 </section>
-                <div class="spacer"></div>
+                <div class="spacer" style="height: 50px"></div>
+                <div class="footer">
+                    <p class="rights animate__animated animate__backInUp">&copy; <span id="year"></span> Semenov Artem (Nighty3098). All Rights Reserved.</p>
+                    <p class="rights animate__animated animate__backInUp">
+                        Attribution-NonCommercial-NoDerivatives 4.0 International
+                    </p>
+                </div>
+                <script>
+                    document.getElementById("year").textContent = new Date().getFullYear();
+                </script>
+                </div>
             </div>
-            <div class="footer">
-                <p class="rights animate__animated animate__backInUp">&copy; <span id="year"></span> Semenov Artem (Nighty3098). All Rights Reserved.</p>
-                <p class="rights animate__animated animate__backInUp">
-                    Attribution-NonCommercial-NoDerivatives 4.0 International
-                </p>
-            </div>
-            <script>
-                document.getElementById("year").textContent = new Date().getFullYear();
-            </script>
         </div>
     </body>
 </html>

@@ -51,7 +51,7 @@ Permanent Marker
 
 .rights {
   font-family: "Varela Round", monospace;
-  color: var(--color1);
+  color: var(--fg);
   font-size: medium;
   font-weight: 800;
 }
@@ -72,7 +72,7 @@ Permanent Marker
   justify-content: right;
   align-items: center;
   align-content: center;
-  background-color: var(--color1);
+  background-color: var(--fg);
   backdrop-filter: blur(5px);
   color: var(--bg);
   border-radius: 15px;
@@ -108,12 +108,12 @@ Permanent Marker
 
 .navbar_button:hover {
   background-color: var(--bg);
-  color: var(--color1);
+  color: var(--fg);
 }
 
 .navbar_button:active {
   background-color: var(--bg);
-  color: var(--color1);
+  color: var(--fg);
 }
 
 .modal {
@@ -137,7 +137,7 @@ Permanent Marker
   align-items: center;
   background-color: var(--bg);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
-  color: var(--color1);
+  color: var(--fg);
   border-radius: 20px;
   padding: 20px;
   width: 80%;
@@ -165,7 +165,7 @@ h1 {
   font-family: "Playwrite HR Lijeva";
   font-optical-sizing: auto;
   font-size: xx-large;
-  color: var(--color1);
+  color: var(--fg);
 }
 
 h3 {
@@ -177,13 +177,13 @@ h3 {
 }
 
 svg path {
-  stroke: var(--color1);
-  background-color: var(--color1);
+  stroke: var(--fg);
+  background-color: var(--fg);
 }
 
 svg circle {
-  stroke: var(--color1);
-  background-color: var(--color1);
+  stroke: var(--fg);
+  background-color: var(--fg);
 }
 
 * {
@@ -196,13 +196,13 @@ svg circle {
 }
 
 .svg_image path {
-  stroke: var(--color1);
-  background-color: var(--color1);
+  stroke: var(--fg);
+  background-color: var(--fg);
 }
 
 .svg_image circle {
-  stroke: var(--color1);
-  background-color: var(--color1);
+  stroke: var(--fg);
+  background-color: var(--fg);
 }
 
 html {
@@ -210,7 +210,7 @@ html {
   background-origin: padding-box;
   background-repeat: repeat;
   background-attachment: scroll;
-  scrollbar-color: var(--color1) transparent;
+  scrollbar-color: var(--fg) transparent;
   scrollbar-arrow-color: transparent transparent;
   font-family: "Madimi One", monospace;
   font-weight: 400;
@@ -222,6 +222,7 @@ html {
   margin: 1%;
   transition: all 0.5s ease-in-out;
   scroll-snap-type: x mandatory;
+  margin-bottom: 0px;
 }
 
 body {
@@ -241,7 +242,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: var(--color1);
+  color: var(--fg);
   cursor: pointer;
   font-size: 20px;
   position: absolute;
@@ -365,8 +366,8 @@ input {
   width: 50%;
   border-radius: 10px;
   border: none;
-  background-color: var(--color1);
-  color: var(--color1);
+  background-color: var(--fg);
+  color: var(--fg);
 }
 
 .skill_badge {
@@ -381,7 +382,7 @@ input {
   height: 25px;
   padding: 0px;
   margin: 0px;
-  color: var(--color1);
+  color: var(--fg);
 }
 
 .client_data {
@@ -391,7 +392,7 @@ input {
 }
 
 .client_data h3 {
-  color: var(--color1);
+  color: var(--fg);
   font-family: "Madimi One", monospace;
   font-size: medium;
 }
@@ -408,7 +409,7 @@ input {
 .profile_blogs {
   background-color: transparent;
   border-radius: 30px;
-  color: var(--color1);
+  color: var(--fg);
   font-size: x-large;
   display: flex;
   flex-direction: column;
@@ -431,6 +432,20 @@ input {
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+.git_profile_card * {
+  color: var(--bg);
+}
+
+#open_git_button {
+  background-color: var(--bg);
+  color: var(--fg)
+}
+
+#open_git_button * {
+  background-color: var(--bg);
+  color: var(--fg)
 }
 
 .user_bio h3 {
@@ -483,14 +498,14 @@ input {
 .profile_stats a {
   line-height: 1.5;
   font-size: medium;
-  color: var(--color1);
+  color: var(--fg);
   text-decoration: none;
 }
 
 .user_bio a {
   line-height: 2;
   font-size: medium;
-  color: var(--color1);
+  color: var(--fg);
   font-family: "Madimi One", sans-serif;
   text-decoration: none;
 }
@@ -511,7 +526,7 @@ input {
   font-family: "WindSong", cursive;
   font-optical-sizing: auto;
   font-size: xx-large;
-  color: var(--color1);
+  color: var(--fg);
 }
 
 .text-box-outline {
@@ -520,7 +535,7 @@ input {
   font-family: "Varela Round";
   font-weight: 700;
   font-size: medium;
-  background-color: var(--color1);
+  background-color: var(--fg);
   color: var(--bg);
   border-radius: 10px;
   align-content: center;
@@ -539,7 +554,7 @@ input {
   font-family: "Varela Round";
   font-weight: 700;
   font-size: medium;
-  background-color: var(--color1);
+  background-color: var(--fg);
   color: var(--bg);
   border-radius: 10px;
   align-content: center;
@@ -587,7 +602,6 @@ a .text-box .i {
   aspect-ratio: 1/1;
   border-radius: 40px;
   z-index: -1000;
-  filter: brightness(0.8);
 }
 
 .contacts_badge_block {
@@ -603,7 +617,7 @@ a .text-box .i {
   font-family: "Varela Round", sans-serif;
   font-weight: 700;
   font-size: medium;
-  background-color: var(--color1);
+  background-color: var(--fg);
   color: var(--bg);
   border-radius: 20px;
   width: 50px;
@@ -642,7 +656,7 @@ ul li {
   padding: 0px;
   margin: 0px;
   border-radius: 72px;
-  background: var(--color1);
+  background: var(--bg);
   cursor: pointer;
   display: flex;
   transition: 300ms;
@@ -672,7 +686,7 @@ ul li span {
 }
 
 ul li i {
-  color: var(--bg);
+  color: var(--fg);
   font-size: 1.5em;
   transition: 300ms;
   transition-delay: 150ms;
@@ -680,12 +694,12 @@ ul li i {
 
 ul li:hover i {
   transform: scale(0);
-  color: var(--bg);
+  color: var(--fg);
   transition-delay: 0s;
 }
 
 ul li .text {
-  color: var(--bg);
+  color: var(--fg);
   font-size: 1.5em;
   z-index: 1;
   text-transform: uppercase;
@@ -748,10 +762,11 @@ ul li:hover .text {
   height: 100%;
   border: none;
   transition: all 0.5s;
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 .link_badge:hover {
-  background-color: var(--blue);
   width: 350px;
 }
 
@@ -759,7 +774,7 @@ ul li:hover .text {
   font-family: "Varela Round", sans-serif;
   font-size: medium;
   font-weight: 700;
-  background-color: var(--color1);
+  background-color: var(--fg);
   border-radius: 10px;
   height: 50px;
   width: 270px;
@@ -796,7 +811,7 @@ a .button {
   font-family: "Varela Round", sans-serif;
   font-size: medium;
   font-weight: 700;
-  background-color: var(--color1);
+  background-color: var(--fg);
   border-radius: 10px;
   width: 270px;
   height: 50px;
@@ -833,7 +848,7 @@ a .button:hover {
   border-radius: 50%;
   border: none;
   box-shadow: none;
-  background-color: var(--color1);
+  background-color: var(--fg);
   color: var(--bg);
   transition: all 1s;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
@@ -848,7 +863,7 @@ a .button:hover {
 }
 
 .theme-toggle:hover {
-  background-color: var(--color1);
+  background-color: var(--fg);
 }
 
 .back_button:hover {
@@ -904,6 +919,7 @@ a .button:hover {
   font-style: normal;
   font-size: medium;
   line-height: 2;
+  border-left: 10px solid var(--fg);
   padding-left: 10px;
   border-radius: 10px;
 }
@@ -911,17 +927,11 @@ a .button:hover {
 .username {
   align-items: center;
   text-align: center;
-  font-size: 15vw;
-  font-family: "Permanent Marker";
+  font-size: 60px;
+  font-family: "Playwrite HR Lijeva";
   margin: 0;
   padding: 0;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-}
-
-.username sup {
-  font-size: 70px;
-  z-index: 100;
-  margin-left: 60px;
 }
 
 .git_stats {
@@ -930,15 +940,18 @@ a .button:hover {
   font-weight: 700;
   width: auto;
   text-align: left;
+  color: var(--bg);
 }
 
 .footer {
   margin-bottom: 100px;
   font-size: medium;
+  color: var(--bg)
 }
 
 .footer p {
   font-size: small;
+  color: var(--bg)
 }
 
 .roller {
@@ -955,11 +968,11 @@ a .button:hover {
 
 #flip {
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-  margin-top: 60px;
-  height: 100px;
+  margin-top: 0px;
+  height: 50px;
   overflow: hidden;
   width: 100%;
-  font-size: 50px;
+  font-size: xx-large;
 }
 
 #flip > div > div {
@@ -1022,6 +1035,102 @@ a .button:hover {
   }
 }
 
+.square {
+	position: relative;
+	margin: 0 10px;
+	width: 350px;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.square .one {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 5px solid var(--fg);
+	border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+	transition: all 0.5s ease-in-out;
+	animation: animate 5s linear infinite;
+}
+
+.twitch:hover .one {
+	border: none;
+	background: var(--blue);
+}
+
+.square .two {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 5px solid var(--fg);
+	border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+	transition: all 0.5s ease-in-out;
+	animation: animate 6s linear infinite;
+}
+
+.twitch:hover .two {
+	border: none;
+	background: var(--blue);
+
+}
+
+.square .three {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 5px solid var(--fg);
+	border-radius: 31% 45% 74% 35% / 38% 56% 51% 37%;
+	transition: all 0.5s ease-in-out;
+	animation: animate2 10s linear infinite;
+}
+
+.twitch:hover .three {
+	border: none;
+	background: var(--blue);
+}
+
+.circle {
+	position: relative;
+	padding: 40px 60px;
+	text-align: center;
+	transition: all 0.5s ease-in-out;
+	z-index: 1000;
+}
+
+@keyframes animate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animate2 {
+	0% {
+		transform: rotate(360deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.base {
+  background-color: var(--fg);
+  margin: 0px;
+  padding: 0px;
+  border-radius: 40px 40px 0px 0px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
 @media screen and (max-height: 500px) and (min-width: 600px) {
   .welcome_card {
     height: 100%;
@@ -1032,7 +1141,7 @@ a .button:hover {
   }
 
   .username {
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 
@@ -1042,8 +1151,17 @@ a .button:hover {
   }
 
   .username {
-    font-size: 250px;
+    font-size: 70px;
   }
+
+  .square {
+    position: relative;
+    margin: 0 10px;
+    width: 500px; height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 }
 
 @media screen and (max-width: 2000px) {
@@ -1059,6 +1177,21 @@ a .button:hover {
     width: 200px;
     margin: 30px;
   }
+}
+
+@media screen and (min-width: 2000px) {
+  .square {
+    position: relative;
+    margin: 0 10px;
+    width: 700px; height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .username { 
+      font-size: 90px;
+    }
 }
 
 @media screen and (max-width: 1500px) {
@@ -1103,7 +1236,7 @@ a .button:hover {
 
 @media screen and (max-width: 850px) {
   .username {
-    font-size: 70px;
+    font-size: 55px;
   }
 
   .left_text {
@@ -1112,10 +1245,6 @@ a .button:hover {
 
   .bio_content {
     flex-direction: column;
-  }
-
-  .left_text {
-    border: none;
   }
 
   .header {
@@ -1161,17 +1290,6 @@ a .button:hover {
   }
 
   #flip {
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-    margin-top: 20px;
-    height: 100px;
-    overflow: hidden;
-    width: 100%;
     font-size: x-large;
-  }
-
-  .username sup {
-    font-size: 40px;
-    z-index: 100;
-    margin-left: 20px;
   }
 }

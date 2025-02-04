@@ -45,7 +45,7 @@ a .button {
   align-items: center;
   align-content: center;
   text-align: center;
-  background-color: var(--color1);
+  background-color: var(--fg);
   color: var(--bg);
   padding: 30px;
   margin: 20px;
@@ -56,7 +56,7 @@ a .button {
 }
 
 .project_card_block:hover {
-  box-shadow: 0px 0px 30px var(--color1);
+  box-shadow: 0px 0px 30px var(--fg);
 }
 
 .project_card {
