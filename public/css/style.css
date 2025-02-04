@@ -79,6 +79,7 @@ Permanent Marker
   padding-left: 10px;
   padding-right: 10px;
   font-family: "Madimi One";
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 .navbar_button_text {
@@ -135,7 +136,7 @@ Permanent Marker
   flex-direction: column;
   align-items: center;
   background-color: var(--bg);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
   color: var(--color1);
   border-radius: 20px;
   padding: 20px;
@@ -161,7 +162,7 @@ Permanent Marker
 }
 
 h1 {
-  font-family: "Madimi One", system-ui;
+  font-family: "Playwrite HR Lijeva";
   font-optical-sizing: auto;
   font-size: xx-large;
   color: var(--color1);
@@ -544,10 +545,17 @@ input {
   align-content: center;
   text-align: center;
   cursor: pointer;
+  font-weight: 1000;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+.text-box a {
+  font-weight: 1000;
 }
 
 a .text-box .i {
   margin-left: 20px;
+  font-weight: 1000;
 }
 
 .text-box .i {
@@ -579,6 +587,7 @@ a .text-box .i {
   aspect-ratio: 1/1;
   border-radius: 40px;
   z-index: -1000;
+  filter: brightness(0.8);
 }
 
 .contacts_badge_block {
@@ -637,6 +646,7 @@ ul li {
   cursor: pointer;
   display: flex;
   transition: 300ms;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 ul li:hover {
@@ -765,6 +775,7 @@ ul li:hover .text {
   transition: all 0.5s;
   outline: none;
   text-decoration: none;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 .button:hover {
@@ -825,6 +836,7 @@ a .button:hover {
   background-color: var(--color1);
   color: var(--bg);
   transition: all 1s;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 .theme-toggle,
@@ -878,7 +890,7 @@ a .button:hover {
 }
 
 .left_text {
-  width: 75%;
+  width: 85%;
   text-align: left;
   align-items: left;
   align-content: left;
@@ -904,6 +916,12 @@ a .button:hover {
   margin: 0;
   padding: 0;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.username sup {
+  font-size: 70px;
+  z-index: 100;
+  margin-left: 60px;
 }
 
 .git_stats {
@@ -1140,5 +1158,20 @@ a .button:hover {
 
   .left_text {
     width: 90%;
+  }
+
+  #flip {
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+    height: 100px;
+    overflow: hidden;
+    width: 100%;
+    font-size: x-large;
+  }
+
+  .username sup {
+    font-size: 40px;
+    z-index: 100;
+    margin-left: 20px;
   }
 }
