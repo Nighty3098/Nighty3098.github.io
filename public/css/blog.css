@@ -13,7 +13,7 @@
   margin: 2%;
   width: 60%;
   margin: 40px 40px 10px 40px;
-  background-color: var(--color1);
+  background-color: var(--fg);
 }
 
 .header a {
@@ -77,7 +77,7 @@
 h1 {
   font-family: "Playpen Sans", cursive;
   font-size: xx-large;
-  color: var(--color1);
+  color: var(--fg);
 }
 
 h3 {
@@ -90,8 +90,8 @@ h3 {
 .text-box {
   width: 100%;
   padding: 2%;
-  background-color: var(--color1);
-  color: var(--color1);
+  background-color: var(--fg);
+  color: var(--fg);
   border-radius: 10px;
   align-content: center;
   text-align: center;
@@ -110,7 +110,7 @@ a button {
 
 .article_card {
   width: 95%;
-  background-color: var(--color1);
+  background-color: var(--fg);
   color: var(--bg);
   border-radius: 25px;
   display: flex;
