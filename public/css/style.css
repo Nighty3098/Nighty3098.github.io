@@ -587,7 +587,6 @@ a .text-box .i {
   aspect-ratio: 1/1;
   border-radius: 40px;
   z-index: -1000;
-  filter: brightness(0.8);
 }
 
 .contacts_badge_block {
@@ -1038,7 +1037,7 @@ a .button:hover {
 
 @media screen and (min-width: 1500px) {
   .user_avatar {
-    width: 300px;
+    width: 400px;
   }
 
   .username {
@@ -1079,7 +1078,7 @@ a .button:hover {
   }
 
   .user_avatar {
-    width: 45%;
+    width: 60%;
   }
 
   .left_text {
@@ -1097,7 +1096,7 @@ a .button:hover {
   }
 
   .user_avatar {
-    margin: 5%;
+    margin: 10%;
   }
 }
 
@@ -1146,7 +1145,7 @@ a .button:hover {
   }
 
   .user_avatar {
-    width: 70%;
+    width: 80%;
     margin: 5%;
     border-radius: 30%;
   }
