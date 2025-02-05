@@ -1,6 +1,5 @@
 const reposContainer = document.getElementById("repos");
 const users_repos = [
-    "https://api.github.com/repos/Nighty3098/OWL_APP",
     "https://api.github.com/repos/Nighty3098/SDash",
     "https://api.github.com/repos/Nighty3098/CodeKeeper",
     "https://api.github.com/repos/Nighty3098/InvestingAssistant",
