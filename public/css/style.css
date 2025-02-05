@@ -47,10 +47,10 @@ Permanent Marker
 
 * {
   user-select: none;
+  font-family: 'Varela Round', monospace;
 }
 
 .rights {
-  font-family: "Varela Round", monospace;
   color: var(--fg);
   font-size: medium;
   font-weight: 800;
@@ -82,6 +82,10 @@ Permanent Marker
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
+.header * {
+  font-family: "Madimi One";
+}
+
 .navbar_button_text {
   width: auto;
   padding: 10px;
@@ -94,16 +98,20 @@ Permanent Marker
 }
 
 .navbar_button {
+  font-family: "Madimi One", monospace;
   text-decoration: none;
   color: var(--bg);
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
   transition: color 0.5s;
-  width: 20px;
+  height: 20px;
   border-radius: 10px;
-  aspect-ratio: 1/1;
   transition: all 0.5s ease-in-out;
+}
+
+.navbar_button i {
+  margin-right: 10px;
 }
 
 .navbar_button:hover {
@@ -162,7 +170,7 @@ Permanent Marker
 }
 
 h1 {
-  font-family: "Playwrite HR Lijeva";
+  font-family: "Madimi One";
   font-optical-sizing: auto;
   font-size: xx-large;
   color: var(--fg);
@@ -370,33 +378,6 @@ input {
   color: var(--fg);
 }
 
-.skill_badge {
-  aspect-ratio: 1/1;
-  width: 100px;
-  margin: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.submitButton {
-  width: 50%;
-  height: 25px;
-  padding: 0px;
-  margin: 0px;
-  color: var(--fg);
-}
-
-.client_data {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-}
-
-.client_data h3 {
-  color: var(--fg);
-  font-family: "Madimi One", monospace;
-  font-size: medium;
-}
-
 .profile_card,
 .welcome_card,
 .profile_card_2,
@@ -405,7 +386,6 @@ input {
 .user_bio,
 .git_profile_card,
 .my_contacts,
-.my_skills,
 .profile_blogs {
   background-color: transparent;
   border-radius: 30px;
@@ -453,8 +433,7 @@ input {
 }
 
 .profile_blogs,
-.profile_repos,
-.my_skills {
+.profile_repos {
   background-color: var(--bg);
 }
 
@@ -486,11 +465,11 @@ input {
   line-height: 2;
   align-content: center;
   text-align: center;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Madimi One", monospace;
 }
 
 .profile_stats h3 {
-  font-family: "Madimi One", sans-serif;
+  font-family: "Madimi One", monospace;
   line-height: 2;
   font-size: x-larger;
 }
@@ -506,7 +485,7 @@ input {
   line-height: 2;
   font-size: medium;
   color: var(--fg);
-  font-family: "Madimi One", sans-serif;
+  font-family: "Madimi One", monospace;
   text-decoration: none;
 }
 
@@ -529,29 +508,10 @@ input {
   color: var(--fg);
 }
 
-.text-box-outline {
-  width: 85%;
-  padding: 15px;
-  font-family: "Varela Round";
-  font-weight: 700;
-  font-size: medium;
-  background-color: var(--fg);
-  color: var(--bg);
-  border-radius: 10px;
-  align-content: center;
-  text-align: center;
-  cursor: pointer;
-}
-
-.text-box-outline i {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 .text-box {
   width: 85%;
   padding: 15px;
-  font-family: "Varela Round";
+  font-family: "Madimi One", monospace;
   font-weight: 700;
   font-size: medium;
   background-color: var(--fg);
@@ -710,6 +670,7 @@ ul li .text {
   letter-spacing: -0.125px;
   text-align: center;
   align-items: center;
+  font-family: "Madimi One", monospace;
   justify-content: center;
 }
 
@@ -721,6 +682,7 @@ ul li * {
 }
 
 ul li:hover .text {
+  font-family: "Madimi One", monospace;
   opacity: 1;
   text-align: center;
   align-items: center;
@@ -764,6 +726,7 @@ ul li:hover .text {
   transition: all 0.5s;
   background-color: var(--bg);
   color: var(--fg);
+  font-family: "Madimi One", monospace;
 }
 
 .link_badge:hover {
@@ -771,7 +734,7 @@ ul li:hover .text {
 }
 
 .button {
-  font-family: "Varela Round", sans-serif;
+  font-family: "Madimi One", monospace;
   font-size: medium;
   font-weight: 700;
   background-color: var(--fg);
@@ -808,7 +771,7 @@ a {
 }
 
 a .button {
-  font-family: "Varela Round", sans-serif;
+  font-family: "Madimi One", monospace;
   font-size: medium;
   font-weight: 700;
   background-color: var(--fg);
@@ -914,7 +877,7 @@ a .button:hover {
   flex-direction: row;
   margin: 20px;
   margin-left: 50px;
-  font-family: "Varela Round", monospace;
+  font-family: "Varela Round";
   font-weight: 700;
   font-style: normal;
   font-size: medium;
@@ -927,20 +890,21 @@ a .button:hover {
 .username {
   align-items: center;
   text-align: center;
-  font-size: 60px;
-  font-family: "Playwrite HR Lijeva";
+  font-size: 70px;
   margin: 0;
   padding: 0;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  color: transparent;
+  text-shadow: none;
+  -webkit-text-stroke: 3px var(--color1)
 }
 
 .git_stats {
   font-size: medium;
-  font-family: "Varela Round", monospace;
   font-weight: 700;
   width: auto;
   text-align: left;
   color: var(--bg);
+  font-family: 'Varela Round', monospace;
 }
 
 .footer {
@@ -952,87 +916,6 @@ a .button:hover {
 .footer p {
   font-size: small;
   color: var(--bg)
-}
-
-.roller {
-  height: 5.5rem;
-  line-height: 5rem;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--accent);
-}
-
-#flip {
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-  margin-top: 0px;
-  height: 50px;
-  overflow: hidden;
-  width: 100%;
-  font-size: xx-large;
-}
-
-#flip > div > div {
-  color: var(--bg);
-  padding: 4px 12px;
-  height: 45px;
-  margin-bottom: 45px;
-  display: inline-block;
-}
-
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-#flip div div {
-  color: var(--accent);
-  font-family: "Madimi One";
-}
-
-#flip div:first-child div {
-  color: var(--accent);
-  font-family: "Madimi One";
-}
-
-#flip div:last-child div {
-  color: var(--accent);
-  font-family: "Madimi One";
-}
-
-@keyframes show {
-  0% {
-    margin-top: -360px;
-  }
-  5% {
-    margin-top: -270px;
-  }
-  33% {
-    margin-top: -270px;
-  }
-  38% {
-    margin-top: -180px;
-  }
-  66% {
-    margin-top: -180px;
-  }
-  71% {
-    margin-top: -90px;
-  }
-  83% {
-    margin-top: -90px;
-  }
-  88% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -360px;
-  }
 }
 
 .square {
@@ -1049,15 +932,10 @@ a .button:hover {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border: 5px solid var(--fg);
+	border: 3px solid var(--fg);
 	border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
 	transition: all 0.5s ease-in-out;
 	animation: animate 5s linear infinite;
-}
-
-.twitch:hover .one {
-	border: none;
-	background: var(--blue);
 }
 
 .square .two {
@@ -1066,16 +944,10 @@ a .button:hover {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: 5px solid var(--fg);
+	border: 3px solid var(--fg);
 	border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
 	transition: all 0.5s ease-in-out;
 	animation: animate 6s linear infinite;
-}
-
-.twitch:hover .two {
-	border: none;
-	background: var(--blue);
-
 }
 
 .square .three {
@@ -1084,15 +956,10 @@ a .button:hover {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: 5px solid var(--fg);
+	border: 3px solid var(--fg);
 	border-radius: 31% 45% 74% 35% / 38% 56% 51% 37%;
 	transition: all 0.5s ease-in-out;
 	animation: animate2 10s linear infinite;
-}
-
-.twitch:hover .three {
-	border: none;
-	background: var(--blue);
 }
 
 .circle {
@@ -1129,6 +996,10 @@ a .button:hover {
   padding: 0px;
   border-radius: 40px 40px 0px 0px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+.base h1 {
+  color: var(--bg);
 }
 
 @media screen and (max-height: 500px) and (min-width: 600px) {
@@ -1170,7 +1041,7 @@ a .button:hover {
     margin: 0 auto;
   }
   .skill_badge {
-    width: 80%;
+    width: 80px;
   }
 
   .svg_image {
@@ -1183,15 +1054,15 @@ a .button:hover {
   .square {
     position: relative;
     margin: 0 10px;
-    width: 700px; height: 700px;
+    width: 1200px; height: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+  }
 
-    .username { 
-      font-size: 90px;
-    }
+  .username { 
+      font-size: 180px;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -1281,7 +1152,7 @@ a .button:hover {
   }
 
   .skill_badge {
-    width: 90%;
+    width: 60px;
     margin: 10px;
   }
 
