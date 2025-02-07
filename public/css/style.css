@@ -893,9 +893,6 @@ a .button:hover {
   font-size: 70px;
   margin: 0;
   padding: 0;
-  color: transparent;
-  text-shadow: none;
-  -webkit-text-stroke: 3px var(--color1)
 }
 
 .git_stats {
