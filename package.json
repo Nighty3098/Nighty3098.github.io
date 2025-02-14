@@ -1,32 +1,42 @@
 {
-  "name": "nighty3098.github.io",
-  "version": "2.2.8",
-  "description": "My portfolio website",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "live": "browser-sync start --proxy 'localhost:3000' --files 'public/**/*.*'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nighty3098/Nighty3098.github.io.git"
-  },
-  "author": "Nighty3098",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Nighty3098/Nighty3098.github.io/issues"
-  },
-  "homepage": "https://github.com/Nighty3098/Nighty3098.github.io#readme",
+  "name": "nighty3098",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "axios": "^1.7.9",
-    "express": "^4.21.2",
-    "octokit": "^4.0.2",
-    "prettier": "^3.4.1"
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^2.1.0"
   },
-  "devDependencies": {
-    "browser-sync": "^3.0.3",
-    "nodemon": "^3.1.9"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
