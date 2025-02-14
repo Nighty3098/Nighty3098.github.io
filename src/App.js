@@ -1,10 +1,10 @@
-import logo from './logo.png';
-import './index.css';
-import Header from "./components/header"
-import WelcomeBlock from "./components/welcome"
-import Bio from "./components/bio"
-import Info, {Skills} from "./components/cards"
-import Contacts  from "./components/contacts"
+import logo from "./logo.png";
+import "./index.css";
+import Header from "./components/header";
+import WelcomeBlock from "./components/welcome";
+import Bio from "./components/bio";
+import Info, { Skills } from "./components/cards";
+import Contacts from "./components/contacts";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -16,7 +16,6 @@ Nighty3098 ❥
 ─▄▄──█░░░░░░░░░░░█──▄▄
 █▄▄█─█░░▀░░┬░░▀░░█─█▄▄█
 */
-
 
 function App() {
   return (

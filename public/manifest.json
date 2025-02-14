@@ -1,6 +1,7 @@
 {
   "short_name": "Nighty",
-  "name": "Nighty's porfolio",  "start_url": ".",
+  "name": "Nighty's porfolio",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
