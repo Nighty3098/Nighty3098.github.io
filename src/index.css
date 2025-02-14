@@ -98,10 +98,10 @@
 .navbar_button {
   text-decoration: none;
   padding: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 0px;
-  margin-right: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
   transition: color 0.5s;
   height: 100%;
   border-radius: 10px;
