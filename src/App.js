@@ -6,10 +6,7 @@ import Bio from "./components/bio";
 import Info, { Skills } from "./components/cards";
 import Contacts from "./components/contacts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCube,
-  faComment
-} from "@fortawesome/free-solid-svg-icons";
+import { faCube, faComment } from "@fortawesome/free-solid-svg-icons";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -28,9 +25,14 @@ function App() {
       <Header />
       <WelcomeBlock />
       <Bio />
-      <h1><FontAwesomeIcon icon={faCube} className="icon" /> SKILLS</h1>
+      <h1>
+        <FontAwesomeIcon icon={faCube} className="icon" /> SKILLS
+      </h1>
       <Skills />
-      <h1><FontAwesomeIcon icon={faComment} className="icon" />CONTACTS</h1>
+      <h1>
+        <FontAwesomeIcon icon={faComment} className="icon" />
+        CONTACTS
+      </h1>
       <Contacts />
     </div>
   );

@@ -6,7 +6,7 @@ import {
   faQ,
   faCodeFork,
   faUserPlus,
-  faUsers
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faPython,
@@ -59,14 +59,14 @@ const Info = () => {
           className="info_widget"
           style={{ transform: `rotate(${item.rotate}deg)` }}
         >
-          <FontAwesomeIcon 
-            icon={item.icon} 
+          <FontAwesomeIcon
+            icon={item.icon}
             className="widget-icon"
             style={{
-              position: 'absolute',
-              top: '10px',
-              right: '10px',
-              opacity: 1
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              opacity: 1,
             }}
           />
           <h1>{item.title}</h1>

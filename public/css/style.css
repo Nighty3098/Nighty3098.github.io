@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+HR+Lijeva:wght@100..400&family=WindSong:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
 :root {
   --bg: hsl(220, 20%, 18%);
@@ -36,7 +36,6 @@
   --blur: hsla(220, 20%, 92%, 0.5);
 }
 
-
 /*
 WindSong
 Playwrite HR Lijeva
@@ -47,7 +46,7 @@ Permanent Marker
 
 * {
   user-select: none;
-  font-family: 'Varela Round', monospace;
+  font-family: "Varela Round", monospace;
 }
 
 .rights {
@@ -420,12 +419,12 @@ input {
 
 #open_git_button {
   background-color: var(--bg);
-  color: var(--fg)
+  color: var(--fg);
 }
 
 #open_git_button * {
   background-color: var(--bg);
-  color: var(--fg)
+  color: var(--fg);
 }
 
 .user_bio h3 {
@@ -901,90 +900,90 @@ a .button:hover {
   width: auto;
   text-align: left;
   color: var(--bg);
-  font-family: 'Varela Round', monospace;
+  font-family: "Varela Round", monospace;
 }
 
 .footer {
   margin-bottom: 100px;
   font-size: medium;
-  color: var(--bg)
+  color: var(--bg);
 }
 
 .footer p {
   font-size: small;
-  color: var(--bg)
+  color: var(--bg);
 }
 
 .square {
-	position: relative;
-	margin: 0 10px;
-	width: 350px;
-	height: 350px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  position: relative;
+  margin: 0 10px;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .square .one {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border: 3px solid var(--fg);
-	border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
-	transition: all 0.5s ease-in-out;
-	animation: animate 5s linear infinite;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--fg);
+  border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+  transition: all 0.5s ease-in-out;
+  animation: animate 5s linear infinite;
 }
 
 .square .two {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: 3px solid var(--fg);
-	border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-	transition: all 0.5s ease-in-out;
-	animation: animate 6s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--fg);
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: all 0.5s ease-in-out;
+  animation: animate 6s linear infinite;
 }
 
 .square .three {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: 3px solid var(--fg);
-	border-radius: 31% 45% 74% 35% / 38% 56% 51% 37%;
-	transition: all 0.5s ease-in-out;
-	animation: animate2 10s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--fg);
+  border-radius: 31% 45% 74% 35% / 38% 56% 51% 37%;
+  transition: all 0.5s ease-in-out;
+  animation: animate2 10s linear infinite;
 }
 
 .circle {
-	position: relative;
-	padding: 40px 60px;
-	text-align: center;
-	transition: all 0.5s ease-in-out;
-	z-index: 1000;
+  position: relative;
+  padding: 40px 60px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
 }
 
 @keyframes animate {
-	0% {
-		transform: rotate(0deg);
-	}
+  0% {
+    transform: rotate(0deg);
+  }
 
-	100% {
-		transform: rotate(360deg);
-	}
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes animate2 {
-	0% {
-		transform: rotate(360deg);
-	}
+  0% {
+    transform: rotate(360deg);
+  }
 
-	100% {
-		transform: rotate(0deg);
-	}
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .base {
@@ -1025,11 +1024,12 @@ a .button:hover {
   .square {
     position: relative;
     margin: 0 10px;
-    width: 500px; height: 500px;
+    width: 500px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+  }
 }
 
 @media screen and (max-width: 2000px) {
@@ -1051,14 +1051,15 @@ a .button:hover {
   .square {
     position: relative;
     margin: 0 10px;
-    width: 1200px; height: 1200px;
+    width: 1200px;
+    height: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .username { 
-      font-size: 180px;
+  .username {
+    font-size: 180px;
   }
 }
 
