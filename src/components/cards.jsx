@@ -4,7 +4,9 @@ import {
   faC,
   faBrain,
   faQ,
-  faScrewdriverWrench,
+  faCodeFork,
+  faUserPlus,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faPython,
@@ -22,20 +24,55 @@ const skills_list = [
 ];
 
 const Info = () => {
+  const items = [
+    {
+      title: "15 +",
+      subtitle: "COMPLETED PROJECTS",
+      rotate: -5,
+      icon: faCodeFork,
+    },
+    {
+      title: "50 +",
+      subtitle: "FOLLOWERS ON GIT",
+      rotate: -5,
+      icon: faUserPlus,
+    },
+    {
+      title: "5 +",
+      subtitle: "YEARS OF EXPERIENCE",
+      rotate: 5,
+      icon: faBrain,
+    },
+    {
+      title: "12 +",
+      subtitle: "satisfied customers",
+      rotate: -10,
+      icon: faUsers,
+    },
+  ];
+
   return (
     <div className="widget_blocks_2">
-      <div className="info_widget" style={{ transform: "rotate(6deg)" }}>
-        <h1>15 +</h1>
-        <h2>COMPLETED PROJECTS</h2>
-      </div>
-      <div className="info_widget" style={{ transform: "rotate(-15deg)" }}>
-        <h1>50 +</h1>
-        <h2>FOLLOWERS ON GIT</h2>
-      </div>
-      <div className="info_widget" style={{ transform: "rotate(5deg)" }}>
-        <h1>5 +</h1>
-        <h2>YEARS OF EXPERIENCE</h2>
-      </div>
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="info_widget"
+          style={{ transform: `rotate(${item.rotate}deg)` }}
+        >
+          <FontAwesomeIcon
+            icon={item.icon}
+            className="widget-icon"
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              opacity: 1,
+            }}
+          />
+          <h1>{item.title}</h1>
+          <h2>{item.subtitle}</h2>
+        </div>
+      ))}
     </div>
   );
 };

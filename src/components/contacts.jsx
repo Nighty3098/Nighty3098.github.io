@@ -19,7 +19,6 @@ const socials = [
 
 const Contacts = () => (
   <div className="contacts" id="links">
-    <h1>CONTACTS</h1>
     <div className="contacts_badge_block">
       {socials.map((social, index) => (
         <a

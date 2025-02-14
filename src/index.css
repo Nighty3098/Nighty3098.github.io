@@ -49,6 +49,8 @@
   align-content: center;
   justify-content: center;
   text-align: center;
+  gap: 50px;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -143,6 +145,7 @@ body {
 .contacts_badge_block {
   width: 100%;
   padding: 0;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -170,13 +173,17 @@ body {
 }
 
 .contact_button:hover {
-  background-color: var(--tr);
+  background-color: var(--purple);
   color: var(--fg);
 }
 
 .contact_button i {
   font-size: 30px;
-  transition: transform 0.5s ease;
+  transition: all 0.3s ease;
+}
+
+.contact_button:hover i {
+  color: var(--bg);
 }
 
 .button {
@@ -271,8 +278,8 @@ a .button:hover {
   margin: 0px;
   padding: 0px;
   height: 100vh;
+  min-height: 100vh;
   max-height: 100vh;
-  min-height: 100%;
   gap: 0px;
 }
 
@@ -286,6 +293,10 @@ h1 {
   font-optical-sizing: auto;
   font-size: xx-large;
   color: var(--fg);
+}
+
+h1 .icon {
+  margin-right: 20px;
 }
 
 h2 {
@@ -419,7 +430,7 @@ h3 {
 
 .widget_blocks_2 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   gap: 30px;
 }
 
@@ -438,8 +449,8 @@ h3 {
   user-select: none;
   gap: 0px;
   background-color: transparent;
-  transition: all 0.5s ease;
-  box-shadow: 0 4px 6px transparent;
+  transition: all 1s ease;
+  box-shadow: 0 8px 12px transparent;
 }
 
 .emoji {
@@ -453,8 +464,7 @@ h3 {
   text-align: center;
   align-items: center;
   align-content: center;
-  box-shadow: 0 8px 12px transparent;
-  transition: transform 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .square_block:hover {
@@ -520,7 +530,12 @@ h3 {
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 
+.widget-icon {
+  font-size: 1.5rem;
+}
+
 .info_widget * {
+  color: var(--fg);
   transition: all 0.5s ease-in-out;
 }
 
@@ -530,6 +545,7 @@ h3 {
   font-weight: bolder;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   font-family: "Oswald";
+  text-transform: uppercase;
 }
 
 .info_widget h1 {
@@ -609,7 +625,8 @@ h3 {
 
 @media screen and (max-width: 700px) {
   .square_block {
-    width: 120px;
+    zoom: 0.8;
+    padding: 10px;
   }
 
   .square_block h1 {
@@ -629,7 +646,17 @@ h3 {
   }
 
   .widget_blocks_2 {
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
+  }
+
+  .info_widget {
+    zoom: 0.8;
+  }
+
+  .large_block {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
   }
 }
 
@@ -675,7 +702,7 @@ h3 {
   }
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 800px) and (max-width: 800px) {
   .main_block,
   .large_block {
     height: 100%;
