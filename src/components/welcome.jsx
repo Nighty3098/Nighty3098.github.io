@@ -4,7 +4,7 @@ import { faFaceLaughWink } from '@fortawesome/free-solid-svg-icons';
 
 const WelcomeBlock = () => {
     return (
-        <div className='main_block'>
+        <div className='main_block' id="main">
             <h1 className="title">
                 <FontAwesomeIcon icon={faFaceLaughWink} /><br />
                 I'm Nighty

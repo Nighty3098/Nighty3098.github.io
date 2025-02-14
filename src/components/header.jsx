@@ -8,13 +8,13 @@ const Header = () => {
 
     return (
         <header className="header">
-        <a className="navbar_button" href="#main_block">
+        <a className="navbar_button" href="#main">
             <FontAwesomeIcon icon={faRocket} style={{ marginRight: "10px" }} /> MAIN
         </a>
-        <a className="navbar_button" href="#user_bio">
+        <a className="navbar_button" href="#bio">
             <FontAwesomeIcon icon={faLightbulb} style={{ marginRight: "10px" }} /> BIO
         </a>
-        <a className="navbar_button" href="#bio_links">
+        <a className="navbar_button" href="#links">
             <FontAwesomeIcon icon={faPaperclip} style={{ marginRight: "10px" }} /> LINKS
         </a>
         <a onClick={toggleTheme} className="navbar_button">

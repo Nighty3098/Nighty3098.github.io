@@ -6,7 +6,7 @@ import Info from "./cards"
 const Bio = () => {
     return (
             <div className='large_block'>
-                <div className='bio_content'>
+                <div className='bio_content' id="bio">
                     <img src="/me.png" style={{width: "50%", maxWidth: "300px", borderRadius: "30%", aspectRatio: "1/1", border: "10px solid var(--fg)" }} />
                     <div style={{ alignContent: "left", alignContent: "left", textAlign: "left", display: "flex", justifyContent: "flex-start", marginTop: "50px"}}>
                         Hello. I'm Artem - backend developer and freelancer. I'm 18 years old, studying in 11th grade at school and 5 years at programming academy.

@@ -14,7 +14,7 @@ const skills_list = [
 
 const Info = () => {
     return (
-        <div style={{ gap: "15px", margin: "0px", padding: "0px", display: "flex", alignItems: "center", alignContent: "center", justifyContent: "center", flexDirection: "row", width: "90%"}}>
+        <div className="widget_blocks_2">
             <div className='info_widget' style={{ transform: "rotate(6deg)" }}>
                 <h1>15 +</h1>
                 <h2>COMPLETED PROJECTS</h2>
