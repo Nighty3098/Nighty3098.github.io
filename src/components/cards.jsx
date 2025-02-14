@@ -28,7 +28,7 @@ const Info = () => {
     {
       title: "15 +",
       subtitle: "COMPLETED PROJECTS",
-      rotate: -5,
+      rotate: 10,
       icon: faCodeFork,
     },
     {

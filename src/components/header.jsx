@@ -17,14 +17,17 @@ const Header = () => {
       <a className="navbar_button" href="#main">
         <FontAwesomeIcon icon={faRocket} style={{ marginRight: "10px" }} /> MAIN
       </a>
+      <p>|</p>
       <a className="navbar_button" href="#bio">
         <FontAwesomeIcon icon={faLightbulb} style={{ marginRight: "10px" }} />{" "}
         BIO
       </a>
+      <p>|</p>
       <a className="navbar_button" href="#links">
         <FontAwesomeIcon icon={faPaperclip} style={{ marginRight: "10px" }} />{" "}
         LINKS
       </a>
+      <p>|</p>
       <a onClick={toggleTheme} className="navbar_button">
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
       </a>
