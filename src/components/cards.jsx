@@ -80,7 +80,7 @@ const Info = () => {
 export const Skills = () => (
   <div className="widget_blocks">
     {skills_list.map((feature, index) => (
-      <div key={index} className="square_block">
+      <div key={index} className="skill_widget">
         <span className="emoji">
           <FontAwesomeIcon icon={feature.icon} />
         </span>

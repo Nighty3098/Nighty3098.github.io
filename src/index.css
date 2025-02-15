@@ -442,7 +442,7 @@ h3 {
   gap: 30px;
 }
 
-.square_block {
+.skill_widget {
   width: 150px;
   aspect-ratio: 1/1;
   border-radius: 20px;
@@ -461,6 +461,10 @@ h3 {
   box-shadow: 0 8px 12px transparent;
 }
 
+.skill_widget * {
+  font-family: "Oswald";
+}
+
 .emoji {
   color: var(--fg);
   font-size: 60px;
@@ -475,16 +479,16 @@ h3 {
   transition: all 0.5s ease;
 }
 
-.square_block:hover {
+.skill_widget:hover {
   background-color: var(--tr);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.square_block:hover .emoji {
+.skill_widget:hover .emoji {
   transform: rotate(15deg);
 }
 
-.square_block h1 {
+.skill_widget h1 {
   color: var(--fg);
   font-size: large;
   padding: 0px;
@@ -495,11 +499,11 @@ h3 {
   transition: color 0.5s ease;
 }
 
-.square_block:hover h1 {
+.skill_widget:hover h1 {
   color: var(--fg);
 }
 
-.square_block h2 {
+.skill_widget h2 {
   color: var(--fg);
   line-height: 1.6rem;
   font-size: medium;
@@ -510,7 +514,7 @@ h3 {
   text-align: center;
 }
 
-.square_block h3 {
+.skill_widget h3 {
   color: var(--fg);
   font-size: medium;
   font-weight: 100;
@@ -636,20 +640,20 @@ h3 {
     font-size: 20vw;
   }
 
-  .square_block {
+  .skill_widget {
     zoom: 0.8;
     padding: 10px;
   }
 
-  .square_block h1 {
+  .skill_widget h1 {
     font-size: medium;
   }
 
-  .square_block h2 {
+  .skill_widget h2 {
     font-size: small;
   }
 
-  .square_block h3 {
+  .skill_widget h3 {
     font-size: small;
   }
 
@@ -687,19 +691,19 @@ h3 {
     font-size: 5rem;
   }
 
-  .square_block {
+  .skill_widget {
     width: 150px;
   }
 
-  .square_block h1 {
+  .skill_widget h1 {
     font-size: large;
   }
 
-  .square_block h2 {
+  .skill_widget h2 {
     font-size: medium;
   }
 
-  .square_block h3 {
+  .skill_widget h3 {
     font-size: medium;
   }
 }
@@ -715,6 +719,10 @@ h3 {
 @media screen and (min-width: 1500px) {
   .main_block h1 {
     font-size: 15rem;
+  }
+
+  .widget_blocks_2 {
+    grid-template-columns: auto auto auto auto;
   }
 }
 
