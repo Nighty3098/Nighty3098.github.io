@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faC,
@@ -23,30 +24,104 @@ const skills_list = [
   { icon: faQ, text: "QT" },
 ];
 
+const InfoWidget = ({ item, index }) => {
+  const controls = useAnimation();
+  const [randomRotate] = useState(() => Math.random() * 25 - 15);
+
+  console.debug("Generated: ", randomRotate)
+
+  return (
+    <motion.div
+      className="info_widget"
+      initial={{ opacity: 0, y: 50, rotate: randomRotate }}
+      animate={controls}
+      viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
+      onViewportEnter={() => {
+        controls.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.6,
+            delay: index * 0.05,
+            ease: "easeOut",
+            rotate: randomRotate
+          },
+        });
+      }}
+      onViewportLeave={() => {
+        controls.start({
+          opacity: 0,
+        });
+      }}
+    >
+      <h1>{item.title}</h1>
+      <h2>{item.subtitle}</h2>
+    </motion.div>
+  );
+};
+
+const SkillWidget = ({ feature, index }) => {
+  const controls = useAnimation();
+
+  return (
+    <motion.div
+      className="skill_widget"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={controls}
+      viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
+      onViewportEnter={() => {
+        controls.start({
+          opacity: 1,
+          scale: 1,
+          transition: {
+            duration: 0.5,
+            delay: index * 0.1,
+            type: "spring",
+            stiffness: 100,
+          },
+        });
+      }}
+      onViewportLeave={() => {
+        controls.start({
+          opacity: 0,
+        });
+      }}
+    >
+      <span className="emoji">
+        <FontAwesomeIcon icon={feature.icon} />
+      </span>
+      <h1>
+        {feature.text.split("\n").map((line, i) => (
+          <React.Fragment key={i}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
+      </h1>
+    </motion.div>
+  );
+};
+
 const Info = () => {
   const items = [
     {
       title: "15 +",
       subtitle: "COMPLETED PROJECTS",
-      rotate: 10,
       icon: faCodeFork,
     },
     {
       title: "50 +",
       subtitle: "FOLLOWERS ON GIT",
-      rotate: -5,
       icon: faUserPlus,
     },
     {
       title: "5 +",
       subtitle: "YEARS OF EXPERIENCE",
-      rotate: 5,
       icon: faBrain,
     },
     {
       title: "12 +",
       subtitle: "satisfied customers",
-      rotate: -10,
       icon: faUsers,
     },
   ];
@@ -54,24 +129,7 @@ const Info = () => {
   return (
     <div className="widget_blocks_2">
       {items.map((item, index) => (
-        <div
-          key={index}
-          className="info_widget"
-          style={{ transform: `rotate(${item.rotate}deg)` }}
-        >
-          <FontAwesomeIcon
-            icon={item.icon}
-            className="widget-icon"
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              opacity: 1,
-            }}
-          />
-          <h1>{item.title}</h1>
-          <h2>{item.subtitle}</h2>
-        </div>
+        <InfoWidget key={index} item={item} index={index} />
       ))}
     </div>
   );
@@ -80,19 +138,7 @@ const Info = () => {
 export const Skills = () => (
   <div className="widget_blocks">
     {skills_list.map((feature, index) => (
-      <div key={index} className="skill_widget">
-        <span className="emoji">
-          <FontAwesomeIcon icon={feature.icon} />
-        </span>
-        <h1>
-          {feature.text.split("\n").map((line, i) => (
-            <React.Fragment key={i}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}
-        </h1>
-      </div>
+      <SkillWidget key={index} feature={feature} index={index} />
     ))}
   </div>
 );

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTelegram,
@@ -17,36 +18,114 @@ const socials = [
   },
 ];
 
-const Contacts = () => (
-  <div className="contacts" id="links">
-    <div className="contacts_badge_block">
-      {socials.map((social, index) => (
-        <a
-          key={index}
-          href={social.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="contact_button">
-            <i>
-              <FontAwesomeIcon icon={social.icon} className="social-icon" />
-            </i>
-          </div>
-        </a>
-      ))}
-    </div>
-    <a
+const SocialIcon = ({ social, index }) => {
+  const controls = useAnimation();
+
+  return (
+    <motion.a
+      href={social.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 20, rotate: -45 }}
+      animate={controls}
+      viewport={{ margin: "0px 0px -100px 0px", amount: 0.1 }}
+      onViewportEnter={() => {
+        controls.start({
+          opacity: 1,
+          y: 0,
+          rotate: 0,
+          transition: {
+            type: "spring",
+            stiffness: 120,
+            delay: index * 0.15
+          }
+        });
+      }}
+      onViewportLeave={() => {
+        controls.start({
+          opacity: 0,
+          y: 20,
+          rotate: -45,
+          transition: {
+            type: "spring",
+            stiffness: 100,
+            duration: 0.3
+          }
+        });
+      }}
+      whileHover={{ scale: 1.1, rotate: 10 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      <div className="contact_button">
+        <i>
+          <FontAwesomeIcon icon={social.icon} className="social-icon" />
+        </i>
+      </div>
+    </motion.a>
+  );
+};
+
+const DiscordButton = () => {
+  const controls = useAnimation();
+
+  return (
+    <motion.a
       href="https://discord.gg/tnHSEc2cZv"
       className="btn-slide"
       style={{ marginTop: "30px" }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={controls}
+      viewport={{ margin: "0px 0px -100px 0px" }}
+      onViewportEnter={() => {
+        controls.start({
+          opacity: 1,
+          scale: 1,
+          transition: {
+            type: "spring",
+            stiffness: 100,
+            delay: 0.8
+          }
+        });
+      }}
+      onViewportLeave={() => {
+        controls.start({
+          opacity: 0,
+          scale: 0.8,
+          transition: {
+            duration: 0.3,
+            ease: "easeIn"
+          }
+        });
+      }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
       <span className="circle">
         <FontAwesomeIcon icon={faDiscord} />
       </span>
       <span className="title">DS SERVER</span>
       <span className="title-hover">CLICK</span>
-    </a>
-  </div>
+    </motion.a>
+  );
+};
+
+const Contacts = () => (
+  <motion.div 
+    className="contacts" 
+    id="links"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ margin: "0px 0px -100px 0px" }}
+    transition={{ duration: 0.5 }}
+  >
+    <div className="contacts_badge_block">
+      {socials.map((social, index) => (
+        <SocialIcon key={index} social={social} index={index} />
+      ))}
+    </div>
+    
+    <DiscordButton />
+  </motion.div>
 );
 
 export default Contacts;
