@@ -258,8 +258,8 @@ a .button:hover {
 }
 
 .spacer {
-  min-height: 150px;
-  max-height: 150px;
+  min-height: 60px;
+  max-height: 60px;
   background-color: transparent;
   border: none;
 }
