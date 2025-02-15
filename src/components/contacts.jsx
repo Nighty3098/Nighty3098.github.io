@@ -53,7 +53,6 @@ const SocialIcon = ({ social, index }) => {
           }
         });
       }}
-      whileHover={{ scale: 1.1, rotate: 10 }}
       whileTap={{ scale: 0.9 }}
     >
       <div className="contact_button">
@@ -97,8 +96,6 @@ const DiscordButton = () => {
           }
         });
       }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
     >
       <span className="circle">
         <FontAwesomeIcon icon={faDiscord} />
