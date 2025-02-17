@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLO</title>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .question {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            width: 200px;
+            height: 40px;
+            transition: background-color 0.3s;
+        }
+
+        .confirm-button {
+            background-color: #007AFF;
+            color: #ffffff;
+        }
+
+        .confirm-button:hover {
+            background-color: #005BB5;
+        }
+
+        .cancel-button {
+            background-color: #FF3B30;
+            color: #ffffff;
+        }
+
+        .cancel-button:hover {
+            background-color: #D70015;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .close-button {
+            background-color: #007AFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .close-button:hover {
+            background-color: #005BB5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question">Пойдёшь бухать?</div>
+        <button class="button confirm-button" onclick="onConfirm()">Да. Пойду</button>
+        <button class="button cancel-button" onclick="onCancel()">Нет</button>
+    </div>
+
+    <div id="ipModal" class="modal">
+        <div class="modal-content" id="ipInfo"></div>
+        <button class="close-button" onclick="closeModal()">Закрыть</button>
+    </div>
+
+    <script>
+        function onConfirm() {
+            window.open("https://t.me/Night3098", "_blank");
+        }
+
+        function onCancel() {
+            fetch('https://ipinfo.io/json')
+                .then(response => response.json())
+                .then(data => {
+                    const ip = data.ip || "Не удалось получить IP";
+                    const city = data.city || "Не удалось получить город";
+                    const region = data.region || "Не удалось получить регион";
+                    const country = data.country || "Не удалось получить страну";
+                    const loc = data.loc ? data.loc.split(',') : [];
+                    const latitude = loc[0] || "Не удалось получить широту";
+                    const longitude = loc[1] || "Не удалось получить долготу";
+                    const org = data.org || "Не удалось получить провайдера";
+
+                    const infoText = `
+                        ОТКАЗ НЕ ПРИНИМАЕТСЯ !!!<br><br>
+                        Ваш IP-адрес: ${ip}<br><br>
+                        Город: ${city}<br><br>
+                        Регион: ${region}<br><br>
+                        Страна: ${country}<br><br>
+                        Широта: ${latitude}<br><br>
+                        Долгота: ${longitude}<br><br>
+                        Провайдер: ${org}
+                    `;
+
+                    document.getElementById('ipInfo').innerHTML = infoText;
+                    document.getElementById('ipModal').style.display = 'block';
+                })
+                .catch(error => {
+                    document.getElementById('ipInfo').innerHTML = "Ошибка при получении данных: " + error.message;
+                    document.getElementById('ipModal').style.display = 'block';
+                });
+        }
+
+        function closeModal() {
+            document.getElementById('ipModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
