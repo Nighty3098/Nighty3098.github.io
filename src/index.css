@@ -115,6 +115,14 @@
   margin-right: 5px;
 }
 
+.user_avatar {
+  width: 50%;
+  max-width: 300px;
+  border-radius: 30%;
+  aspect-ratio: 1/1;
+  border: 10px solid var(--fg);
+}
+
 html {
   background: var(--bg);
   scrollbar-color: var(--fg) transparent;
@@ -182,7 +190,6 @@ body {
 
 .contact_button:hover {
   background-color: var(--purple);
-  color: var(--fg);
 }
 
 .contact_button i {
@@ -192,6 +199,20 @@ body {
 
 .contact_button:hover i {
   color: var(--bg);
+}
+
+#git_button:hover {
+  background-color: var(--purple);
+  color: var(--bg);
+  display: flex;
+}
+
+#git_button {
+  background-color: var(--tr);
+  color: var(--fg);
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .button {
@@ -232,12 +253,13 @@ a {
 }
 
 a .button {
+  position: relative;
   font-size: medium;
   font-weight: 700;
   background-color: var(--fg);
   border-radius: 10px;
   width: 270px;
-  height: 50px;
+  height: 40px;
   padding: 10px;
   border: none;
   display: flex;
@@ -341,11 +363,11 @@ h3 {
 .btn-slide {
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: 45px;
   width: 200px;
-  line-height: 40px;
+  line-height: 45px;
   padding: 0;
-  border-radius: 40px;
+  border-radius: 45px;
   background: var(--fg);
   border: none;
   margin: 10px;
@@ -374,13 +396,13 @@ h3 {
 }
 
 .btn-slide:hover span.title {
-  left: 40px;
+  left: 45px;
   opacity: 0;
 }
 
 .btn-slide:hover span.title-hover {
   opacity: 1;
-  left: 40px;
+  left: 45px;
 }
 
 .btn-slide span.circle {
@@ -390,11 +412,12 @@ h3 {
   position: absolute;
   float: left;
   margin: 5px;
-  line-height: 30px;
-  height: 30px;
-  width: 30px;
+  line-height: 35px;
+  height: 35px;
+  width: 35px;
   top: 0;
   left: 0;
+  padding: 0px;
   transition: 0.5s;
   border-radius: 50%;
 }
@@ -490,7 +513,7 @@ h3 {
 
 .skill_widget h1 {
   color: var(--fg);
-  font-size: large;
+  font-size: larger;
   padding: 0px;
   margin: 0px;
   width: 100%;

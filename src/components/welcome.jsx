@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFaceLaughWink } from "@fortawesome/free-solid-svg-icons";
 import FloatWidget from "./decoration";
 
 const WelcomeBlock = () => {
@@ -8,9 +6,7 @@ const WelcomeBlock = () => {
     <div className="main_block" id="main">
       <FloatWidget />
       <h1 className="title">
-        <FontAwesomeIcon icon={faFaceLaughWink} />
-        <br />
-        I'm Nighty
+        I'm<br />Nighty
       </h1>
     </div>
   );

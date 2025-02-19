@@ -77,13 +77,7 @@ const Bio = () => {
         {/* Анимированное изображение */}
         <motion.img
           src="/me.png"
-          style={{
-            width: "50%",
-            maxWidth: "300px",
-            borderRadius: "30%",
-            aspectRatio: "1/1",
-            border: "10px solid var(--fg)",
-          }}
+          className="user_avatar"
           variants={imageVariants}
         />
         <div style={{ height: "50px" }} />
@@ -122,7 +116,7 @@ const Bio = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <button className="button">
+          <button className="button" id="git_button">
             <FontAwesomeIcon
               icon={faGithubAlt}
               style={{ marginRight: "20px" }}
