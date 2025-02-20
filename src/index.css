@@ -688,7 +688,7 @@ h3 {
 
   .widget_blocks {
     align-items: center;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto;
   }
 
   .widget_blocks_2 {
@@ -696,7 +696,7 @@ h3 {
   }
 
   .info_widget {
-    zoom: 0.6;
+    zoom: 1.1;
   }
 
   .large_block {
