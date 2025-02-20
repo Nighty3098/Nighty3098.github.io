@@ -14,6 +14,7 @@ import {
   faSquareJs,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
+import { faCube, faComment } from "@fortawesome/free-solid-svg-icons";
 
 const skills_list = [
   { icon: faPython, text: "PYTHON" },
@@ -27,8 +28,6 @@ const skills_list = [
 const InfoWidget = ({ item, index }) => {
   const controls = useAnimation();
   const [randomRotate] = useState(() => Math.random() * 25 - 15);
-
-  console.debug("Generated: ", randomRotate)
 
   return (
     <motion.div
@@ -44,7 +43,7 @@ const InfoWidget = ({ item, index }) => {
             duration: 0.6,
             delay: index * 0.05,
             ease: "easeOut",
-            rotate: randomRotate
+            rotate: randomRotate,
           },
         });
       }}
@@ -53,6 +52,7 @@ const InfoWidget = ({ item, index }) => {
           opacity: 0,
         });
       }}
+      whileTap={{ scale: 0.95 }}
     >
       <h1>{item.title}</h1>
       <h2>{item.subtitle}</h2>
@@ -110,11 +110,6 @@ const Info = () => {
       icon: faCodeFork,
     },
     {
-      title: "50 +",
-      subtitle: "FOLLOWERS ON GIT",
-      icon: faUserPlus,
-    },
-    {
       title: "5 +",
       subtitle: "YEARS OF EXPERIENCE",
       icon: faBrain,
@@ -127,7 +122,7 @@ const Info = () => {
   ];
 
   return (
-    <div className="widget_blocks_2">
+    <div className="widget_blocks">
       {items.map((item, index) => (
         <InfoWidget key={index} item={item} index={index} />
       ))}
@@ -135,12 +130,47 @@ const Info = () => {
   );
 };
 
+export const Title = () => {
+  const controls = useAnimation();
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={controls}
+      viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
+      onViewportEnter={() => {
+        controls.start({
+          opacity: 1,
+          scale: 1,
+          transition: {
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+          },
+        });
+      }}
+      onViewportLeave={() => {
+        controls.start({
+          opacity: 0,
+        });
+      }}
+    >
+      <h1>
+        <FontAwesomeIcon icon={faCube} className="icon" /> SKILLS
+      </h1>
+    </motion.div>
+  );
+};
+
 export const Skills = () => (
-  <div className="widget_blocks">
-    {skills_list.map((feature, index) => (
-      <SkillWidget key={index} feature={feature} index={index} />
-    ))}
-  </div>
+  <>
+    <Title />
+    <div className="widget_blocks">
+      {skills_list.map((feature, index) => (
+        <SkillWidget key={index} feature={feature} index={index} />
+      ))}
+    </div>
+  </>
 );
 
 export default Info;

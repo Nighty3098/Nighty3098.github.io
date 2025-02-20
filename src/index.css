@@ -213,6 +213,7 @@ body {
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+  box-shadow: none;
 }
 
 .button {
@@ -276,7 +277,6 @@ a .button {
 
 a .button:hover {
   background-color: var(--tr);
-  width: 350px;
 }
 
 .spacer {
@@ -457,12 +457,16 @@ h3 {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 30px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .widget_blocks_2 {
   display: grid;
   grid-template-columns: auto auto;
   gap: 30px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .skill_widget {
@@ -683,7 +687,7 @@ h3 {
   }
 
   .widget_blocks {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
   }
 
   .widget_blocks_2 {
@@ -691,7 +695,7 @@ h3 {
   }
 
   .info_widget {
-    zoom: 0.85;
+    zoom: 1;
   }
 
   .large_block {

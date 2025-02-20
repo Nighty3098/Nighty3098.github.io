@@ -21,19 +21,12 @@ Nighty3098 ❥
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ padding: "0px", margin: "0px" }}>
       <Header />
       <WelcomeBlock />
       <Bio />
-      <h1>
-        <FontAwesomeIcon icon={faCube} className="icon" /> SKILLS
-      </h1>
       <Skills />
       <div className="spacer"></div>
-      <h1>
-        <FontAwesomeIcon icon={faComment} className="icon" />
-        CONTACTS
-      </h1>
       <Contacts />
       <div className="spacer"></div>
     </div>

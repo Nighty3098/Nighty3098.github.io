@@ -7,6 +7,7 @@ import {
   faReddit,
   faSignalMessenger,
 } from "@fortawesome/free-brands-svg-icons";
+import { faCube, faComment } from "@fortawesome/free-solid-svg-icons";
 
 const socials = [
   { icon: faTelegram, link: "https://t.me/Night3098" },
@@ -37,8 +38,8 @@ const SocialIcon = ({ social, index }) => {
           transition: {
             type: "spring",
             stiffness: 120,
-            delay: index * 0.15
-          }
+            delay: index * 0.15,
+          },
         });
       }}
       onViewportLeave={() => {
@@ -49,8 +50,8 @@ const SocialIcon = ({ social, index }) => {
           transition: {
             type: "spring",
             stiffness: 100,
-            duration: 0.3
-          }
+            duration: 0.3,
+          },
         });
       }}
       whileTap={{ scale: 0.9 }}
@@ -82,8 +83,8 @@ const DiscordButton = () => {
           transition: {
             type: "spring",
             stiffness: 100,
-            delay: 0.8
-          }
+            delay: 0.8,
+          },
         });
       }}
       onViewportLeave={() => {
@@ -92,8 +93,8 @@ const DiscordButton = () => {
           scale: 0.8,
           transition: {
             duration: 0.3,
-            ease: "easeIn"
-          }
+            ease: "easeIn",
+          },
         });
       }}
     >
@@ -106,21 +107,58 @@ const DiscordButton = () => {
   );
 };
 
+export const Title = () => {
+  const controls = useAnimation();
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={controls}
+      viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
+      onViewportEnter={() => {
+        controls.start({
+          opacity: 1,
+          scale: 1,
+          transition: {
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+          },
+        });
+      }}
+      onViewportLeave={() => {
+        controls.start({
+          opacity: 0,
+        });
+      }}
+    >
+      <h1>
+        <FontAwesomeIcon icon={faComment} className="icon" />
+        CONTACTS
+      </h1>
+    </motion.div>
+  );
+};
+
 const Contacts = () => (
-  <motion.div 
-    className="contacts" 
+  <motion.div
+    className="contacts"
     id="links"
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ margin: "0px 0px -100px 0px" }}
     transition={{ duration: 0.5 }}
   >
+    <h1>
+      <FontAwesomeIcon icon={faComment} className="icon" />
+      CONTACTS
+    </h1>
     <div className="contacts_badge_block">
       {socials.map((social, index) => (
         <SocialIcon key={index} social={social} index={index} />
       ))}
     </div>
-    
+
     <DiscordButton />
   </motion.div>
 );
