@@ -3,7 +3,8 @@ import { motion, useAnimation } from "framer-motion";
 
 const InfoWidget = ({ item, index }) => {
   const controls = useAnimation();
-  const [randomRotate] = useState(() => Math.random() * 30 - 20);
+  const [randomRotate] = useState(() => Math.random() * 20 - 10);
+  // const [randomRotate] = "0";
 
   return (
     <motion.div
@@ -57,18 +58,52 @@ const GitHubStats = ({ username }) => {
       }
 
       try {
-        const response = await fetch(
+        const userResponse = await fetch(
           `https://api.github.com/users/${username}`,
         );
-        if (!response.ok) {
+        if (!userResponse.ok) {
           throw new Error("Network response was not ok");
         }
-        const data = await response.json();
+        const userData = await userResponse.json();
+
+        const reposResponse = await fetch(
+          `https://api.github.com/users/${username}/repos`,
+        );
+        if (!reposResponse.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const reposData = await reposResponse.json();
+
+        let totalCommits = 0;
+        let totalPullRequests = 0;
+
+        const commitPromises = reposData.map((repo) =>
+          fetch(`https://api.github.com/repos/${username}/${repo.name}/commits`)
+            .then((response) => (response.ok ? response.json() : []))
+            .then((commitsData) => commitsData.length),
+        );
+
+        const pullRequestPromises = reposData.map((repo) =>
+          fetch(
+            `https://api.github.com/repos/${username}/${repo.name}/pulls?state=all`,
+          )
+            .then((response) => (response.ok ? response.json() : []))
+            .then((pullsData) => pullsData.length),
+        );
+
+        const commitsResults = await Promise.all(commitPromises);
+        const pullsResults = await Promise.all(pullRequestPromises);
+
+        totalCommits = commitsResults.reduce((acc, count) => acc + count, 0);
+        totalPullRequests = pullsResults.reduce((acc, count) => acc + count, 0);
+
         const statsData = [
-          { title: "Public Projects", subtitle: data.public_repos },
-          { title: "Followers", subtitle: data.followers },
-          { title: "Following", subtitle: data.following },
+          // { title: "Public Projects", subtitle: userData.public_repos },
+          { title: "Followers on git", subtitle: userData.followers },
+          { title: "Total Commits", subtitle: totalCommits },
+          { title: "Total Pull Requests", subtitle: totalPullRequests },
         ];
+
         setStats(statsData);
         localStorage.setItem(cacheKey, JSON.stringify(statsData));
         localStorage.setItem(`${cacheKey}_time`, now);
@@ -83,7 +118,7 @@ const GitHubStats = ({ username }) => {
   }, [username]);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (error) return <div></div>;
 
   return (
     <div className="widget_blocks">

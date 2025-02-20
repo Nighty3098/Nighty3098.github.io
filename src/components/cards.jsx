@@ -27,7 +27,8 @@ const skills_list = [
 
 const InfoWidget = ({ item, index }) => {
   const controls = useAnimation();
-  const [randomRotate] = useState(() => Math.random() * 25 - 15);
+  const [randomRotate] = useState(() => Math.random() * 20 - 10);
+  // const [randomRotate] = "0";
 
   return (
     <motion.div
@@ -105,12 +106,12 @@ const SkillWidget = ({ feature, index }) => {
 const Info = () => {
   const items = [
     {
-      title: "15 +",
+      title: "20 +",
       subtitle: "COMPLETED PROJECTS",
       icon: faCodeFork,
     },
     {
-      title: "5 +",
+      title: "4 +",
       subtitle: "YEARS OF EXPERIENCE",
       icon: faBrain,
     },
@@ -165,7 +166,7 @@ export const Title = () => {
 export const Skills = () => (
   <>
     <Title />
-    <div className="widget_blocks">
+    <div className="widget_blocks_2">
       {skills_list.map((feature, index) => (
         <SkillWidget key={index} feature={feature} index={index} />
       ))}
