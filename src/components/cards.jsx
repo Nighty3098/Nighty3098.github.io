@@ -106,11 +106,6 @@ const SkillWidget = ({ feature, index }) => {
 const Info = () => {
   const items = [
     {
-      title: "20 +",
-      subtitle: "COMPLETED PROJECTS",
-      icon: faCodeFork,
-    },
-    {
       title: "4 +",
       subtitle: "YEARS OF EXPERIENCE",
       icon: faBrain,
