@@ -21,7 +21,11 @@ const WelcomeBlock = () => {
         initial="hidden"
         animate="visible"
       >
-        <Textra data={["DEVELOPER", "FREELANCER", "STUDENT"]} className="title" effect="topDown" />
+        <Textra
+          data={["DEVELOPER", "FREELANCER", "STUDENT"]}
+          className="title"
+          effect="topDown"
+        />
       </motion.h1>
     </div>
   );

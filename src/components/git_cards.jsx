@@ -16,7 +16,7 @@ const InfoWidget = ({ item, index }) => {
           scale: 1,
           transition: {
             duration: 0.6,
-            delay: index * 0.05, 
+            delay: index * 0.05,
             ease: "easeOut",
           },
         });

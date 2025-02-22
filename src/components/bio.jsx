@@ -10,10 +10,7 @@ const Bio = () => {
   const controls = useAnimation();
 
   return (
-    <motion.div
-      className="large_block"
-      style={{ gap: "50px" }}
-    >
+    <motion.div className="large_block" style={{ gap: "50px" }}>
       <motion.div className="bio_content" id="bio">
         <motion.img
           src="/me.png"
