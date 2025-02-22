@@ -50,24 +50,21 @@ const Info = () => {
 
 const InfoWidget = ({ item, index }) => {
   const controls = useAnimation();
-  const [randomRotate] = useState(() => Math.random() * 20 - 10);
-  // const [randomRotate] = "0";
 
   return (
     <motion.div
       className="info_widget"
-      initial={{ opacity: 0, y: 50, rotate: randomRotate }}
+      initial={{ opacity: 0, scale: 0.8 }}
       animate={controls}
       viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
       onViewportEnter={() => {
         controls.start({
           opacity: 1,
-          y: 0,
+          scale: 1,
           transition: {
             duration: 0.6,
-            delay: index * 0.05,
+            delay: index * 0.05, 
             ease: "easeOut",
-            rotate: randomRotate,
           },
         });
       }}
@@ -78,6 +75,7 @@ const InfoWidget = ({ item, index }) => {
     </motion.div>
   );
 };
+
 
 const SkillWidget = ({ feature, index }) => {
   const controls = useAnimation();
