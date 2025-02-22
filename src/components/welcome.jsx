@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import FloatWidget from "./decoration";
+import Textra from "./text_area";
 
 const WelcomeBlock = () => {
   const titleVariants = {
@@ -21,9 +22,7 @@ const WelcomeBlock = () => {
         initial="hidden"
         animate="visible"
       >
-        I'm
-        <br />
-        Nighty
+        <Textra data={["DEVELOPER", "FREELANCER", "STUDENT"]} className="title" effect="topDown" />
       </motion.h1>
     </div>
   );

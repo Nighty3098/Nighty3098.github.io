@@ -7,7 +7,6 @@ import Info from "./cards";
 import GitHubStats from "./git_cards";
 
 const Bio = () => {
-  // Варианты анимаций
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -21,14 +20,14 @@ const Bio = () => {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8, rotate: -15 },
+    hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
       scale: 1,
       rotate: 0,
       transition: { type: "spring", stiffness: 120, damping: 10, delay: 0.2 },
     },
-    exit: { opacity: 0, scale: 0.7, rotate: 15 },
+    exit: { opacity: 0, scale: 0.7 },
   };
 
   const textVariants = {

@@ -18,17 +18,13 @@ const Header = () => {
         <FontAwesomeIcon icon={faLightbulb} style={{ marginRight: "10px" }} />{" "}
         BIO
       </a>
-      <a className="navbar_button" href="https://github.com/Nighty3098">
-        <FontAwesomeIcon icon={faGithubAlt} style={{ marginRight: "10px" }} />{" "}
-        GIT
-      </a>
       <a className="navbar_button" href="#links">
         <FontAwesomeIcon icon={faPaperclip} style={{ marginRight: "10px" }} />{" "}
         LINKS
       </a>
-      <a onClick={toggleTheme} className="navbar_button">
+      <button onClick={toggleTheme} className="navbar_button">
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
-      </a>
+      </button>
     </header>
   );
 };

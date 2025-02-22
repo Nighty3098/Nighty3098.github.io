@@ -25,6 +25,29 @@ const skills_list = [
   { icon: faQ, text: "QT" },
 ];
 
+const info_list = [
+  {
+    title: "4 +",
+    subtitle: "YEARS OF EXPERIENCE",
+    icon: faBrain,
+  },
+  {
+    title: "15 +",
+    subtitle: "satisfied customers",
+    icon: faUsers,
+  },
+];
+
+const Info = () => {
+  return (
+    <div className="widget_blocks">
+      {info_list.map((item, index) => (
+        <InfoWidget key={index} item={item} index={index} />
+      ))}
+    </div>
+  );
+};
+
 const InfoWidget = ({ item, index }) => {
   const controls = useAnimation();
   const [randomRotate] = useState(() => Math.random() * 20 - 10);
@@ -100,29 +123,6 @@ const SkillWidget = ({ feature, index }) => {
         ))}
       </h1>
     </motion.div>
-  );
-};
-
-const Info = () => {
-  const items = [
-    {
-      title: "4 +",
-      subtitle: "YEARS OF EXPERIENCE",
-      icon: faBrain,
-    },
-    {
-      title: "12 +",
-      subtitle: "satisfied customers",
-      icon: faUsers,
-    },
-  ];
-
-  return (
-    <div className="widget_blocks">
-      {items.map((item, index) => (
-        <InfoWidget key={index} item={item} index={index} />
-      ))}
-    </div>
   );
 };
 

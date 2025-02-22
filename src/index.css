@@ -710,17 +710,7 @@ h3 {
   }
 }
 
-@media screen and (max-width: 800px) {
-  .main_block h1 {
-    font-size: 7rem;
-  }
-}
-
 @media screen and (max-height: 500px) and (max-width: 600px) {
-  .main_block h1 {
-    font-size: 5rem;
-  }
-
   .skill_widget {
     width: 150px;
   }
@@ -744,11 +734,15 @@ h3 {
     margin: 0px;
     padding: 0px;
   }
+
+  .main_block h1 {
+    font-size: 12vw;
+  }
 }
 
 @media screen and (min-width: 1500px) {
   .main_block h1 {
-    font-size: 15rem;
+    font-size: 13vw;
   }
 }
 
