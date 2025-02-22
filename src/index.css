@@ -40,6 +40,13 @@
   outline: none;
 }
 
+.main_block .title {
+  font-family: "Oswald";
+  font-size: 10rem;
+  font-weight: bolder;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
 .App {
   width: 100%;
   height: auto;
@@ -311,11 +318,6 @@ a .button:hover {
   min-height: 100vh;
   max-height: 100vh;
   gap: 0px;
-}
-
-.main_block h1 {
-  font-size: 10rem;
-  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -624,7 +626,7 @@ h3 {
   min-height: auto;
   max-width: 800px;
   border-radius: 30px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 2.2rem;
   font-weight: lighter;
   display: flex;
@@ -735,13 +737,13 @@ h3 {
     padding: 0px;
   }
 
-  .main_block h1 {
+  .main_block .title {
     font-size: 12vw;
   }
 }
 
 @media screen and (min-width: 1500px) {
-  .main_block h1 {
+  .main_block .title {
     font-size: 13vw;
   }
 }
