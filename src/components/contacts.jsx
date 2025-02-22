@@ -126,6 +126,7 @@ const Contacts = () => (
       <FontAwesomeIcon icon={faComment} className="icon" />
       CONTACTS
     </h1>
+    <div style={{height: "50px"}}></div>
     <div className="contacts_badge_block">
       {socials.map((social, index) => (
         <SocialIcon key={index} social={social} index={index} />
