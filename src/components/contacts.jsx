@@ -42,18 +42,6 @@ const SocialIcon = ({ social, index }) => {
           },
         });
       }}
-      onViewportLeave={() => {
-        controls.start({
-          opacity: 0,
-          y: 20,
-          rotate: -45,
-          transition: {
-            type: "spring",
-            stiffness: 100,
-            duration: 0.3,
-          },
-        });
-      }}
       whileTap={{ scale: 0.9 }}
     >
       <div className="contact_button">
@@ -87,16 +75,6 @@ const DiscordButton = () => {
           },
         });
       }}
-      onViewportLeave={() => {
-        controls.start({
-          opacity: 0,
-          scale: 0.8,
-          transition: {
-            duration: 0.3,
-            ease: "easeIn",
-          },
-        });
-      }}
     >
       <span className="circle">
         <FontAwesomeIcon icon={faDiscord} />
@@ -124,11 +102,6 @@ export const Title = () => {
             type: "spring",
             stiffness: 100,
           },
-        });
-      }}
-      onViewportLeave={() => {
-        controls.start({
-          opacity: 0,
         });
       }}
     >

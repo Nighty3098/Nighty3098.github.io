@@ -71,11 +71,6 @@ const InfoWidget = ({ item, index }) => {
           },
         });
       }}
-      onViewportLeave={() => {
-        controls.start({
-          opacity: 0,
-        });
-      }}
       whileTap={{ scale: 0.95 }}
     >
       <h1>{item.title}</h1>
@@ -103,11 +98,6 @@ const SkillWidget = ({ feature, index }) => {
             type: "spring",
             stiffness: 100,
           },
-        });
-      }}
-      onViewportLeave={() => {
-        controls.start({
-          opacity: 0,
         });
       }}
     >
@@ -143,11 +133,6 @@ export const Title = () => {
             type: "spring",
             stiffness: 100,
           },
-        });
-      }}
-      onViewportLeave={() => {
-        controls.start({
-          opacity: 0,
         });
       }}
     >

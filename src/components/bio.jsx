@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
@@ -7,84 +7,40 @@ import Info from "./cards";
 import GitHubStats from "./git_cards";
 
 const Bio = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, when: "beforeChildren" },
-    },
-    exit: {
-      opacity: 0,
-      transition: { staggerChildren: 0.1, staggerDirection: -1 },
-    },
+  const controls = useAnimation();
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      rotate: 0,
-      transition: { type: "spring", stiffness: 120, damping: 10, delay: 0.2 },
-    },
-    exit: { opacity: 0, scale: 0.7 },
-  };
-
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-    exit: { opacity: 0, y: -20 },
-  };
-
-  const rocketVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { type: "spring", delay: 0.8, stiffness: 100 },
-    },
-    exit: { opacity: 0, x: 50 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   };
 
   const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { type: "spring", delay: 1.0, stiffness: 150 },
-    },
-    exit: { opacity: 0, scale: 0.8 },
-  };
-
-  const iconVariants = {
-    hidden: { opacity: 0, rotate: -90 },
-    visible: {
-      opacity: 1,
-      rotate: 0,
-      transition: { type: "spring", delay: 0.5, stiffness: 120 },
-    },
-    hover: { rotate: 360, transition: { duration: 1 } },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } },
   };
 
   return (
     <motion.div
       className="large_block"
-      variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       exit="exit"
       style={{ gap: "50px" }}
       viewport={{ margin: "0px 0px -100px 0px", amount: 0.2 }}
     >
-      <motion.div className="bio_content" id="bio" variants={containerVariants}>
+      <motion.div className="bio_content" id="bio">
         <motion.img
           src="/me.png"
           className="user_avatar"
           variants={imageVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         />
@@ -96,7 +52,7 @@ const Bio = () => {
             marginTop: "50px",
           }}
         >
-          <motion.div variants={iconVariants} whileHover="hover">
+          <motion.div whileHover="hover">
             <FontAwesomeIcon
               icon={faRocket}
               className="text_emoji"
@@ -111,17 +67,24 @@ const Bio = () => {
           ].map((text, index) => (
             <motion.div
               key={index}
-              variants={textVariants}
               style={{ marginBottom: "30px" }}
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
             >
               {text}
             </motion.div>
           ))}
-          <motion.div variants={rocketVariants}></motion.div>
+          <motion.div></motion.div>
         </motion.div>
         <motion.a
           href="https://github.com/Nighty3098"
           variants={buttonVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           whileHover={{ scale: 1.0, width: "350px" }}
           whileTap={{ scale: 0.95 }}
         >

@@ -25,11 +25,6 @@ const InfoWidget = ({ item, index }) => {
         });
       }}
       whileTap={{ scale: 0.95 }}
-      onViewportLeave={() => {
-        controls.start({
-          opacity: 0,
-        });
-      }}
     >
       <h1>{item.subtitle}</h1>
       <h2>{item.title}</h2>
