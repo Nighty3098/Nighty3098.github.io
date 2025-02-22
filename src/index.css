@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Capriola&family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 /*
-  font-family: "M PLUS Rounded 1c", serif;
-  font-family: "Capriola", serif;
   font-family: "Oswald", serif;
-  font-family: "Nunito", serif;
+  font-family: "Roboto Condensed", serif;
 */
 
 :root {
@@ -35,7 +32,7 @@
 
 * {
   user-select: none;
-  font-family: "Capriola", serif;
+  font-family: "Roboto Condensed", serif;
   font-weight: bolder;
   outline: none;
 }
@@ -70,7 +67,7 @@
 .header {
   display: flex;
   position: fixed;
-  top: 10px;
+  bottom: 20px;
   height: 50px;
   z-index: 10000;
   width: auto;
@@ -105,10 +102,10 @@
 .navbar_button {
   text-decoration: none;
   padding: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 15px;
-  margin-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   transition: color 0.5s;
   height: 100%;
   border-radius: 10px;
@@ -300,7 +297,6 @@ a .button:hover {
 }
 
 .footer p {
-  font-family: "Nunito", serif;
   font-size: small;
   color: var(--fg);
 }
@@ -321,7 +317,6 @@ a .button:hover {
 }
 
 h1 {
-  font-family: "Nunito", serif;
   font-optical-sizing: auto;
   font-size: xx-large;
   color: var(--fg);
@@ -626,8 +621,8 @@ h3 {
   min-height: auto;
   max-width: 800px;
   border-radius: 30px;
-  font-size: 1rem;
-  line-height: 2.2rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
   font-weight: lighter;
   display: flex;
   flex-direction: column;
