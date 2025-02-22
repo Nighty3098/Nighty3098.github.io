@@ -661,7 +661,7 @@ h3 {
   color: var(--bg);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .float_widget {
     font-size: 20vw;
   }
@@ -703,7 +703,10 @@ h3 {
   }
 
   .contact_button {
-    zoom: 0.9;
+    zoom: 0.8;
+  }
+  .btn-slide {
+    zoom: 0.85;
   }
 }
 
