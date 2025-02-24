@@ -552,7 +552,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.float_widget {
+.float_widget_s {
   height: 160px;
   width: 160px;
   min-height: 160px;
@@ -573,7 +573,7 @@ h3 {
   box-shadow: 0px 0px 20px var(--tr);
 }
 
-.float_widget h2 * {
+.float_widget_s h2 * {
   font-size: 70px;
 }
 
@@ -704,7 +704,7 @@ h3 {
     zoom: 0.7;
   }
 
-  .float_widget {
+  .float_widget_s {
     zoom: 0.8;
   }
 

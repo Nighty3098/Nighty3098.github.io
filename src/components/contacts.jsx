@@ -114,7 +114,7 @@ export const Card = () => {
         }}
       >
         <div
-          className="float_widget"
+          className="float_widget_s"
           style={{ transform: "rotate(-15deg)", right: "-30px" }}
         >
           <h2>
@@ -124,7 +124,7 @@ export const Card = () => {
           </h2>
         </div>
         <div
-          className="float_widget"
+          className="float_widget_s"
           style={{
             position: "relative",
             zIndex: "-1",
