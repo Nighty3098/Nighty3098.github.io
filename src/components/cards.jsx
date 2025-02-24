@@ -40,7 +40,7 @@ const info_list = [
 
 const Info = () => {
   return (
-    <div className="widget_blocks">
+    <div style={{ display: "flex", flexDirection: "row", gap: "30px" }}>
       {info_list.map((item, index) => (
         <InfoWidget key={index} item={item} index={index} />
       ))}

@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
 /*
   font-family: "Oswald", serif;
   font-family: "Roboto Condensed", serif;
+  font-family: "Bebas Neue", serif;
 */
 
 :root {
@@ -38,7 +40,7 @@
 }
 
 .main_block .title {
-  font-family: "Oswald";
+  font-family: "Bebas Neue";
   font-size: 10rem;
   font-weight: bolder;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
@@ -108,11 +110,12 @@
   margin-right: 10px;
   transition: color 0.5s;
   height: 100%;
+  width: auto;
   border-radius: 10px;
   background-color: transparent;
   border: none;
   font-size: medium;
-  transition: all 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 
 .navbar_button i {
@@ -452,7 +455,7 @@ h3 {
 
 .widget_blocks {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   gap: 30px;
   margin: 0px;
   padding: 0px;
@@ -549,13 +552,41 @@ h3 {
   text-transform: uppercase;
 }
 
+.float_widget {
+  height: 160px;
+  width: 160px;
+  min-height: 160px;
+  min-width: 160px;
+  background-color: var(--tr);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  opacity: 1;
+  margin: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 0px 20px var(--tr);
+}
+
+.float_widget h2 * {
+  font-size: 70px;
+}
+
 .info_widget {
   height: 150px;
   width: 150px;
+  min-height: 150px;
+  min-width: 150px;
   background-color: var(--tr);
   padding: 20px;
   margin: 10px;
   gap: 0px;
+  opacity: 1;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -641,26 +672,6 @@ h3 {
   z-index: -1;
 }
 
-.gif_anim {
-  width: 80%;
-  max-width: 1000px;
-  height: 300px;
-  border-radius: 30px;
-  z-index: -2;
-  margin: 30px;
-  background-size: cover;
-  background-blend-mode: multiply;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  background-image: url("./../public/bg.gif");
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-}
-
-.gif_anim * {
-  color: var(--bg);
-}
-
 @media screen and (max-width: 800px) {
   .float_widget {
     font-size: 20vw;
@@ -683,17 +694,18 @@ h3 {
     font-size: small;
   }
 
-  .widget_blocks {
-    align-items: center;
-    grid-template-columns: auto;
-  }
-
+  .widget_blocks,
   .widget_blocks_2 {
+    align-items: center;
     grid-template-columns: auto auto;
   }
 
   .info_widget {
-    zoom: 1.1;
+    zoom: 0.7;
+  }
+
+  .float_widget {
+    zoom: 0.8;
   }
 
   .large_block {
@@ -743,6 +755,11 @@ h3 {
 @media screen and (min-width: 1500px) {
   .main_block .title {
     font-size: 13vw;
+  }
+
+  .widget_blocks {
+    align-items: center;
+    grid-template-columns: auto auto auto auto;
   }
 }
 

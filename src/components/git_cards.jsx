@@ -68,6 +68,7 @@ const GitHubStats = ({ username }) => {
 
         let totalCommits = 0;
         let totalPullRequests = 0;
+        let totalStars = 0;
 
         const commitPromises = reposData.map((repo) =>
           fetch(`https://api.github.com/repos/${username}/${repo.name}/commits`)
@@ -88,9 +89,13 @@ const GitHubStats = ({ username }) => {
 
         totalCommits = commitsResults.reduce((acc, count) => acc + count, 0);
         totalPullRequests = pullsResults.reduce((acc, count) => acc + count, 0);
+        totalStars = reposData.reduce(
+          (acc, repo) => acc + repo.stargazers_count,
+          0,
+        );
 
         const statsData = [
-          // { title: "Public Projects", subtitle: userData.public_repos },
+          { title: "Total Stars", subtitle: totalStars },
           { title: "Followers on git", subtitle: userData.followers },
           { title: "Total Commits", subtitle: totalCommits },
           { title: "Total Pull Requests", subtitle: totalPullRequests },

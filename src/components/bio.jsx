@@ -44,7 +44,7 @@ const Bio = () => {
             <FontAwesomeIcon
               icon={faRocket}
               className="text_emoji"
-              style={{ marginTop: "-80px", marginLeft: "-30px" }}
+              style={{ marginTop: "-80px", marginLeft: "0px" }}
             />
           </motion.div>
 

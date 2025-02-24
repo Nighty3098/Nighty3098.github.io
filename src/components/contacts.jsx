@@ -7,7 +7,7 @@ import {
   faReddit,
   faSignalMessenger,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCube, faComment } from "@fortawesome/free-solid-svg-icons";
+import { faCube, faComment, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const socials = [
   { icon: faTelegram, link: "https://t.me/Night3098" },
@@ -85,7 +85,7 @@ const DiscordButton = () => {
   );
 };
 
-export const Title = () => {
+export const Card = () => {
   const controls = useAnimation();
 
   return (
@@ -105,10 +105,39 @@ export const Title = () => {
         });
       }}
     >
-      <h1>
-        <FontAwesomeIcon icon={faComment} className="icon" />
-        CONTACTS
-      </h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          className="float_widget"
+          style={{ transform: "rotate(-15deg)", right: "-30px" }}
+        >
+          <h2>
+            Let's work
+            <br />
+            together
+          </h2>
+        </div>
+        <div
+          className="float_widget"
+          style={{
+            position: "relative",
+            zIndex: "-1",
+            left: "-30px",
+            opacity: "0.8",
+            transform: "rotate(20deg)",
+          }}
+        >
+          <h2>
+            <FontAwesomeIcon icon={faUser} />
+          </h2>
+        </div>
+      </div>
     </motion.div>
   );
 };
@@ -121,11 +150,10 @@ const Contacts = () => (
     whileInView={{ opacity: 1 }}
     viewport={{ margin: "0px 0px -100px 0px" }}
     transition={{ duration: 0.5 }}
+    style={{ width: "100%" }}
   >
-    <h1>
-      <FontAwesomeIcon icon={faComment} className="icon" />
-      CONTACTS
-    </h1>
+    <div style={{ height: "50px" }}></div>
+    <Card />
     <div style={{ height: "50px" }}></div>
     <div className="contacts_badge_block">
       {socials.map((social, index) => (
