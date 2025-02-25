@@ -11,7 +11,7 @@ const Bio = () => {
 
   return (
     <motion.div className="large_block" style={{ gap: "50px" }}>
-      <motion.div className="bio_content" id="bio">
+      <motion.div className="main_block" id="bio">
         <motion.img
           src="/me.png"
           className="user_avatar"

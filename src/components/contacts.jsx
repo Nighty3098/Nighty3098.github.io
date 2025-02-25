@@ -144,7 +144,7 @@ export const Card = () => {
 
 const Contacts = () => (
   <motion.div
-    className="contacts"
+    className="main_block"
     id="links"
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}

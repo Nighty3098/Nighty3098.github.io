@@ -113,36 +113,8 @@ const SkillWidget = ({ feature, index }) => {
   );
 };
 
-export const Title = () => {
-  const controls = useAnimation();
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={controls}
-      viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
-      onViewportEnter={() => {
-        controls.start({
-          opacity: 1,
-          scale: 1,
-          transition: {
-            duration: 0.5,
-            type: "spring",
-            stiffness: 100,
-          },
-        });
-      }}
-    >
-      <h1>
-        <FontAwesomeIcon icon={faCube} className="icon" /> SKILLS
-      </h1>
-    </motion.div>
-  );
-};
-
 export const Skills = () => (
   <>
-    <Title />
     <div className="widget_blocks_2">
       {skills_list.map((feature, index) => (
         <SkillWidget key={index} feature={feature} index={index} />

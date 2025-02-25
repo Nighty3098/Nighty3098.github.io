@@ -41,7 +41,7 @@
 
 .main_block .title {
   font-family: "Bebas Neue";
-  font-size: 10rem;
+  font-size: 15rem;
   font-weight: bolder;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
@@ -93,7 +93,7 @@
 }
 
 .header * {
-  font-family: "Oswald";
+  font-family: "Roboto Condensed";
   font-weight: bolder;
   color: var(--fg);
   align-items: center;
@@ -307,9 +307,9 @@ a .button:hover {
 .main_block {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   align-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin: 0px;
   padding: 0px;
@@ -317,6 +317,7 @@ a .button:hover {
   min-height: 100vh;
   max-height: 100vh;
   gap: 0px;
+  color: var(--fg);
 }
 
 h1 {
@@ -377,6 +378,10 @@ h3 {
 
 .btn-slide {
   border: none;
+}
+
+.btn-slide * {
+  font-family: "Bebas Neue";
 }
 
 .btn-slide:hover {
@@ -490,6 +495,7 @@ h3 {
 
 .skill_widget * {
   font-family: "Oswald";
+  text-transform: uppercase;
 }
 
 .emoji {
@@ -553,10 +559,10 @@ h3 {
 }
 
 .float_widget_s {
-  height: 160px;
-  width: 160px;
-  min-height: 160px;
-  min-width: 160px;
+  height: 180px;
+  width: 180px;
+  min-height: 180px;
+  min-width: 180px;
   background-color: var(--tr);
   backdrop-filter: blur(10px);
   padding: 20px;
@@ -573,8 +579,13 @@ h3 {
   box-shadow: 0px 0px 20px var(--tr);
 }
 
+.float_widget_s h2 {
+  font-family: "Bebas Neue";
+  font-size: xx-large;
+}
+
 .float_widget_s h2 * {
-  font-size: 70px;
+  font-size: 80px;
 }
 
 .info_widget {
@@ -748,7 +759,7 @@ h3 {
   }
 
   .main_block .title {
-    font-size: 12vw;
+    font-size: 15vw;
   }
 }
 
