@@ -5,6 +5,7 @@ import Bio from "./components/bio";
 import Contacts from "./components/contacts";
 import Info from "./components/info";
 import GitHubStats from "./components/git_stats";
+import Links from "./components/links";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -25,6 +26,7 @@ function App() {
       <Bio />
       <Info />
       <GitHubStats username={"Nighty3098"} />
+      <Links />
       <Contacts />
     </div>
   );
