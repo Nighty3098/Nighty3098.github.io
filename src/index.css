@@ -7,29 +7,21 @@
 */
 
 :root {
-  --bg: hsl(232deg, 23%, 18%);
-  --fg: hsl(226deg, 64%, 88%);
-  --fg2: hsla(226deg, 64%, 88%, 0.9);
-  --fg3: hsla(226deg, 64%, 88%, 0);
-  --color1: hsl(237deg, 16%, 23%);
-  --color2: hsl(232deg, 23%, 18%);
-  --tr: hsla(237deg, 16%, 23%, 0.5);
-  --red: hsl(0, 100%, 81%);
-  --green: hsl(114, 100%, 86%);
-  --purple: hsl(258, 100%, 83%);
+  --bg: hsl(222, 22%, 15%);
+  --fg: hsl(48, 9%, 78%);
+  --tr: hsla(219, 11%, 49%, 0.5);
+  --red: hsl(0, 100%, 70%);
+  --green: hsl(105, 59%, 64%);
+  --purple: hsl(270, 100%, 87%);
 }
 
 :root.light {
-  --bg: hsl(220deg, 23%, 95%);
-  --fg: hsl(234deg, 16%, 35%);
-  --fg2: hsla(234deg, 16%, 35%, 0.5);
-  --fg3: hsla(234deg, 16%, 35%, 0);
-  --color1: hsl(225deg, 14%, 77%);
-  --color2: hsl(234deg, 16%, 35%);
-  --tr: hsla(225deg, 14%, 77%, 0.5);
-  --red: hsl(0, 100%, 83%);
-  --green: hsl(114, 100%, 85%);
-  --purple: hsl(252, 100%, 84%);
+  --bg: hsl(210, 17%, 98%);
+  --fg: hsl(210, 5%, 38%);
+  --tr: hsla(212, 7%, 57%, 0.5);
+  --red: hsl(353, 100%, 73%);
+  --green: hsl(75, 100%, 35%);
+  --purple: hsl(270, 45%, 64%);
 }
 
 * {
@@ -399,7 +391,7 @@ h3 {
   align-items: center;
   text-align: center;
   margin-left: -45px;
-  background-color: var(--color2);
+  background-color: var(--bg);
   color: var(--purple);
 }
 
@@ -463,7 +455,7 @@ h3 {
 }
 
 .btn-slide span.title-hover {
-  color: var(--color2);
+  color: var(--bg);
 }
 
 .widget_blocks {
@@ -604,7 +596,7 @@ h3 {
   min-width: 150px;
   background-color: var(--tr);
   padding: 20px;
-  margin: 10px;
+  margin: 0px;
   gap: 0px;
   opacity: 1;
   border-radius: 15px;
@@ -687,7 +679,7 @@ h3 {
 .text_emoji {
   font-size: 13rem;
   position: absolute;
-  color: var(--fg2);
+  color: var(--fg);
   opacity: 0.2;
   z-index: -1;
 }
