@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import FloatWidget from "./decoration";
 import Textra from "./text_area";
 
 const WelcomeBlock = () => {
@@ -14,7 +13,6 @@ const WelcomeBlock = () => {
 
   return (
     <div className="main_block" id="main">
-      <FloatWidget />
       <motion.h1
         className="title"
         variants={titleVariants}

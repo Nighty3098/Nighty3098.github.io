@@ -27,7 +27,7 @@ const SocialIcon = ({ social, index }) => {
       href={social.link}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 20, rotate: -45 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={controls}
       viewport={{ margin: "0px 0px -100px 0px", amount: 0.1 }}
       onViewportEnter={() => {

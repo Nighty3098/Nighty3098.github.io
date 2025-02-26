@@ -3,8 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
-import Info from "./cards";
-import GitHubStats from "./git_cards";
+import Skills from "./skills";
 
 const Bio = () => {
   const controls = useAnimation();
@@ -29,8 +28,6 @@ const Bio = () => {
               },
             });
           }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         />
         <motion.div
           style={{
@@ -77,38 +74,8 @@ const Bio = () => {
             </motion.div>
           ))}
         </motion.div>
-        <motion.a
-          href="https://github.com/Nighty3098"
-          initial={{ opacity: 0, y: 20 }}
-          animate={controls}
-          viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
-          onViewportEnter={() => {
-            controls.start({
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: 0.5,
-                delay: 0.4,
-                type: "spring",
-                stiffness: 100,
-              },
-            });
-          }}
-          whileHover={{ scale: 1.0, width: "350px" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <button className="button" id="git_button">
-            <FontAwesomeIcon
-              icon={faGithubAlt}
-              style={{ marginRight: "20px" }}
-            />
-            GITHUB
-          </button>
-        </motion.a>
+        <Skills />
       </motion.div>
-
-      <Info />
-      <GitHubStats username={"Nighty3098"} />
     </motion.div>
   );
 };

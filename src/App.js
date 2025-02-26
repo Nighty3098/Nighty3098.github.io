@@ -1,12 +1,10 @@
-import logo from "./logo.png";
 import "./index.css";
 import Header from "./components/header";
 import WelcomeBlock from "./components/welcome";
 import Bio from "./components/bio";
-import Info, { Skills } from "./components/cards";
 import Contacts from "./components/contacts";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCube, faComment } from "@fortawesome/free-solid-svg-icons";
+import Info from "./components/info";
+import GitHubStats from "./components/git_stats";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -25,10 +23,9 @@ function App() {
       <Header />
       <WelcomeBlock />
       <Bio />
-      <Skills />
-      <div className="spacer"></div>
+      <Info />
+      <GitHubStats username={"Nighty3098"} />
       <Contacts />
-      <div className="spacer"></div>
     </div>
   );
 }

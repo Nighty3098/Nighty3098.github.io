@@ -1,33 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
-
-const InfoWidget = ({ item, index }) => {
-  const controls = useAnimation();
-
-  return (
-    <motion.div
-      className="info_widget"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={controls}
-      viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
-      onViewportEnter={() => {
-        controls.start({
-          opacity: 1,
-          scale: 1,
-          transition: {
-            duration: 0.6,
-            delay: index * 0.05,
-            ease: "easeOut",
-          },
-        });
-      }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <h1>{item.subtitle}</h1>
-      <h2>{item.title}</h2>
-    </motion.div>
-  );
-};
+import InfoWidget from "./info_widget";
 
 const GitHubStats = ({ username }) => {
   const [stats, setStats] = useState([]);
@@ -53,17 +25,13 @@ const GitHubStats = ({ username }) => {
         const userResponse = await fetch(
           `https://api.github.com/users/${username}`,
         );
-        if (!userResponse.ok) {
-          throw new Error("Network response was not ok");
-        }
+        if (!userResponse.ok) throw new Error("Network response was not ok");
         const userData = await userResponse.json();
 
         const reposResponse = await fetch(
           `https://api.github.com/users/${username}/repos`,
         );
-        if (!reposResponse.ok) {
-          throw new Error("Network response was not ok");
-        }
+        if (!reposResponse.ok) throw new Error("Network response was not ok");
         const reposData = await reposResponse.json();
 
         let totalCommits = 0;
@@ -95,10 +63,10 @@ const GitHubStats = ({ username }) => {
         );
 
         const statsData = [
-          { title: "Total Stars", subtitle: totalStars },
-          { title: "Followers on git", subtitle: userData.followers },
-          { title: "Total Commits", subtitle: totalCommits },
-          { title: "Total Pull Requests", subtitle: totalPullRequests },
+          { subtitle: "Total Stars", title: totalStars },
+          { subtitle: "Followers on git", title: userData.followers },
+          { subtitle: "Total Commits", title: totalCommits },
+          { subtitle: "Total Pull Requests", title: totalPullRequests },
         ];
 
         setStats(statsData);
@@ -115,7 +83,7 @@ const GitHubStats = ({ username }) => {
   }, [username]);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div></div>;
+  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <div className="widget_blocks">
