@@ -7,12 +7,12 @@
 */
 
 :root {
-  --bg: hsl(222, 22%, 15%);
+  --bg: hsl(197, 24%, 6%);
   --fg: hsl(48, 9%, 78%);
-  --tr: hsla(219, 11%, 49%, 0.5);
+  --tr: hsla(200, 15%, 20%, 0.5);
   --red: hsl(0, 100%, 70%);
   --green: hsl(105, 59%, 64%);
-  --purple: hsl(270, 100%, 87%);
+  --purple: hsl(270, 100%, 80%);
 }
 
 :root.light {
@@ -32,8 +32,8 @@
 }
 
 .main_block .title {
-  font-family: "Oswald";
-  font-size: 15rem;
+  font-family: "Oswald", monospace;
+  font-size: 17rem;
   font-weight: bolder;
   text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
 }
@@ -769,7 +769,7 @@ h3 {
   }
 }
 
-@media screen and (max-height: 800px) and (max-width: 1100px) {
+@media screen and (max-height: 800px) and (min-width: 700px) {
   .main_block,
   .large_block {
     height: 100%;

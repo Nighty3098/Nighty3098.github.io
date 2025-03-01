@@ -8,7 +8,7 @@ const Textra = (props) => {
   const textArrIndex = useRef(0);
   const previousTime = useRef(null);
   const animationDuration = props.duration || 500;
-  const stopDuration = props.stopDuration || 3000;
+  const stopDuration = props.stopDuration || 1000;
   const currentRoundStartTime = useRef(0);
   const singleRoundDuration = stopDuration + 2 * animationDuration;
   const easeOutQuad = (t) => t * (2 - t);
