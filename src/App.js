@@ -5,6 +5,8 @@ import Bio from "./components/bio";
 import Contacts from "./components/contacts";
 import Info from "./components/info";
 import GitHubStats from "./components/git_stats";
+import Projects from "./pages/Projects";
+import { Routes, Route } from "react-router-dom";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -17,7 +19,7 @@ Nighty3098 ❥
 █▄▄█─█░░▀░░┬░░▀░░█─█▄▄█
 */
 
-function App() {
+function Home() {
   return (
     <div className="App" style={{ padding: "0px", margin: "0px" }}>
       <Header />
@@ -29,6 +31,15 @@ function App() {
       </div>
       <Contacts />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<Projects />} />
+    </Routes>
   );
 }
 

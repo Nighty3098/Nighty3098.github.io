@@ -32,8 +32,8 @@
 }
 
 .main_block .title {
-  font-family: "Oswald", monospace;
-  font-size: 17rem;
+  font-family: "Bebas Neue", monospace;
+  font-size: 15rem;
   font-weight: bolder;
   text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
 }
@@ -106,6 +106,7 @@
   border-radius: 10px;
   background-color: transparent;
   border: none;
+  text-transform: uppercase;
   font-size: medium;
   transition: width 0.5s ease-in-out;
 }
@@ -218,6 +219,63 @@ body {
   color: var(--bg);
 }
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.project-card {
+  background: var(--tr);
+  border-radius: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  margin: 0 0 1rem 0;
+  color: var(--fg);
+}
+
+.project-content p {
+  margin: 0 0 1rem 0;
+  color: var(--fg);
+  font-size: 0.9rem;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    padding: 30px;
+    grid-template-columns: auto;
+  }
+}
+
 .button {
   font-size: medium;
   font-weight: 700;
@@ -317,8 +375,9 @@ a .button:hover {
 
 h1 {
   font-optical-sizing: auto;
-  font-size: xx-large;
+  font-size: xxx-large;
   color: var(--fg);
+  font-family: "Bebas Neue";
 }
 
 h1 .icon {
@@ -755,13 +814,13 @@ h3 {
   }
 
   .main_block .title {
-    font-size: 15vw;
+    font-size: 22vw;
   }
 }
 
 @media screen and (min-width: 1500px) {
   .main_block .title {
-    font-size: 13vw;
+    font-size: 15vw;
   }
 
   .widget_blocks {
