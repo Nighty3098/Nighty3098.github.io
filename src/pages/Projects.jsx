@@ -1,9 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/project_header";
 import ProjectCard from "../components/project_card";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -24,6 +21,14 @@ const Projects = () => {
       githubLink: "https://github.com/Nighty3098/InvestingAssistant",
     },
     {
+      title: "LogInsight",
+      description:
+        "Program for analyzing log files and detecting anomalies in program operation",
+      image:
+        "https://github.com/Nighty3098/LogInsight/raw/production/imgs/1.png",
+      githubLink: "https://github.com/Nighty3098/LogInsight",
+    },
+    {
       title: "TechSupport",
       description: "N9 GROUP technical support telegram bot ",
       image:
@@ -38,12 +43,11 @@ const Projects = () => {
       githubLink: "https://github.com/Nighty3098/SDash",
     },
     {
-      title: "LogInsight",
-      description:
-        "Project description goes here. This is a brief overview of what the project does and what technologies were used.",
+      title: "CodeKeeper",
+      description: "Project and task manager for developers with Git",
       image:
-        "https://github.com/Nighty3098/LogInsight/raw/production/imgs/1.png",
-      githubLink: "https://github.com/Nighty3098/LogInsight",
+        "https://github.com/Nighty3098/CodeKeeper/raw/main/imgs/1.png?raw=true",
+      githubLink: "https://github.com/Nighty3098/CodeKeeper",
     },
   ];
 
@@ -51,7 +55,15 @@ const Projects = () => {
     <div className="App">
       <Header />
       <motion.div>
-        <h1>Projects</h1>
+        <div className="spacer" />
+        <motion.h1
+          initial={{ opacity: 0, x: 500 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Projects
+        </motion.h1>
+        <div className="spacer" />
         <div className="projects-grid">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
