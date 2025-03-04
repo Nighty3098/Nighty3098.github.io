@@ -10,27 +10,51 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import useTheme from "../hooks/theme";
+import { motion } from "framer-motion";
+
+const MotionLink = motion(Link);
 
 const Header = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
     <header className="header">
-      <a className="navbar_button" href="#bio">
-        <FontAwesomeIcon icon={faLightbulb} style={{ marginRight: "10px" }} />
-        BIO
-      </a>
-      <a className="navbar_button" href="#links">
-        <FontAwesomeIcon icon={faPaperclip} style={{ marginRight: "10px" }} />
-        LINKS
-      </a>
-      <Link className="navbar_button" to="/projects">
-        <FontAwesomeIcon icon={faCodeFork} style={{ marginRight: "10px" }} />
-        PROJECTS
-      </Link>
-      <button onClick={toggleTheme} className="navbar_button">
+      <motion.a 
+        className="navbar_button tooltip-container"
+        href="#bio"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <FontAwesomeIcon icon={faLightbulb} />
+        <span className="tooltip">Bio</span>
+      </motion.a>
+      <motion.a 
+        className="navbar_button tooltip-container"
+        href="#links"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <FontAwesomeIcon icon={faPaperclip} />
+        <span className="tooltip">Links</span>
+      </motion.a>
+      <MotionLink 
+        className="navbar_button tooltip-container"
+        to="/projects"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <FontAwesomeIcon icon={faCodeFork} />
+        <span className="tooltip">Projects</span>
+      </MotionLink>
+      <motion.button 
+        onClick={toggleTheme} 
+        className="navbar_button tooltip-container"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
-      </button>
+        <span className="tooltip">Toggle theme</span>
+      </motion.button>
     </header>
   );
 };

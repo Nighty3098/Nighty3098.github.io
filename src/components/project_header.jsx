@@ -18,7 +18,6 @@ const Header = () => {
     <header className="header">
       <Link to="/" className="navbar_button">
         <FontAwesomeIcon icon={faArrowLeft} style={{ marginRight: "10px" }} />
-        Back
       </Link>
       <button onClick={toggleTheme} className="navbar_button">
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
