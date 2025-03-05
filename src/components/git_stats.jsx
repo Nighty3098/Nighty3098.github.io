@@ -83,7 +83,7 @@ const GitHubStats = ({ username }) => {
   }, [username]);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (error) return <div></div>;
 
   return (
     <div className="widget_blocks">

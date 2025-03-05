@@ -7,9 +7,9 @@
 */
 
 :root {
-  --bg: hsl(213, 52%, 0%);
+  --bg: #000000;
   --fg: hsl(213, 5%, 92%);
-  --tr: hsla(0, 0%, 20%, 0.5);
+  --tr: hsla(0, 0%, 20%, 0.4);
   --red: hsl(0, 100%, 70%);
   --green: hsl(113, 36%, 65%);
   --purple: hsl(220, 25%, 53%);
@@ -153,7 +153,7 @@
 }
 
 html {
-  background: var(--bg);
+  background-color: var(--bg);
   scrollbar-color: var(--fg) transparent;
   font-weight: 400;
   display: flex;

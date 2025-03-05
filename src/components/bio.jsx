@@ -29,27 +29,6 @@ const Bio = () => {
             });
           }}
         />
-        <motion.button
-          className="button"
-          id="git_btn"
-          style={{ marginTop: "20px" }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={controls}
-          viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
-          onViewportEnter={() => {
-            controls.start({
-              opacity: 1,
-              scale: 1,
-              transition: {
-                duration: 0.2,
-                type: "spring",
-                stiffness: 100,
-              },
-            });
-          }}
-        >
-          <FontAwesomeIcon icon={faGithubAlt} /> GITHUB
-        </motion.button>
         <motion.div
           style={{
             textAlign: "left",
