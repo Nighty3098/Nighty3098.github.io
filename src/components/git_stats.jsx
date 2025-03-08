@@ -22,43 +22,61 @@ const GitHubStats = ({ username }) => {
       }
 
       try {
-        const userResponse = await fetch(
-          `https://api.github.com/users/${username}`,
-        );
-        if (!userResponse.ok) throw new Error("Network response was not ok");
-        const userData = await userResponse.json();
+        const query = `
+          query {
+            user(login: "${username}") {
+              followers
+              repositories(first: 100) {
+                totalCount
+                nodes {
+                  stargazerCount
+                  defaultBranchRef {
+                    target {
+                      ... on Commit {
+                        history {
+                          totalCount
+                        }
+                      }
+                    }
+                  }
+                  pullRequests {
+                    totalCount
+                  }
+                }
+              }
+            }
+          }
+        `;
+        
+        const response = await fetch('https://api.github.com/graphql', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer YOUR_GITHUB_TOKEN`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ query }),
+        });
+        
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
 
-        const reposResponse = await fetch(
-          `https://api.github.com/users/${username}/repos`,
-        );
-        if (!reposResponse.ok) throw new Error("Network response was not ok");
-        const reposData = await reposResponse.json();
+        const userData = data.data.user;
+        const reposData = data.data.user.repositories.nodes;
 
         let totalCommits = 0;
         let totalPullRequests = 0;
         let totalStars = 0;
 
-        const commitPromises = reposData.map((repo) =>
-          fetch(`https://api.github.com/repos/${username}/${repo.name}/commits`)
-            .then((response) => (response.ok ? response.json() : []))
-            .then((commitsData) => commitsData.length),
+        totalCommits = reposData.reduce(
+          (acc, repo) => acc + repo.history.totalCount,
+          0,
         );
-
-        const pullRequestPromises = reposData.map((repo) =>
-          fetch(
-            `https://api.github.com/repos/${username}/${repo.name}/pulls?state=all`,
-          )
-            .then((response) => (response.ok ? response.json() : []))
-            .then((pullsData) => pullsData.length),
+        totalPullRequests = reposData.reduce(
+          (acc, repo) => acc + repo.pullRequests.totalCount,
+          0,
         );
-
-        const commitsResults = await Promise.all(commitPromises);
-        const pullsResults = await Promise.all(pullRequestPromises);
-
-        totalCommits = commitsResults.reduce((acc, count) => acc + count, 0);
-        totalPullRequests = pullsResults.reduce((acc, count) => acc + count, 0);
         totalStars = reposData.reduce(
-          (acc, repo) => acc + repo.stargazers_count,
+          (acc, repo) => acc + repo.stargazerCount,
           0,
         );
 
@@ -73,6 +91,7 @@ const GitHubStats = ({ username }) => {
         localStorage.setItem(cacheKey, JSON.stringify(statsData));
         localStorage.setItem(`${cacheKey}_time`, now);
       } catch (error) {
+        console.error("GitHub error:", error);
         setError(error);
       } finally {
         setLoading(false);
@@ -82,7 +101,7 @@ const GitHubStats = ({ username }) => {
     fetchData();
   }, [username]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Loading</div>;
   if (error) return <div></div>;
 
   return (

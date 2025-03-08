@@ -6,23 +6,33 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import useGithubStats from "../hooks/useGithubStats";
 
 const ProjectCard = ({ title, description, image, githubLink }) => {
-  const { stars, loading } = useGithubStats(githubLink);
+  const { stars, loading, error } = useGithubStats(githubLink);
 
   return (
     <motion.div
       className="project-card"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      {/*<img src={image} alt={title} className="project-image" />*/}
       <div className="project-content">
         <div
           className="project-header"
           style={{ width: "80%", justifyContent: "space-between" }}
         >
           <h3>{title}</h3>
-          {!loading && stars !== null && (
-            <a className="stars-count">
+          {!loading && !error && stars !== null ? (
+            <span className="stars-count" aria-label={`${stars} STARS ON GIT`}>
               <FontAwesomeIcon icon={faStar} /> {stars}
-            </a>
+            </span>
+          ) : error ? (
+            <span className="stars-count" aria-label="STARS ERROR">
+              <FontAwesomeIcon icon={faStar} /> -
+            </span>
+          ) : (
+            <span className="stars-count" aria-label="LOADING">
+              <FontAwesomeIcon icon={faStar} /> ...
+            </span>
           )}
         </div>
         <p style={{ width: "80%" }}>{description}</p>
@@ -34,8 +44,9 @@ const ProjectCard = ({ title, description, image, githubLink }) => {
             className="button"
             id="git_btn"
             style={{ height: "20px" }}
+            aria-label={`VIEW ${title} ON GIT`}
           >
-            <FontAwesomeIcon icon={faGithub} /> View on GitHub
+            <FontAwesomeIcon icon={faGithub} /> VIEW ON GIT
           </a>
         )}
       </div>
