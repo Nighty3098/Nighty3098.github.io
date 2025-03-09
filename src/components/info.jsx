@@ -5,8 +5,8 @@ import InfoWidget from "./info_widget";
 const Info = () => (
   <div
     style={{
-      display: "flex",
-      flexDirection: "row",
+      display: "grid",
+      gridTemplateColumns: "auto auto",
       gap: "30px",
       alignContent: "center",
       justifyContent: "center",

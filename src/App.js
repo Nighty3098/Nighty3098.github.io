@@ -1,8 +1,14 @@
-import React, { lazy, Suspense } from "react";
 import "./index.css";
 import Header from "./components/header";
 import WelcomeBlock from "./components/welcome";
-import { Routes, Route } from "react-router-dom";
+import Bio from "./components/bio";
+import Contacts from "./components/contacts";
+import Info from "./components/info";
+import GitHubStats from "./components/git_stats";
+import Projects from "./pages/Projects";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Layout from "./components/Layout";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -15,52 +21,37 @@ Nighty3098 ❥
 █▄▄█─█░░▀░░┬░░▀░░█─█▄▄█
 */
 
-const Bio = lazy(() => import("./components/bio"));
-const Contacts = lazy(() => import("./components/contacts"));
-const Info = lazy(() => import("./components/info"));
-const GitHubStats = lazy(() => import("./components/git_stats"));
-const Projects = lazy(() => import("./pages/Projects"));
-
-const Loading = () => (
-  <div style={{ 
-    display: "flex", 
-    justifyContent: "center", 
-    alignItems: "center", 
-    height: "100vh",
-    color: "var(--fg)",
-    fontSize: "2rem"
-  }}>
-    Loading
-  </div>
-);
-
 function Home() {
   return (
-    <div className="App" style={{ padding: "0px", margin: "0px" }}>
-      <Header />
-      <WelcomeBlock />
-      <Suspense fallback={<Loading />}>
+    <Layout>
+      <div className="App" style={{ padding: "0px", margin: "0px" }}>
+        <Header />
+        <WelcomeBlock />
         <Bio />
         <div className="main_block">
           <Info />
           <GitHubStats username={"Nighty3098"} />
         </div>
         <Contacts />
-      </Suspense>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/projects" element={
-        <Suspense fallback={<Loading />}>
-          <Projects />
-        </Suspense>
-      } />
-    </Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={
+          <Layout>
+            <Projects />
+          </Layout>
+        } />
+      </Routes>
+    </AnimatePresence>
   );
 }
 
