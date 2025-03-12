@@ -16,6 +16,7 @@ const ProjectCard = ({ title, description, image, githubLink }) => {
       transition={{ duration: 0.5 }}
     >
       <div className="project-content">
+        <img src={image} alt={title} className="project-image" />
         <div
           className="project-header"
           style={{ width: "80%", justifyContent: "space-between" }}
@@ -43,10 +44,10 @@ const ProjectCard = ({ title, description, image, githubLink }) => {
             rel="noopener noreferrer"
             className="button"
             id="git_btn"
-            style={{ height: "20px" }}
+            style={{ height: "20px", textAlign: "center", alignContent: "center", justifyContent: "center" }}
             aria-label={`VIEW ${title} ON GIT`}
           >
-            <FontAwesomeIcon icon={faGithub} /> VIEW ON GIT
+            OPEN PROJECT
           </a>
         )}
       </div>

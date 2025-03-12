@@ -6,6 +6,20 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projects = [
     {
+      title: "DreamCoffee",
+      description:
+        "Coffee shop website",
+      image: "coffee/main.png",
+      githubLink: "https://dreamcoffee.vercel.app/",
+    },
+    {
+      title: "StyleShop",
+      description:
+        "Clothing store website",
+      image: "styleshop/main.png",
+      githubLink: "https://style-shop-nine.vercel.app/",
+    },
+    {
       title: "OWL",
       description:
         "OWL - task and project managment app designed specifically for developers",
