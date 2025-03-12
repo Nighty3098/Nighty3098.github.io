@@ -1,28 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Meddon&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
   font-family: "Oswald", serif;
   font-family: "Roboto Condensed", serif;
   font-family: "Bebas Neue", serif;
+  font-family: "Meddon", cursive;
 */
 
 :root {
-  --bg: hsl(210, 17%, 10%);
-  --fg: hsl(213, 5%, 92%);
-  --tr: hsla(0, 0%, 20%, 0.4);
-  --red: hsl(0, 100%, 70%);
-  --green: hsl(113, 36%, 65%);
-  --purple: hsl(220, 25%, 53%);
+  --bg: hsl(232deg, 23%, 18%);
+  --fg: hsl(226deg, 64%, 88%);
+  --fg2: hsla(226deg, 64%, 88%, 0.9);
+  --fg3: hsla(226deg, 64%, 88%, 0);
+  --color1: hsl(237deg, 16%, 23%);
+  --color2: hsl(232deg, 23%, 18%);
+  --tr: hsla(237deg, 16%, 23%, 0.5);
+  --red: hsl(0, 100%, 81%);
+  --green: hsl(114, 100%, 86%);
+  --purple: hsl(258, 100%, 83%);
 }
 
 :root.light {
-  --bg: hsl(210, 17%, 98%);
-  --fg: hsl(210, 5%, 38%);
-  --tr: hsla(212, 7%, 57%, 0.5);
-  --red: hsl(353, 100%, 73%);
-  --green: hsl(75, 100%, 35%);
-  --purple: hsl(270, 45%, 64%);
+  --bg: hsl(220deg, 23%, 95%);
+  --fg: hsl(234deg, 16%, 35%);
+  --fg2: hsla(234deg, 16%, 35%, 0.5);
+  --fg3: hsla(234deg, 16%, 35%, 0);
+  --color1: hsl(225deg, 14%, 77%);
+  --color2: hsl(234deg, 16%, 35%);
+  --tr: hsla(225deg, 14%, 77%, 0.5);
+  --red: hsl(0, 100%, 83%);
+  --green: hsl(114, 100%, 85%);
+  --purple: hsl(252, 100%, 84%);
 }
+
 
 * {
   user-select: none;
@@ -32,7 +42,7 @@
 }
 
 .main_block .title {
-  font-family: "Bebas Neue", monospace;
+  font-family: "Bebas Neue", cursive;
   font-size: 15rem;
   font-weight: bolder;
   text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
@@ -218,7 +228,7 @@ body {
 }
 
 .contact_button:hover {
-  background-color: var(--purple);
+  background-color: var(--green);
 }
 
 .contact_button i {
@@ -239,12 +249,12 @@ body {
 }
 
 #git_btn:hover {
-  background-color: var(--purple);
+  background-color: var(--green);
   color: var(--bg);
 }
 
 #projects_btn:hover {
-  background-color: var(--purple);
+  background-color: var(--green);
   color: var(--bg);
 }
 
@@ -501,7 +511,7 @@ h3 {
 }
 
 .btn-slide:hover {
-  background-color: var(--purple);
+  background-color: var(--green);
 }
 
 .btn-slide:hover span.circle,
@@ -512,11 +522,11 @@ h3 {
   text-align: center;
   margin-left: -45px;
   background-color: var(--bg);
-  color: var(--purple);
+  color: var(--green);
 }
 
 .btn-slide:hover span.circle2 {
-  color: var(--purple);
+  color: var(--green);
 }
 
 .btn-slide:hover span.title {
@@ -531,7 +541,7 @@ h3 {
 
 .btn-slide span.circle {
   display: block;
-  background-color: var(--purple);
+  background-color: var(--green);
   color: var(--fg);
   position: absolute;
   float: left;
@@ -698,7 +708,6 @@ h3 {
   align-content: center;
   text-align: center;
   position: relative;
-  box-shadow: 0px 0px 20px var(--tr);
 }
 
 .float_widget_s h2 {
@@ -757,7 +766,7 @@ h3 {
 }
 
 .info_widget:hover {
-  background-color: var(--purple);
+  background-color: var(--green);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 
