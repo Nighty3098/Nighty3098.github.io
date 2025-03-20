@@ -230,7 +230,7 @@ body {
 }
 
 .contact_button:hover {
-  background-color: var(--green);
+  background-color: var(--purple);
 }
 
 .contact_button i {
@@ -251,12 +251,12 @@ body {
 }
 
 #git_btn:hover {
-  background-color: var(--green);
+  background-color: var(--purple);
   color: var(--bg);
 }
 
 #projects_btn:hover {
-  background-color: var(--green);
+  background-color: var(--purple);
   color: var(--bg);
 }
 
@@ -520,7 +520,7 @@ h3 {
 }
 
 .btn-slide:hover {
-  background-color: var(--green);
+  background-color: var(--purple);
 }
 
 .btn-slide:hover span.circle,
@@ -531,11 +531,11 @@ h3 {
   text-align: center;
   margin-left: -45px;
   background-color: var(--bg);
-  color: var(--green);
+  color: var(--purple);
 }
 
 .btn-slide:hover span.circle2 {
-  color: var(--green);
+  color: var(--purple);
 }
 
 .btn-slide:hover span.title {
@@ -550,7 +550,7 @@ h3 {
 
 .btn-slide span.circle {
   display: block;
-  background-color: var(--green);
+  background-color: var(--purple);
   color: var(--fg);
   position: absolute;
   float: left;
@@ -775,7 +775,7 @@ h3 {
 }
 
 .info_widget:hover {
-  background-color: var(--green);
+  background-color: var(--purple);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
 

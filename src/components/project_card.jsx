@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -7,6 +7,7 @@ import useGithubStats from "../hooks/useGithubStats";
 
 const ProjectCard = ({ title, description, image, githubLink }) => {
   const { stars, loading, error } = useGithubStats(githubLink);
+  const [imgError, setImgError] = useState(false);
 
   return (
     <motion.div
@@ -16,7 +17,31 @@ const ProjectCard = ({ title, description, image, githubLink }) => {
       transition={{ duration: 0.5 }}
     >
       <div className="project-content">
-        <img src={image} alt={title} className="project-image" />
+        {!imgError ? (
+          <img
+            src={image}
+            alt={title}
+            className="project-image"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div
+            className="project-image fallback"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              background: "#f0f0f0",
+              fontSize: "2rem",
+              height: "200px",
+              width: "100%",
+              color: "#666"
+            }}
+            aria-label="Изображение недоступно"
+          >
+            ?
+          </div>
+        )}
         <div
           className="project-header"
           style={{ width: "80%", justifyContent: "space-between" }}
@@ -44,7 +69,12 @@ const ProjectCard = ({ title, description, image, githubLink }) => {
             rel="noopener noreferrer"
             className="button"
             id="git_btn"
-            style={{ height: "20px", textAlign: "center", alignContent: "center", justifyContent: "center" }}
+            style={{
+              height: "20px",
+              textAlign: "center",
+              alignContent: "center",
+              justifyContent: "center"
+            }}
             aria-label={`VIEW ${title} ON GIT`}
           >
             OPEN PROJECT

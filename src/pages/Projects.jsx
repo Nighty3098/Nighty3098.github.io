@@ -46,14 +46,14 @@ const Projects = () => {
       title: "TechSupport",
       description: "N9 GROUP technical support telegram bot ",
       image:
-        "https://private-user-images.githubusercontent.com/154594695/418331037-d13b978c-9f0a-40db-af93-fb6295776305.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA5MTQ2NDcsIm5iZiI6MTc0MDkxNDM0NywicGF0aCI6Ii8xNTQ1OTQ2OTUvNDE4MzMxMDM3LWQxM2I5NzhjLTlmMGEtNDBkYi1hZjkzLWZiNjI5NTc3NjMwNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMwMlQxMTE5MDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zMzYzNWQzNGQzOGNiODRkZDQ5OTM1MDVlODYzNDJlMmQ5NTBmMzVjOGVjYWRmMDYwYjNlNmNiY2YwNTEyZjJlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Fp2N9fF4KSAIDuYJrAlKSCp6hnca0Pd8Ti0Hzg8taC4",
+        "https://github.com/Nighty3098/TechSupportBot/blob/main/src/resources/header_2.png?raw=true",
       githubLink: "https://github.com/Nighty3098/TechSupportBot",
     },
     {
       title: "SDash",
       description: " A simple server dashboard for smaller private servers",
       image:
-        "https://private-user-images.githubusercontent.com/154594695/371582091-b8953212-cd61-4458-9a53-0f62da7e7456.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA5MTQ1NzksIm5iZiI6MTc0MDkxNDI3OSwicGF0aCI6Ii8xNTQ1OTQ2OTUvMzcxNTgyMDkxLWI4OTUzMjEyLWNkNjEtNDQ1OC05YTUzLTBmNjJkYTdlNzQ1Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMwMlQxMTE3NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jODQ1NDBlM2ZmNjQ4Yzk4NzE1YzU5YWVmMWUyMTBlZWZmNDM4NTkzY2FiMWE0Njc3YmFmODVhYWY0NTIzZGVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.pc80SZop1GSCUEjN88QYrS-mmrr9rOB2AYk5vlenfhk",
+        "https://private-user-images.githubusercontent.com/154594695/371582091-b8953212-cd61-4458-9a53-0f62da7e7456.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI0MzkwNzQsIm5iZiI6MTc0MjQzODc3NCwicGF0aCI6Ii8xNTQ1OTQ2OTUvMzcxNTgyMDkxLWI4OTUzMjEyLWNkNjEtNDQ1OC05YTUzLTBmNjJkYTdlNzQ1Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyMFQwMjQ2MTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00YzFkZmJmMjFlZDljOGVhNWE1YWY0NTU0YjczYmI5YTk0NGM0ZTJjYzFmNzBkZmFlNDFiYWQ1YTdkYTFmOGM5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.D8mulzhQxL3few1pRYGX8i-p_ctgVh-qxuNfY7yAUqQ",
       githubLink: "https://github.com/Nighty3098/SDash",
     },
     {
