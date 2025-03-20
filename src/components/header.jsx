@@ -26,7 +26,7 @@ const Header = ({ type = "main" }) => {
         </Link>
       ) : (
         <>
-          <motion.a 
+          <motion.a
             className="navbar_button tooltip-container"
             href="#bio"
             whileHover={{ scale: 1.1 }}
@@ -35,7 +35,7 @@ const Header = ({ type = "main" }) => {
             <FontAwesomeIcon icon={faLightbulb} />
             <span className="tooltip">BIO</span>
           </motion.a>
-          <motion.a 
+          <motion.a
             className="navbar_button tooltip-container"
             href="#links"
             whileHover={{ scale: 1.1 }}
@@ -44,7 +44,7 @@ const Header = ({ type = "main" }) => {
             <FontAwesomeIcon icon={faPaperclip} />
             <span className="tooltip">LINKS</span>
           </motion.a>
-          <MotionLink 
+          <MotionLink
             className="navbar_button tooltip-container"
             to="/projects"
             whileHover={{ scale: 1.1 }}
@@ -55,8 +55,8 @@ const Header = ({ type = "main" }) => {
           </MotionLink>
         </>
       )}
-      <motion.button 
-        onClick={toggleTheme} 
+      <motion.button
+        onClick={toggleTheme}
         className="navbar_button tooltip-container"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}

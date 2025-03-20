@@ -7,15 +7,13 @@ const Projects = () => {
   const projects = [
     {
       title: "DreamCoffee",
-      description:
-        "Coffee shop website",
+      description: "Coffee shop website",
       image: "coffee/main.png",
       githubLink: "https://dreamcoffee.vercel.app/",
     },
     {
       title: "StyleShop",
-      description:
-        "Clothing store website",
+      description: "Clothing store website",
       image: "styleshop/main.png",
       githubLink: "https://style-shop-nine.vercel.app/",
     },
@@ -69,12 +67,12 @@ const Projects = () => {
     <div className="App">
       <Header />
       <motion.div
-      initial={{ opacity: 0, x: 500 }}    whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}>
+        initial={{ opacity: 0, x: 500 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="spacer" />
-        <motion.h1>
-          Projects
-        </motion.h1>
+        <motion.h1>Projects</motion.h1>
         <div className="spacer" />
         <div className="projects-grid">
           {projects.map((project, index) => (

@@ -35,7 +35,7 @@ const ProjectCard = ({ title, description, image, githubLink }) => {
               fontSize: "2rem",
               height: "200px",
               width: "100%",
-              color: "#666"
+              color: "#666",
             }}
             aria-label="Изображение недоступно"
           >
@@ -73,7 +73,7 @@ const ProjectCard = ({ title, description, image, githubLink }) => {
               height: "20px",
               textAlign: "center",
               alignContent: "center",
-              justifyContent: "center"
+              justifyContent: "center",
             }}
             aria-label={`VIEW ${title} ON GIT`}
           >

@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Layout = ({ children }) => {
   return (
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       transition={{
         type: "spring",
         stiffness: 90,
-        duration: 0.3
+        duration: 0.3,
       }}
     >
       {children}

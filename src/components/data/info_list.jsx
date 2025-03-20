@@ -1,4 +1,8 @@
-import { faBrain, faUsers, faProjectDiagram } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBrain,
+  faUsers,
+  faProjectDiagram,
+} from "@fortawesome/free-solid-svg-icons";
 import { title } from "framer-motion/client";
 
 export const infoList = [
@@ -21,5 +25,5 @@ export const infoList = [
     title: "6 +",
     subtitle: "ACTIVE PROJECTS",
     icon: faProjectDiagram,
-  }
+  },
 ];

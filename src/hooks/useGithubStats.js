@@ -42,11 +42,11 @@ const useGithubStats = (repoUrl) => {
         const response = await fetch(
           `https://api.github.com/repos/${owner}/${repo}`,
         );
-        
+
         if (!response.ok) {
           throw new Error(`GitHub API return error: ${response.status}`);
         }
-        
+
         const data = await response.json();
 
         if (data.stargazers_count !== undefined) {

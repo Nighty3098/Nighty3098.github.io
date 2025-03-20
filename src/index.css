@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Meddon&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Meddon&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*
   font-family: "Oswald", serif;
@@ -32,7 +32,6 @@
   --green: hsl(114, 100%, 85%);
   --purple: hsl(252, 100%, 84%);
 }
-
 
 * {
   user-select: none;
@@ -145,7 +144,7 @@
 }
 
 .tooltip::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 50%;
@@ -154,7 +153,6 @@
   border-style: solid;
   border-color: var(--fg) transparent transparent transparent;
 }
-
 
 .user_avatar {
   width: 50%;

@@ -47,16 +47,16 @@ const GitHubStats = ({ username }) => {
             }
           }
         `;
-        
-        const response = await fetch('https://api.github.com/graphql', {
-          method: 'POST',
+
+        const response = await fetch("https://api.github.com/graphql", {
+          method: "POST",
           headers: {
             Authorization: `Bearer YOUR_GITHUB_TOKEN`,
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({ query }),
         });
-        
+
         if (!response.ok) throw new Error("Network response was not ok");
         const data = await response.json();
 
