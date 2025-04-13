@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import Skills from "./skills";
+import GitHubStats from "./git_stats"
 
 const Bio = () => {
   const controls = useAnimation();
@@ -46,7 +47,7 @@ const Bio = () => {
           </motion.div>
 
           {[
-            "Hello. I am Artem, a backend developer and freelancer.",
+            "Hello. I am Artem, a full-stack / ML developer and freelancer.",
             "I am 18 years old, I am in the 11th grade of school and have been at the programming academy for 4 years.",
             "I strive to develop in the field of development and want to work on large projects that can affect people's lives.",
             "You can view all the projects on my github.",
@@ -75,6 +76,7 @@ const Bio = () => {
           ))}
         </motion.div>
         <Skills />
+        <GitHubStats />
       </motion.div>
     </motion.div>
   );
