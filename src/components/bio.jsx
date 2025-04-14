@@ -2,9 +2,7 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
-import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import Skills from "./skills";
-import GitHubStats from "./git_stats"
 
 const Bio = () => {
   const controls = useAnimation();
@@ -76,7 +74,6 @@ const Bio = () => {
           ))}
         </motion.div>
         <Skills />
-        <GitHubStats />
       </motion.div>
     </motion.div>
   );

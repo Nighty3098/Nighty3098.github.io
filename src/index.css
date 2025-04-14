@@ -18,6 +18,7 @@
   --red: hsl(0, 100%, 81%);
   --green: hsl(114, 100%, 86%);
   --purple: hsl(258, 100%, 83%);
+  --shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 :root.light {
@@ -31,6 +32,7 @@
   --red: hsl(0, 100%, 83%);
   --green: hsl(114, 100%, 85%);
   --purple: hsl(252, 100%, 84%);
+  --shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -41,8 +43,10 @@
 }
 
 .main_block .title {
+  width: fit-content;
   font-family: "Bebas Neue", cursive;
-  font-size: 15rem;
+  font-size: 13vw;
+  white-space: nowrap;
   font-weight: bolder;
   text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
 }
@@ -70,11 +74,11 @@
 }
 
 .header {
+  opacity: 1;
   display: flex;
   position: fixed;
   bottom: 20px;
-  height: 50px;
-  z-index: 10000;
+  height: auto;
   width: auto;
   max-width: 90%;
   justify-content: space-between;
@@ -95,7 +99,7 @@
 .header-scrolled {
   background: var(--tr);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow)
 }
 
 .header-content {
@@ -122,7 +126,7 @@
 .navbar_button {
   position: relative;
   aspect-ratio: 1/1;
-  width: 50px;
+  width: 45px;
   border-radius: 10px;
   background-color: transparent;
   border: none;
@@ -226,8 +230,8 @@ body {
 .contact_button {
   font-weight: 700;
   font-size: medium;
-  background-color: var(--fg);
-  color: var(--bg);
+  background-color: var(--tr);
+  color: var(--fg);
   border-radius: 20px;
   width: 50px;
   aspect-ratio: 1/1;
@@ -239,7 +243,7 @@ body {
   align-content: center;
   text-align: center;
   transition: all 0.3s ease-in;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow)
 }
 
 .contact_button:hover {
@@ -291,7 +295,7 @@ body {
   padding: 0px;
   width: 100%;
   max-width: 550px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow)
 }
 
 .project-image {
@@ -388,7 +392,7 @@ body {
   transition: all 0.5s;
   outline: none;
   text-decoration: none;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow)
 }
 
 .button:hover {
@@ -516,12 +520,13 @@ h3 {
   line-height: 45px;
   padding: 0;
   border-radius: 45px;
-  background: var(--fg);
+  background-color: var(--tr);
+  color: var(--fg);
   border: none;
   margin: 10px;
   transition: 0.5s;
   font-family: "Oswald";
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow)
 }
 
 .btn-slide {
@@ -579,7 +584,8 @@ h3 {
 }
 
 .btn-slide span.circle {
-  background-color: var(--bg);
+  background-color: var(--fg);
+  color: var(--bg);
 }
 
 .btn-slide span.title-hover,
@@ -596,7 +602,7 @@ h3 {
 
 .btn-slide span.title,
 .btn-slide span.title-hover {
-  color: var(--bg);
+  color: var(--fg);
   left: 80px;
   font-family: "Oswald";
 }
@@ -668,7 +674,7 @@ h3 {
 
 .skill_widget:hover {
   background-color: var(--tr);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow)
 }
 
 .skill_widget:hover .emoji {
@@ -730,6 +736,7 @@ h3 {
   align-content: center;
   text-align: center;
   position: relative;
+  box-shadow: var(--shadow);
 }
 
 .float_widget_s h2 {
@@ -754,11 +761,13 @@ h3 {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20%;
   align-items: center;
   align-content: center;
   transition: all 0.5s ease-in-out;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow)
 }
 
 .widget-icon {
@@ -773,6 +782,8 @@ h3 {
 .info_widget h2 {
   font-size: 1rem;
   color: var(--fg);
+  margin: 0px;
+  padding: 0px;
   font-weight: bolder;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   font-family: "Oswald";
@@ -780,7 +791,9 @@ h3 {
 }
 
 .info_widget h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin: 0px;
+  padding: 0px;
   font-weight: lighter;
   color: var(--fg);
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
@@ -789,7 +802,7 @@ h3 {
 
 .info_widget:hover {
   background-color: var(--purple);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow)
 }
 
 .info_widget:hover * {
@@ -907,15 +920,11 @@ h3 {
   }
 
   .main_block .title {
-    font-size: 22vw;
+    font-size: 20vw;
   }
 }
 
 @media screen and (min-width: 1500px) {
-  .main_block .title {
-    font-size: 15vw;
-  }
-
   .widget_blocks {
     align-items: center;
   }

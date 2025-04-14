@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion"; // Удален MotionLink
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun, faBars, faTimes, faRocket, faBrain, faInfo, faComment, faLightbulb, faPaperclip, faCodeFork } from "@fortawesome/free-solid-svg-icons"; // Добавлены недостающие иконки
 import useTheme from "../hooks/theme";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -21,9 +20,9 @@ const Header = () => {
   return (
     <motion.header 
       className={`header ${isScrolled ? "header-scrolled" : ""}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0 }}
     >
       <div className="header-content">
         <motion.a
@@ -44,7 +43,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faPaperclip} />
           <span className="tooltip">LINKS</span>
         </motion.a>
-        <motion.a // Заменен MotionLink на motion.a
+        <motion.a
           className="navbar_button tooltip-container"
           href="/projects"
           whileHover={{ scale: 1.1 }}

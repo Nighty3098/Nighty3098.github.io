@@ -4,11 +4,9 @@ import WelcomeBlock from "./components/welcome";
 import Bio from "./components/bio";
 import Contacts from "./components/contacts";
 import Info from "./components/info";
-import GitHubStats from "./components/git_stats";
 import Projects from "./pages/Projects";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Layout from "./components/Layout";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -23,18 +21,17 @@ Nighty3098 ❥
 
 function Home() {
   return (
-    <Layout>
+    <div>
       <div className="App" style={{ padding: "0px", margin: "0px" }}>
         <Header />
         <WelcomeBlock />
         <Bio />
         <div className="main_block">
           <Info />
-          <GitHubStats username={"Nighty3098"} />
         </div>
         <Contacts />
       </div>
-    </Layout>
+    </div>
   );
 }
 
@@ -48,9 +45,9 @@ function App() {
         <Route
           path="/projects"
           element={
-            <Layout>
+            <div>
               <Projects />
-            </Layout>
+            </div>
           }
         />
       </Routes>
