@@ -53,6 +53,18 @@
   text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
 }
 
+.gradient-circle {
+  width: 70%;
+  max-width: 1200px;
+  position: absolute;
+  aspect-ratio: 1/1;
+  margin: 0px;
+  padding: 0px;
+  background: radial-gradient(var(--red) 0%, transparent 50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
 .handwrite_title {
   text-align: left;
   width: 100%;
@@ -89,10 +101,10 @@
   opacity: 1;
   display: flex;
   position: fixed;
-  bottom: 20px;
+  top: 20px;
   height: auto;
-  width: auto;
-  max-width: 90%;
+  width: 80%;
+  max-width: 1000px;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
@@ -116,12 +128,11 @@
 }
 
 .header-content {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .header_title {
@@ -266,7 +277,7 @@ body {
 }
 
 .contact_button:hover {
-  background-color: var(--purple);
+  background-color: var(--red);
 }
 
 .contact_button i {
@@ -287,12 +298,12 @@ body {
 }
 
 #git_btn:hover {
-  background-color: var(--purple);
+  background-color: var(--red);
   color: var(--bg);
 }
 
 #projects_btn:hover {
-  background-color: var(--purple);
+  background-color: var(--red);
   color: var(--bg);
 }
 
@@ -486,6 +497,8 @@ a .button:hover {
   min-height: 100vh;
   max-height: 100vh;
   gap: 0px;
+  margin: 0px;
+  padding: 0px;
   color: var(--fg);
 }
 
@@ -557,7 +570,7 @@ h3 {
 }
 
 .btn-slide:hover {
-  background-color: var(--purple);
+  background-color: var(--red);
 }
 
 .btn-slide:hover span.circle,
@@ -568,11 +581,11 @@ h3 {
   text-align: center;
   margin-left: -45px;
   background-color: var(--bg);
-  color: var(--purple);
+  color: var(--red);
 }
 
 .btn-slide:hover span.circle2 {
-  color: var(--purple);
+  color: var(--red);
 }
 
 .btn-slide:hover span.title {
@@ -587,7 +600,7 @@ h3 {
 
 .btn-slide span.circle {
   display: block;
-  background-color: var(--purple);
+  background-color: var(--red);
   color: var(--fg);
   position: absolute;
   float: left;
@@ -818,7 +831,7 @@ h3 {
 }
 
 .info_widget:hover {
-  background-color: var(--purple);
+  background-color: var(--red);
   box-shadow: var(--shadow)
 }
 
@@ -912,6 +925,15 @@ h3 {
   }
   .btn-slide {
     zoom: 0.85;
+  }
+
+
+  .header {
+    width: auto;
+    max-width: 1000px;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.5s ease-in-out;
   }
 }
 

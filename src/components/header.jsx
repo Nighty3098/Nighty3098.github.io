@@ -31,7 +31,6 @@ const Header = () => {
         >
           <FontAwesomeIcon icon={faPaperclip} />
           <p>LINKS</p>
-          <span className="tooltip">LINKS</span>
         </motion.a>
         <motion.a
           className="navbar_button tooltip-container"
@@ -39,16 +38,14 @@ const Header = () => {
         >
           <FontAwesomeIcon icon={faCodeFork} />
           <p>PROJECTS</p>
-          <span className="tooltip">PROJECTS</span>
         </motion.a>
+        </div>
         <motion.button
           onClick={toggleTheme}
           className="navbar_button tooltip-container"
         >
           <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} /> 
-          <span className="tooltip">TOGGLE THEME</span>
         </motion.button>
-      </div>
     </motion.header>
   );
 };

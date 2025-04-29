@@ -34,10 +34,11 @@ const Header = () => {
     >
       <motion.a href="/" className="navbar_button">
         <FontAwesomeIcon icon={faArrowLeft} />
+        <p>BACK</p>
       </motion.a>
       <motion.a to="https://github.com/Nighty3098" className="navbar_button">
         <FontAwesomeIcon icon={faCodeBranch} />
-        <p>GIT</p>
+        <p>OPEN GIT</p>
       </motion.a>
       <motion.button onClick={toggleTheme} className="navbar_button">
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
