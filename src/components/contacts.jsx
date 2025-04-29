@@ -7,7 +7,7 @@ import {
   faReddit,
   faSignalMessenger,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCube, faComment, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCube, faComment, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 const socials = [
   { icon: faTelegram, link: "https://t.me/Night3098" },
@@ -134,7 +134,7 @@ export const Card = () => {
           }}
         >
           <h2>
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUsers} />
           </h2>
         </div>
       </div>

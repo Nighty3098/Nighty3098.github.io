@@ -2,14 +2,11 @@ import React from "react";
 import Textra from "./text_area";
 
 const WelcomeBlock = () => {
-
   return (
     <div className="main_block" id="main">
-      <h1
-        className="title"
-      >
+      <h1 className="title">
         <Textra
-          data={["DEVELOPER", "FREELANCER", "STUDENT"]}
+          data={["DEVELOPER", "FREELANCER", "DESIGNER", "STUDENT"]}
           className="title"
           effect="topDown"
         />

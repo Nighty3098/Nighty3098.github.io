@@ -7,12 +7,11 @@ const InfoWidget = ({ item, index }) => {
   return (
     <motion.div
       className="info_widget"
-      initial={{ opacity: 0, scale: 0.8 }}
+      initial={{ scale: 0.8 }}
       animate={controls}
       viewport={{ margin: "0px 0px -50px 0px", amount: 0.1 }}
       onViewportEnter={() => {
         controls.start({
-          opacity: 1,
           scale: 1,
           transition: {
             duration: 0.6,

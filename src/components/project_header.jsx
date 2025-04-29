@@ -33,16 +33,14 @@ const Header = () => {
     transition={{ duration: 0 }}
     >
       <motion.a href="/" className="navbar_button">
-        <FontAwesomeIcon icon={faArrowLeft} style={{ marginRight: "10px" }} />
-        <span className="tooltip">BIO</span>
+        <FontAwesomeIcon icon={faArrowLeft} />
       </motion.a>
       <motion.a to="https://github.com/Nighty3098" className="navbar_button">
-        <FontAwesomeIcon icon={faCodeBranch} style={{ marginRight: "10px" }} />
-        <span className="tooltip">BIO</span>
+        <FontAwesomeIcon icon={faCodeBranch} />
+        <p>GIT</p>
       </motion.a>
       <motion.button onClick={toggleTheme} className="navbar_button">
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
-        <span className="tooltip">BIO</span>
       </motion.button>
     </motion.div>
   );

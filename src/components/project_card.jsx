@@ -37,7 +37,7 @@ const ProjectCard = ({ title, description, image, githubLink }) => {
               width: "100%",
               color: "#666",
             }}
-            aria-label="Изображение недоступно"
+            aria-label="ERROR"
           >
             ?
           </div>

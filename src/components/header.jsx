@@ -27,36 +27,23 @@ const Header = () => {
       <div className="header-content">
         <motion.a
           className="navbar_button tooltip-container"
-          href="#bio"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <FontAwesomeIcon icon={faLightbulb} />
-          <span className="tooltip">BIO</span>
-        </motion.a>
-        <motion.a
-          className="navbar_button tooltip-container"
           href="#links"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
         >
           <FontAwesomeIcon icon={faPaperclip} />
+          <p>LINKS</p>
           <span className="tooltip">LINKS</span>
         </motion.a>
         <motion.a
           className="navbar_button tooltip-container"
           href="/projects"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
         >
           <FontAwesomeIcon icon={faCodeFork} />
+          <p>PROJECTS</p>
           <span className="tooltip">PROJECTS</span>
         </motion.a>
         <motion.button
           onClick={toggleTheme}
           className="navbar_button tooltip-container"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
         >
           <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} /> 
           <span className="tooltip">TOGGLE THEME</span>

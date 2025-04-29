@@ -17,12 +17,12 @@ export const infoList = [
     icon: faUsers,
   },
   {
-    title: "17 +",
+    title: "19 +",
     subtitle: "PROJECTS COMPLETED",
     icon: faBrain,
   },
   {
-    title: "6 +",
+    title: "4 +",
     subtitle: "ACTIVE PROJECTS",
     icon: faProjectDiagram,
   },
