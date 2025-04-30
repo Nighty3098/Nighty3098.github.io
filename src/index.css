@@ -54,13 +54,13 @@
 }
 
 .gradient-circle {
-  width: 70%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1600px;
   position: absolute;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1.3/1;
   margin: 0px;
   padding: 0px;
-  background: radial-gradient(var(--red) 0%, transparent 50%);
+  background: radial-gradient(var(--red) 0%, transparent 70%);
   border-radius: 50%;
   z-index: -1;
 }
@@ -101,8 +101,8 @@
   opacity: 1;
   display: flex;
   position: fixed;
-  top: 20px;
-  height: auto;
+  top: 0px;
+  height: 50px;
   width: 80%;
   max-width: 1000px;
   justify-content: space-between;
@@ -112,9 +112,9 @@
   background: transparent;
   align-content: center;
   text-align: center;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(20px);
   color: var(--bg);
-  border-radius: 15px;
+  border-radius: 0px 0px 20px 20px;
   padding-left: 20px;
   padding-right: 20px;
   gap: 15px;
@@ -244,6 +244,7 @@ body {
   flex-direction: column;
   text-align: center;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .contacts_badge_block {
