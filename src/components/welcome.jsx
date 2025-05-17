@@ -1,18 +1,23 @@
 import React from "react";
 import Textra from "./text_area";
+import { motion } from "framer-motion";
 
 const WelcomeBlock = () => {
   return (
-    <div className="main_block" id="main">
-      <div className="gradient-circle"></div>
-      <h1 className="title">
+    <section className="welcome-section">
+      <motion.h1
+        className="welcome-title"
+        initial={{ y: 60, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
         <Textra
-          data={["DEVELOPER", "FREELANCER", "DESIGNER", "STUDENT"]}
-          className="title"
+          data={["DEVELOPER", "FREELANCER", "DESIGNER"]}
+          className="welcome-title-textra"
           effect="topDown"
         />
-      </h1>
-    </div>
+      </motion.h1>
+    </section>
   );
 };
 

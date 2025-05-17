@@ -44,6 +44,16 @@
   outline: none;
 }
 
+.welcome-title * {
+  font-family: "Bebas Neue", cursive;
+  font-size: 15vw;
+  font-weight: bold;
+  color: var(--fg);
+  margin: 0;
+  z-index: 2;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.3);
+}
+
 .main_block .title, .big_title {
   width: fit-content;
   font-family: "Bebas Neue", cursive;
@@ -101,7 +111,7 @@
   opacity: 1;
   display: flex;
   position: fixed;
-  top: 0px;
+  top: 5px;
   height: 50px;
   width: 80%;
   max-width: 1000px;
@@ -114,7 +124,7 @@
   text-align: center;
   backdrop-filter: blur(20px);
   color: var(--bg);
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 20px;
   padding-left: 20px;
   padding-right: 20px;
   gap: 15px;
@@ -209,6 +219,7 @@
   border-radius: 30%;
   aspect-ratio: 1/1;
   border: 10px solid var(--fg);
+  filter: brightness(1.3) contrast(0.8);
 }
 
 html {
@@ -976,5 +987,86 @@ h3 {
     height: 100%;
     min-height: 100%;
     max-height: 100%;
+  }
+}
+
+.welcome-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.welcome-bg-gradient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 120vw;
+  max-width: 1600px;
+  max-height: 1600px;
+  background: radial-gradient(circle at 50% 50%, var(--red) 0%, var(--purple) 60%, transparent 100%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.25;
+  filter: blur(10px);
+}
+
+.welcome-avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  margin-bottom: 30px;
+  z-index: 2;
+  background: var(--bg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  filter: brightness(1.3) contrast(0.8);
+}
+
+.welcome-desc {
+  font-size: 1.5rem;
+  color: var(--fg2);
+  margin: 30px 0 40px 0;
+  z-index: 2;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.welcome-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  background: linear-gradient(90deg, var(--red), var(--purple));
+  color: var(--bg);
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 2;
+  margin-top: 10px;
+}
+.welcome-btn:hover {
+  background: linear-gradient(90deg, var(--purple), var(--red));
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .welcome-title {
+    font-size: 12vw;
+  }
+  .welcome-desc {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  .welcome-avatar {
+    width: 120px;
+    height: 120px;
   }
 }
