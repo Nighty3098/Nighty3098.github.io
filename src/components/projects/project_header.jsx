@@ -11,7 +11,7 @@ import {
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
-import useTheme from "../hooks/theme";
+import useTheme from "../../hooks/theme";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

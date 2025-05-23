@@ -26,9 +26,6 @@ function Home() {
         <Header />
         <WelcomeBlock />
         <Bio />
-        <div className="main_block">
-          <Info />
-        </div>
         <Contacts />
       </div>
     </div>

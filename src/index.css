@@ -17,6 +17,7 @@
   --color1: hsl(237deg, 16%, 23%);
   --color2: hsl(232deg, 23%, 18%);
   --tr: hsla(237deg, 16%, 23%, 0.5);
+  --white: hsl(226deg, 64%, 88%);
   --red: hsl(0, 100%, 81%);
   --green: hsl(114, 100%, 86%);
   --purple: hsl(258, 100%, 83%);
@@ -31,6 +32,7 @@
   --color1: hsl(225deg, 14%, 77%);
   --color2: hsl(234deg, 16%, 35%);
   --tr: hsla(225deg, 14%, 77%, 0.5);
+  --white: hsl(220deg, 23%, 95%);
   --red: hsl(0, 100%, 83%);
   --green: hsl(114, 100%, 85%);
   --purple: hsl(252, 100%, 84%);
@@ -48,7 +50,7 @@
   font-family: "Bebas Neue", cursive;
   font-size: 15vw;
   font-weight: bold;
-  color: var(--fg);
+  color: var(--white);
   margin: 0;
   z-index: 2;
   text-shadow: 0 2px 40px rgba(0,0,0,0.3);
@@ -113,7 +115,7 @@
   position: fixed;
   top: 5px;
   height: 50px;
-  width: 80%;
+  width: auto;
   max-width: 1000px;
   justify-content: space-between;
   align-items: center;
@@ -122,8 +124,9 @@
   background: transparent;
   align-content: center;
   text-align: center;
-  backdrop-filter: blur(20px);
   color: var(--bg);
+  background-color: var(--tr);
+  backdrop-filter: blur(20px);
   border-radius: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -131,10 +134,24 @@
   transition: all 0.5s ease-in-out;
 }
 
+.header * {
+  font-family: "Roboto Condensed";
+  font-weight: bolder;
+  color: var(--white);
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-size: medium;
+}
+
 .header-scrolled {
   background: var(--tr);
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
+}
+
+.header-scrolled * {
+  color: var(--fg);
 }
 
 .header-content {
@@ -146,16 +163,6 @@
 }
 
 .header_title {
-  font-size: medium;
-}
-
-.header * {
-  font-family: "Roboto Condensed";
-  font-weight: bolder;
-  color: var(--fg);
-  align-items: center;
-  align-content: center;
-  text-align: center;
   font-size: medium;
 }
 
@@ -1000,6 +1007,11 @@ h3 {
   justify-content: center;
   overflow: hidden;
   z-index: 1;
+  background-image: url("./../public/bg.png");
+  background-size:cover;
+  background-position: center;
+  background-repeat: none;
+  background-clip: content-box;
 }
 
 .welcome-bg-gradient {

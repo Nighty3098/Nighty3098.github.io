@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/project_header";
-import {ProjectCard} from "../components/projects_list";
+import Header from "../components/projects/project_header";
+import {ProjectCard} from "../components/projects/projects_list";
 import { motion } from "framer-motion";
 
 const Projects = () => {

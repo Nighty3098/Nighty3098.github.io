@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import useGithubStats from "../hooks/useGithubStats";
+import useGithubStats from "./../../hooks/useGithubStats";
 
 export const ProjectCard = ({ title, description, image, githubLink }) => {
   const { stars, loading, error } = useGithubStats(githubLink);
