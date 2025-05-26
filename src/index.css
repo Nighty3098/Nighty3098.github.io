@@ -10,7 +10,7 @@
 */
 
 :root {
-  --bg: hsl(232deg, 23%, 18%);
+  --bg: hsl(240deg, 21%, 12%);
   --fg: hsl(226deg, 64%, 88%);
   --fg2: hsla(226deg, 64%, 88%, 0.9);
   --fg3: hsla(226deg, 64%, 88%, 0);
@@ -22,6 +22,7 @@
   --green: hsl(114, 100%, 86%);
   --purple: hsl(258, 100%, 83%);
   --shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  --welcome-shadow: var(--bg);
 }
 
 :root.light {
@@ -37,6 +38,7 @@
   --green: hsl(114, 100%, 85%);
   --purple: hsl(252, 100%, 84%);
   --shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  --welcome-shadow: transparent;
 }
 
 * {
@@ -333,7 +335,7 @@ body {
   align-items: center;
   justify-content: center;
   align-content: center;
-  width: 100%;
+  width: auto;
 }
 
 .project-card {
@@ -1008,11 +1010,22 @@ h3 {
   overflow: hidden;
   z-index: 1;
   background-image: url("./../public/bg.png");
-  background-size:cover;
+  background-size: cover;
   background-position: center;
-  background-repeat: none;
-  background-clip: content-box;
+  background-repeat: no-repeat;
 }
+
+.welcome-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(to bottom, transparent, var(--welcome-shadow));
+  pointer-events: none;
+}
+
 
 .welcome-bg-gradient {
   position: absolute;

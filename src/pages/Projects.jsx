@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/projects/project_header";
-import {ProjectCard} from "../components/projects/projects_list";
+import { ProjectCard } from "../components/projects/projects_list";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -22,8 +22,7 @@ const Projects = () => {
     },
     {
       title: "IPSA AI MODEL",
-      description:
-        "Neural network model for IPSA",
+      description: "Neural network model for IPSA",
       image:
         "https://private-user-images.githubusercontent.com/154594695/395795333-0c0c862e-2ba6-4a7f-8f99-a6589c3d5682.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDU5NDU5NjUsIm5iZiI6MTc0NTk0NTY2NSwicGF0aCI6Ii8xNTQ1OTQ2OTUvMzk1Nzk1MzMzLTBjMGM4NjJlLTJiYTYtNGE3Zi04Zjk5LWE2NTg5YzNkNTY4Mi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQyOVQxNjU0MjVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yN2MzMWYxODgxOWRjMWIzYWVkODdjYjUyOWNmOWNiMzkxNjIzNmYyMTM4ODU4OTFhMDE2Zjc2ZThlYWMzM2M1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.HSIyMc7RUuYrb12rLEdWMoevVw4SyeUTEv4061gWFiI",
       githubLink: "https://github.com/Nighty3098/IPSA_MODEL",
@@ -75,19 +74,20 @@ const Projects = () => {
     <div className="App">
       <Header />
       <motion.div
+        style={{ width: "100%" }}
         initial={{ opacity: 0, x: 500 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="main_block">
-          <h1 className="title">Projects</h1>
-        </div>
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
+        <div className="welcome-section">
+          <h1 className="welcome-title"><p>Projects</p></h1>
         </div>
       </motion.div>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
+      </div>
     </div>
   );
 };
