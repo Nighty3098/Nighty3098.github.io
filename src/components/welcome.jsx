@@ -1,4 +1,3 @@
-import React from "react";
 import Textra from "./text_area";
 import { motion } from "framer-motion";
 

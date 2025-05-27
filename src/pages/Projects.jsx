@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/projects/project_header";
 import { ProjectCard } from "../components/projects/projects_list";
 import { motion } from "framer-motion";
@@ -24,7 +23,7 @@ const Projects = () => {
       title: "IPSA AI MODEL",
       description: "Neural network model for IPSA",
       image:
-        "https://private-user-images.githubusercontent.com/154594695/395795333-0c0c862e-2ba6-4a7f-8f99-a6589c3d5682.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDU5NDU5NjUsIm5iZiI6MTc0NTk0NTY2NSwicGF0aCI6Ii8xNTQ1OTQ2OTUvMzk1Nzk1MzMzLTBjMGM4NjJlLTJiYTYtNGE3Zi04Zjk5LWE2NTg5YzNkNTY4Mi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQyOVQxNjU0MjVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yN2MzMWYxODgxOWRjMWIzYWVkODdjYjUyOWNmOWNiMzkxNjIzNmYyMTM4ODU4OTFhMDE2Zjc2ZThlYWMzM2M1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.HSIyMc7RUuYrb12rLEdWMoevVw4SyeUTEv4061gWFiI",
+        "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
       githubLink: "https://github.com/Nighty3098/IPSA_MODEL",
     },
     {
@@ -48,6 +47,13 @@ const Projects = () => {
       githubLink: "https://github.com/Nighty3098/LogInsight",
     },
     {
+      title: "mFetch",
+      description: "A simple fetch tool for Linux written in bash ",
+      image:
+        "https://raw.githubusercontent.com/Nighty3098/mfetch/refs/heads/main/images/1.png",
+      githubLink: "https://github.com/Nighty3098/mfetch",
+    },
+    {
       title: "TechSupport",
       description: "N9 GROUP technical support telegram bot ",
       image:
@@ -55,17 +61,10 @@ const Projects = () => {
       githubLink: "https://github.com/Nighty3098/TechSupportBot",
     },
     {
-      title: "SDash",
-      description: " A simple server dashboard for smaller private servers",
-      image:
-        "https://private-user-images.githubusercontent.com/154594695/371582091-b8953212-cd61-4458-9a53-0f62da7e7456.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDQ1NjA2NzksIm5iZiI6MTc0NDU2MDM3OSwicGF0aCI6Ii8xNTQ1OTQ2OTUvMzcxNTgyMDkxLWI4OTUzMjEyLWNkNjEtNDQ1OC05YTUzLTBmNjJkYTdlNzQ1Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQxM1QxNjA2MTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kODQ3YjI5OTg2MTQ0Y2E3Yzk0OTAwZjI0NjU5MjI2MDhjMjBmMmNjNzE3ZmNjODM4OWRjNmExYzgyMmQ3YmFlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.wBmZ_TOpDAWih77Qj7WQiSDPTgRpGlzGqGyxfu-8n6I",
-      githubLink: "https://github.com/Nighty3098/SDash",
-    },
-    {
       title: "CodeKeeper",
       description: "Project and task manager for developers with Git",
       image:
-        "https://github.com/Nighty3098/CodeKeeper/raw/main/imgs/1.png?raw=true",
+        "https://raw.githubusercontent.com/Nighty3098/CodeKeeper/refs/heads/main/imgs/1.png",
       githubLink: "https://github.com/Nighty3098/CodeKeeper",
     },
   ];

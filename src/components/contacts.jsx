@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,7 +6,7 @@ import {
   faReddit,
   faSignalMessenger,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCube, faComment, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 const socials = [
   { icon: faTelegram, link: "https://t.me/Night3098" },

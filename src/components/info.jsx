@@ -1,4 +1,3 @@
-import React from "react";
 import { infoList } from "./data/info_list";
 import {motion, useAnimation} from "framer-motion"
 

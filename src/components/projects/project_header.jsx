@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import {
-  faLightbulb,
-  faPaperclip,
   faMoon,
   faSun,
   faArrowLeft,
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import useTheme from "../../hooks/theme";
 
 const Header = () => {
