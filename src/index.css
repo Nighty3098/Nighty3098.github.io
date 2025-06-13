@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Meddon&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 /*
   font-family: "Oswald", serif;
@@ -38,7 +38,7 @@
   --green: hsl(114, 100%, 85%);
   --purple: hsl(252, 100%, 84%);
   --shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
-  --welcome-shadow: transparent;
+  --welcome-shadow: var(--fg);
 }
 
 * {
@@ -49,16 +49,17 @@
 }
 
 .welcome-title * {
-  font-family: "Bebas Neue", cursive;
-  font-size: 15vw;
+  font-family: "Pacifico", cursive;
+  font-size: 11vw;
   font-weight: bold;
   color: var(--white);
   margin: 0;
   z-index: 2;
-  text-shadow: 0 2px 40px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
 }
 
-.main_block .title, .big_title {
+.main_block .title,
+.big_title {
   width: fit-content;
   font-family: "Bebas Neue", cursive;
   font-size: 15vw;
@@ -294,7 +295,7 @@ body {
   align-content: center;
   text-align: center;
   transition: all 0.3s ease-in;
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .contact_button:hover {
@@ -346,7 +347,7 @@ body {
   padding: 0px;
   width: 100%;
   max-width: 550px;
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .project-image {
@@ -443,7 +444,7 @@ body {
   transition: all 0.5s;
   outline: none;
   text-decoration: none;
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .button:hover {
@@ -579,7 +580,7 @@ h3 {
   margin: 10px;
   transition: 0.5s;
   font-family: "Oswald";
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .btn-slide {
@@ -726,7 +727,7 @@ h3 {
 
 .skill_widget:hover {
   background-color: var(--tr);
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .skill_widget:hover .emoji {
@@ -794,6 +795,8 @@ h3 {
 .float_widget_s h2 {
   font-family: "Bebas Neue";
   font-size: xx-large;
+  padding: 0px;
+  margin: 0px;
 }
 
 .float_widget_s h2 * {
@@ -818,7 +821,7 @@ h3 {
   align-content: center;
   transition: all 0.5s ease-in-out;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .widget-icon {
@@ -853,7 +856,7 @@ h3 {
 
 .info_widget:hover {
   background-color: var(--red);
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .info_widget:hover * {
@@ -948,7 +951,6 @@ h3 {
     zoom: 0.85;
   }
 
-
   .header {
     width: auto;
     max-width: 1000px;
@@ -1009,23 +1011,22 @@ h3 {
   justify-content: center;
   overflow: hidden;
   z-index: 1;
+}
+
+.welcome-bg {
   background-image: url("./../public/bg.png");
+  height: calc(100vh - 40px);
+  width: calc(100vw - 40px);
+  margin: 20px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
 }
-
-.welcome-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30%;
-  background: linear-gradient(to bottom, transparent, var(--welcome-shadow));
-  pointer-events: none;
-}
-
 
 .welcome-bg-gradient {
   position: absolute;
@@ -1035,7 +1036,12 @@ h3 {
   height: 120vw;
   max-width: 1600px;
   max-height: 1600px;
-  background: radial-gradient(circle at 50% 50%, var(--red) 0%, var(--purple) 60%, transparent 100%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--red) 0%,
+    var(--purple) 60%,
+    transparent 100%
+  );
   transform: translate(-50%, -50%);
   z-index: 0;
   opacity: 0.25;
@@ -1049,7 +1055,7 @@ h3 {
   margin-bottom: 30px;
   z-index: 2;
   background: var(--bg);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   filter: brightness(1.3) contrast(0.8);
 }
 
@@ -1072,8 +1078,10 @@ h3 {
   background: linear-gradient(90deg, var(--red), var(--purple));
   color: var(--bg);
   text-decoration: none;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  transition:
+    background 0.3s,
+    transform 0.2s;
   z-index: 2;
   margin-top: 10px;
 }

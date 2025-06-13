@@ -116,11 +116,19 @@ export const Card = () => {
           className="float_widget_s"
           style={{ transform: "rotate(-15deg)", right: "-30px" }}
         >
-          <h2>
-            Let's work
-            <br />
-            together
-          </h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              alignContent: "center",
+              justifyContent: "center",
+              gap: "0px",
+            }}
+          >
+            <h2>Let's work</h2>
+            <h2>together</h2>
+          </div>
         </div>
         <div
           className="float_widget_s"
