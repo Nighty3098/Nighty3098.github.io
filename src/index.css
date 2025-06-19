@@ -48,14 +48,20 @@
   outline: none;
 }
 
-.welcome-title * {
+.welcome-title {
   font-family: "Pacifico", cursive;
-  font-size: 11vw;
+  font-size: 10vw;
   font-weight: bold;
   color: var(--white);
   margin: 0;
   z-index: 2;
-  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 40px;
+  rotate: 8deg;
+}
+
+.welcome-title-2 {
+  rotate: -4deg;
 }
 
 .main_block .title,

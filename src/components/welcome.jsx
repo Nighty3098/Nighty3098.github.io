@@ -1,4 +1,3 @@
-import Textra from "./text_area";
 import { motion } from "framer-motion";
 
 const WelcomeBlock = () => {
@@ -11,11 +10,7 @@ const WelcomeBlock = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Textra
-            data={["DEVELOPER", "FREELANCER", "DESIGNER"]}
-            className="welcome-title-textra"
-            effect="topDown"
-          />
+          DEVELOPER
         </motion.h1>
       </div>
     </section>
