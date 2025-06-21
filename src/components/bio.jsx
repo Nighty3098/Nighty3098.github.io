@@ -80,10 +80,10 @@ const Bio = () => {
           </motion.div>
           
           {[
-            "Hello. I am Artem, a full-stack / ML developer and freelancer.",
-            "I am 18 years old, I am in the 11th grade of school and have been at the programming academy for 4 years.",
-            "I strive to develop in the field of development and want to work on large projects that can affect people's lives.",
-            "You can view all the projects on my github.",
+            "Hey. I am Artem, a full-stack /ML developer and freelancer.",
+            "I am 18 years old, I have been studying at the programming academy for 5 years and developing on a freelance basis.",
+            "I strive to develop in the field of development and want to work on large projects that can improve people's lives",
+            "You can view all projects on my git",
           ].map((text, index) => (
             <motion.div
               key={index}
