@@ -55,15 +55,13 @@ const Projects = () => {
     },
     {
       title: "CV Creator bot [Vercel]",
-      description:
-        "A bot for selling improvement services or selling resumes",
+      description: "A bot for selling improvement services or selling resumes",
       image: "/other/image.png",
       githubLink: "https://github.com/Nighty3098/CV_CREATOR_BOT",
     },
     {
       title: "WalkAnnouncerBot [Vercel]",
-      description:
-        "Telegram Walk Announcer Bot",
+      description: "Telegram Walk Announcer Bot",
       image: "/other/image2.png",
       githubLink: "https://github.com/Nighty3098/WalkAnnouncerBot",
     },
@@ -75,7 +73,7 @@ const Projects = () => {
       githubLink: "https://github.com/Nighty3098/CodeKeeper",
     },
   ];
-  
+
   return (
     <div className="App">
       <Header />
@@ -85,8 +83,12 @@ const Projects = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="welcome-section">
-          <h1 className="welcome-title"><p>Projects</p></h1>
+        <div className="welcome-bg">
+          <div className="welcome-section">
+            <h1 className="welcome-title">
+              <p>Projects</p>
+            </h1>
+          </div>
         </div>
       </motion.div>
       <div className="projects-grid">
