@@ -20,6 +20,29 @@ const Skeleton = ({ height = 300, width = "100%" }) => (
   />
 );
 
+const cardContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const cardItemVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 export const ProjectCard = ({ title, description, image, githubLink }) => {
   const { stars, loading, error } = useGithubStats(githubLink);
   const [imgError, setImgError] = useState(false);
@@ -29,9 +52,16 @@ export const ProjectCard = ({ title, description, image, githubLink }) => {
   return (
     <motion.div
       className="project-card"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      variants={cardItemVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover={{
+        y: -8,
+        scale: 1.03,
+        boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+        transition: { type: "spring", stiffness: 200, damping: 15 },
+      }}
+      style={{ cursor: "pointer" }}
     >
       <div className="project-content">
         {!imgError ? (
@@ -107,14 +137,17 @@ export const ProjectCard = ({ title, description, image, githubLink }) => {
   );
 };
 
-const ProjectsList = () => (
+const ProjectsList = ({ projects }) => (
   <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    viewport={{ margin: "0px 0px -100px 0px" }}
-    transition={{ duration: 0.5 }}
+    variants={cardContainerVariants}
+    initial="hidden"
+    animate="visible"
     style={{ width: "100%" }}
-  ></motion.div>
+  >
+    {projects && projects.map((project, index) => (
+      <ProjectCard key={index} {...project} />
+    ))}
+  </motion.div>
 );
 
 export default ProjectsList;

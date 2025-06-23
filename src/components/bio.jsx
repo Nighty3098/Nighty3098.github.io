@@ -20,34 +20,33 @@ const Skeleton = ({ height = 300, width = 300 }) => (
   />
 );
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.14,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      duration: 0.5,
+    },
+  },
+};
+
 const Bio = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
   const { t } = useTranslation();
-
-  const containerVariants = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.1,
-        delayChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        duration: 0.5
-      }
-    }
-  };
 
   const handleViewportEnter = () => {
     if (!hasAnimated) {
@@ -84,6 +83,7 @@ const Bio = () => {
           />
           <motion.div
             whileHover="hover"
+            variants={itemVariants}
             style={{
               width: "100%",
               alignItems: "left",

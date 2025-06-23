@@ -1,30 +1,34 @@
 import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SocialIcon = ({ social, index }) => {
-  const controls = useAnimation();
+const iconVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 180,
+      damping: 14,
+      duration: 0.7,
+      delay: 0.1,
+    },
+  },
+};
 
+const SocialIcon = ({ social, index }) => {
   return (
     <motion.a
       href={social.link}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 20 }}
-      animate={controls}
-      viewport={{ margin: "0px 0px -100px 0px", amount: 0.1 }}
-      onViewportEnter={() => {
-        controls.start({
-          opacity: 1,
-          y: 0,
-          rotate: 0,
-          transition: {
-            type: "spring",
-            stiffness: 120,
-            delay: index * 0.15,
-          },
-        });
-      }}
-      whileTap={{ scale: 0.9 }}
+      variants={iconVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover={{ scale: 1.18, rotate: -8, boxShadow: "0 4px 24px rgba(0,0,0,0.16)" }}
+      whileTap={{ scale: 0.92, rotate: 0 }}
+      style={{ display: "inline-block", transition: "box-shadow 0.2s" }}
     >
       <div className="contact_button">
         <i>
