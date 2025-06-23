@@ -54,11 +54,18 @@ const Projects = () => {
       githubLink: "https://github.com/Nighty3098/mfetch",
     },
     {
-      title: "TechSupport",
-      description: "N9 GROUP technical support telegram bot ",
-      image:
-        "https://github.com/Nighty3098/TechSupportBot/blob/main/src/resources/header_2.png?raw=true",
-      githubLink: "https://github.com/Nighty3098/TechSupportBot",
+      title: "CV Creator bot [Vercel]",
+      description:
+        "A bot for selling improvement services or selling resumes",
+      image: "/other/image.png",
+      githubLink: "https://github.com/Nighty3098/CV_CREATOR_BOT",
+    },
+    {
+      title: "WalkAnnouncerBot [Vercel]",
+      description:
+        "Telegram Walk Announcer Bot",
+      image: "/other/image2.png",
+      githubLink: "https://github.com/Nighty3098/WalkAnnouncerBot",
     },
     {
       title: "CodeKeeper",
@@ -68,7 +75,7 @@ const Projects = () => {
       githubLink: "https://github.com/Nighty3098/CodeKeeper",
     },
   ];
-
+  
   return (
     <div className="App">
       <Header />
