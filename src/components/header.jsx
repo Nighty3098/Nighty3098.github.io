@@ -8,10 +8,13 @@ import {
   faCodeFork,
 } from "@fortawesome/free-solid-svg-icons";
 import useTheme from "../hooks/theme";
+import LanguageSelector from "./LanguageSelector";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isDarkMode, toggleTheme } = useTheme();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,12 +34,13 @@ const Header = () => {
       <div className="header-content">
         <motion.a className="navbar_button tooltip-container" href="#links">
           <FontAwesomeIcon icon={faPaperclip} />
-          <p>LINKS</p>
+          <p>{t('navbar.links')}</p>
         </motion.a>
         <motion.a className="navbar_button tooltip-container" href="/projects">
           <FontAwesomeIcon icon={faCodeFork} />
-          <p>PROJECTS</p>
+          <p>{t('navbar.projects')}</p>
         </motion.a>
+        <LanguageSelector />
       </div>
       <motion.button
         onClick={toggleTheme}

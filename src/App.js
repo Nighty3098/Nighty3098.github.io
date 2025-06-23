@@ -5,6 +5,7 @@ import Bio from "./components/bio";
 import Contacts from "./components/contacts";
 import Info from "./components/info";
 import Projects from "./pages/Projects";
+import ReviewsSlider from "./components/ReviewsSlider";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -27,6 +28,7 @@ function Home() {
         <WelcomeBlock />
         <Bio />
         <Contacts />
+        <ReviewsSlider />
       </div>
     </div>
   );

@@ -1,78 +1,73 @@
 import Header from "../components/projects/project_header";
 import { ProjectCard } from "../components/projects/projects_list";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
+const projectsData = [
+  {
+    key: "owl",
+    title: "THE OWL",
+    image: "https://owl-gamma.vercel.app/imgs/1.png",
+    githubLink: "https://owl-gamma.vercel.app/",
+  },
+  {
+    key: "ipsa",
+    title: "IPSA",
+    image: "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
+    githubLink: "https://github.com/Nighty3098/InvestingAssistant",
+  },
+  {
+    key: "ipsa_model",
+    title: "IPSA AI MODEL",
+    image: "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
+    githubLink: "https://github.com/Nighty3098/IPSA_MODEL",
+  },
+  {
+    key: "dreamcoffee",
+    title: "DreamCoffee",
+    image: "coffee/main.png",
+    githubLink: "https://dreamcoffee.vercel.app/",
+  },
+  {
+    key: "styleshop",
+    title: "StyleShop",
+    image: "styleshop/main.png",
+    githubLink: "https://style-shop-nine.vercel.app/",
+  },
+  {
+    key: "loginsight",
+    title: "LogInsight",
+    image: "https://github.com/Nighty3098/LogInsight/raw/production/imgs/1.png",
+    githubLink: "https://github.com/Nighty3098/LogInsight",
+  },
+  {
+    key: "mfetch",
+    title: "mFetch",
+    image: "https://raw.githubusercontent.com/Nighty3098/mfetch/refs/heads/main/images/1.png",
+    githubLink: "https://github.com/Nighty3098/mfetch",
+  },
+  {
+    key: "cv_creator",
+    title: "CV Creator bot [Vercel]",
+    image: "/other/image.png",
+    githubLink: "https://github.com/Nighty3098/CV_CREATOR_BOT",
+  },
+  {
+    key: "walkannouncer",
+    title: "WalkAnnouncerBot [Vercel]",
+    image: "/other/image2.png",
+    githubLink: "https://github.com/Nighty3098/WalkAnnouncerBot",
+  },
+  {
+    key: "codekeeper",
+    title: "CodeKeeper",
+    image: "https://raw.githubusercontent.com/Nighty3098/CodeKeeper/refs/heads/main/imgs/1.png",
+    githubLink: "https://github.com/Nighty3098/CodeKeeper",
+  },
+];
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "THE OWL",
-      description:
-        "OWL - task and project managment app designed specifically for developers",
-      image: "https://owl-gamma.vercel.app/imgs/1.png",
-      githubLink: "https://owl-gamma.vercel.app/",
-    },
-    {
-      title: "IPSA",
-      description:
-        "Telegram is an investment assistant bot with neural network and other functions",
-      image:
-        "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
-      githubLink: "https://github.com/Nighty3098/InvestingAssistant",
-    },
-    {
-      title: "IPSA AI MODEL",
-      description: "Neural network model for IPSA",
-      image:
-        "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
-      githubLink: "https://github.com/Nighty3098/IPSA_MODEL",
-    },
-    {
-      title: "DreamCoffee",
-      description: "Coffee shop website",
-      image: "coffee/main.png",
-      githubLink: "https://dreamcoffee.vercel.app/",
-    },
-    {
-      title: "StyleShop",
-      description: "Clothing store website",
-      image: "styleshop/main.png",
-      githubLink: "https://style-shop-nine.vercel.app/",
-    },
-    {
-      title: "LogInsight",
-      description:
-        "Program for analyzing log files and detecting anomalies in program operation",
-      image:
-        "https://github.com/Nighty3098/LogInsight/raw/production/imgs/1.png",
-      githubLink: "https://github.com/Nighty3098/LogInsight",
-    },
-    {
-      title: "mFetch",
-      description: "A simple fetch tool for Linux written in bash ",
-      image:
-        "https://raw.githubusercontent.com/Nighty3098/mfetch/refs/heads/main/images/1.png",
-      githubLink: "https://github.com/Nighty3098/mfetch",
-    },
-    {
-      title: "CV Creator bot [Vercel]",
-      description: "A bot for selling improvement services or selling resumes",
-      image: "/other/image.png",
-      githubLink: "https://github.com/Nighty3098/CV_CREATOR_BOT",
-    },
-    {
-      title: "WalkAnnouncerBot [Vercel]",
-      description: "Telegram Walk Announcer Bot",
-      image: "/other/image2.png",
-      githubLink: "https://github.com/Nighty3098/WalkAnnouncerBot",
-    },
-    {
-      title: "CodeKeeper",
-      description: "Project and task manager for developers with Git",
-      image:
-        "https://raw.githubusercontent.com/Nighty3098/CodeKeeper/refs/heads/main/imgs/1.png",
-      githubLink: "https://github.com/Nighty3098/CodeKeeper",
-    },
-  ];
+  const { t } = useTranslation();
 
   return (
     <div className="App">
@@ -86,14 +81,18 @@ const Projects = () => {
         <div className="welcome-bg">
           <div className="welcome-section">
             <h1 className="welcome-title">
-              <p>Projects</p>
+              <p>{t('projects')}</p>
             </h1>
           </div>
         </div>
       </motion.div>
       <div className="projects-grid">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+        {projectsData.map((project, index) => (
+          <ProjectCard
+            key={index}
+            {...project}
+            description={t(`projects_data.${project.key}`)}
+          />
         ))}
       </div>
     </div>

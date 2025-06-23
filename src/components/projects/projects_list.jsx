@@ -3,10 +3,28 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import useGithubStats from "./../../hooks/useGithubStats";
+import { useTranslation } from "react-i18next";
+
+const Skeleton = ({ height = 300, width = "100%" }) => (
+  <div
+    style={{
+      width,
+      height,
+      background: "linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%)",
+      backgroundSize: "200% 100%",
+      animation: "skeleton-shimmer 1.2s infinite linear",
+      borderRadius: "10px",
+      marginBottom: "1rem",
+    }}
+    className="skeleton"
+  />
+);
 
 export const ProjectCard = ({ title, description, image, githubLink }) => {
   const { stars, loading, error } = useGithubStats(githubLink);
   const [imgError, setImgError] = useState(false);
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -17,12 +35,17 @@ export const ProjectCard = ({ title, description, image, githubLink }) => {
     >
       <div className="project-content">
         {!imgError ? (
-          <img
-            src={image}
-            alt={title}
-            className="project-image"
-            onError={() => setImgError(true)}
-          />
+          <>
+            {!imgLoaded && <Skeleton />}
+            <img
+              src={image}
+              alt={title}
+              className="project-image"
+              style={{ display: imgLoaded ? "block" : "none" }}
+              onLoad={() => setImgLoaded(true)}
+              onError={() => setImgError(true)}
+            />
+          </>
         ) : (
           <div
             className="project-image fallback"
@@ -76,14 +99,13 @@ export const ProjectCard = ({ title, description, image, githubLink }) => {
             }}
             aria-label={`VIEW ${title} ON GIT`}
           >
-            OPEN PROJECT
+            {t('open_project')}
           </a>
         )}
       </div>
     </motion.div>
   );
 };
-
 
 const ProjectsList = () => (
   <motion.div
@@ -96,3 +118,9 @@ const ProjectsList = () => (
 );
 
 export default ProjectsList;
+
+// CSS для shimmer-эффекта
+// @keyframes skeleton-shimmer {
+//   0% { background-position: -200% 0; }
+//   100% { background-position: 200% 0; }
+// }

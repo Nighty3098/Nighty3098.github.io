@@ -8,10 +8,12 @@ import {
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
 import useTheme from "../../hooks/theme";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isDarkMode, toggleTheme } = useTheme();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,11 +32,11 @@ const Header = () => {
     >
       <motion.a href="/" className="navbar_button">
         <FontAwesomeIcon icon={faArrowLeft} />
-        <p>BACK</p>
+        <p>{t('back')}</p>
       </motion.a>
-      <motion.a to="https://github.com/Nighty3098" className="navbar_button">
+      <motion.a href="https://github.com/Nighty3098" className="navbar_button">
         <FontAwesomeIcon icon={faCodeBranch} />
-        <p>OPEN GIT</p>
+        <p>{t('open_git')}</p>
       </motion.a>
       <motion.button onClick={toggleTheme} className="navbar_button">
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
