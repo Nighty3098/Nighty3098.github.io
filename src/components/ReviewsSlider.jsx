@@ -10,9 +10,8 @@ const ReviewsSlider = () => {
       <div className="review-grid">
         {reviews.map((review, i) => (
           <div className="review-card" key={i}>
+            <div className="review-card-name"><p style={{ fontSize: "large"}}>~ {review.name} ~</p><p style={{ fontSize: "large", opacity: "0.5" }}>{review.role}</p></div>
             <div className="review-card-text">“{review.text}”</div>
-            <div className="review-card-name">{review.name}</div>
-            <div className="review-card-role">{review.role}</div>
           </div>
         ))}
       </div>
