@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+Host: https://nighty.dev
+Sitemap: https://nighty.dev/sitemap.xml

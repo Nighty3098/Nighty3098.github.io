@@ -7,9 +7,9 @@
 */
 
 :root {
-  --bg: hsl(0deg, 0%, 12%);
-  --fg: hsl(34deg, 32%, 100%);
-  --tr: hsla(237deg, 16%, 23%, 0.3);
+  --bg: rgb(32, 32, 35);
+  --fg: rgba(255, 255, 255, 0.9);
+  --tr: rgba(255, 255, 255, 0.07);
   --white: hsl(226deg, 64%, 88%);
   --accent: rgba(107, 70, 193);
   --shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
@@ -54,7 +54,9 @@
   background-color: var(--tr);
   padding: 20px;
   border-radius: 40px;
-  width: 90%;
+  width: 70%;
+  padding-top: 40px;
+  padding-bottom: 40px;
   max-width: 600px;
   backdrop-filter: blur(10px);
 }
@@ -63,6 +65,72 @@
   .welcome-sub {
     flex-direction: column;
     justify-content: center;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .navbar_spacer {
+    display: none;
+  }
+  .mobile-burger {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--fg);
+    z-index: 1100;
+  }
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    z-index: 1200;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: calc(50% - 150px);
+    background: var(--bg);
+    color: var(--fg);
+    width: calc(300px - 30px - 30px);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .mobile-menu a {
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: Rubik;
+    text-align: left;
+    padding: 8px 0;
+  }
+  .mobile-menu a:hover {
+    color: var(--accent);
+  }
+  @keyframes slideInMenu {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -124,7 +192,7 @@
   opacity: 1;
   display: flex;
   position: fixed;
-  top: 5px;
+  top: 20px;
   height: 50px;
   width: auto;
   max-width: 1000px;
@@ -136,12 +204,12 @@
   align-content: center;
   text-align: center;
   color: var(--bg);
-  background-color: var(--tr);
+  background-color: transparent;
   backdrop-filter: blur(20px);
   border-radius: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  gap: 15px;
+  gap: 10px;
   transition: all 0.5s ease-in-out;
 }
 
@@ -170,7 +238,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 
 .header_title {
@@ -193,6 +261,26 @@
   justify-content: space-around;
   font-weight: normal;
   gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar_button:hover {
+  background-color: var(--fg);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar_button * {
+  transition: all 0.5s ease-in-out;
+}
+.navbar_button:hover * {
+  color: var(--bg);
+}
+
+.navbar_spacer {
+  width: 100px;
+  background-color: transparent;
 }
 
 .tooltip-container {
@@ -802,7 +890,7 @@ h3 {
 }
 
 .float_widget_s h2 {
-  font-family: "Rubik";
+  font-family: "Roboto Condensed";
   font-size: xx-large;
   padding: 0px;
   margin: 0px;
@@ -887,10 +975,15 @@ h3 {
   margin-bottom: 100px;
 }
 
+#bio {
+  max-width: 650px;
+  line-height: 1.5rem;
+}
+
 .bio_content {
   width: 100%;
+  max-width: 600px;
   min-height: auto;
-  max-width: 800px;
   border-radius: 30px;
   font-size: 1.1rem;
   line-height: 2rem;
@@ -1023,7 +1116,6 @@ h3 {
 }
 
 .welcome-bg {
-  background-image: url("./../public/bg.png");
   height: calc(50vh - 40px);
   position: fixed;
   top: 40px;

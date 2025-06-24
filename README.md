@@ -62,11 +62,15 @@ The application will be available at `http://localhost:3000`.
 ## Project Structure
 ```
 PROFILE/
-├── public/                # Static assets (images, favicon, bg.png, index.html)
-│   ├── me.png             # Avatar for the Bio section
-│   ├── bg.png             # Background image
-│   └── other/             # Additional images
+├── public/                # Статические публичные файлы (index.html, manifest, robots.txt, sitemap.xml, favicon, og:image)
+│   ├── me.png             # Аватар для секции Bio (если нужен публично)
+│   └── ...                # Только необходимые публичные ресурсы
 ├── src/
+│   ├── assets/            # Все ассеты (изображения, иконки, svg, подпапки other, styleshop, owl_website, coffee)
+│   │   ├── other/
+│   │   ├── styleshop/
+│   │   ├── owl_website/
+│   │   └── coffee/
 │   ├── App.js             # Main component and routing
 │   ├── index.js           # React entry point
 │   ├── index.css          # Global styles, variables, responsive

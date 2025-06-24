@@ -25,18 +25,14 @@ const Header = () => {
 
   return (
     <motion.div
-    className={`header ${isScrolled ? "header-scrolled" : ""}`}
-    initial={{ opacity: 0, y: 60 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0 }}
+      className={`header ${isScrolled ? "header-scrolled" : ""}`}
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0 }}
     >
       <motion.a href="/" className="navbar_button">
         <FontAwesomeIcon icon={faArrowLeft} />
-        <p>{t('back')}</p>
-      </motion.a>
-      <motion.a href="https://github.com/Nighty3098" className="navbar_button">
-        <FontAwesomeIcon icon={faCodeBranch} />
-        <p>{t('open_git')}</p>
+        <p>{t("back")}</p>
       </motion.a>
       <motion.button onClick={toggleTheme} className="navbar_button">
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />

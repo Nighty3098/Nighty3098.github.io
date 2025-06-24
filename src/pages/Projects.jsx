@@ -27,13 +27,13 @@ const projectsData = [
   {
     key: "dreamcoffee",
     title: "DreamCoffee",
-    image: "coffee/main.png",
+    image: "/assets/coffee/image.png",
     githubLink: "https://dreamcoffee.vercel.app/",
   },
   {
     key: "styleshop",
     title: "StyleShop",
-    image: "styleshop/main.png",
+    image: "/assets/styleshop/main.png",
     githubLink: "https://style-shop-nine.vercel.app/",
   },
   {
@@ -52,13 +52,13 @@ const projectsData = [
   {
     key: "cv_creator",
     title: "CV Creator bot [Vercel]",
-    image: "/other/image.png",
+    image: "/assets/other/image.png",
     githubLink: "https://github.com/Nighty3098/CV_CREATOR_BOT",
   },
   {
     key: "walkannouncer",
     title: "WalkAnnouncerBot [Vercel]",
-    image: "/other/image2.png",
+    image: "/assets/other/image2.png",
     githubLink: "https://github.com/Nighty3098/WalkAnnouncerBot",
   },
   {
@@ -76,18 +76,9 @@ const Projects = () => {
   return (
     <div className="App">
       <Header />
-      <motion.div
-        style={{ width: "100%" }}
-        initial={{ opacity: 0, x: 500 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="welcome-bg">
-          <div className="welcome-section">
-            <h1 className="welcome-title">PROJECTS</h1>
-          </div>
-        </div>
-      </motion.div>
+      <div className="welcome-section">
+        <h1 style={{ fontSize: "xxx-large" }}>PROJECTS</h1>
+      </div>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
           <ProjectCard

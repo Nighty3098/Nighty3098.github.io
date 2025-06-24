@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
 
 const languages = [
   { code: "en", label: "English" },
@@ -21,24 +23,12 @@ const LanguageSelector = () => {
   return (
     <div style={{ position: "relative", minWidth: 10 }}>
       <button
-        className="navbar_button"
-        style={{
-          padding: "0px",
-          margin: "0px",
-          display: "flex",
-          alignItems: "center",
-          background: "none",
-          border: "none",
-          cursor: "pointer",
-        }}
+        className="navbar_button tooltip-container"
         onClick={() => setOpen((v) => !v)}
         aria-label="Select language"
       >
-        <span
-          style={{ padding: "0px", margin: "0px", textTransform: "capitalize" }}
-        >
-          {current.code}
-        </span>
+        <FontAwesomeIcon icon={faEarthAmericas} />
+        <p>{current.code.toLocaleUpperCase()}</p>
       </button>
       {open && (
         <div
@@ -46,8 +36,9 @@ const LanguageSelector = () => {
             position: "absolute",
             top: "110%",
             left: 0,
-            background: "var(--tr)",
+            background: "var(--bg)",
             borderRadius: 10,
+            backdropFilter: "blur(10px)",
             boxShadow: "var(--shadow)",
             zIndex: 100,
             minWidth: 100,

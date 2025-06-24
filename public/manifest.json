@@ -1,8 +1,17 @@
 {
   "short_name": "Nighty",
-  "name": "Nighty's porfolio",
+  "name": "Nighty's portfolio",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "Портфолио Nighty: проекты, навыки, контакты. Fullstack/ML разработчик и фрилансер.",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

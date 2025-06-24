@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Sitemap for nighty.dev -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nighty.dev/</loc>
+    <loc>https://nighty3098.vercel.app/</loc>
   </url>
   <url>
-    <loc>https://nighty.dev/projects</loc>
+    <loc>https://nighty3098.vercel.app/projects</loc>
   </url>
 </urlset> 
