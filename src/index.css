@@ -1117,12 +1117,19 @@ h3 {
 
 .review-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  width: 100%;
+  width: 90%;
+  max-width: 900px;
   justify-content: center;
   align-items: stretch;
   margin-bottom: 60px;
+}
+
+.review-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 @media (max-width: 700px) {
@@ -1130,11 +1137,20 @@ h3 {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .review-column {
+    width: 100%;
+    gap: 20px;
+  }
 }
 
 .review-slider-container {
   margin-bottom: 0;
   padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .review-slider-title {
