@@ -56,9 +56,6 @@ export const ProjectCard = ({ title, description, image, githubLink }) => {
       initial="hidden"
       animate="visible"
       whileHover={{
-        y: -8,
-        scale: 1.03,
-        boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
         transition: { type: "spring", stiffness: 200, damping: 15 },
       }}
       style={{ cursor: "pointer" }}
@@ -129,7 +126,7 @@ export const ProjectCard = ({ title, description, image, githubLink }) => {
             }}
             aria-label={`VIEW ${title} ON GIT`}
           >
-            {t('open_project')}
+            {t("open_project")}
           </a>
         )}
       </div>
@@ -144,9 +141,10 @@ const ProjectsList = ({ projects }) => (
     animate="visible"
     style={{ width: "100%" }}
   >
-    {projects && projects.map((project, index) => (
-      <ProjectCard key={index} {...project} />
-    ))}
+    {projects &&
+      projects.map((project, index) => (
+        <ProjectCard key={index} {...project} />
+      ))}
   </motion.div>
 );
 

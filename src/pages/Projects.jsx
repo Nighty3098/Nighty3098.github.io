@@ -13,13 +13,15 @@ const projectsData = [
   {
     key: "ipsa",
     title: "IPSA",
-    image: "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
+    image:
+      "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
     githubLink: "https://github.com/Nighty3098/InvestingAssistant",
   },
   {
     key: "ipsa_model",
     title: "IPSA AI MODEL",
-    image: "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
+    image:
+      "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
     githubLink: "https://github.com/Nighty3098/IPSA_MODEL",
   },
   {
@@ -43,7 +45,8 @@ const projectsData = [
   {
     key: "mfetch",
     title: "mFetch",
-    image: "https://raw.githubusercontent.com/Nighty3098/mfetch/refs/heads/main/images/1.png",
+    image:
+      "https://raw.githubusercontent.com/Nighty3098/mfetch/refs/heads/main/images/1.png",
     githubLink: "https://github.com/Nighty3098/mfetch",
   },
   {
@@ -61,7 +64,8 @@ const projectsData = [
   {
     key: "codekeeper",
     title: "CodeKeeper",
-    image: "https://raw.githubusercontent.com/Nighty3098/CodeKeeper/refs/heads/main/imgs/1.png",
+    image:
+      "https://raw.githubusercontent.com/Nighty3098/CodeKeeper/refs/heads/main/imgs/1.png",
     githubLink: "https://github.com/Nighty3098/CodeKeeper",
   },
 ];
@@ -80,9 +84,7 @@ const Projects = () => {
       >
         <div className="welcome-bg">
           <div className="welcome-section">
-            <h1 className="welcome-title">
-              <p>{t('projects')}</p>
-            </h1>
+            <h1 className="welcome-title">PROJECTS</h1>
           </div>
         </div>
       </motion.div>

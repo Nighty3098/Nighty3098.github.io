@@ -26,8 +26,8 @@ const SocialIcon = ({ social, index }) => {
       variants={iconVariants}
       initial="hidden"
       animate="visible"
-      whileHover={{ scale: 1.18, rotate: -8, boxShadow: "0 4px 24px rgba(0,0,0,0.16)" }}
-      whileTap={{ scale: 0.92, rotate: 0 }}
+      whileHover={{ scale: 1.18 }}
+      whileTap={{ scale: 0.92 }}
       style={{ display: "inline-block", transition: "box-shadow 0.2s" }}
     >
       <div className="contact_button">
@@ -39,4 +39,4 @@ const SocialIcon = ({ social, index }) => {
   );
 };
 
-export default SocialIcon; 
+export default SocialIcon;

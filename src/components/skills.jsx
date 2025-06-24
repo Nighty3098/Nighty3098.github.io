@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {skillsList} from "./data/skills_list"
+import { skillsList } from "./data/skills_list";
 
 const containerVariants = {
   hidden: {},
@@ -33,7 +33,7 @@ const SkillWidget = ({ feature }) => (
     variants={itemVariants}
     initial="hidden"
     animate="visible"
-    whileHover={{ scale: 1.08, boxShadow: "0 4px 24px rgba(0,0,0,0.12)" }}
+    whileHover={{ boxShadow: "0 4px 24px rgba(0,0,0,0.3)" }}
   >
     <span className="emoji">
       <FontAwesomeIcon icon={feature.icon} />
@@ -50,7 +50,12 @@ const SkillWidget = ({ feature }) => (
 );
 
 const Skills = () => (
-  <motion.div className="widget_blocks_2" variants={containerVariants} initial="hidden" animate="visible">
+  <motion.div
+    className="widget_blocks_2"
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+  >
     {skillsList.map((feature, index) => (
       <SkillWidget key={index} feature={feature} />
     ))}

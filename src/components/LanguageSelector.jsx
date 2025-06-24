@@ -10,7 +10,8 @@ const languages = [
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
-  const current = languages.find((l) => l.code === i18n.language) || languages[0];
+  const current =
+    languages.find((l) => l.code === i18n.language) || languages[0];
 
   const selectLang = (code) => {
     i18n.changeLanguage(code);
@@ -21,23 +22,37 @@ const LanguageSelector = () => {
     <div style={{ position: "relative", minWidth: 10 }}>
       <button
         className="navbar_button"
-        style={{ display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", cursor: "pointer" }}
+        style={{
+          padding: "0px",
+          margin: "0px",
+          display: "flex",
+          alignItems: "center",
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+        }}
         onClick={() => setOpen((v) => !v)}
         aria-label="Select language"
       >
-        <span style={{ fontWeight: 700 }}>{current.code.toUpperCase()}</span>
+        <span
+          style={{ padding: "0px", margin: "0px", textTransform: "capitalize" }}
+        >
+          {current.code}
+        </span>
       </button>
       {open && (
-        <div style={{
-          position: "absolute",
-          top: "110%",
-          left: 0,
-          background: "var(--tr)",
-          borderRadius: 10,
-          boxShadow: "var(--shadow)",
-          zIndex: 100,
-          minWidth: 100,
-        }}>
+        <div
+          style={{
+            position: "absolute",
+            top: "110%",
+            left: 0,
+            background: "var(--tr)",
+            borderRadius: 10,
+            boxShadow: "var(--shadow)",
+            zIndex: 100,
+            minWidth: 100,
+          }}
+        >
           {languages.map((lang) => (
             <div
               key={lang.code}
@@ -50,7 +65,8 @@ const LanguageSelector = () => {
                 cursor: "pointer",
                 borderRadius: 10,
                 fontWeight: lang.code === current.code ? 700 : 400,
-                background: lang.code === current.code ? "var(--color1)" : "transparent",
+                background:
+                  lang.code === current.code ? "var(--color1)" : "transparent",
                 color: "var(--fg)",
               }}
             >
@@ -63,4 +79,4 @@ const LanguageSelector = () => {
   );
 };
 
-export default LanguageSelector; 
+export default LanguageSelector;
