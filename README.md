@@ -1,25 +1,27 @@
 # Nighty's Developer Portfolio
 
 ## Overview
-This is a personal portfolio website for Nighty, a Fullstack / ML developer and freelancer. The site showcases projects, skills, and contact information, built with a modern and interactive design.
+This is a personal portfolio website for Nighty — a Fullstack/ML developer and freelancer. The site showcases projects, skills, and contact information, built in a modern style with smooth animations and responsive design.
 
 ## Features
-- **Dynamic Welcome Section**: Engaging introduction with animated text.
-- **Detailed About Section**: Comprehensive bio with facts, a timeline of experience, and skills.
-- **Projects Showcase**: Displays various projects with details and links.
-- **Contact Information**: Easy access to social media and contact options.
-- **Theme Toggling**: Switch between dark and light themes.
-- **Responsive Design**: Optimized for various screen sizes, including mobile.
-- **Smooth Animations**: Utilizes `framer-motion` for fluid UI/UX.
+- **Modern Animations**: Smooth and responsive animations in all key sections using `framer-motion` (headings, cards, buttons, sections, reviews).
+- **Reviews Grid**: Reviews are displayed in two flex columns (or one on mobile), each column is a vertical flex block.
+- **Detailed About Section**: Biography, facts, skills, animated blocks.
+- **Project Showcase**: Project cards with animation, links, and GitHub statistics.
+- **Contacts and Socials**: Quick access to social networks and contacts, animated icons.
+- **Theme Switching**: Light and dark theme support.
+- **Responsive Design**: Looks great on all devices.
+- **Modern Styles and Fonts**: Uses modern fonts (Rubik, Work Sans, Roboto Condensed), new color variables, and improved responsiveness.
 
 ## Technologies Used
 - React.js
 - HTML5 / CSS3
-- JavaScript
-- Framer Motion (for animations)
-- React Router DOM (for navigation)
-- FontAwesome (for icons)
-- Google Fonts
+- JavaScript (ES6+)
+- Framer Motion (animations)
+- React Router DOM (navigation)
+- FontAwesome (icons)
+- Google Fonts (Rubik, Work Sans, Roboto Condensed)
+- i18next (multilanguage)
 
 ## Setup and Installation
 
@@ -42,15 +44,12 @@ This is a personal portfolio website for Nighty, a Fullstack / ML developer and 
    yarn install
    ```
 
-3. **(Optional) GitHub API Token for `git_stats.jsx`:**
-   If you plan to use the GitHub statistics feature (which fetches public repo stars, followers, commits, and pull requests), you'll need a GitHub Personal Access Token.
-   - Go to GitHub -> Settings -> Developer settings -> Personal access tokens.
-   - Generate a new token with `public_repo` scope (or `repo` for private repos, if needed).
-   - In `src/components/git_stats.jsx`, replace `YOUR_GITHUB_TOKEN` with your actual token. **Be careful not to commit your token directly to public repositories.** Consider using environment variables for production.
+3. **(Optional) GitHub API Token for statistics:**
+   If you want to use GitHub statistics (stars, commits, etc.), get a Personal Access Token and specify it in the corresponding hook or use environment variables.
 
 ## Running the Project
 
-To start the development server:
+To start the project in development mode:
 
 ```bash
 npm start
@@ -58,32 +57,43 @@ npm start
 yarn start
 ```
 
-The application will be available at `http://localhost:3000` (or another port if 3000 is occupied).
+The application will be available at `http://localhost:3000`.
 
 ## Project Structure
 ```
 PROFILE/
-├── public/                # Static assets (images, favicon, index.html)
+├── public/                # Static assets (images, favicon, bg.png, index.html)
+│   ├── me.png             # Avatar for the Bio section
+│   ├── bg.png             # Background image
+│   └── other/             # Additional images
 ├── src/
-│   ├── App.js             # Main application component and routing
-│   ├── index.js           # Entry point of the React application
-│   ├── index.css          # Global styles
-│   ├── components/        # Reusable UI components
-│   │   ├── bio.jsx        # About Me section
-│   │   ├── contacts.jsx   # Contact information
-│   │   ├── header.jsx     # Navigation bar
-│   │   ├── info.jsx       # General info widgets
-│   │   ├── skills.jsx     # Skills display
-│   │   ├── text_area.jsx  # Animated text component
-│   │   └── data/          # Data files for components (e.g., skills_list.jsx)
-│   ├── hooks/             # Custom React hooks (e.g., useTheme.js)
-│   ├── pages/             # Page-level components
-│   │   └── Projects.jsx   # Projects display page
-└── README.md              # Project documentation (this file)
+│   ├── App.js             # Main component and routing
+│   ├── index.js           # React entry point
+│   ├── index.css          # Global styles, variables, responsive
+│   ├── components/        # UI components
+│   │   ├── bio.jsx        # About section
+│   │   ├── contacts.jsx   # Contacts and socials
+│   │   ├── header.jsx     # Navigation and theme switch
+│   │   ├── info.jsx       # Info widgets
+│   │   ├── skills.jsx     # Skills
+│   │   ├── SocialIcon.jsx # Animated social icons
+│   │   ├── DiscordButton.jsx # Discord button
+│   │   ├── ReviewsSlider.jsx # Reviews grid (flex columns)
+│   │   ├── ContactCard.jsx   # Contact card
+│   │   ├── welcome.jsx       # Animated welcome block
+│   │   ├── LanguageSelector.jsx # Language switcher
+│   │   ├── data/           # Data for components (skills_list.jsx, info_list.jsx)
+│   │   └── projects/       # Project components
+│   │       ├── projects_list.jsx   # Project list (cards)
+│   │       └── project_header.jsx  # Projects page header
+│   ├── hooks/              # Custom hooks (theme.js, useGithubStats.js)
+│   ├── pages/              # Pages (Projects.jsx)
+├── package.json            # Dependencies and scripts
+├── README.md               # Documentation (this file)
 ```
 
 ## Contributing
-Feel free to fork the repository, make improvements, and submit pull requests.
+Fork, improve, and send pull requests — any suggestions are welcome!
 
 ## Contact
 - **GitHub**: [Nighty3098](https://github.com/Nighty3098)
