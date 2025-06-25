@@ -78,6 +78,7 @@ const WelcomeBlock = () => {
               padding: "0px",
               margin: "0px",
               fontSize: "4rem",
+              lineHeight: "6rem",
               fontWeight: "lighter",
               fontFamily: "Rubik",
             }}
@@ -92,6 +93,8 @@ const WelcomeBlock = () => {
               margin: "0px",
               fontWeight: "normal",
               letterSpacing: "0.1rem",
+              fontSize: "1rem",
+              lineHeight: "2rem",
             }}
           >
             DEVELOPER / FREELANCER / DESIGNER

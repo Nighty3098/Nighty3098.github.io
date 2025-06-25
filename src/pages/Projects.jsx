@@ -76,7 +76,7 @@ const Projects = () => {
   return (
     <div className="App">
       <Header />
-      <div className="welcome-section">
+      <div className="welcome-section" style={{ height: "100vh" }}>
         <h1 style={{ fontSize: "xxx-large" }}>PROJECTS</h1>
       </div>
       <div className="projects-grid">

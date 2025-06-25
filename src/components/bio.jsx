@@ -76,21 +76,25 @@ const Bio = () => {
             style={{ marginTop: "-100px" }}
           />
         </motion.div>
-        {[t("bio.line1"), t("bio.line2"), t("bio.line3"), t("bio.line4")].map(
-          (text, index) => (
-            <motion.div
-              key={index}
-              style={{
-                marginBottom: "30px",
-                width: "100%",
-                textAlign: "left",
-              }}
-              variants={itemVariants}
-            >
-              {text}
-            </motion.div>
-          ),
-        )}
+        {[
+          t("bio.line1"),
+          t("bio.line2"),
+          t("bio.line3"),
+          t("bio.line4"),
+          t("bio.line5"),
+        ].map((text, index) => (
+          <motion.div
+            key={index}
+            style={{
+              marginBottom: "30px",
+              width: "100%",
+              textAlign: "left",
+            }}
+            variants={itemVariants}
+          >
+            {text}
+          </motion.div>
+        ))}
       </motion.div>
       <Skills />
     </motion.div>
