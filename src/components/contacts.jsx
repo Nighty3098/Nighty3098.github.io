@@ -6,19 +6,15 @@ import {
   faReddit,
   faSignalMessenger,
 } from "@fortawesome/free-brands-svg-icons";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faUsers } from "@fortawesome/free-solid-svg-icons";
 import SocialIcon from "./SocialIcon";
-import DiscordButton from "./DiscordButton";
 import ContactCard from "./ContactCard";
 
 const socials = [
+  { icon: faEnvelope, ling: "mailto:night3098games@gmail.com" },
   { icon: faTelegram, link: "https://t.me/Night3098" },
   { icon: faDiscord, link: "https://discord.gg/#9707" },
   { icon: faReddit, link: "https://www.reddit.com/user/DEVELOPER0x31/" },
-  {
-    icon: faSignalMessenger,
-    link: "https://signal.me/#eu/XJMqmO9JXZQCwYJIpzjOS741ZnGsLYOQhGqMfpS4lB-8PTSQVmRAbqFIvOrepYiK",
-  },
 ];
 
 const Contacts = () => (
@@ -39,7 +35,6 @@ const Contacts = () => (
         <SocialIcon key={index} social={social} index={index} />
       ))}
     </div>
-    <DiscordButton />
   </motion.div>
 );
 

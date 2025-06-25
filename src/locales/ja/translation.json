@@ -34,24 +34,24 @@
   "open_git": "Gitを開く",
   "reviews_list": [
     {
-      "name": "andreyponomarev73",
+      "name": "Andrey Ponomarev",
       "text": "迅速に課題を解決してくれ、質問にも丁寧に答えてくれました。常に連絡が取れました。おすすめします！",
-      "role": "クライアント、ロシア"
+      "source": "kwork"
     },
     {
-      "name": "maxsol2106",
+      "name": "Max Solonenko",
       "text": "素晴らしい出品者です。注文を迅速かつ高品質に仕上げてくれました。",
-      "role": "翻訳者、ロシア"
+      "source": "kwork"
     },
     {
-      "name": "alik7107",
+      "name": "Alik7107",
       "text": "Qtフレームワークの構成を依頼しました。プロフェッショナルに対応してくれました。おすすめします！",
-      "role": "システム管理者、ロシア"
+      "source": "kwork"
     },
     {
-      "name": "AndreyAndreevich2020",
+      "name": "Andrey Andreevich",
       "text": "Artemと一緒にテレグラムボットを非常に迅速かつ常に連絡を取りながら開発しました。開発はArtemが担当し、私はテストをサポートしました。実際、午前8時頃に作業を開始し、12時までにすべて完了しました（ボットは私のサーバーでテスト・展開済み）。責任感があり、迅速に対応できる開発者としてArtemをおすすめします。",
-      "role": "クライアント、ロシア"
+      "source": "kwork"
     }
   ]
-} 
+}

@@ -40,66 +40,61 @@ const Bio = () => {
   };
 
   return (
-    <motion.div className="large_block" style={{ gap: "50px" }}>
-      <motion.div className="main_block" id="bio">
+    <motion.div className="main_block" id="bio">
+      <motion.div
+        initial="hidden"
+        animate={hasAnimated ? "visible" : "hidden"}
+        onViewportEnter={handleViewportEnter}
+        viewport={{ margin: "0px 0px -50px 0px", amount: 0.1, once: true }}
+        variants={containerVariants}
+        style={{
+          textAlign: "center",
+          alignContent: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+          flexDirection: "column",
+          marginTop: "0px",
+          padding: "0px",
+          margin: "0px",
+        }}
+      >
+        <h1 style={{ width: "100%", textAlign: "left" }}> // BIO</h1>
         <motion.div
-          initial="hidden"
-          animate={hasAnimated ? "visible" : "hidden"}
-          onViewportEnter={handleViewportEnter}
-          viewport={{ margin: "0px 0px -50px 0px", amount: 0.1, once: true }}
-          variants={containerVariants}
+          whileHover="hover"
+          variants={itemVariants}
           style={{
-            textAlign: "center",
-            alignContent: "center",
-            alignItems: "center",
-            justifyContent: "center",
-            display: "flex",
-            flexDirection: "column",
-            marginTop: "50px",
+            width: "100%",
+            alignItems: "left",
+            textAlign: "left",
+            alignContent: "left",
           }}
         >
-          <motion.div
-            whileHover="hover"
-            variants={itemVariants}
-            style={{
-              width: "100%",
-              alignItems: "left",
-              textAlign: "left",
-              alignContent: "left",
-            }}
-          >
-            <FontAwesomeIcon
-              icon={faRocket}
-              className="text_emoji"
-              style={{ marginTop: "-100px" }}
-            />
-          </motion.div>
-          {[t("bio.line1"), t("bio.line2"), t("bio.line3"), t("bio.line4")].map(
-            (text, index) => (
-              <motion.div
-                key={index}
-                style={{
-                  marginBottom: "30px",
-                  width: "100%",
-                  textAlign: "left",
-                }}
-                variants={itemVariants}
-              >
-                {text}
-              </motion.div>
-            ),
-          )}
+          <FontAwesomeIcon
+            icon={faRocket}
+            className="text_emoji"
+            style={{ marginTop: "-100px" }}
+          />
         </motion.div>
-        <Skills />
+        {[t("bio.line1"), t("bio.line2"), t("bio.line3"), t("bio.line4")].map(
+          (text, index) => (
+            <motion.div
+              key={index}
+              style={{
+                marginBottom: "30px",
+                width: "100%",
+                textAlign: "left",
+              }}
+              variants={itemVariants}
+            >
+              {text}
+            </motion.div>
+          ),
+        )}
       </motion.div>
+      <Skills />
     </motion.div>
   );
 };
 
 export default Bio;
-
-// CSS для shimmer-эффекта
-// @keyframes skeleton-shimmer {
-//   0% { background-position: -200% 0; }
-//   100% { background-position: 200% 0; }
-// }

@@ -48,7 +48,7 @@ const WelcomeBlock = () => {
   }, []);
 
   return (
-    <section className="welcome-section">
+    <section className="welcome-section" style={{ minHeight: "100vh" }}>
       {!imgLoaded && <Skeleton />}
       <div className="welcome-sub">
         <motion.img
@@ -91,6 +91,7 @@ const WelcomeBlock = () => {
               padding: "0px",
               margin: "0px",
               fontWeight: "normal",
+              letterSpacing: "0.1rem",
             }}
           >
             DEVELOPER / FREELANCER / DESIGNER

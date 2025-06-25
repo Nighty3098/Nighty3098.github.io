@@ -54,10 +54,9 @@
   background-color: var(--tr);
   padding: 20px;
   border-radius: 40px;
-  width: 70%;
+  width: 90%;
   padding-top: 40px;
   padding-bottom: 40px;
-  max-width: 600px;
   backdrop-filter: blur(10px);
 }
 
@@ -146,7 +145,6 @@
 
 .gradient-circle {
   width: 100%;
-  max-width: 1600px;
   position: absolute;
   aspect-ratio: 1.3/1;
   margin: 0px;
@@ -195,7 +193,6 @@
   top: 20px;
   height: 50px;
   width: auto;
-  max-width: 1000px;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
@@ -349,11 +346,10 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  width: 100%;
+  width: 80%;
   height: 100%;
-  max-width: 100%;
   max-height: 100%;
-  min-width: 100%;
+  max-width: 800px;
   min-height: auto;
   display: flex;
   justify-content: center;
@@ -369,7 +365,8 @@ body {
   width: 100%;
   padding: 0;
   margin-top: 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -443,7 +440,6 @@ body {
   backdrop-filter: blur(10px);
   padding: 0px;
   width: 100%;
-  max-width: 550px;
   box-shadow: var(--shadow);
 }
 
@@ -612,11 +608,10 @@ a .button:hover {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  height: 100vh;
-  min-height: 100vh;
-  max-height: 100vh;
+  height: 100%;
   gap: 0px;
-  margin: 0px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   padding: 0px;
   color: var(--fg);
 }
@@ -648,7 +643,6 @@ h3 {
 .content {
   height: 100%;
   width: 90%;
-  max-width: 1000px;
   max-height: 100%;
   min-height: auto;
   text-wrap: pretty;
@@ -964,25 +958,25 @@ h3 {
   height: 100%;
   min-height: 100%;
   max-height: 100%;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
   gap: 0px;
+  padding: 0px;
+  margin: 0px;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
 #bio {
-  max-width: 650px;
   line-height: 1.5rem;
 }
 
 .bio_content {
   width: 100%;
-  max-width: 600px;
   min-height: auto;
   border-radius: 30px;
   font-size: 1.1rem;
@@ -993,7 +987,6 @@ h3 {
   align-content: center;
   align-items: center;
   justify-content: center;
-  gap: 30px;
   color: var(--fg);
 }
 
@@ -1011,7 +1004,7 @@ h3 {
   }
 
   .skill_widget {
-    padding: 10px;
+    padding: 0px;
   }
 
   .skill_widget h1 {
@@ -1026,10 +1019,15 @@ h3 {
     font-size: small;
   }
 
+  .skill_widget {
+    zoom: 0.7;
+  }
+
   .widget_blocks,
   .widget_blocks_2 {
     align-items: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
   }
 
   .info_widget {
@@ -1055,7 +1053,6 @@ h3 {
 
   .header {
     width: auto;
-    max-width: 1000px;
     justify-content: center;
     gap: 15px;
     transition: all 0.5s ease-in-out;
@@ -1105,7 +1102,7 @@ h3 {
 
 .welcome-section {
   position: relative;
-  min-height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1137,7 +1134,6 @@ h3 {
   left: 50%;
   width: 120vw;
   height: 120vw;
-  max-width: 1600px;
   max-height: 1600px;
   background: radial-gradient(
     circle at 50% 50%,
@@ -1168,7 +1164,6 @@ h3 {
   margin: 30px 0 40px 0;
   z-index: 2;
   text-align: center;
-  max-width: 600px;
   line-height: 1.5;
 }
 
@@ -1226,7 +1221,6 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   width: 90%;
-  max-width: 900px;
   justify-content: center;
   align-items: stretch;
   margin-bottom: 60px;
@@ -1274,7 +1268,6 @@ h3 {
   min-height: 140px;
   height: auto;
   width: calc(100% - 28px - 28px);
-  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;

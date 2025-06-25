@@ -34,24 +34,24 @@
   "open_git": "Open Git",
   "reviews_list": [
     {
-      "name": "andreyponomarev73",
+      "name": "Andrey Ponomarev",
       "text": "Helped to solve the task quickly, answered all my questions along the way, and was always in touch. Recommend!",
-      "role": "Client, Russia"
+      "source": "kwork"
     },
     {
-      "name": "maxsol2106",
+      "name": "Max Solonenko",
       "text": "Great seller, completed the order quickly and with quality.",
-      "role": "Translator, Russia"
+      "source": "kwork"
     },
     {
       "name": "alik7107",
       "text": "Ordered Qt framework configuration. The job was done professionally, I recommend!",
-      "role": "System Administrator, Russia"
+      "source": "kwork"
     },
     {
-      "name": "AndreyAndreevich2020",
+      "name": "Andrey Andreevich",
       "text": "We developed a Telegram bot quite quickly and were in constant contact with Artem. Artem did all the development, I just helped and tested. In fact, we started around 8 am and finished by 12, which is very good (the bot was tested and deployed on my server). I recommend Artem as a responsible and efficient developer.",
-      "role": "Client, Russia"
+      "source": "kwork"
     }
   ]
-} 
+}
