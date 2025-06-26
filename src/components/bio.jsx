@@ -48,6 +48,7 @@ const Bio = () => {
         viewport={{ margin: "0px 0px -50px 0px", amount: 0.1, once: true }}
         variants={containerVariants}
         style={{
+          width: "100%",
           textAlign: "center",
           alignContent: "center",
           alignItems: "center",
@@ -68,6 +69,7 @@ const Bio = () => {
             alignItems: "left",
             textAlign: "left",
             alignContent: "left",
+            justifyContent: "left",
           }}
         >
           <FontAwesomeIcon
