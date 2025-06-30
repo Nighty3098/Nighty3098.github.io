@@ -75,6 +75,17 @@ const Projects = () => {
 
   return (
     <div className="App">
+      <div
+        className="pattern-noisy"
+        style={{
+          width: "100vw",
+          height: "100vh",
+          opacity: "40%",
+          position: "fixed",
+          top: "0px",
+          left: "0px",
+        }}
+      ></div>
       <Header />
       <div className="welcome-section" style={{ height: "100vh" }}>
         <h1 style={{ fontSize: "xxx-large" }}>PROJECTS</h1>
