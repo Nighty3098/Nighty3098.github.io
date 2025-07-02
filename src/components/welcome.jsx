@@ -49,17 +49,6 @@ const WelcomeBlock = () => {
 
   return (
     <section className="welcome-section" style={{ minHeight: "100vh" }}>
-      <div
-        className="pattern-noisy"
-        style={{
-          width: "100vw",
-          height: "100vh",
-          opacity: "40%",
-          position: "fixed",
-          top: "0px",
-          left: "0px",
-        }}
-      ></div>
       {!imgLoaded && <Skeleton />}
       <div className="welcome-sub">
         <motion.img

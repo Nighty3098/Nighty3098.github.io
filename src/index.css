@@ -36,9 +36,7 @@
 }
 
 .pattern-noisy {
-  background-size: 150px;
-  background-image: var(--noisy-pattern);
-  background-repeat: repeat;
+  z-index: -10;
 }
 
 .welcome-title {
@@ -125,9 +123,6 @@
     font-family: Rubik;
     text-align: left;
     padding: 8px 0;
-  }
-  .mobile-menu a:hover {
-    color: var(--accent);
   }
   @keyframes slideInMenu {
     from {
@@ -397,6 +392,7 @@ body {
   text-align: center;
   transition: all 0.3s ease-in;
   box-shadow: var(--shadow);
+  z-index: 100;
 }
 
 .contact_button:hover {
@@ -550,7 +546,6 @@ body {
 .button:hover {
   background-color: var(--tr);
   color: var(--fg);
-  width: 350px;
 }
 
 .button i {

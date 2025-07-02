@@ -14,6 +14,7 @@
   "reviews": "Reviews",
   "filter": "Filter by tag",
   "search": "Search projects...",
+  "cv": "Open my CV",
   "projects_data": {
     "owl": "OWL - task and project management app designed specifically for developers",
     "ipsa": "Telegram is an investment assistant bot with neural network and other functions",
@@ -34,6 +35,11 @@
   "back": "Back",
   "open_git": "Open Git",
   "reviews_list": [
+    {
+      "name": "Andrey Andreevich",
+      "text": "I have already completed the second order for the development of a TG bot. Everything is fine, it's working!",
+      "source": "kwork"
+    },
     {
       "name": "Andrey Ponomarev",
       "text": "Helped to solve the task quickly, answered all my questions along the way, and was always in touch. Recommend!",

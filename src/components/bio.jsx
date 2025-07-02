@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faRocket, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Skills from "./skills";
 import { useTranslation } from "react-i18next";
 
@@ -97,6 +97,32 @@ const Bio = () => {
             {text}
           </motion.div>
         ))}
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            alignContent: "center",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <a
+            href="https://docs.google.com/document/d/1F56DLD5cfGlKVzTzlpU5TD-zoJlGTi2LhfMb9mejHe8/edit?usp=sharing"
+            className="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              width: "100%",
+              maxWidth: "450px",
+              height: "30px",
+              boxShadow: "none",
+              gap: "15px",
+            }}
+          >
+            <FontAwesomeIcon icon={faFileArrowDown} /> {t("cv")}
+          </a>
+        </div>
       </motion.div>
       <Skills />
     </motion.div>
