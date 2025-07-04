@@ -5,6 +5,13 @@ import { useTranslation } from "react-i18next";
 
 const projectsData = [
   {
+    key: "PrettyBanner",
+    title: "Pretty Banner",
+    image:
+      "https://pretty-profile.vercel.app/api/github-stats?username=Nighty3098&theme=mac_bigsur&langs=true",
+    githubLink: "https://github.com/Nighty3098/pretty-profile",
+  },
+  {
     key: "owl",
     title: "THE OWL",
     image: "https://owl-gamma.vercel.app/imgs/1.png",

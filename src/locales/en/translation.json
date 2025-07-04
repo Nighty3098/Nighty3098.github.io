@@ -21,6 +21,7 @@
   "search": "Search projects...",
   "cv": "Open my CV",
   "projects_data": {
+    "PrettyBanner": "Generate a pretty art style profile card from your GitHub data! ",
     "owl": "OWL - task and project management app designed specifically for developers",
     "ipsa": "Telegram is an investment assistant bot with neural network and other functions",
     "ipsa_model": "Neural network model for IPSA",
