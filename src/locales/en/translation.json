@@ -7,6 +7,11 @@
     "line4": "Currently, I'm working on my own project – OWL – and plan to monetize it.",
     "line5": "You can see my open-source projects on GitHub and in my organizations."
   },
+  "work": {
+    "title": "Freelance ( Jan 2024 - PT )",
+    "line1": "Developed over 10 serverless solutions using Vercel technologies and integrated them into modern web applications",
+    "line2": "Developed web applications and landing pages with a focus on user experience and responsive design"
+  },
   "projects": "Projects",
   "contacts": "Contacts",
   "skills": "Skills",

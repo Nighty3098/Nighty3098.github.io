@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRocket, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import Skills from "./skills";
 import { useTranslation } from "react-i18next";
 
@@ -30,7 +30,6 @@ const itemVariants = {
 
 const Bio = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
-  const [imgLoaded, setImgLoaded] = useState(false);
   const { t } = useTranslation();
 
   const handleViewportEnter = () => {
@@ -60,7 +59,7 @@ const Bio = () => {
           margin: "0px",
         }}
       >
-        <h1 style={{ width: "100%", textAlign: "left" }}> // BIO</h1>
+        <h1 style={{ width: "100%", textAlign: "left", marginTop: "50px" }}> // BIO</h1>
         <motion.div
           whileHover="hover"
           variants={itemVariants}
@@ -75,7 +74,7 @@ const Bio = () => {
           <FontAwesomeIcon
             icon={faRocket}
             className="text_emoji"
-            style={{ marginTop: "-100px" }}
+            style={{ marginTop: "-150px" }}
           />
         </motion.div>
         {[
@@ -97,32 +96,21 @@ const Bio = () => {
             {text}
           </motion.div>
         ))}
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "row",
-            alignContent: "center",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <a
-            href="https://docs.google.com/document/d/1F56DLD5cfGlKVzTzlpU5TD-zoJlGTi2LhfMb9mejHe8/edit?usp=sharing"
-            className="button"
-            target="_blank"
-            rel="noopener noreferrer"
+        <h1 style={{ width: "100%", textAlign: "left", marginTop: "50px" }}> // WORK</h1>
+        <h2 style={{ width: "100%", textAlign: "left" }}>{t("work.title")}</h2>
+        {[t("work.line1"), t("work.line2")].map((text, index) => (
+          <motion.div
+            key={index}
             style={{
+              marginBottom: "30px",
               width: "100%",
-              maxWidth: "450px",
-              height: "30px",
-              boxShadow: "none",
-              gap: "15px",
+              textAlign: "left",
             }}
+            variants={itemVariants}
           >
-            <FontAwesomeIcon icon={faFileArrowDown} /> {t("cv")}
-          </a>
-        </div>
+            {text}
+          </motion.div>
+        ))}
       </motion.div>
       <Skills />
     </motion.div>
