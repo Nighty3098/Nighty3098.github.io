@@ -24,9 +24,6 @@ const ReviewsSlider = () => {
               <div className="review-card" key={i}>
                 <div className="review-card-name">
                   <p style={{ fontSize: "large" }}>~ {review.name} ~</p>
-                  <p style={{ fontSize: "large", opacity: "0.5" }}>
-                    {review.source}
-                  </p>
                 </div>
                 <div className="review-card-text">“{review.text}”</div>
               </div>

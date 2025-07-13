@@ -7,6 +7,19 @@
 */
 
 :root {
+  --border-radius: 15px;
+  --border-radius-l: 25px;
+  --spacing-xs: 5px;
+  --spacing-s: 10px;
+  --spacing-m: 15px;
+  --spacing-l: 20px;
+  --spacing-xl: 30px;
+  --spacing-xxl: 100px;
+  --shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  --shadow-skill-hover: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+:root {
   --bg: rgb(32, 32, 35);
   --fg: rgba(255, 255, 255, 0.9);
   --tr: rgba(255, 255, 255, 0.07);
@@ -352,7 +365,7 @@ body {
   width: 80%;
   height: 100%;
   max-height: 100%;
-  max-width: 800px;
+  max-width: 720px;
   min-height: auto;
   display: flex;
   justify-content: center;
@@ -1223,7 +1236,8 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  width: 90%;
+  padding: 0px;
+  width: 100%;
   justify-content: center;
   align-items: stretch;
   margin-bottom: 60px;

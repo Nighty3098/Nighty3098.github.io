@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import ReviewsSlider from "./components/ReviewsSlider";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import Skills from "./components/skills";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -23,10 +24,11 @@ Nighty3098 ❥
 function Home() {
   return (
     <div>
-      <div className="App" style={{ padding: "0px", margin: "0px" }}>
+      <div className="App" style={{ padding: "0px", margin: "0px", gap: "var(--spacing-xxl)" }}>
         <Header />
         <WelcomeBlock />
         <Bio />
+        <Skills />
         <Contacts />
         <ReviewsSlider />
       </div>

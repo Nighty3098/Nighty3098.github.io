@@ -82,7 +82,6 @@ const Header = () => {
       >
         <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
       </motion.button>
-      {/* Мобильное меню с анимацией */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

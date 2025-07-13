@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
-import Skills from "./skills";
 import { useTranslation } from "react-i18next";
 
 const containerVariants = {
@@ -59,7 +58,10 @@ const Bio = () => {
           margin: "0px",
         }}
       >
-        <h1 style={{ width: "100%", textAlign: "left", marginTop: "50px" }}> // BIO</h1>
+        <h1 style={{ width: "100%", textAlign: "left", marginTop: "50px" }}>
+          {" "}
+          // BIO
+        </h1>
         <motion.div
           whileHover="hover"
           variants={itemVariants}
@@ -96,23 +98,26 @@ const Bio = () => {
             {text}
           </motion.div>
         ))}
-        <h1 style={{ width: "100%", textAlign: "left", marginTop: "50px" }}> // WORK</h1>
+        <div style={{ height: "var(--spacing-xxl)" }}></div>
+        <h1 style={{ width: "100%", textAlign: "left" }}> // WORK</h1>
+        <div style={{ height: "var(--spacing-xl)" }}></div>
         <h2 style={{ width: "100%", textAlign: "left" }}>{t("work.title")}</h2>
+        <div style={{ height: "var(--spacing-xl)" }}></div>
         {[t("work.line1"), t("work.line2")].map((text, index) => (
           <motion.div
             key={index}
             style={{
-              marginBottom: "30px",
               width: "100%",
               textAlign: "left",
             }}
             variants={itemVariants}
           >
             {text}
+            <br />
+            <br />
           </motion.div>
         ))}
       </motion.div>
-      <Skills />
     </motion.div>
   );
 };

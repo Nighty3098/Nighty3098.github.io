@@ -42,28 +42,38 @@
   "open_git": "Open Git",
   "reviews_list": [
     {
-      "name": "Andrey Andreevich",
-      "text": "I have already completed the second order for the development of a TG bot. Everything is fine, it's working!",
+      "name": "Yuri",
+      "text": "Everything was smooth from the very beginning, with specifics on every point. During implementation, fast communication and clear responses. The work was completed very quickly and exactly as needed. Minimal edits were required during the process, which were resolved extremely fast. Extremely satisfied.",
+      "source": "kwork"
+    },
+    {
+      "name": "Alexey",
+      "text": "The main advantage is speed. If you want things done fast and well, turn to this specialist.",
       "source": "kwork"
     },
     {
       "name": "Andrey Ponomarev",
-      "text": "Helped to solve the task quickly, answered all my questions along the way, and was always in touch. Recommend!",
-      "source": "kwork"
-    },
-    {
-      "name": "Max Solonenko",
-      "text": "Great seller, completed the order quickly and with quality.",
-      "source": "kwork"
-    },
-    {
-      "name": "alik7107",
-      "text": "Ordered Qt framework configuration. The job was done professionally, I recommend!",
+      "text": "Helped solve the task quickly, while also answering any questions that came up. Was available and responsive. Recommend!",
       "source": "kwork"
     },
     {
       "name": "Andrey Andreevich",
-      "text": "We developed a Telegram bot quite quickly and were in constant contact with Artem. Artem did all the development, I just helped and tested. In fact, we started around 8 am and finished by 12, which is very good (the bot was tested and deployed on my server). I recommend Artem as a responsible and efficient developer.",
+      "text": "Completed a second order for developing a Telegram bot. Everything is good, it works!",
+      "source": "kwork"
+    },
+    {
+      "name": "Max Solonenko",
+      "text": "Excellent seller, completed the order quickly and with quality.",
+      "source": "kwork"
+    },
+    {
+      "name": "Alik7107",
+      "text": "Ordered Qt framework configuration. The freelancer did everything professionally, I recommend!",
+      "source": "kwork"
+    },
+    {
+      "name": "Andrey Andreevich",
+      "text": "We developed a Telegram bot fairly quickly and in constant contact with Artem. Artem developed the bot (obviously), while I assisted and supervised testing. Essentially, we started work around 8 AM and had everything finished by 12 PM, which is very, very good (the bot was tested and deployed on my server). I recommend Artem as a responsible professional who handles tasks promptly.",
       "source": "kwork"
     }
   ]
