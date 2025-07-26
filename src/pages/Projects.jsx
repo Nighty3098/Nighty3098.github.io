@@ -2,13 +2,15 @@ import Header from "../components/projects/project_header";
 import { ProjectCard } from "../components/projects/projects_list";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { faSpaceShuttle } from "@fortawesome/free-solid-svg-icons";
 
 const projectsData = [
   {
     key: "PrettyBanner",
     title: "Pretty Banner",
     image:
-      "https://pretty-profile.vercel.app/api/github-stats?username=Nighty3098&theme=mac_bigsur&langs=true",
+      "https://pretty-profile.vercel.app/api/github-stats?username=Nighty3098&theme=ancient&langs=true",
     githubLink: "https://github.com/Nighty3098/pretty-profile",
   },
   {
@@ -94,8 +96,9 @@ const Projects = () => {
         }}
       ></div>
       <Header />
-      <div className="welcome-section" style={{ height: "100vh" }}>
-        <h1 style={{ fontSize: "xxx-large" }}>PROJECTS</h1>
+      <div className="welcome-section" style={{ height: "100vh", width: "100%", maxWidth: "100%" }}>
+        <h1 className="projects_page_title">PROJECTS</h1>
+        <FontAwesomeIcon className="bg_icon" icon={faSpaceShuttle} />
       </div>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
