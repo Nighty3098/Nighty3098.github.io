@@ -7,13 +7,6 @@ import { faSpaceShuttle } from "@fortawesome/free-solid-svg-icons";
 
 const projectsData = [
   {
-    key: "PrettyBanner",
-    title: "Pretty Banner",
-    image:
-      "https://pretty-profile.vercel.app/api/github-stats?username=Nighty3098&theme=ancient&langs=true",
-    githubLink: "https://github.com/Nighty3098/pretty-profile",
-  },
-  {
     key: "owl",
     title: "THE OWL",
     image: "https://owl-gamma.vercel.app/imgs/1.png",
@@ -34,6 +27,34 @@ const projectsData = [
     githubLink: "https://github.com/Nighty3098/IPSA_MODEL",
   },
   {
+    key: "Thunder",
+    title: "Thunder",
+    image:
+      "https://github.com/He4vyL0v3/Thunder/raw/main/data/2.png",
+    githubLink: "https://github.com/He4vyL0v3/Thunder",
+  },
+  {
+    key: "ILogU",
+    title: "ILogU",
+    image:
+      "https://github.com/He4vyL0v3/ILogU/raw/main/resources/1.png",
+    githubLink: "github.com/He4vyL0v3/ILogU",
+  },
+  {
+    key: "ProxySniffer",
+    title: "ProxySniffer",
+    image:
+      "https://github.com/He4vyL0v3/ProxySniffer/raw/main/imgs/1.png",
+    githubLink: "https://github.com/He4vyL0v3/ProxySniffer",
+  },
+  {
+    key: "GhostlyGrabber",
+    title: "GhostlyGrabber",
+    image:
+      "https://github.com/He4vyL0v3/GhostlyGrabber/raw/main/data/screen.png",
+    githubLink: "https://github.com/He4vyL0v3/GhostlyGrabber",
+  },
+  {
     key: "dreamcoffee",
     title: "DreamCoffee",
     image: "/assets/coffee/image.png",
@@ -46,17 +67,17 @@ const projectsData = [
     githubLink: "https://style-shop-nine.vercel.app/",
   },
   {
+    key: "PrettyBanner",
+    title: "Pretty Banner",
+    image:
+      "https://pretty-profile.vercel.app/api/github-stats?username=Nighty3098&theme=ancient&langs=true",
+    githubLink: "https://github.com/Nighty3098/pretty-profile",
+  },
+  {
     key: "loginsight",
     title: "LogInsight",
     image: "https://github.com/Nighty3098/LogInsight/raw/production/imgs/1.png",
     githubLink: "https://github.com/Nighty3098/LogInsight",
-  },
-  {
-    key: "mfetch",
-    title: "mFetch",
-    image:
-      "https://raw.githubusercontent.com/Nighty3098/mfetch/refs/heads/main/images/1.png",
-    githubLink: "https://github.com/Nighty3098/mfetch",
   },
   {
     key: "cv_creator",
