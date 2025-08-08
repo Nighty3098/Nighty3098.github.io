@@ -2,7 +2,7 @@ import Header from "../components/projects/project_header";
 import { ProjectCard } from "../components/projects/projects_list";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpaceShuttle } from "@fortawesome/free-solid-svg-icons";
 
 const projectsData = [
@@ -29,22 +29,19 @@ const projectsData = [
   {
     key: "Thunder",
     title: "Thunder",
-    image:
-      "https://github.com/He4vyL0v3/Thunder/raw/main/data/2.png",
+    image: "https://github.com/He4vyL0v3/Thunder/raw/main/data/2.png",
     githubLink: "https://github.com/He4vyL0v3/Thunder",
   },
   {
-    key: "ILogU",
-    title: "ILogU",
-    image:
-      "https://github.com/He4vyL0v3/ILogU/raw/main/resources/1.png",
-    githubLink: "github.com/He4vyL0v3/ILogU",
+    key: "IStealU",
+    title: "IStealU",
+    image: "https://github.com/He4vyL0v3/IStealU/raw/main/resources/1.png",
+    githubLink: "github.com/He4vyL0v3/IStealU",
   },
   {
     key: "ProxySniffer",
     title: "ProxySniffer",
-    image:
-      "https://github.com/He4vyL0v3/ProxySniffer/raw/main/imgs/1.png",
+    image: "https://github.com/He4vyL0v3/ProxySniffer/raw/main/imgs/1.png",
     githubLink: "https://github.com/He4vyL0v3/ProxySniffer",
   },
   {
@@ -117,7 +114,10 @@ const Projects = () => {
         }}
       ></div>
       <Header />
-      <div className="welcome-section" style={{ height: "100vh", width: "100%", maxWidth: "100%" }}>
+      <div
+        className="welcome-section"
+        style={{ height: "100vh", width: "100%", maxWidth: "100%" }}
+      >
         <h1 className="projects_page_title">PROJECTS</h1>
         <FontAwesomeIcon className="bg_icon" icon={faSpaceShuttle} />
       </div>
