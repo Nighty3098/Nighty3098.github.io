@@ -16,7 +16,7 @@
   --spacing-xl: 30px;
   --spacing-xxl: 100px;
   --shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
-  --shadow-skill-hover: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-skill-hover: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 :root {
@@ -787,10 +787,11 @@ h3 {
 
 .widget_blocks_2 {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 30px;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
   margin: 0px;
   padding: 0px;
+  width: auto;
 }
 
 .skill_widget {
@@ -1043,7 +1044,7 @@ h3 {
   .widget_blocks_2 {
     align-items: center;
     grid-template-columns: auto auto auto;
-    gap: 10px;
+    gap: 3px;
   }
 
   .info_widget {

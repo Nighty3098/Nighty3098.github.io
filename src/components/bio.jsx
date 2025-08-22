@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faRocket, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 const containerVariants = {
@@ -117,6 +117,23 @@ const Bio = () => {
             <br />
           </motion.div>
         ))}
+        <div style={{ height: "20px" }}></div>
+        <a
+          href="https://docs.google.com/document/d/1F56DLD5cfGlKVzTzlpU5TD-zoJlGTi2LhfMb9mejHe8/edit?usp=sharing"
+          className="button"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            width: "30%",
+            minWidth: "150px",
+            maxWidth: "450px",
+            height: "30px",
+            boxShadow: "none",
+            gap: "15px",
+          }}
+        >
+          <FontAwesomeIcon icon={faFileArrowDown} /> {t("cv")}
+        </a>
       </motion.div>
     </motion.div>
   );

@@ -5,7 +5,7 @@ import {
   faDiscord,
   faReddit,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import SocialIcon from "./SocialIcon";
 import ContactCard from "./ContactCard";
 import { useTranslation } from "react-i18next";
@@ -32,23 +32,6 @@ const Contacts = () => {
     >
       <div style={{ height: "50px" }}></div>
       <ContactCard />
-      <div style={{ height: "50px" }}></div>
-      <a
-        href="https://docs.google.com/document/d/1F56DLD5cfGlKVzTzlpU5TD-zoJlGTi2LhfMb9mejHe8/edit?usp=sharing"
-        className="button"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          width: "30%",
-          minWidth: "150px",
-          maxWidth: "450px",
-          height: "30px",
-          boxShadow: "none",
-          gap: "15px",
-        }}
-      >
-        <FontAwesomeIcon icon={faFileArrowDown} /> {t("cv")}
-      </a>
       <div style={{ height: "50px" }}></div>
       <div className="contacts_badge_block">
         {socials.map((social, index) => (

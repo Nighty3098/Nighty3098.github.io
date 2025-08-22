@@ -96,19 +96,6 @@ export const ProjectCard = ({ title, description, image, githubLink }) => {
           style={{ width: "80%", justifyContent: "space-between" }}
         >
           <h3>{title}</h3>
-          {!loading && !error && stars !== null ? (
-            <span className="stars-count" aria-label={`${stars} STARS ON GIT`}>
-              <FontAwesomeIcon icon={faStar} /> {stars}
-            </span>
-          ) : error ? (
-            <span className="stars-count" aria-label="STARS ERROR">
-              <FontAwesomeIcon icon={faStar} /> -
-            </span>
-          ) : (
-            <span className="stars-count" aria-label="LOADING">
-              <FontAwesomeIcon icon={faStar} /> ...
-            </span>
-          )}
         </div>
         <p style={{ width: "80%" }}>{description}</p>
         {githubLink && (
@@ -149,9 +136,3 @@ const ProjectsList = ({ projects }) => (
 );
 
 export default ProjectsList;
-
-// CSS для shimmer-эффекта
-// @keyframes skeleton-shimmer {
-//   0% { background-position: -200% 0; }
-//   100% { background-position: 200% 0; }
-// }
