@@ -11,6 +11,7 @@ const projectsData = [
     title: "THE OWL",
     image: "https://owl-gamma.vercel.app/imgs/1.png",
     githubLink: "https://owl-gamma.vercel.app/",
+    description: "OWL - task and project managment app designed specifically for developers"
   },
   {
     key: "ipsa",
@@ -18,50 +19,36 @@ const projectsData = [
     image:
       "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
     githubLink: "https://github.com/Nighty3098/InvestingAssistant",
-  },
-  {
-    key: "ipsa_model",
-    title: "IPSA AI MODEL",
-    image:
-      "https://github.com/Nighty3098/InvestingAssistant/raw/main/header.png?raw=true",
-    githubLink: "https://github.com/Nighty3098/IPSA_MODEL",
+    description: "Telegram is an investment assistant bot with exchange rate forecasting and stock analysis using AI"
   },
   {
     key: "Thunder",
     title: "Thunder",
     image: "https://github.com/He4vyL0v3/Thunder/raw/main/data/2.png",
     githubLink: "https://github.com/He4vyL0v3/Thunder",
+    description: "Thunder is a multi-threaded HTTP HTTPS load testing tool designed for stress-testing web services"
   },
   {
     key: "IStealU",
     title: "IStealU",
     image: "https://github.com/He4vyL0v3/IStealU/raw/main/resources/1.png",
-    githubLink: "github.com/He4vyL0v3/IStealU",
+    githubLink: "https://github.com/He4vyL0v3/IStealU",
+    description: "IStealU is a spyware program for Windows designed to intercept and log user keystrokes, as well as send logs to Telegram via the Telegram API"
   },
   {
     key: "ProxySniffer",
     title: "ProxySniffer",
     image: "https://github.com/He4vyL0v3/ProxySniffer/raw/main/imgs/1.png",
     githubLink: "https://github.com/He4vyL0v3/ProxySniffer",
+    description: "ProxySniffer [ HTTP - HTTPS - SOCKS4 - SOCKS5 ]"
   },
   {
     key: "GhostlyGrabber",
     title: "GhostlyGrabber",
     image:
       "https://github.com/He4vyL0v3/GhostlyGrabber/raw/main/data/screen.png",
-    githubLink: "https://github.com/He4vyL0v3/GhostlyGrabber",
-  },
-  {
-    key: "dreamcoffee",
-    title: "DreamCoffee",
-    image: "/assets/coffee/image.png",
-    githubLink: "https://dreamcoffee.vercel.app/",
-  },
-  {
-    key: "styleshop",
-    title: "StyleShop",
-    image: "/assets/styleshop/main.png",
-    githubLink: "https://style-shop-nine.vercel.app/",
+    githubLink: "A utility for automatically downloading media files from Telegram channels and chats with convenient storage and organization of content",
+    description: ""
   },
   {
     key: "PrettyBanner",
@@ -69,24 +56,21 @@ const projectsData = [
     image:
       "https://pretty-profile.vercel.app/api/github-stats?username=Nighty3098&theme=ancient&langs=true",
     githubLink: "https://github.com/Nighty3098/pretty-profile",
+    description: "Generate a pretty art style profile card from your GitHub data"
   },
   {
     key: "loginsight",
     title: "LogInsight",
     image: "https://github.com/Nighty3098/LogInsight/raw/production/imgs/1.png",
     githubLink: "https://github.com/Nighty3098/LogInsight",
+    description: "Program for analyzing log files and detecting anomalies in program operation"
   },
   {
     key: "cv_creator",
     title: "CV Creator bot [Vercel]",
     image: "/assets/other/image.png",
-    githubLink: "https://github.com/Nighty3098/CV_CREATOR_BOT",
-  },
-  {
-    key: "walkannouncer",
-    title: "WalkAnnouncerBot [Vercel]",
-    image: "/assets/other/image2.png",
-    githubLink: "https://github.com/Nighty3098/WalkAnnouncerBot",
+    githubLink: "https://t.me/creating_cv_bot",
+    description: "A telegram bot that helps a user choose a resume creation service"
   },
   {
     key: "codekeeper",
@@ -94,6 +78,7 @@ const projectsData = [
     image:
       "https://raw.githubusercontent.com/Nighty3098/CodeKeeper/refs/heads/main/imgs/1.png",
     githubLink: "https://github.com/Nighty3098/CodeKeeper",
+    description: "Project and task manager for developers with Git"
   },
 ];
 
@@ -101,18 +86,7 @@ const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="App">
-      <div
-        className="pattern-noisy"
-        style={{
-          width: "100vw",
-          height: "100vh",
-          opacity: "40%",
-          position: "fixed",
-          top: "0px",
-          left: "0px",
-        }}
-      ></div>
+    <div className="App" style={{ width: "100%", maxWidth: "1500px"}}>
       <Header />
       <div
         className="welcome-section"
@@ -126,7 +100,7 @@ const Projects = () => {
           <ProjectCard
             key={index}
             {...project}
-            description={t(`projects_data.${project.key}`)}
+            description={project.description}
           />
         ))}
       </div>

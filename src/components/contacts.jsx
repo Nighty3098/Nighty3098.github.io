@@ -30,9 +30,7 @@ const Contacts = () => {
       transition={{ duration: 0.5 }}
       style={{ width: "100%" }}
     >
-      <div style={{ height: "50px" }}></div>
-      <ContactCard />
-      <div style={{ height: "50px" }}></div>
+      <h1 style={{ width: "100%", textAlign: "left" }}> // CONTACTS</h1>
       <div className="contacts_badge_block">
         {socials.map((social, index) => (
           <SocialIcon key={index} social={social} index={index} />

@@ -45,9 +45,9 @@ const Header = () => {
       transition={{ duration: 0 }}
     >
       <div className="header-content">
-        <button className="navbar_button">
-          <FontAwesomeIcon icon={faGhost} /> <p>Nighty3098</p>
-        </button>
+        <p style={{ display: "flex", flexDirection: "row", gap: "10px", fontSize: "1rem", marginRight: "50px" }}>
+          <FontAwesomeIcon icon={faGhost} /> Nighty3098
+        </p>
         <div className="navbar_spacer"></div>
         <motion.a
           className="navbar_button tooltip-container desktop-nav"

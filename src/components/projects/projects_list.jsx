@@ -126,7 +126,7 @@ const ProjectsList = ({ projects }) => (
     variants={cardContainerVariants}
     initial="hidden"
     animate="visible"
-    style={{ width: "100%" }}
+    style={{ width: "100%", display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", justifyContent: "center" }}
   >
     {projects &&
       projects.map((project, index) => (

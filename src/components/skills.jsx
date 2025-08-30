@@ -54,9 +54,7 @@ const Skills = () => (
     variants={containerVariants}
     initial="hidden"
     animate="visible"
-    className="main_block"
   >
-    <h1 style={{ width: "100%", textAlign: "left" }}>// TECH</h1>
     <div className="widget_blocks_2">
       {skillsList.map((feature, index) => (
         <SkillWidget key={index} feature={feature} />

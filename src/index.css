@@ -79,10 +79,20 @@
   backdrop-filter: blur(10px);
 }
 
+.welcome-sub p {
+  width: 100%;
+  text-align: left;
+}
+
 @media (max-width: 800px) {
   .welcome-sub {
     flex-direction: column;
     justify-content: center;
+    background-color: transparent;
+  }
+  .welcome-sub p {
+    width: 100%;
+    text-align: center;
   }
   .desktop-nav {
     display: none !important;
@@ -116,28 +126,34 @@
   .mobile-menu {
     position: fixed;
     top: 70px;
-    left: calc(50% - 150px);
+    left: calc(50% - 125px);
     background-color: var(--bg);
     color: var(--fg);
-    width: calc(300px - 30px - 30px);
+    width: calc(250px - 30px - 30px);
     padding: 30px;
     border-radius: 24px;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 14px;
     margin-top: 0;
     margin-right: 0;
     backdrop-filter: blur(10px);
   }
+
   .mobile-menu a {
     color: var(--fg);
     text-decoration: none;
-    font-size: 1.2rem;
     font-family: Rubik;
-    text-align: left;
     padding: 8px 0;
   }
+
+  .mobile-menu .navbar_button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
   @keyframes slideInMenu {
     from {
       transform: translateX(100%);
@@ -210,6 +226,7 @@
   top: 20px;
   height: 50px;
   width: auto;
+  max-width: 720px;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
@@ -262,6 +279,8 @@
   position: relative;
   height: 40px;
   width: auto;
+  min-width: 40px;
+  max-width: auto;
   border-radius: 10px;
   background-color: transparent;
   border: none;
@@ -334,8 +353,8 @@
 }
 
 .user_avatar {
-  width: 50%;
-  max-width: 150px;
+  width: 70%;
+  max-width: 180px;
   border-radius: 30%;
   aspect-ratio: 1/1;
   border: 5px solid var(--fg);
@@ -382,7 +401,7 @@ body {
   padding: 0;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto auto;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -395,7 +414,7 @@ body {
   background-color: var(--tr);
   color: var(--fg);
   border-radius: 20px;
-  width: 50px;
+  width: 40px;
   aspect-ratio: 1/1;
   padding: 10px;
   border: none;
@@ -414,7 +433,7 @@ body {
 }
 
 .contact_button i {
-  font-size: 30px;
+  font-size: 25px;
   transition: all 0.3s ease;
 }
 
@@ -442,7 +461,7 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 60% 60%;
+  grid-template-columns: 100%;
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -787,7 +806,7 @@ h3 {
 
 .widget_blocks_2 {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   gap: 10px;
   margin: 0px;
   padding: 0px;
@@ -795,7 +814,7 @@ h3 {
 }
 
 .skill_widget {
-  width: 150px;
+  width: 130px;
   aspect-ratio: 1/1;
   border-radius: 20px;
   margin: 0px;
@@ -821,7 +840,7 @@ h3 {
 
 .emoji {
   color: var(--fg);
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 1000;
   padding: 0px;
   margin: 0px;
@@ -844,7 +863,7 @@ h3 {
 
 .skill_widget h1 {
   color: var(--fg);
-  font-size: larger;
+  font-size: large;
   padding: 0px;
   margin: 0px;
   width: 100%;
@@ -1043,8 +1062,7 @@ h3 {
   .widget_blocks,
   .widget_blocks_2 {
     align-items: center;
-    grid-template-columns: auto auto auto;
-    gap: 3px;
+    grid-template-columns: auto auto;
   }
 
   .info_widget {
@@ -1052,7 +1070,8 @@ h3 {
   }
 
   .float_widget_s {
-    zoom: 0.8;
+    zoom: 0.9;
+    margin: 0px;
   }
 
   .large_block {
@@ -1062,7 +1081,7 @@ h3 {
   }
 
   .contact_button {
-    zoom: 0.8;
+    zoom: 1;
   }
   .btn-slide {
     zoom: 0.85;
@@ -1240,7 +1259,7 @@ h3 {
 @media (min-width: 1500px) {
   .projects-grid {
     display: grid;
-    grid-template-columns: 80% 80%;
+    grid-template-columns: 100%;
     gap: 2rem;
     align-items: center;
     justify-content: center;

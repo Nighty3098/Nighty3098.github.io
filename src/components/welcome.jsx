@@ -56,8 +56,8 @@ const WelcomeBlock = () => {
           className="user_avatar"
           variants={itemVariants}
           style={{
-            marginTop: "50px",
-            marginBottom: "50px",
+            marginTop: "35px",
+            marginBottom: "35px",
             display: imgLoaded ? "block" : "none",
           }}
           onLoad={() => setImgLoaded(true)}
@@ -77,7 +77,7 @@ const WelcomeBlock = () => {
               color: "var(--fg)",
               padding: "0px",
               margin: "0px",
-              fontSize: "4rem",
+              fontSize: "3.5rem",
               lineHeight: "6rem",
               fontWeight: "lighter",
               fontFamily: "Rubik",
@@ -92,12 +92,10 @@ const WelcomeBlock = () => {
               padding: "0px",
               margin: "0px",
               fontWeight: "normal",
-              letterSpacing: "0.1rem",
               fontSize: "1rem",
-              lineHeight: "2rem",
             }}
           >
-            DEVELOPER / FREELANCER / DESIGNER
+            BACKEND DEVELOPER
           </p>
         </div>
       </div>

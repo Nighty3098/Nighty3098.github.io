@@ -8,7 +8,6 @@ import Projects from "./pages/Projects";
 import ReviewsSlider from "./components/ReviewsSlider";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Skills from "./components/skills";
 
 /*
 ●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
@@ -28,7 +27,6 @@ function Home() {
         <Header />
         <WelcomeBlock />
         <Bio />
-        <Skills />
         <Contacts />
         <ReviewsSlider />
       </div>

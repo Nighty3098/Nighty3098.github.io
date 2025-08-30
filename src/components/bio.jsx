@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import Skills from "./skills";
 
 const containerVariants = {
   hidden: {},
@@ -92,12 +93,14 @@ const Bio = () => {
               marginBottom: "30px",
               width: "100%",
               textAlign: "left",
+              fontSize: "1.2rem"
             }}
             variants={itemVariants}
           >
             {text}
           </motion.div>
         ))}
+        <Skills />
         <div style={{ height: "var(--spacing-xxl)" }}></div>
         <h1 style={{ width: "100%", textAlign: "left" }}> // WORK</h1>
         <div style={{ height: "var(--spacing-xl)" }}></div>
@@ -109,6 +112,7 @@ const Bio = () => {
             style={{
               width: "100%",
               textAlign: "left",
+              fontSize: "1.2rem"
             }}
             variants={itemVariants}
           >
@@ -130,6 +134,8 @@ const Bio = () => {
             height: "30px",
             boxShadow: "none",
             gap: "15px",
+            backgroundColor: "transparent",
+            color: "var(--fg)"
           }}
         >
           <FontAwesomeIcon icon={faFileArrowDown} /> {t("cv")}

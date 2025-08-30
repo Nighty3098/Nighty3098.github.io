@@ -3,7 +3,6 @@ import {
   faSquareJs,
   faReact,
   faDocker,
-  faLinux,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faC,
@@ -19,6 +18,4 @@ export const skillsList = [
   { icon: faReact, text: "React JS" },
   { icon: faBrain, text: "AI DEV" },
   { icon: faQ, text: "QT" },
-  { icon: faDocker, text: "Docker" },
-  { icon: faDatabase, text: "SQL" },
 ];

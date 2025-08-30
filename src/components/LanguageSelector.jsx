@@ -6,7 +6,6 @@ import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
 const languages = [
   { code: "en", label: "English" },
   { code: "ru", label: "Русский" },
-  { code: "ja", label: "日本語" },
 ];
 
 const LanguageSelector = () => {
