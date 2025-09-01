@@ -77,7 +77,7 @@ const WelcomeBlock = () => {
               color: "var(--fg)",
               padding: "0px",
               margin: "0px",
-              fontSize: "3.5rem",
+              fontSize: "3.6rem",
               lineHeight: "6rem",
               fontWeight: "lighter",
               fontFamily: "Rubik",
@@ -92,7 +92,7 @@ const WelcomeBlock = () => {
               padding: "0px",
               margin: "0px",
               fontWeight: "normal",
-              fontSize: "1rem",
+              fontSize: "1.2rem",
             }}
           >
             BACKEND DEVELOPER

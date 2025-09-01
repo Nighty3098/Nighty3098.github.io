@@ -65,23 +65,23 @@
 
 .welcome-sub {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: center;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  background-color: var(--tr);
+  background-color: transparent;
   padding: 20px;
   border-radius: 40px;
   width: 90%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   backdrop-filter: blur(10px);
 }
 
 .welcome-sub p {
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 800px) {
@@ -353,8 +353,8 @@
 }
 
 .user_avatar {
-  width: 70%;
-  max-width: 180px;
+  width: 80%;
+  max-width: 250px;
   border-radius: 30%;
   aspect-ratio: 1/1;
   border: 5px solid var(--fg);
